@@ -1,0 +1,29 @@
+body, html{
+    height: calc(100% - 2em);
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+
+//SECTION: base_aside
+#base_aside{
+    aside{
+        background-color: $proj_black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: .3em 1.5em;
+        max-height: 5vh;
+    }
+    h1{
+        color: $primary1;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        margin: 0;
+    }
+    svg{
+        width: 12%;
+    }
+}

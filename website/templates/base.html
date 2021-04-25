@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css2?family=GoogleSans:wght@100;400&display=swap" rel="stylesheet">
+
+        {% assets "main_scss" %}
+            <link rel="stylesheet" href="{{ASSET_URL}}">
+        {% endassets %}
+
+    </head>
+
+    <body>
+        <!-- //SECTION: base_aside -->
+        <section id="base_aside">
+            <aside>
+                <h1>
+                    BARRERA
+                </h1>
+                <img src="{{url_for('static', filename='images/assets/hamburger.svg')}}" alt="">           
+            </aside>
+        </section>
+
+
+
+
+        {% block content %}{% endblock %}
+    </body>
+</html>

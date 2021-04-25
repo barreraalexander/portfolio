@@ -1,7 +1,7 @@
 from flask import Flask
-from portfolio.db import DB
-from portfolio.config import Config
-from portfolio.utils.assets import bundles
+from website.db import DB
+from website.config import Config
+from website.utils.assets import bundles
 from flask_assets import Environment, Bundle
 
 db = DB()
@@ -16,7 +16,7 @@ def create_app (config_class=Config):
     
     db.init_app(app)
 
-    from portfolio.blueprints.\
+    from website.blueprints.\
          main.routes import main
 
     app.register_blueprint(main)

@@ -1,7 +1,7 @@
 body, html{
     height: calc(100% - 2em);
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'GoogleSans', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
     background-color: #000;
 }
@@ -10,12 +10,14 @@ body, html{
 //SECTION: base_aside
 #base_aside{
     aside{
-        background-color: $proj_black;
+        background-color: #000;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: .3em 1.5em;
+        // padding: .3em 1.5em;
+        padding: 1em;
         max-height: 5vh;
+        border-bottom: 1px solid #111;
     }
     h1{
         color: $primary1;
@@ -23,7 +25,11 @@ body, html{
         letter-spacing: 2px;
         margin: 0;
     }
-    svg{
-        width: 12%;
+    img{
+        width: 2em;
     }
+}
+
+aside:hover{
+    background-color: #fff;
 }

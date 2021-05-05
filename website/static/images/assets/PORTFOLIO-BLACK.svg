@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="138.061" height="116" viewBox="0 0 138.061 116">
+  <g id="PORTFOLIO-BLACK" transform="translate(0.051)">
+    <g id="Rectangle_25" data-name="Rectangle 25" transform="translate(0 15)" stroke="#fff" stroke-width="3">
+      <rect width="138" height="101" stroke="none"/>
+      <rect x="1.5" y="1.5" width="135" height="98" fill="none"/>
+    </g>
+    <g id="Rectangle_26" data-name="Rectangle 26" transform="translate(39)" stroke="#fff" stroke-width="2">
+      <path d="M16,0H45A16,16,0,0,1,61,16v0a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0v0A16,16,0,0,1,16,0Z" stroke="none"/>
+      <path d="M14.3,1H46.7A13.3,13.3,0,0,1,60,14.3v0a.7.7,0,0,1-.7.7H1.7a.7.7,0,0,1-.7-.7v0A13.3,13.3,0,0,1,14.3,1Z" fill="none"/>
+    </g>
+    <g id="Rectangle_27" data-name="Rectangle 27" transform="translate(49 5)" fill="#fff" stroke="#fff" stroke-width="1">
+      <path d="M11,0H31A11,11,0,0,1,42,11v0a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0v0A11,11,0,0,1,11,0Z" stroke="none"/>
+      <path d="M10.25.5h21.5a9.75,9.75,0,0,1,9.75,9.75v0a.25.25,0,0,1-.25.25H.75a.25.25,0,0,1-.25-.25v0A9.75,9.75,0,0,1,10.25.5Z" fill="none"/>
+    </g>
+    <path id="Path_19" data-name="Path 19" d="M-667,822.84l67.318,19.252,41.3-11.369,28.633-7.882" transform="translate(667.361 -761.969)" stroke="#fff" stroke-width="3"/>
+  </g>
+</svg>

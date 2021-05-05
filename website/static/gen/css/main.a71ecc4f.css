@@ -1,0 +1,39 @@
+body, html {
+  height: calc(100% - 2em);
+  margin: 0;
+  font-family: 'GoogleSans', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #000; }
+
+#base_aside aside {
+  background-color: #2E2E2E;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .3em 1.5em;
+  max-height: 5vh; }
+
+#base_aside h1 {
+  color: #FFBB7F;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin: 0; }
+
+#base_aside img {
+  width: 2em; }
+
+#index_section1 {
+  position: relative; }
+  #index_section1 h1 {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    font-size: 6rem;
+    text-align: center; }
+
+#globe_canvas {
+  position: absolute;
+  top: -10em;
+  right: 0em;
+  outline: none;
+  mix-blend-mode: exclusion; }

@@ -1,0 +1,111 @@
+body, html {
+  height: calc(100% - 2em);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #000; }
+
+#base_aside aside {
+  background-color: #2E2E2E;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: .3em 1.5em;
+  max-height: 5vh; }
+
+#base_aside h1 {
+  color: #FFBB7F;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin: 0; }
+
+#base_aside svg {
+  width: 12%; }
+
+#index_section1 #main_div {
+  background-color: #2E2E2E;
+  border-radius: 15px;
+  height: 75vh;
+  padding: .8em;
+  padding-top: 1px;
+  text-align: center;
+  width: 90%;
+  margin: 1em auto;
+  box-shadow: 1px 1px 3px #BCBCBC; }
+  #index_section1 #main_div p {
+    font-size: 1rem;
+    font-weight: 500; }
+  #index_section1 #main_div span:first-child {
+    color: #77FFC0;
+    font-weight: 700;
+    letter-spacing: 1.2px; }
+  #index_section1 #main_div span {
+    color: #FFBB7F;
+    font-size: 1.2rem;
+    font-weight: 600; }
+
+#index_section1 #media_div {
+  background-color: #fff;
+  border-radius: 15px;
+  height: 50%;
+  width: 90%;
+  margin: 1em auto; }
+
+#index_section1 #skill_div {
+  border: 1.5px solid #FFBB7F;
+  border-radius: 15px;
+  height: 25%;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between; }
+  #index_section1 #skill_div div {
+    width: 45%; }
+  #index_section1 #skill_div h2 {
+    font-size: .7rem;
+    font-weight: 600; }
+
+#index_section1 #text_div {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3rem; }
+
+#index_section1 #bottom_nav {
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%; }
+  #index_section1 #bottom_nav div {
+    background-color: #2E2E2E;
+    border: 1.5px solid #77FFC0;
+    height: 15vh;
+    margin-top: 1em;
+    text-align: center;
+    width: 33%; }
+  #index_section1 #bottom_nav p {
+    font-size: .8rem;
+    font-weight: 500;
+    margin: .4em; }
+  #index_section1 #bottom_nav img {
+    margin-top: .5em; }
+  #index_section1 #bottom_nav #portfolio_img {
+    margin-top: .5em;
+    width: 50%;
+    max-height: 5em; }
+  #index_section1 #bottom_nav #aboutme_img {
+    margin-top: .5em;
+    max-height: 5em;
+    width: 30%; }
+  #index_section1 #bottom_nav #contactme_text {
+    color: #94FF75;
+    padding: 0;
+    font-size: 3em;
+    font-weight: 600;
+    margin: 0; }
+
+#index_section1 .skills_img_flex {
+  display: flex;
+  flex-direction: row; }

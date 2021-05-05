@@ -1,0 +1,63 @@
+.hide_on_mobile{
+    display: none;
+}
+
+.hide_on_tablet{
+    display: none;
+}
+
+.show_on_desktop{
+    display: none;
+}
+
+@media only screen and (min-width: $tablet_bp){
+    body, html{
+        font-size: 1.5em;
+    }
+    .show_on_tablet{
+        display: block;
+    }
+    .hide_on_tablet{
+        display: block;
+    }
+    .hide_on_mobile{
+        display: block;
+    }
+    #base_footer_section{
+    }
+}
+
+
+@media only screen and (min-width: $desktop_bp){
+    body, html{
+        font-size: 1.2em;
+    }
+    .show_on_desktop{
+        display: block;
+    }
+    
+    .aboutme_text{
+        font-size: 1.5rem;
+    }
+    .img_of_me{
+        width: 12em;
+    }
+    .aboutme_ctnr{
+        justify-content: center;
+        gap: 3em;
+    }
+    #base_footer_section{
+        footer{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+        }
+    }
+
+}
+
+@media only screen and (min-width: $desktop_4k_bp){
+    body, html{
+        font-size: 2.8em;
+    }
+}

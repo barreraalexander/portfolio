@@ -6,30 +6,83 @@ body, html{
     background-color: #000;
 }
 
+ul{
+    list-style: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#windows_logo{
+    width: 8em;
+}
+
 
 //SECTION: base_aside
-#base_aside{
+#base_aside_section{
+    background-color: #111;
+    position: absolute;
+    top: 0;
+    opacity: .7;
+    width: 100%;
+    z-index: 1001;
+    :hover{
+        background-color:#000;
+    }
     aside{
         background-color: #000;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        // padding: .3em 1.5em;
-        padding: 1em;
-        max-height: 5vh;
+        padding: 1em .5em;
         border-bottom: 1px solid #111;
     }
     h1{
-        color: $primary1;
-        font-size: 1.3rem;
+        // color: $primary1;
+        font-size: 1rem;
         letter-spacing: 2px;
         margin: 0;
     }
     img{
-        width: 2em;
+        width: 1rem;
     }
 }
 
+#base_footer_section{
+    background-color: #fff;
+    padding: 1em;
+    color: #000;
+    footer{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    h5{
+        font-size: 1.5rem;
+        margin: .5em;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        text-decoration-thickness: .01px;
+    }
+    a{
+        font-size: 1.2rem;
+    }
+    li{
+        margin-bottom: .2em;
+    }
+
+}
+
+
 aside:hover{
     background-color: #fff;
+}
+
+
+.invisible{
+    display: none !important;
 }

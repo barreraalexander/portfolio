@@ -1,11 +1,2 @@
-website/static/gen
-website/static/.webassets-cache
-website/static/images
-website/outline
-website/webhandlers
-__pycache__
-progress.txt
-**.vscode
-outline
-**.txt
-debug.log
+*.mp4
+.mp4

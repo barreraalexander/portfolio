@@ -7,9 +7,26 @@
 <main>
     <section id="index_section1">
         <h1>
-            BARRERA'S<br>WORLD 
+            BARRERA'S
+            <hr>
+            WORLD 
         </h1>
-        <div id="world_ctnr"></div>
+        <div class="show_on_desktop">
+            <div class="caption_ctnr">
+                <p>
+                    Full Stack Web Developer from south Florida.
+                </p>
+                <a href="#">
+                    Checkout my github 🐱
+                </a>
+                <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
+                    <button>
+                        Download my resume 📃        
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div id="world_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
     </section>
     <section id="index_section2">
         <p class="dramatic_p">
@@ -20,10 +37,21 @@
             I've been working on
         </p>
         <div id="clips_ctnr">
-            <div class="img_standin">thefood</div>
-            <div class="img_standin">tod</div>
-            <div class="img_standin">broward</div>
-            <div class="img_standin">ppb</div>
+            <div class="clips">
+                <!-- <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe>  -->
+                <!-- <video src="https://www.youtube.com/watch?v=xTMn9LcZf5k" type="video/mp4" alt="alexander_barrera" muted autoplay></video> -->
+                <div class="img_standin">thefood</div>
+                <div class="img_standin">thefood</div>
+            </div>
+            <div class="project_tabs">
+                <div class="projects_ctnr">
+                    <img class="project_img" src="https://source.unsplash.com/random/600x600" alt="broward reseller">
+                    <img class="project_img" src="https://source.unsplash.com/random/600x600" alt="privacy playbook">
+                    <img class="project_img" src="https://source.unsplash.com/random/600x600" alt=" ">
+                </div>
+            </div>
         </div>
     </section>
     <section id="index_section3">
@@ -40,106 +68,99 @@
             <img src="{{url_for('static', filename='images/assets/css-shield.svg')}}" alt="css-shield">
             <img src="{{url_for('static', filename='images/assets/javascript-shield.svg')}}" alt="javascript-shield">
             <img src="{{url_for('static', filename='images/assets/mysql.svg')}}" alt="mysql">
+            <img src="{{url_for('static', filename='images/assets/adobephotoshop.svg')}}" alt="adobe photoshop">
+            <img src="{{url_for('static', filename='images/assets/adobexd.svg')}}" alt="adobe xd">
+            <img src="{{url_for('static', filename='images/assets/github.svg')}}" alt="github">
+            <img id="windows_logo" src="{{url_for('static', filename='images/assets/windows-10.svg')}}" alt="windows 10">
         </div>
+    </section>
+    <section id="index_section4">
+        <h2>
+            ABOUT ME
+        </h2>
+        <div class="aboutme_ctnr">
+            <div class="show_on_desktop">
+                {% for i in range(20) %}
+                    <div class="digital" style="top:{{i}}em;"></div>
+                {% endfor %}
+            </div>
+            <img class="img_of_me" src="{{url_for('static', filename='images/me_sm2.jpg')}}" alt="">
+            <div>
+                <p class="aboutme_text">
+                    NAME:
+                    <span>
+                        ALEXANDER BARRERA
+                    </span> 
+                </p>
+                <p class="aboutme_text">
+                    JOB:
+                    <span>
+                        WEB DEVELOPER
+                    </span> 
+                </p>
+                <p class="aboutme_text">
+                    LOCATION:
+                    <span>
+                        SOUTH FLORIDA
+                    </span> 
+                </p>
+            </div>
+        </div>
+        <p class="aboutme_paragraph">
+            Skrrr! My name is
+            <span>
+                Alexander Barrera
+            </span>
+            and I'm a junior web developer from south Florida.
+        </p>
+        <strong class=:workflow_strong>
+            WORK FLOW
+        </strong>
+        <p class="workflow_text">
+            These days, I like to use to use
+            <strong>
+                python flask
+            </strong>
+            when I'm building web apps. For the front end
+            I'll usually utilize 
+            <strong>
+                SASS
+            </strong>
+            as well as
+            <strong>
+                GSAP
+            </strong>
+            and
+            <strong>
+                THREEJS
+            </strong>
+            libraries. For the database I like to use
+            <strong>
+                MySQL.
+            </strong>
+            For deployment, I like to use 
+            <strong>
+                ubuntu
+            </strong>
+            on
+            <strong>
+                nginx.
+            </strong>
+            Versional control with
+            <strong>
+                github.
+            </strong>  
+        </p>
+    </section>
+    <section id="index_section5" class="invisible">
+        <button>
+            CONTACT ME
+        </button>
     </section>
 </main>
 
 
 
-
-
-<script>
-    var scene = new THREE.Scene();
-    
-    var camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth/window.innerHeight,
-        0.1,
-        1000
-        )
-        
-    camera.position.z = 5
-
-
-    var renderer = new THREE.WebGLRenderer({
-        antialias: true
-    })
-
-    renderer.setClearColor ("#000");
-
-    renderer.setSize(window.innerWidth, window.innerHeight)
-
-    //document.body.appendChild(renderer.domElement)
-    document.body.querySelector('#world_ctnr').appendChild(renderer.domElement)
-    window.addEventListener('resize', ()=> {
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix()
-    })
-
-
-    var raycaster = new THREE.Raycaster();
-    var mouse = new THREE.Vector2();
-
-    
-    var geometry = new THREE.SphereBufferGeometry(1, 20, 20);
-    var material = new THREE.MeshLambertMaterial({color: 0x33B8FF});
-    material.metalness = 0.7
-    material.roughness = 0.7
-
-    var mesh1 = new THREE.Mesh(geometry, material)
-    mesh1.position.y = 1;
-    mesh1.position.x = 1;
-    mesh1.position.z = .5;
-    scene.add(mesh1)
-    
-    var geometry = new THREE.SphereBufferGeometry(.5, 15, 15);
-    var material = new THREE.MeshLambertMaterial({color: 0x666666});
-    var mesh2 = new THREE.Mesh(geometry, material)
-    mesh2.position.x = 0;
-    mesh2.position.y = 2;
-    mesh2.position.z = 0;
-    scene.add(mesh2)
-    
-
-    var light1 = new THREE.PointLight(0xFFFFFF, 1, 1000)
-    light1.position.set(1, 1, 0);
-    scene.add(light1)
-
-    var light2 = new THREE.PointLight(0xFFFFFF, 1, 1000)
-    light2.position.set(-1, -1  , 5);
-    scene.add(light2)
-
-    const clock = new THREE.Clock()
-    
-    this.tl = new TimelineMax().delay(.3);
-    this.tl.timeScale = 1
-    this.tl.to(mesh2.position,.5,{x:2, smoothChildTiming:true, ease:Expo.ease, repeat:-1, repeatDelay:.5, yoyo:true})
-    this.tl.to(mesh2.position,.5,{z:1.6, ease:Expo.easeOut, repeat:-1, repeatDelay:.5, yoyo:true})
-  
-    
-//
-//    this.tl.to(mesh1.position,.5,{x:2, ease:Expo.easeOut})
-//    this.tl.to(mesh1.position,.5,{z:2, ease:Expo.easeOut})
-     
-
-    var render = function (){
-        requestAnimationFrame(render)
-
-        mesh1.rotation.y += 0.02;
-        mesh2.rotation.x += 0.05;
-        
-        
-
-        renderer.domElement.id = 'globe_canvas';
-        renderer.render(scene, camera)
-
-        //window.requestAnimationFrame()
-    }
-
-    render();
-
-</script>
 
 
 {% endblock content %}

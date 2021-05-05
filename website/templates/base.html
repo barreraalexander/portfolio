@@ -14,7 +14,7 @@
 
     <body>
         <!-- //SECTION: base_aside -->
-        <section id="base_aside">
+        <section id="base_aside_section">
             <aside>
                 <h1>
                     BARRERA
@@ -23,9 +23,55 @@
             </aside>
         </section>
 
-
-
-
         {% block content %}{% endblock %}
+
+        <section id="base_footer_section">
+            <footer>
+                <div class="footer_left">
+                    <h5>
+                        CONTACT ME
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="">
+                                954 882 8507 ☎
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                barreraalexander93@gmail.com ✉
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_right">
+                    <h5>
+                        SEE MY WORKS
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="">
+                                Visit my github 😺
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.docx')}}" download>
+                                Download my resume (docx) 📃
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
+                                Download my resume (pdf) 📃
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </section>
+
+
+        {% assets "main_js" %}
+            <script type="text/javascript" src="{{ ASSET_URL}}"> </script>
+        {% endassets %}
     </body>
 </html>

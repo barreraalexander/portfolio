@@ -1,7 +1,8 @@
+import json
+
+with open('/etc/portfolio_config.json') as config_file:
+    config = json.load(config_file)
+
+
 class Config:
-    SECRET_KEY = 'secret_key'
-    MYSQL_USER = "root"
-    MYSQL_PASSWORD = "Barr1993"
-    MYSQL_HOST = "localhost"
-    MYSQL_DB = "portfolio"
-    MYSQL_CURSORCLASS = "DictCursor"
+    SECRET_KEY = config.get('secret_key')

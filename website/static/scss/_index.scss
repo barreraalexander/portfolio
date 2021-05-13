@@ -1,4 +1,5 @@
 #index_section1{
+    height: 75vh;
     overflow: hidden;
     position: relative;
     z-index: 1000;
@@ -93,7 +94,6 @@
     padding: 2em;
     padding-top: 1em;
     margin-top: -1em;
-
     h2{
         letter-spacing: 4px;
         text-align: left;
@@ -104,39 +104,6 @@
         color: $primary1;
     }
 }
-
- 
-.clips{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    width: 100%;
-    margin-bottom: .5em;
-    video{
-        width: 10em;
-        // background-color: #f1f1f1;
-        height: 30em;
-    }
-}
-
-.img_standin{
-    width: 5em;
-    background-color: #f1f1f1;
-    height: 30em;
-}
-
-
-.projects_ctnr{
-    display: flex;
-    flex-flow: row nowrap;
-    gap: .5em
-}
-
-.project_img{
-    width: 33%;
-}
-
-
 
 .dramatic_p{
     font-size: 2rem;
@@ -149,6 +116,76 @@
         font-size: 1.8rem;
     }
 }
+
+
+.projects_ctnr{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    position: relative;
+    width: 100%;
+
+}
+
+.project{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    gap: 1em;
+    margin-bottom: 2em;
+    p{
+        max-width:33%;
+    }
+}
+
+.flow_reversed{
+    flex-flow: row-reverse nowrap !important;
+}
+
+.img_ctnr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    padding: 1em;
+    // background-color: #fff;
+    img{
+        position: relative;
+        width: 80%;
+        z-index: 1000;
+    }
+}
+
+
+.shifting_grill_ctnr{
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    transform: scale(1.2);
+    .horizontal_bars{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        position: absolute;
+        width: 100%;
+        div{
+            @include shifting_bg(10em, .05em);
+        }
+    }
+    .vertical_bars{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        justify-content: space-evenly;
+        position: absolute;
+        div{
+            @include shifting_bg(.05em, 10em);
+        }
+    }
+}
+
+
 
 #index_section3{
     padding: 2em;

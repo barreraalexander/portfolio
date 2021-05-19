@@ -14,8 +14,6 @@
 }
 
 
-
-
 @-webkit-keyframes shifting_gradient {
     0% {
         background-position: 0% 50%;
@@ -38,4 +36,14 @@
     100% {
         background-position: 0% 50%;
     }
+}
+
+@-webkit-keyframes dissolving {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
+@keyframes dissolving {
+    from {opacity:1;}
+    to {opacity:0;}
 }

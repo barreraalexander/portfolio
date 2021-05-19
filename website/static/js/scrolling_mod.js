@@ -1,27 +1,79 @@
 let lastKnownScrollPosition = 0;
 let ticking = false;
+let run1 = false;
+let run2 = false;
+let run3 = false;
+let project1 = document.querySelector('#project1');
+let project2 = document.querySelector('#project2');
+let project3 = document.querySelector('#project3');
 
-function doSomething(scrollPos) {
-    // console.log(scrollPos)
-    if (90 <= scrollPos <= 100){
-        // alert('passed')
-    } else if (1200 <= scrollPos <= 1250){
-        // alert('passed')
+
+let deg_min = 0
+function shift_digital(scrollPos) {
+    let digital = document.querySelectorAll('.digital')
+    let deg_max = 360
+    if (scrollPos > 2380){
+      for (let digi of digital){
+        digi.style.transform = `rotate(${deg_min}deg)`
+      }
+      deg_min += 1
+      if (deg_min > deg_max){
+        deg_min = 0
+      } 
     }
-    // positions: at scrollPos 100, remove opaque of class="clips"
-    // positions: at scrollPos 1236, remove opaque of class="technologies_ctnr"
-    // heartbeat your image from grayscale to color
 }
+
+let filter_min = 100
+let img = document.querySelector('.img_of_me')
+function alter_image(scrollPos){
+  let filter_max = 0
+  if (scrollPos > 2500){
+    if (filter_min > filter_max){
+      img.style.filter = "grayscale("+ filter_min +"%)"
+      filter_min -= 3;
+    }
+  } else if (scrollPos < 2000){
+    img.style.filter = "grayscale(100%)"
+    filter_min = 100
+  }
+}
+
+
+let divider = document.querySelector('.shimmering_div')
+function dissolve_divider(scrollPos){
+  if(scrollPos > 10){
+    divider.classList.add("dissolving_div")
+    setTimeout(function(){
+      divider.style.display = "none"
+    }, 400)
+  }
+}
+
+function check_no_scroll(scrollPos){
+  setTimeout(function(){
+    divider.classList.add("enlarge_div")
+    var scroll_alert = document.createElement("p")
+    var alert_text = document.createTextNode("Please Scroll Down")
+    scroll_alert.appendChild(alert_text)
+    scroll_alert.classList.add("scroll_alert")
+    divider.appendChild(scroll_alert)
+  }, 30000/3)
+}
+
+if (divider){
+  check_no_scroll()
+}
+
 
 document.addEventListener('scroll', function(e) {
   lastKnownScrollPosition = window.scrollY;
-
   if (!ticking) {
     window.requestAnimationFrame(function() {
-      doSomething(lastKnownScrollPosition);
+      shift_digital(lastKnownScrollPosition);
+      alter_image(lastKnownScrollPosition);
+      dissolve_divider(lastKnownScrollPosition);
       ticking = false;
     });
-
     ticking = true;
   }
 });

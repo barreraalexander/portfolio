@@ -113,7 +113,6 @@ if (world_ctnr){
     var star_cluster_material = new THREE.PointsMaterial({
         size: 0.02,
         transparent: true,
-        metalness: .7,
         color: 0xa165ff
     }) 
 

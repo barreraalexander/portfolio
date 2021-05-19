@@ -145,9 +145,6 @@
     }
 }
 
-
-
-
 .dramatic_p{
     font-size: 2rem;
     line-height: 2.4rem;
@@ -159,7 +156,6 @@
         font-size: 1.8rem;
     }
 }
-
 
 .projects_ctnr{
     display: flex;
@@ -177,26 +173,38 @@
     gap: 1em;
     margin-bottom: 2em;
     p{
-        max-width:33%;
+        max-width:45%;
     }
     strong{
         text-decoration: underline;
         color: $primary2;
         font-weight: 400;
     }
+    a{
+        color: #c9c9c9;
+        font-size: .8rem;
+    }
 }
 
 
 .project:hover{
-    background-color: #fff;
+    background-color: #f1f1f1;
     color: #000;
     transform: scale(1.05);
     strong{
         color: #000;
         font-weight: 700;
     }
+    a{
+        // color: #c8c8c8;
+        font-weight: 700;
+        color: $primary1;
+    }
     .shifting_grill_ctnr{
         display: none;
+    }
+    img{
+        width: 25em;
     }
 }
 

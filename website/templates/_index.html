@@ -7,16 +7,16 @@
 <main>
     <section id="index_section1">
         <h1>
-            BARRERA'S
+            ALEXANDER
             <hr>
-            WORLD 
+            BARRERA
         </h1>
         <div class="show_on_desktop">
             <div class="caption_ctnr">
                 <p>
                     Full Stack Web Developer from south Florida.
                 </p>
-                <a href="#">
+                <a href="{{CONTACT_DICT['github_link']}}">
                     Checkout my github 🐱
                 </a>
                 <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
@@ -28,6 +28,9 @@
         </div>
         <div id="world_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
     </section>
+    <div class="shimmering_div">
+        <!-- <p id="suggested_text"></p> -->
+    </div>
     <section id="index_section2">
         <p class="dramatic_p">
             These are some
@@ -36,25 +39,16 @@
             </span>
             I've been working on
         </p>
-        <div id="clips_ctnr">
-            <div class="clips">
-                <!-- <iframe width="420" height="315"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                </iframe>  -->
-                <!-- <video src="https://www.youtube.com/watch?v=xTMn9LcZf5k" type="video/mp4" alt="alexander_barrera" muted autoplay></video> -->
-                <div class="img_standin">thefood</div>
-                <div class="img_standin">thefood</div>
-            </div>
-            <div class="project_tabs">
-                <div class="projects_ctnr">
-                    <img class="project_img" src="https://source.unsplash.com/random/600x600" alt="broward reseller">
-                    <img class="project_img" src="https://source.unsplash.com/random/600x600" alt="privacy playbook">
-                    <img class="project_img" src="https://source.unsplash.com/random/600x600" alt=" ">
-                </div>
-            </div>
+        <div class="projects_ctnr">
+            {{project_div1}}
+            {{project_div2}}
+            <!-- {{project_div3}} -->
         </div>
     </section>
     <section id="index_section3">
+        <div class="image_caption show_on_desktop">
+            <p id="caption_text"></p>
+        </div>
         <p class="dramatic_p">
             These are some
             <span>
@@ -63,15 +57,106 @@
             I like to use
         </p>
         <div class="technologies_ctnr">
-            <img src="{{url_for('static', filename='images/assets/python.svg')}}" alt="python">
-            <img src="{{url_for('static', filename='images/assets/html5-shield.svg')}}" alt="html5-shield">
-            <img src="{{url_for('static', filename='images/assets/css-shield.svg')}}" alt="css-shield">
-            <img src="{{url_for('static', filename='images/assets/javascript-shield.svg')}}" alt="javascript-shield">
-            <img src="{{url_for('static', filename='images/assets/mysql.svg')}}" alt="mysql">
-            <img src="{{url_for('static', filename='images/assets/adobephotoshop.svg')}}" alt="adobe photoshop">
-            <img src="{{url_for('static', filename='images/assets/adobexd.svg')}}" alt="adobe xd">
-            <img src="{{url_for('static', filename='images/assets/github.svg')}}" alt="github">
-            <img id="windows_logo" src="{{url_for('static', filename='images/assets/windows-10.svg')}}" alt="windows 10">
+            <div
+                id="tech_img1"
+                class="tech_img_ctnr selected_img"
+                data-caption="Python is just the ultimate programming language to me. Whether writing scripts, apis, or full on web applications (flask), python is my goto when it comes to programming."
+            >
+                <img
+                    src="{{url_for('static', filename='images/assets/python.svg')}}"
+                    alt="python"
+                >
+            </div>
+            
+            <div
+                id="tech_img2"
+                class="tech_img_ctnr"
+                data-caption="text about html5"
+            >
+                <img
+                    src="{{url_for('static', filename='images/assets/html5-shield.svg')}}"
+                    alt="html5-shield"
+                    data-caption="HTML5"
+                >
+            </div>
+
+            <div
+                id="tech_img3"
+                class="tech_img_ctnr"
+                data-caption="Oh CSS. Definitely one of the more tricky languages to work with, that is, until SaaS really picked up in popularity. I generally use SaaS because it saves a lot of rule-writing, what with the use of mixins and includes."
+            >
+                <img
+                    src="{{url_for('static', filename='images/assets/css-shield.svg')}}"
+                    alt="css-shield"
+                >
+            </div>
+
+
+            <div
+            id="tech_img4"
+            class="tech_img_ctnr"
+            data-caption="Javascript is an absolutely incredible and powerful language. The asynchronous features, coupled with ajax calls to REST apis has really transformed my applications."
+            >
+                <img
+                    src="{{url_for('static', filename='images/assets/javascript-shield.svg')}}"
+                    alt="javascript-shield"
+                >
+            </div>
+
+            <div
+            id="tech_img5"
+            class="tech_img_ctnr"
+            data-caption="MySQL was the first language I ever worked with. It was day one in college and I was completely new programming. That was 5 years ago, and, other than a few stints with GraphQL, MySQL has been my goto for creating REST apis."
+            >
+                <img
+                    src="{{url_for('static', filename='images/assets/mysql.svg')}}"
+                    alt="mysql"
+                >
+            </div>
+            
+            <div
+                id="tech_img6"
+                class="tech_img_ctnr"
+                data-caption="Photoshop is a tool that I rarely have to turn to these days. However it photographs makes creating assets super easy."
+            >
+                <img
+                    src="{{url_for('static', filename='images/assets/adobephotoshop.svg')}}"
+                    alt="adobe photoshop"
+                >
+            </div>
+
+            <div
+                id="tech_img7"
+                class="tech_img_ctnr"
+                data-caption="Drafting drafting drafting. Abode XD is my go to for creating mockups of websites I plan to build."
+            >
+            <img
+                src="{{url_for('static', filename='images/assets/adobexd.svg')}}"
+                alt="adobe xd"
+            >
+            </div>
+            
+            <div
+                id="tech_img8"
+                class="tech_img_ctnr"
+                data-caption="The ultimate version control system. I absolutely love using github."
+            >
+            <img
+                src="{{url_for('static', filename='images/assets/github.svg')}}"
+                alt="github"
+            >
+            </div>
+            
+            <div
+                id="tech_img9"
+                class="tech_img_ctnr"
+                data-caption="This is about windows 10. I spent all of my time between the windows operating system and ubuntu."
+            >
+            <img
+                src="{{url_for('static', filename='images/assets/windows-10.svg')}}"
+                alt="windows 10"
+            >
+            </div>
         </div>
     </section>
     <section id="index_section4">
@@ -81,11 +166,14 @@
         <div class="aboutme_ctnr">
             <div class="show_on_desktop">
                 {% for i in range(20) %}
-                    <div class="digital" style="top:{{i}}em;"></div>
+                    <div id="digi{{i}}" class="digital " style="top:{{i}}em;"></div>
                 {% endfor %}
             </div>
-            <img class="img_of_me" src="{{url_for('static', filename='images/me_sm2.jpg')}}" alt="">
-            <div>
+            <img class="img_of_me"
+                 src="{{url_for('static', filename='images/me_sm2.jpg')}}"
+                 alt=""
+            >
+            <div class="aboutme_text_ctnr">
                 <p class="aboutme_text">
                     NAME:
                     <span>
@@ -106,14 +194,27 @@
                 </p>
             </div>
         </div>
+        <strong>
+                PERSONAL
+        </strong>
         <p class="aboutme_paragraph">
-            Skrrr! My name is
-            <span>
+            Hello my name is
+            <strong>
                 Alexander Barrera
-            </span>
-            and I'm a junior web developer from south Florida.
+            </strong>
+            and I'm a junior web developer from south Florida. When I'm not coding
+            I like to go on
+            <strong>
+                long runs
+            </strong>
+                and
+            <strong>
+                read
+            </strong> 
+            fantasy novels (Lord of the Rings, anyone? 😊)
+
         </p>
-        <strong class=:workflow_strong>
+        <strong class="workflow_strong">
             WORK FLOW
         </strong>
         <p class="workflow_text">

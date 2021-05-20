@@ -4,10 +4,17 @@ from flask import Markup, url_for
 def component(title, elem_id=""):
     text = ""
     domain = ""
+<<<<<<< HEAD
     img_src1 =f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}1.png"
     img_src2 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}2.png"
     img_src3 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}3.png"
     img_src4 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}4.png"
+=======
+    img_src1 = ""
+    img_src2 = ""
+    img_src3 = ""
+    img_src4 = ""
+>>>>>>> branch-backup
 
     def unpack_divs():
         divs = ["<div></div>" for i in range(20)]
@@ -18,25 +25,51 @@ def component(title, elem_id=""):
         title_formatted="The Food}"
         text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
         domain = "www.thefood.com"
+<<<<<<< HEAD
 
+=======
+        img_src1 = url_for('static', filename=f'images/portfolio_screenshots/{title}1.png')
+        img_src2 = url_for('static', filename=f'images/portfolio_screenshots/{title}2.png')
+        img_src3 = url_for('static', filename=f'images/portfolio_screenshots/{title}3.png')
+>>>>>>> branch-backup
 
     elif (title=="tod"):
         title_formatted="Technicians on Demand"
         text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
         domain = "www.technicianondemand.com"
+<<<<<<< HEAD
 
+=======
+        img_src1 = url_for('static', filename=f'images/portfolio_screenshots/{title}1.png')
+        img_src2 = url_for('static', filename=f'images/portfolio_screenshots/{title}2.png')
+        img_src3 = url_for('static', filename=f'images/portfolio_screenshots/{title}3.png')
+        img_src4 = url_for('static', filename=f'images/portfolio_screenshots/{title}4.png')
+>>>>>>> branch-backup
     
     elif (title=="browardreseller"):
         title_formatted="Broward Reseller"
         text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
         domain = "www.browardreseller.com"
+<<<<<<< HEAD
 
+=======
+        img_src1 = url_for('static', filename=f'images/portfolio_screenshots/{title}1.png')
+        img_src2 = url_for('static', filename=f'images/portfolio_screenshots/{title}2.png')
+        img_src3 = url_for('static', filename=f'images/portfolio_screenshots/{title}3.png')
+>>>>>>> branch-backup
     
 
     elif (title=="ppb"):
         title_formatted="Privacy Playbook"
         text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
         domain = "www.privacyplaybook.com"
+<<<<<<< HEAD
+=======
+        img_src1 = url_for('static', filename=f'images/portfolio_screenshots/{title}1.png')
+        img_src2 = url_for('static', filename=f'images/portfolio_screenshots/{title}2.png')
+        img_src3 = url_for('static', filename=f'images/portfolio_screenshots/{title}3.png')
+        img_src4 = url_for('static', filename=f'images/portfolio_screenshots/{title}4.png')
+>>>>>>> branch-backup
 
 
     

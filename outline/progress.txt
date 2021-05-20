@@ -1,0 +1,1 @@
+Everything is pretty much complete but there are some more details to add, and some more media queries to check for. 

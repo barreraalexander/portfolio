@@ -1,3 +1,96 @@
+let tech_ctnr=document.querySelector('.technologies_ctnr')
+if(tech_ctnr){imgs=tech_ctnr.querySelectorAll('img')
+for(let img of imgs){img.addEventListener('mouseover',alter_tech_interface,false)}}
+let selected="tech_img1";function alter_tech_interface(){unselected=tech_ctnr.querySelector(`#${selected}`)
+unselected.classList.remove('selected_img')
+this.classList.add('selected_img')
+selected=this.id
+let caption_elem=document.querySelector('#caption_text')
+if(selected=="tech_img1"){caption_elem.innerText="This is about Python"}else if(selected=="tech_img2"){caption_elem.innerText="This is about HTML5"}else if(selected=="tech_img3"){caption_elem.innerText=`Oh CSS.Definitely one of the more tricky languages to work with,that is,until SaaS really picked up in popularity.I generally use
+SaaS because it saves a lot of rule-writing,what with the use of mixins and includes.`}else if(selected=="tech_img4"){caption_elem.innerText=`Javascript is an absolutely incredible and powerful language.The asynchronous features,coupled with ajax calls to REST apis
+has really transformed my applications.I'm in the middle of learning some of the changes in es6.`   
+    } else if (selected=="tech_img5"){
+        caption_elem.innerText = `MySQL was the first language I ever worked with. It was day
+                                one in college and I was completely new programming. That was 5 years ago,
+                                and, other than a few stints with GraphQL, MySQL has been my goto for creating REST apis.`   
+    } else if (selected=="tech_img6"){
+        caption_elem.innerText = "This is about Photoshop"   
+    } else if (selected=="tech_img7"){
+        caption_elem.innerText = "This is about Adobe XD."   
+    } else if (selected=="tech_img8"){
+        caption_elem.innerText = "This is about github."   
+    } else if (selected=="tech_img8"){
+        caption_elem.innerText = "This is about windows."   
+    }
+
+    // caption_elem.querySelector('p').innerHTML = "hey"
+
+
+
+}
+let lastKnownScrollPosition = 0;
+let ticking = false;
+let run1 = false;
+let run2 = false;
+let run3 = false;
+let project1 = document.querySelector('#project1');
+let project2 = document.querySelector('#project2');
+let project3 = document.querySelector('#project3');
+
+
+let deg_min = 0
+function shift_digital(scrollPos) {
+    let digital = document.querySelectorAll('.digital')
+    let deg_max = 360
+    if (scrollPos > 2380){
+      for (let digi of digital){
+        digi.style.transform = `rotate(${deg_min}deg)`
+      }
+      deg_min += 1
+      if (deg_min > deg_max){
+        deg_min = 0
+      } 
+    }
+}
+
+let filter_min = 100
+let img = document.querySelector('.img_of_me')
+function alter_image(scrollPos){
+  let filter_max = 0
+  if (scrollPos > 2500){
+    if (filter_min > filter_max){
+      img.style.filter = "grayscale("+ filter_min +"%)"
+      filter_min -= 2;
+    }
+  }
+}
+
+
+function dissolve_divider(scrollPos){
+  let divider = document.querySelector('.shimmering_div')
+  if(scrollPos > 10){
+    divider.style.display = "none"
+  }
+}
+
+
+
+
+
+document.addEventListener('scroll', function(e) {
+  lastKnownScrollPosition = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      shift_digital(lastKnownScrollPosition);
+      alter_image(lastKnownScrollPosition);
+      dissolve_divider(lastKnownScrollPosition);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
 var world_ctnr = document.querySelector('#world_ctnr')
 if (world_ctnr){
     var scene = new THREE.Scene();
@@ -113,7 +206,6 @@ if (world_ctnr){
     var star_cluster_material = new THREE.PointsMaterial({
         size: 0.02,
         transparent: true,
-        metalness: .7,
         color: 0xa165ff
     }) 
 
@@ -175,3 +267,4 @@ if (world_ctnr){
     }
     render();
 }
+// digitals = document.querySelectorAll('.digital'

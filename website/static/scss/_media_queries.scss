@@ -12,7 +12,7 @@
 
 @media only screen and (min-width: $tablet_bp){
     body, html{
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     .show_on_tablet{
         display: block;
@@ -30,8 +30,9 @@
 
 @media only screen and (min-width: $desktop_bp){
     body, html{
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
+
     .show_on_desktop{
         display: block;
     }
@@ -46,6 +47,10 @@
         justify-content: center;
         gap: 3em;
     }
+    .aboutme_paragraph, .workflow_text{
+        max-width: 80%;
+        margin-left: 1.5em;
+    }
     #base_footer_section{
         footer{
             display: flex;
@@ -53,11 +58,34 @@
             justify-content: space-evenly;
         }
     }
-
+    #index_section2{
+        padding: 2em 4em;
+    }
+    #index_section4{
+        padding: 2em 4em;
+    }
+    .img_ctnr{
+        max-width: 360px;
+    }
+    .dramatic_p{
+        font-size: 2.2rem;
+    }
+    .project{
+        p{
+            font-size: 1.8rem;
+        }
+    }
 }
 
 @media only screen and (min-width: $desktop_4k_bp){
     body, html{
-        font-size: 2.8em;
+        font-size: 2.3em;
     }
+    .img_ctnr{
+        max-width: 1100px;
+    }
+    .project{
+        margin-bottom: 4em;
+    }
+
 }

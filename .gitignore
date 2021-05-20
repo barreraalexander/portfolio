@@ -1,4 +1,5 @@
 *.mp4
 .mp4
+.png
 .webassets-cache
 ".webassets-cache"

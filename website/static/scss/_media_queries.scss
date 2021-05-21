@@ -120,10 +120,41 @@
         max-width: 1100px;
     }
     .project{
-        margin-bottom: 4em;
+        margin-bottom: 10em;
+        p{
+            font-size: 2.8rem;
+        }
+        a{
+            font-size: 1.4rem;
+        }
     }
-    .enlarge_div{
-        // transform: translate(0, -10em);
+    .image_caption{
+        // height: 8em;
+        // top: -4em;
+        padding-top: 0;
+        margin-top: 2em;
     }
-
+    .technologies_ctnr{
+        .tech_img_ctnr{
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+    .dramatic_p{
+        line-height: 4rem;
+        font-size: 4rem;
+        span{
+            font-size: 2.5rem;
+            letter-spacing: 20px;
+        }
+    }
+    #index_section4 h2{
+        font-size: 3rem;
+    }
+    #base_footer_section h5{
+        font-size: 2.3rem;
+    }
+    #base_footer_section a{
+        font-size: 2rem;
+    }
 }

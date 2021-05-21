@@ -185,6 +185,9 @@
     }
 }
 
+.project:last-of-type{
+    margin-bottom: 1em;
+}
 
 
 
@@ -203,6 +206,7 @@
         position: relative;
         width: 8em;
         z-index: 1000;
+        max-width: 1400px;
     }
 }
 
@@ -239,6 +243,7 @@
 
 #index_section3{
     padding: 2em;
+    position: relative;
     text-align: right;
     span{
         color: $primary2;
@@ -253,6 +258,7 @@
     position: absolute;
     background-color: #f1f1f1;
     width: 40em;
+    max-width: 2250px;
     p{
         text-align: left;
         color: #000;
@@ -311,6 +317,7 @@
     gap: 1em;
     position: relative;
     left: 1em;
+    margin-bottom: 1em;
     overflow: hidden;
     *{
         z-index: 1000;

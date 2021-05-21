@@ -3,7 +3,6 @@
     position: relative;
     z-index: 1000;
     height: 99vh;
-    // border-bottom: 3px solid $primary2;
     h1{
         font-size: 3rem;
         text-align: center;
@@ -111,7 +110,7 @@
 
 
 .enlarge_div{
-    transform: translate(0, -4em);
+    transform: translate(0, -10em);
     transition: 3s;
     height: 30em;
     position: relative;
@@ -187,26 +186,6 @@
 }
 
 
-.project:hover{
-    background-color: #f1f1f1;
-    color: #000;
-    transform: scale(1.05);
-    strong{
-        color: #000;
-        font-weight: 700;
-    }
-    a{
-        // color: #c8c8c8;
-        font-weight: 700;
-        color: $primary1;
-    }
-    .shifting_grill_ctnr{
-        display: none;
-    }
-    img{
-        width: 25em;
-    }
-}
 
 
 .flow_reversed{
@@ -220,11 +199,9 @@
     position: relative;
     width: 50%;
     padding: 1em;
-    max-width: 360px;
-    // background-color: #fff;
     img{
         position: relative;
-        width: 80%;
+        width: 8em;
         z-index: 1000;
     }
 }
@@ -232,15 +209,16 @@
 
 .shifting_grill_ctnr{
     position: absolute;
-    width: 10em;
-    height: 10em;
+    width: 7em;
+    height: 5em;
     transform: scale(1.2);
+    overflow: hidden;
     .horizontal_bars{
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
         position: absolute;
-        width: 100%;
+        width: 10em;
         div{
             @include shifting_bg(10em, .05em);
         }
@@ -248,7 +226,7 @@
     .vertical_bars{
         display: flex;
         flex-flow: column nowrap;
-        height: 100%;
+        height: 10em;
         justify-content: space-evenly;
         position: absolute;
         div{
@@ -393,7 +371,6 @@
     width: 8em;
     border-radius: 10px;
     margin: 1em;
-    filter: grayscale(100%);
     border: 5px solid $primary2;
 }
 

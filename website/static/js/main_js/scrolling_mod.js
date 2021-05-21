@@ -70,8 +70,10 @@ document.addEventListener('scroll', function(e) {
   if (!ticking) {
     window.requestAnimationFrame(function() {
       shift_digital(lastKnownScrollPosition);
-      alter_image(lastKnownScrollPosition);
       dissolve_divider(lastKnownScrollPosition);
+      if (screen.width >= 1600){
+        alter_image(lastKnownScrollPosition);
+      }
       ticking = false;
     });
     ticking = true;

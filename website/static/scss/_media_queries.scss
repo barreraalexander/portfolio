@@ -42,6 +42,7 @@
     }
     .img_of_me{
         width: 12em;
+        filter: grayscale(100%);
     }
     .aboutme_ctnr{
         justify-content: center;
@@ -64,9 +65,7 @@
     #index_section4{
         padding: 2em 4em;
     }
-    .img_ctnr{
-        max-width: 360px;
-    }
+
     .dramatic_p{
         font-size: 2.2rem;
     }
@@ -75,6 +74,42 @@
             font-size: 1.8rem;
         }
     }
+    .enlarge_div{
+        transform: translate(0, -4em);
+    }
+    .shifting_grill_ctnr{
+        
+    }
+    .project{
+        margin-bottom: 6em;
+        padding: 1em;
+    }
+    .project:hover{
+        background-color: #f1f1f1;
+        color: #000;
+        transform: scale(1.05);
+        strong{
+            color: #000;
+            font-weight: 700;
+        }
+        a{
+            font-weight: 700;
+            color: $primary1;
+        }
+        .shifting_grill_ctnr{
+            display: none;
+        }
+        img{
+            width: 25em;
+        }
+    }
+    .shifting_grill_ctnr{
+        position: absolute;
+        width: 10em;
+        height: 10em;
+        transform: scale(1.5);
+    }
+    
 }
 
 @media only screen and (min-width: $desktop_4k_bp){
@@ -86,6 +121,9 @@
     }
     .project{
         margin-bottom: 4em;
+    }
+    .enlarge_div{
+        // transform: translate(0, -10em);
     }
 
 }

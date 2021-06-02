@@ -31,10 +31,12 @@ if (world_ctnr){
     var geometry = new THREE.SphereBufferGeometry(1, 20, 20);
     var material = new THREE.MeshLambertMaterial({color: 0x77FFC0});
    
-    var textureLoader = new THREE.TextureLoader()
-    // var normal_texture = textureLoader.load('../images/textures/moon_texture.png')
-    var normal_texture = textureLoader.load(world_ctnr.getAttribute('data-normal_texture'))
-    material.normalMap = normal_texture
+    const textureLoader = new THREE.TextureLoader()
+    
+    const normal_texture = textureLoader.load('../../images/textures/moon_texture.png')
+
+    // const normal_texture = textureLoader.load(world_ctnr.getAttribute('data-normal_texture'))
+    material.normalMap = normal_texture;
     material.roughness = 0.7
 
     var mesh1 = new THREE.Mesh(geometry, material)
@@ -46,9 +48,9 @@ if (world_ctnr){
     var geometry = new THREE.SphereBufferGeometry(.5, 15, 15);
     var material = new THREE.MeshLambertMaterial({color: 0xBCBCBC});
 
-    var textureLoader = new THREE.TextureLoader()
-    var normal_texture = textureLoader.load('../images/textures/moon_texture.png')
-    material.normalMap = normal_texture
+    // var textureLoader = new THREE.TextureLoader()
+    // var normal_texture = textureLoader.load('../images/textures/moon_texture.png')
+    // material.normalMap = normal_texture
 
     var mesh2 = new THREE.Mesh(geometry, material)
     mesh2.position.x = 2.5;
@@ -75,14 +77,6 @@ if (world_ctnr){
     var light2 = new THREE.PointLight(0xFFFFFF, 1, 1000)
     light2.position.set(-1, -1  , 5); 
     scene.add(light2)
-
-    var light3 = new THREE.DirectionalLight(0xa165ff , 2)
-    light3.position.x = -2.5;
-    light3.position.y = -1.5;
-    light3.position.z = -10;
-    // light3.position.set(-10.5, -10.5 , 2);
-    // scene.add(light3)
-
 
 
     //star   system

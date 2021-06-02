@@ -11,6 +11,7 @@ bundles = {
         'js/main_js/technologies_mod.js',
         'js/main_js/scrolling_mod.js',
         'js/main_js/planets_mod.js',
+        'js/main_js/projects_mod.js',
         'js/main_js/digital_mod.js',
         filters='jsmin',
         depends='js/*.js',

@@ -4,12 +4,12 @@
     z-index: 1000;
     height: 99vh;
     h1{
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
         left: 0;
         right: 0;
         margin-right: 0;
-        margin-left: 0;
+        margin-left: 2em;
         margin-top: 20vh;
         position: absolute;
         z-index: 1000;
@@ -166,16 +166,17 @@
 }
 
 .project{
+    border-radius: 1em;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
     gap: 1em;
+    justify-content: space-evenly;
     margin-bottom: 2em;
     p{
         max-width:45%;
     }
     strong{
-        text-decoration: underline;
+        // text-decoration: underline;
         color: $primary2;
         font-weight: 400;
     }
@@ -253,6 +254,7 @@
 
 .image_caption{
     border-top: 10px solid $primary2;
+    border-radius: 0px 0px 1em 1em;
     height: 6em;
     padding: 1em;
     position: absolute;
@@ -260,7 +262,7 @@
     width: 40em;
     max-width: 2250px;
     p{
-        text-align: left;
+        text-align: center;
         color: #000;
         font-weight: 600;
     }

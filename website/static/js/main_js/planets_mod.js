@@ -16,7 +16,7 @@ if (world_ctnr){
         antialias: true
     })
 
-    renderer.setClearColor ("#000");
+    renderer.setClearColor ("#707070");
 
     renderer.setSize(window.innerWidth, window.innerHeight)
 
@@ -66,9 +66,10 @@ if (world_ctnr){
     var mesh3 = new THREE.Mesh(geometry, material)
     mesh3.position.x = -10;
     mesh3.position.y = 5;
-    mesh3.position.z = -10;
+    mesh3.position.z = -20;
+    mesh3.opacity = .3;
 
-    scene.add(mesh3)
+    // scene.add(mesh3)
 
     var light1 = new THREE.PointLight(0xFFFFFF, 1, 1000)
     light1.position.set(1, 1, 0);
@@ -161,7 +162,7 @@ if (world_ctnr){
         particles_mesh.rotation.x = (.0009 * -mouse_x)
 
         renderer.domElement.id = 'globe_canvas';
-        renderer.setClearColor(new THREE.Color('#000'))
+        renderer.setClearColor(new THREE.Color('#111'))
         renderer.render(scene, camera)
 
         //window.requestAnimationFrame()

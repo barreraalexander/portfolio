@@ -17,22 +17,26 @@ def component(title, elem_id=""):
         title_formatted="The Food"
         text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
         domain = "www.thefood.com"
+        domain_name = "www.privacyplaybook.com"
 
     elif (title=="tod"):
         title_formatted="Technicians on Demand"
         text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
-        domain = "www.technicianondemand.com"
-    
+        domain = "https://www.technicianondemand.com/"
+        domain_name = "www.privacyplaybook.com"
+
     elif (title=="browardreseller"):
         title_formatted="Broward Reseller"
         text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
         domain = "www.browardreseller.com"
+        domain_name = "www.privacyplaybook.com"
     
 
     elif (title=="ppb"):
         title_formatted="Privacy Playbook"
         text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
-        domain = "www.privacyplaybook.com"
+        domain = "https://privacyplaybook.com/"
+        domain_name = "www.privacyplaybook.com"
 
     else:
         pass
@@ -45,7 +49,7 @@ def component(title, elem_id=""):
                         {title_formatted}
                     </strong>
                     <br>
-                    <a src='{domain}'> {domain} </a>
+                    <a href='{domain}' target='_blank'> {domain_name} </a>
                     <br>
                     {text}
                 </p>

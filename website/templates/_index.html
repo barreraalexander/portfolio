@@ -6,24 +6,24 @@
 
 <main>
     <section id="index_section1">
-        <h1 style="display:none;">
-            MY SPACE
-            <hr>
-            IN THE WORLD WIDE WEB
-        </h1>
-        <div class="show_on_desktop">
-            <div class="caption_ctnr">
-                <p>
-                    Full Stack Web Developer from south Florida.
-                </p>
-                <a href="{{CONTACT_DICT['github_link']}}">
-                    Checkout my github 🐱
-                </a>
-                <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
-                    <button>
-                        Download my resume 📃        
-                    </button>
-                </a>
+        <div class="hero_ctnr">
+            <h1 class="neonText">
+                DEVELOPER.            
+            </h1>
+            <div class="show_on_desktop">
+                <div class="caption_ctnr">
+                    <p>
+                        Full Stack Web Developer from south Florida.
+                    </p>
+                    <a href="{{CONTACT_DICT['github_link']}}">
+                        Checkout my github 🐱
+                    </a>
+                    <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
+                        <button>
+                            Download my resume 📃        
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
         <div id="world_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
@@ -59,7 +59,7 @@
             <div
                 id="tech_img1"
                 class="tech_img_ctnr selected_img"
-                data-caption="Python is just the ultimate programming language to me. Whether writing scripts, apis, or full on web applications (flask), python is my goto when it comes to programming."
+                data-caption="To me, Python is just the ultimate programming language. Whether writing scripts, apis, or full on web applications (flask), python is my goto when it comes to developing software."
             >
                 <img
                     src="{{url_for('static', filename='images/assets/python.svg')}}"
@@ -70,7 +70,7 @@
             <div
                 id="tech_img2"
                 class="tech_img_ctnr"
-                data-caption="text about html5"
+                data-caption=""
             >
                 <img
                     src="{{url_for('static', filename='images/assets/html5-shield.svg')}}"
@@ -82,7 +82,7 @@
             <div
                 id="tech_img3"
                 class="tech_img_ctnr"
-                data-caption="Oh CSS. Definitely one of the more tricky languages to work with, that is, until SaaS really picked up in popularity. I generally use SaaS because it saves a lot of rule-writing, what with the use of mixins and includes."
+                data-caption="Oh CSS. Definitely one of the more tricky languages to work with, that is, until SaaS came into the picture. I generally use SaaS because it saves a lot of rule-writing, what with the use of mixins/includes."
             >
                 <img
                     src="{{url_for('static', filename='images/assets/css-shield.svg')}}"
@@ -94,7 +94,7 @@
             <div
             id="tech_img4"
             class="tech_img_ctnr"
-            data-caption="Javascript is an absolutely incredible and powerful language. The asynchronous features, coupled with ajax calls to REST apis has really transformed my applications."
+            data-caption="Javascript is an absolutely incredible and powerful language. The asynchronous features, coupled with ajax calls to REST apis, has really transformed my applications. And of course, libraries like GSAP and ThreeJS have really helped me take my frontend designs to the next level."
             >
                 <img
                     src="{{url_for('static', filename='images/assets/javascript-shield.svg')}}"

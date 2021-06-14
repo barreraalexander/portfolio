@@ -1,0 +1,23 @@
+@mixin cust_h1{
+    font-size: 4rem;
+    letter-spacing: .05em;
+    font-weight: 400;
+    // color: $proj_black;
+
+    // text-transform: capitalize;
+    
+}
+@mixin cust_h2{
+
+}
+
+@mixin cust_p{
+
+}
+@mixin cust_a{
+
+}
+@mixin cust_li($fontsize){
+    font-size: $fontsize;
+    font-weight:  600;
+}

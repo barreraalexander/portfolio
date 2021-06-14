@@ -1,0 +1,14 @@
+#index2_section1{
+    height: 100vh;
+    background-color: $accent_light;
+    padding: 1em 3em;
+    h1{
+        @include cust_h1;
+        text-align: center;
+    }
+    #shifting_h1{
+        border-top: .08em solid $primary2;
+        color: $accent_light;
+        background-color: $dk_bg;
+    }
+}

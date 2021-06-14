@@ -17,3 +17,19 @@ def index():
                             project_div1=project_div1,
                             project_div2=project_div2,
                             project_div3=project_div3)
+
+@main.route('/new', methods=['GET', 'POST'])
+def index_new():
+    project_div1 = project_div(title="ppb", elem_id="project1")
+    project_div2 = project_div(title="tod", elem_id="project2")
+    project_div3 = project_div(title="browardreseller", elem_id="project3")
+    return render_template('_index_new.html',
+                            CONTACT_DICT=CONTACT_DICT,
+                            project_div1=project_div1,
+                            project_div2=project_div2,
+                            project_div3=project_div3)
+
+
+@main.route('/index2')
+def index2():
+    return render_template('_index2.html')

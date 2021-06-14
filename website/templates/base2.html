@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-main_theme="light">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=GoogleSans:wght@100;400&display=swap" rel="stylesheet">
+
+    {% assets "light_scss" %}
+        <link rel="stylesheet" href="{{ASSET_URL}}">
+    {% endassets %}
+
+    <title>Portfolio</title>
+
+</head>
+<body class="dark_theme">
+    <section id="base_section">
+        <aside>
+            <nav>
+                <ul>
+                    <li>
+                        HOME
+                    </li>
+                    <li>
+                        ABOUT
+                    </li>
+                    <li>
+                        CONTACT
+                    </li>
+                    <li>
+                        <div id="theme_btn"></div>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </section>
+
+    {% block content %} {% endblock %}
+
+    {% assets "theme2" %}
+        <script type="text/javascript" src="{{ ASSET_URL}}"> </script>
+    {% endassets %}
+</body>
+</html>

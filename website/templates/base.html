@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" data-main_theme="light">
+<html lang="en" data-main_theme="dark">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,20 +17,20 @@
         <section id="base_aside_section">
             <aside>
                 <ul>
-                    <li>
+                    <li class="h1_flexi">
                         <h1>
                             <a href="#">
                                 ALEXANDER BARRERA
                             </a>
                         </h1>
                     </li>
-                    <li>
-                        <a id="light_theme_anchor">
-                            button
-                        </a>   
+                    <li class="light_switch_flexi">
+                        <div class="light_switch_ctnr">
+                            <div class="switch"></div>
+                        </div>
                     </li>
-                    <li>
-                        <img src="" alt="nav button">
+                    <li class="menu_flexi">
+                        <img src="{{url_for('static', filename='images/assets/hamburger.svg')}}" alt="nav button">
                     </li>
                     <li dataset-mquery="hide_on_mobile">
                         <a href="#">
@@ -48,7 +48,6 @@
                         </a>
                     </li>
                 </ul>
-                <!-- <img class="hide_on_tablet" src="{{url_for('static', filename='images/assets/hamburger.svg')}}" alt="">            -->
             </aside>
         </section>
 

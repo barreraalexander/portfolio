@@ -1,7 +1,6 @@
-var world_ctnr = document.querySelector('#world_ctnr')
-if (world_ctnr){
+var night_ctnr = document.querySelector('#night_ctnr')
+if (night_ctnr){
     var scene = new THREE.Scene();
-        
     var camera = new THREE.PerspectiveCamera(
         75,
         window.innerWidth/window.innerHeight,
@@ -16,11 +15,13 @@ if (world_ctnr){
         antialias: true
     })
 
-    renderer.setClearColor ("#707070");
+    renderer.setClearColor(new THREE.Color('#111'))
+
+    // renderer.setClearColor ("#111");
 
     renderer.setSize(window.innerWidth, window.innerHeight)
 
-    document.body.querySelector('#world_ctnr').appendChild(renderer.domElement)
+    document.body.querySelector('#night_ctnr').appendChild(renderer.domElement)
     window.addEventListener('resize', ()=> {
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
@@ -29,13 +30,12 @@ if (world_ctnr){
 
 
     var geometry = new THREE.SphereBufferGeometry(1, 20, 20);
-    var material = new THREE.MeshLambertMaterial({color: 0x77FFC0});
+    var material = new THREE.MeshLambertMaterial({color: 0xF1F1F1});
    
     const textureLoader = new THREE.TextureLoader()
     
     const normal_texture = textureLoader.load('../../images/textures/moon_texture.png')
 
-    // const normal_texture = textureLoader.load(world_ctnr.getAttribute('data-normal_texture'))
     material.normalMap = normal_texture;
     material.roughness = 0.7
 
@@ -44,20 +44,6 @@ if (world_ctnr){
     mesh1.position.x = 1;
     mesh1.position.z = .5;
     scene.add(mesh1)
-
-    var geometry = new THREE.SphereBufferGeometry(.5, 15, 15);
-    var material = new THREE.MeshLambertMaterial({color: 0xBCBCBC});
-
-    // var textureLoader = new THREE.TextureLoader()
-    // var normal_texture = textureLoader.load('../images/textures/moon_texture.png')
-    // material.normalMap = normal_texture
-
-    var mesh2 = new THREE.Mesh(geometry, material)
-    mesh2.position.x = 2.5;
-    mesh2.position.y = 2.5;
-    mesh2.position.z = -.5;
-    scene.add(mesh2)
-
 
     var geometry = new THREE.SphereBufferGeometry(8, 20, 20);
     var material = new THREE.MeshLambertMaterial({color: 0x111111});
@@ -103,38 +89,6 @@ if (world_ctnr){
 
 
     //star cluster
-    var star_cluster_geometry = new THREE.SphereBufferGeometry(3, 20, 15);
-
-    var star_cluster_material = new THREE.PointsMaterial({
-        size: 0.02,
-        transparent: true,
-        color: 0xa165ff
-    }) 
-
-    var star_cluster_mesh = new THREE.Points(star_cluster_geometry, star_cluster_material)
-    star_cluster_mesh.position.x = -2.5;
-    star_cluster_mesh.position.y = -1.5;
-    star_cluster_mesh.position.z = -3;
-
-    scene.add(star_cluster_mesh)
-    
-    var star_cluster_geometry2 = new THREE.SphereBufferGeometry(2, 20, 15);
-
-    var star_cluster_material2 = new THREE.PointsMaterial({
-        size: 0.03,
-        transparent: true,
-        color: 0xa165ff
-    }) 
-    var star_cluster_mesh2 = new THREE.Points(star_cluster_geometry2, star_cluster_material2)
-    star_cluster_mesh2.position.x = -2.5;
-    star_cluster_mesh2.position.y = -1.5;
-    star_cluster_mesh2.position.z = -8;
-
-    scene.add(star_cluster_mesh2)
-    
-    
-    
-    //mouse
     document.addEventListener('mousemove', animateParticles)
 
 
@@ -152,17 +106,13 @@ if (world_ctnr){
 
         let elasped_time = clock.getElapsedTime()   
         mesh1.rotation.y += 0.01;
-        mesh2.rotation.x += 0.01;
-
-        star_cluster_mesh.rotation.x += 0.0001; 
-        star_cluster_mesh2.rotation.x += -0.0001; 
 
         particles_mesh.rotation.y = (.0009 * elasped_time)
         particles_mesh.rotation.x = (.0009 * -mouse_y)
         particles_mesh.rotation.x = (.0009 * -mouse_x)
 
         renderer.domElement.id = 'globe_canvas';
-        renderer.setClearColor(new THREE.Color('#111'))
+        // renderer.setClearColor(new THREE.Color('#111'))
         renderer.render(scene, camera)
 
         //window.requestAnimationFrame()

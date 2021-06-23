@@ -3,7 +3,7 @@
     height: $h;
     width: $w;
 
-    background: linear-gradient(-45deg, $primary1, $primary2, $primary2_alt );
+    background: linear-gradient(-45deg, var(--primary), var(--secondary), $primary2_alt );
     background-attachment: fixed;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -14,36 +14,20 @@
 }
 
 
-@-webkit-keyframes shifting_gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@keyframes shifting_gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@-webkit-keyframes dissolving {
-    from {opacity:1;}
-    to {opacity:0;}
-}
-
-@keyframes dissolving {
-    from {opacity:1;}
-    to {opacity:0;}
+@mixin neon_text{
+    animation: pulsate 2.5s infinite alternate;     
+    color: var(--text_color);
+    padding: 2em;
+    border-radius: 2em;
+    text-shadow:
+      0 0 .4em var(--primary),
+      0 0 .10em var(--primary),
+      0 0 .82em var(--primary);
+    
+    box-shadow: 0 0 .2rem var(--text_color),
+              0 0 .2rem var(--text_color),
+              0 0 2rem var(--primary),
+              0 0 0.8rem var(--primary),
+              0 0 2.8rem var(--primary),
+              inset 0 0 1.3rem var(--primary);
 }

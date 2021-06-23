@@ -1,4 +1,5 @@
-let theme_btn = document.querySelector('#theme_btn')
+// let theme_btn = document.querySelector('#theme_btn')
+let theme_btn = document.querySelector('#light_theme_anchor')
 if (theme_btn){
     theme_btn.addEventListener('click', toggle_dark, false)
 }

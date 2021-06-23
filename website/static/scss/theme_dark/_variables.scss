@@ -1,9 +1,27 @@
 //SECTION: colors
 $primary1: #FFBB7F;
-$primary2: #77FFC0;
 $primary2_alt: #94FF75;
+$primary2: #77FFC0;
 $proj_black: #2E2E2E;
 $proj_gray: #BCBCBC;
+
+//SECTION: colors for light theme
+$lt_bg: #f1f1f1;
+$lt_primary: #fff;
+$lt_accent: #f8f8f8;
+
+$lt_theme_primary: #000;
+$lt_theme_secondary: #f042e1;
+// $primary: #FFBB7F;
+
+//SECTION: colors for dark theme
+$dk_bg: #222222;
+$dk_primary: #000;
+$dk_accent: #111;
+
+$dk_theme_primary: #77FFC0;
+$dk_theme_secondary: #FFBB7F;
+// $primary: #FFBB7F;
 
 
 

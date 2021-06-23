@@ -1,1 +1,6 @@
 Everything is pretty much complete but there are some more details to add, and some more media queries to check for. 
+
+
+
+1. change the alert to scroll feature,
+use something less intrusive. A simple animation.

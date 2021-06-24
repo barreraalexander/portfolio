@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-main_theme="dark">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +16,38 @@
         <!-- //SECTION: base_aside -->
         <section id="base_aside_section">
             <aside>
-                <h1>
-                    ALEXANDER BARRERA
-                </h1>
-                <img src="{{url_for('static', filename='images/assets/hamburger.svg')}}" alt="">           
+                <ul>
+                    <li class="h1_flexi">
+                        <h1>
+                            <a href="#">
+                                ALEXANDER BARRERA
+                            </a>
+                        </h1>
+                    </li>
+                    <li class="light_switch_flexi">
+                        <div class="light_switch_ctnr">
+                            <div class="switch"></div>
+                        </div>
+                    </li>
+                    <li class="menu_flexi">
+                        <img src="{{url_for('static', filename='images/assets/hamburger.svg')}}" alt="nav button">
+                    </li>
+                    <li dataset-mquery="hide_on_mobile">
+                        <a href="#">
+                            HOME
+                        </a>
+                    </li>
+                    <li dataset-mquery="hide_on_mobile">
+                        <a href="#">
+                            ABOUT
+                        </a>
+                    </li>
+                    <li dataset-mquery="hide_on_mobile">
+                        <a href="#">
+                            CONTACT
+                        </a>
+                    </li>
+                </ul>
             </aside>
         </section>
 
@@ -67,6 +95,11 @@
                     </ul>
                 </div>
             </footer>
+            <div class="lets_build">
+                <button>
+                    LET'S BUILD SOMETHING
+                </button>
+            </div>
         </section>
 
 

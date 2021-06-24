@@ -1,23 +1,56 @@
+html[data-main_theme="light"]{
+    --bg: #{$lt_bg};
+    --bg_invert: #{$dk_bg};
+    --text_color: #{$dk_primary};
+    --text_color_inv: #{$lt_primary};
+    --accent: #{$proj_black};
+    --theme_accent: #{$lt_accent};
+    --primary: #{$lt_theme_primary};
+    --secondary: #{$lt_theme_secondary};
+    
+    #night_ctnr{
+        display: none;
+    }
+    #day_ctnr{
+        display: block;
+    }
+    .switch{
+        left: 1.5rem;
+    }
+}
+
+html[data-main_theme="dark"]{
+    --bg: #{$dk_bg};
+    --bg_invert: #{$lt_bg};
+    --text_color: #{$lt_primary};
+    --text_color_inv: #{$dk_primary};
+    --accent: #{$proj_gray};
+    --theme_accent: #{$dk_accent};
+    --primary: #{$dk_theme_primary};
+    --secondary: #{$dk_theme_secondary};
+
+
+    #night_ctnr{
+        display: block;
+    }
+    #day_ctnr{
+        display: none;
+    }
+
+    .switch{
+        left: .25rem;
+    }
+}
+
 body, html{
     height: calc(100% - 2em);
     margin: 0;
     font-family: 'GoogleSans', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
-    background-color: #000;
+    color: var(--text_color);
+    background-color: var(--text_color_inv);
 }
 
-ul{
-    list-style: none;
-}
-a{
-    color: #000;
-    text-decoration: none;
-}
 
-a:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
 
 #windows_logo{
     width: 6rem;
@@ -26,39 +59,78 @@ a:hover{
 
 //SECTION: base_aside
 #base_aside_section{
-    background-color: #111;
-    position: absolute;
     top: 0;
     opacity: .7;
     width: 100%;
     z-index: 1001;
     :hover{
-        background-color:#000;
+        background-color: var(--text_color_inv);
     }
-    aside{
-        background-color: #000;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    ul{
+        //FIX: MOVE SOME OF THESE RULESETS TO DESKTOP/TAB
+        align-items: center;
+        background-color: var(--bg);
         padding: 1em .5em;
+        display: flex;
+        // flex-direction: row;
+        // justify-content: flex-end;
+        justify-content: center;
         border-bottom: 1px solid #111;
+        gap: 4em;
+        margin: 0;
+        // li:first-of-type{
+        //     margin-right: auto;
+        //     margin-left: 1em;
+        // }
+        // li:last-of-type{
+        //     margin-right: 2em;
+        // }
+        li[dataset-mquery="hide_on_mobile"]{
+            display: none;
+        }
+        // li+li{
+            // display: none;
+        // }
+        a{
+            color: var(--text_color);
+            text-decoration: none;
+        }
+        a:hover{
+            border-bottom: .03em solid var(--primary);
+        }
     }
     h1{
-        // color: $primary1;
+        // align-self: flex-start;
         font-size: 1rem;
         letter-spacing: 2px;
-        margin: 0;
+        // margin: 0;
     }
     img{
+        width: 2rem;
+        opacity: 1;
+    }
+    .light_switch_ctnr{
+        background-color: var(--primary);
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 2em;
+        position: relative;
+    }
+    .switch{
+        position: absolute;
+        border-radius: 50%;
         width: 1rem;
-        opacity: 0;
+        height: 1rem;
+        top: .25rem;
+        transition: .5s;
+        background-color: var(--theme_accent);
     }
 }
 
 #base_footer_section{
-    background-color: #fff;
+    background-color: var(--bg_invert);
     padding: 1em;
-    color: #000;
+    color:var(--text_color_inv);
     footer{
         display: flex;
         flex-flow: column nowrap;
@@ -68,9 +140,11 @@ a:hover{
         margin: .5em;
         text-decoration: underline;
         text-decoration-thickness: 3px;
+        
     }
     a{
         font-size: 1.2rem;
+        color:var(--text_color_inv);
     }
     li{
         margin-bottom: .2em;
@@ -79,11 +153,11 @@ a:hover{
 }
 
 
-aside:hover{
-    background-color: #fff;
-}
+// aside:hover{
+//     background-color: #fff;
+// }
 
 
-.invisible{
-    display: none !important;
-}
+// .invisible{
+//     display: none !important;
+// }

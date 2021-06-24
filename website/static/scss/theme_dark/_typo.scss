@@ -1,0 +1,80 @@
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h1, h2, h3, p, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2{
+    font-size: 2rem;
+    z-index: 1000;
+    letter-spacing: .03em;
+    font-weight: 300;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+
+
+
+@mixin decorated_paragraph($font_color){
+    margin: .5em;
+    strong{
+        color: $font_color;
+        font-weight: 600;
+    }
+}
+
+
+
+
+.dramatic_p{
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin: 1em 0;
+    strong{
+        color: var(--primary);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 1.8rem;
+    }
+}
+
+
+
+@mixin neon_text{
+    animation: pulsate 2.5s infinite alternate;     
+    color: var(--text_color);
+    padding: 2em;
+    border-radius: 2em;
+    text-shadow:
+      0 0 .4em var(--primary),
+      0 0 .10em var(--primary),
+      0 0 .82em var(--primary);
+    
+    // box-shadow: 0 0 .2rem var(--text_color),
+    //           0 0 .2rem var(--text_color),
+    //           0 0 2rem var(--primary),
+    //           0 0 0.8rem var(--primary),
+    //           0 0 2.8rem var(--primary),
+    //           inset 0 0 1.3rem var(--primary);
+}

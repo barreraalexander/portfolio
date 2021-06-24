@@ -1,12 +1,3 @@
-html[data-main_theme="light"]{
-    --bg: #{$lt_bg};
-}
-
-html[data-main_theme="dark"]{
-    --bg: #{$dk_bg};
-}
-
-
 body, html{
     height: calc(100% - 2em);
     margin: 0;

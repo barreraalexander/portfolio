@@ -14,6 +14,51 @@
     body, html{
         font-size: 1.3em;
     }
+
+    #base_aside_section{
+        // justify-content: flex-end;
+        ul{
+            justify-content: flex-end;
+            padding: 1.5rem;
+            li[dataset-mquery="hide_on_mobile"]{
+                display: block;
+            }
+            .light_switch_flexi{
+                order: 9;
+            }
+            .menu_flexi{
+                display: none;
+            }
+            .h1_flexi{
+                margin-right: auto;
+                // margin-left: 2rem;
+            }
+        }
+    }
+
+    #base_aside_section{
+        // justify-content: flex-end;
+        ul{
+            justify-content: flex-end;
+            padding: 1.5rem;
+            li[dataset-mquery="hide_on_mobile"]{
+                display: block;
+            }
+            .light_switch_flexi{
+                order: 9;
+            }
+            .menu_flexi{
+                display: none;
+            }
+            .h1_flexi{
+                margin-right: auto;
+                // margin-left: 2rem;
+            }
+        }
+    }
+
+
+
     .show_on_tablet{
         display: block;
     }
@@ -32,6 +77,9 @@
     body, html{
         font-size: 1.3em;
     }
+
+
+
 
     .show_on_desktop{
         display: block;
@@ -94,7 +142,7 @@
         }
         a{
             font-weight: 700;
-            color: $primary1;
+            color: var(--primary);
         }
         .shifting_grill_ctnr{
             display: none;
@@ -103,7 +151,7 @@
             // width: 25em;
             transform: scale(3);
             transition: .5s;
-            border: 1px solid $primary2;
+            border: 1px solid var(--secondary);
         }
     }
     .shifting_grill_ctnr{
@@ -137,8 +185,6 @@
         }
     }
     .image_caption{
-        // height: 8em;
-        // top: -4em;
         padding-top: 0;
         margin-top: 2em;
     }
@@ -151,7 +197,7 @@
     .dramatic_p{
         line-height: 4rem;
         font-size: 4rem;
-        span{
+        strong{
             font-size: 2.5rem;
             letter-spacing: 20px;
         }

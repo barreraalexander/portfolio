@@ -57,7 +57,7 @@ function check_no_scroll(scrollPos){
     scroll_alert.appendChild(alert_text)
     scroll_alert.classList.add("scroll_alert")
     divider.appendChild(scroll_alert)
-  }, 30000/3)
+  }, 6000)
 }
 
 if (divider){

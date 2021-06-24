@@ -10,36 +10,39 @@
 
 <main>
     <section id="index_section1">
+    
         <div class="hero_ctnr">
-            <h1 class="neonText">
+            <h1>
                 DEVELOPER.            
             </h1>
-            <div class="show_on_desktop">
-                <div class="caption_ctnr">
-                    <p>
-                        Full Stack Web Developer from south Florida.
-                    </p>
-                    <a href="{{CONTACT_DICT['github_link']}}">
-                        Checkout my github 🐱
-                    </a>
-                    <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
-                        <button>
-                            Download my resume 📃        
-                        </button>
-                    </a>
-                </div>
+            <div class="caption_ctnr">
+                <p>
+                    Full Stack Web Developer from south Florida.
+                </p>
+                <a href="{{CONTACT_DICT['github_link']}}">
+                    Checkout my github 🐱
+                </a>
+                <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
+                    <button>
+                        Download my resume 📃        
+                    </button>
+                </a>
             </div>
         </div>
-        <div id="world_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
+        <div id="night_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
+        <div id="day_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
     </section>
-    <div class="shimmering_div">
+    <!-- //FIX: THIS IS SET TO DISPLAY NONE -->
+    <div style="display: none;" class="shimmering_div">
     </div>
     <section id="index_section2">
         <p class="dramatic_p">
             These are some
-            <span>
-                <br>PROJECTS<br>
-            </span>
+                <br>
+                <strong>
+                    PROJECTS
+                </strong>
+                <br>
             I've been working on
         </p>
         <div class="projects_ctnr">
@@ -54,9 +57,9 @@
         </div>
         <p class="dramatic_p">
             These are some
-            <span>
-                <br>TECHNOLOGIES<br>
-            </span>
+            <br>
+                <strong>TECHNOLOGIES</strong>
+            <br>
             I like to use
         </p>
         <div class="technologies_ctnr">
@@ -197,9 +200,7 @@
                 </p>
             </div>
         </div>
-        <!-- <strong>
-                PERSONAL
-        </strong> -->
+
         <p class="aboutme_paragraph">
             Hello! My name is
             <strong>
@@ -217,9 +218,6 @@
             fantasy novels (Lord of the Rings, anyone? 😊)
 
         </p>
-        <!-- <strong class="workflow_strong">
-            WORK FLOW
-        </strong> -->
         <p class="workflow_text">
             These days, I like to use to use
             <strong>
@@ -255,11 +253,6 @@
                 github.
             </strong>  
         </p>
-    </section>
-    <section id="index_section5" class="invisible">
-        <button>
-            CONTACT ME
-        </button>
     </section>
 </main>
 

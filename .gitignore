@@ -4,7 +4,9 @@
 .png
 .webassets-cache
 ".webassets-cache"
-website/static/gen
+website/static/gen/css
+website/static/gen/js
+outline
 
 
 # //SECTION: GENERAL

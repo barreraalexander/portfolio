@@ -9,15 +9,16 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 10em;
-    height: 100%;
     align-items: center;
     justify-content: flex-start;
     position: absolute;
     padding: 1em;
-    top: 10%;
+    top: 0;
+    width: 100%;
     h1{
         @include neon_text;
-
+        font-size: 3rem;
+        // gap: 10em;
     }
 }
 #night_ctnr{

@@ -61,3 +61,20 @@ h3{
 
 
 
+@mixin neon_text{
+    animation: pulsate 2.5s infinite alternate;     
+    color: var(--text_color);
+    padding: 2em;
+    border-radius: 2em;
+    text-shadow:
+      0 0 .4em var(--primary),
+      0 0 .10em var(--primary),
+      0 0 .82em var(--primary);
+    
+    // box-shadow: 0 0 .2rem var(--text_color),
+    //           0 0 .2rem var(--text_color),
+    //           0 0 2rem var(--primary),
+    //           0 0 0.8rem var(--primary),
+    //           0 0 2.8rem var(--primary),
+    //           inset 0 0 1.3rem var(--primary);
+}

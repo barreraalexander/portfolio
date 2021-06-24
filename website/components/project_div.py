@@ -44,16 +44,10 @@ def component(title, elem_id=""):
     
     return Markup(f"""
             <div id="{elem_id}" class="project">
-                <p>
-                    <strong>
-                        {title_formatted}
-                    </strong>
-                    <br>
-                    <a href='{domain}' target='_blank'> {domain_name} </a>
-                    <br>
-                    {text}
-                </p>
-                <div class="img_ctnr">
+                <h3>
+                    {title_formatted}
+                </h3>
+                <a href='{domain}' target='_blank'> {domain_name} </a>
                     <img
                         src="{img_src1}"
                         alt="{title} image"
@@ -64,15 +58,8 @@ def component(title, elem_id=""):
                         data-src_active=1
                         loading-lazy
                     >
-                    
-                    <div class="shifting_grill_ctnr">
-                        <div class="horizontal_bars">
-                            {unpack_divs()}
-                        </div>
-                        <div class="vertical_bars">
-                            {unpack_divs()}
-                        </div>
-                    </div>
-                </div>
+                <p>
+                    {text}
+                </p>
             </div>
     """)

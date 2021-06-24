@@ -132,28 +132,28 @@
         margin-bottom: 6em;
         padding: 1em;
     }
-    .project:hover{
-        background-color: #f1f1f1;
-        color: #000;
-        transform: scale(1.05);
-        strong{
-            color: #000;
-            font-weight: 600;
-        }
-        a{
-            font-weight: 700;
-            color: var(--primary);
-        }
-        .shifting_grill_ctnr{
-            display: none;
-        }
-        img{
-            // width: 25em;
-            transform: scale(3);
-            transition: .5s;
-            border: 1px solid var(--secondary);
-        }
-    }
+    // .project:hover{
+    //     background-color: #f1f1f1;
+    //     color: #000;
+    //     transform: scale(1.05);
+    //     strong{
+    //         color: #000;
+    //         font-weight: 600;
+    //     }
+    //     a{
+    //         font-weight: 700;
+    //         color: var(--primary);
+    //     }
+    //     .shifting_grill_ctnr{
+    //         display: none;
+    //     }
+    //     img{
+    //         // width: 25em;
+    //         transform: scale(3);
+    //         transition: .5s;
+    //         border: 1px solid var(--secondary);
+    //     }
+    // }
     .shifting_grill_ctnr{
         position: absolute;
         width: 10em;
@@ -167,9 +167,9 @@
     body, html{
         font-size: 2.3em;
     }
-    .img_ctnr{
-        max-width: 1100px;
-    }
+    // .img_ctnr{
+    //     max-width: 1100px;
+    // }
     .project{
         margin-bottom: 10em;
         p{
@@ -179,11 +179,7 @@
             font-size: 1.4rem;
         }
     }
-    .project:hover{
-        img{
-            transform: scale(2);
-        }
-    }
+
     .image_caption{
         padding-top: 0;
         margin-top: 2em;

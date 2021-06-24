@@ -67,3 +67,29 @@
         height: 0em;
     }
 }
+
+
+@-webkit-keyframes dissipate {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes dissipate {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.dissipation{
+    // transition: 1s;
+    -webkit-animation: dissipate .5s ease;
+            animation: dissipate .5s ease;
+}

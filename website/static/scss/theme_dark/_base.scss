@@ -17,6 +17,12 @@ html[data-main_theme="light"]{
     .switch{
         left: 1.5rem;
     }
+    #index_section1{
+        height: unset;
+    }
+    .caption_ctnr{
+        display: none;
+    }
 }
 
 html[data-main_theme="dark"]{

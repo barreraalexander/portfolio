@@ -21,10 +21,18 @@
         // gap: 10em;
     }
 }
-#night_ctnr{
+#night_ctnr, #day_ctnr{
     z-index: 999;
     opacity: .8;
 }
+
+#day_ctnr{
+    video{
+        width: 100%;
+        // position: absolute;
+    }
+}
+
 
 #globe_canvas{
     outline: none;

@@ -4,10 +4,6 @@
 <script src="{{url_for('static', filename='js/assets/three.min.js')}}"></script>
 <script src="{{url_for('static', filename='js/assets/gsap.min.js')}}"></script>
 
-{% assets "dark_scss" %}
-<link rel="stylesheet" href="{{ASSET_URL}}">
-{% endassets %}
-
 <main>
     <section id="index_section1">
     
@@ -30,7 +26,16 @@
             </div>
         </div>
         <div id="night_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
-        <div id="day_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
+        <div id="day_ctnr">
+            <video
+                dataset-orientation="horizontal"
+                autoplay
+                loop
+                muted
+                src="{{url_for('static', filename='images/day_small_long.mp4')}}" type="video/mp4"
+            >
+            </video>
+        </div>
     </section>
     <!-- //FIX: THIS IS SET TO DISPLAY NONE -->
     <div style="display: none;" class="shimmering_div">

@@ -1,0 +1,36 @@
+#about_section{
+    padding: 2em;
+    background-color: var(--primary);
+    font-family: 'Roboto', sans-serif;
+    h1{
+        @include proj_heading;
+        border-bottom: .10em solid var(--text_color_inv);
+        color: var(--text_color_inv);
+        font-size: 2rem;
+        width: max-content;
+    }
+    .about_me_ctnr{
+        display: flex;
+        flex-flow: column;
+        gap: 2em;
+        margin-top: 1em;
+        
+    }
+    .about_me{
+        font-size: 1.2em;
+        strong{
+            color: var(--theme_accent);
+            display: block;
+            font-size: 1.1em;
+            font-style: italic;
+            margin-bottom: .5em;
+            width: 100%;
+            text-align: center;
+        }
+        p{
+            color: var(--text_color_inv);
+            font-size: 1em;
+        }
+    }
+
+}

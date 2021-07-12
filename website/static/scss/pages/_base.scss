@@ -17,12 +17,6 @@ html[data-main_theme="light"]{
     .switch{
         left: 1.5rem;
     }
-    #index_section1{
-        height: unset;
-    }
-    .caption_ctnr{
-        display: none;
-    }
 }
 
 html[data-main_theme="dark"]{
@@ -69,34 +63,22 @@ body, html{
     opacity: .7;
     width: 100%;
     z-index: 1001;
+    position: relative;
     :hover{
         background-color: var(--text_color_inv);
     }
-    ul{
-        //FIX: MOVE SOME OF THESE RULESETS TO DESKTOP/TAB
+    #main_nav{
         align-items: center;
         background-color: var(--bg);
         padding: 1em 2em;
         display: flex;
-        // flex-direction: row;
-        // justify-content: flex-end;
         justify-content: center;
-        border-bottom: 1px solid #111;
+        border-bottom: 1px solid var(--text_color);
         gap: 4em;
         margin: 0;
-        // li:first-of-type{
-        //     margin-right: auto;
-        //     margin-left: 1em;
-        // }
-        // li:last-of-type{
-        //     margin-right: 2em;
-        // }
         li[dataset-mquery="hide_on_mobile"]{
             display: none;
         }
-        // li+li{
-            // display: none;
-        // }
         a{
             color: var(--text_color);
             text-decoration: none;
@@ -106,10 +88,8 @@ body, html{
         }
     }
     h1{
-        // align-self: flex-start;
         font-size: 1rem;
         letter-spacing: 2px;
-        // margin: 0;
     }
     img{
         width: 2rem;
@@ -131,8 +111,25 @@ body, html{
         transition: .5s;
         background-color: var(--theme_accent);
     }
-    .menu_flexi{
-        // margin-right: 1em;
+    #hidden_nav{
+        background-color: var(--primary);
+        border-radius: 1rem 0rem 0rem 1rem;
+        height: 90vh;
+        display: flex;
+        flex-flow: column;
+        gap: 2em;
+        justify-content: flex-start;
+        padding: 1em;
+        position: absolute;
+        right: 0;
+        li:first-of-type{
+            margin-top: 1em;
+        }
+        a{
+            color: var(--text_color_inv);
+            font-weight: 600;
+        }
+
     }
 }
 
@@ -161,12 +158,10 @@ body, html{
 
 }
 
-
-// aside:hover{
-//     background-color: #fff;
-// }
-
-
-// .invisible{
-//     display: none !important;
-// }
+@media only screen and (min-width: $tablet_bp){
+    #base_aside_section{
+        #hidden_nav{
+            display: none;
+        }
+    }
+}

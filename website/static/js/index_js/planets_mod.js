@@ -17,8 +17,6 @@ if (night_ctnr){
 
     renderer.setClearColor(new THREE.Color('#111'))
 
-    // renderer.setClearColor ("#111");
-
     renderer.setSize(window.innerWidth, window.innerHeight)
 
     document.body.querySelector('#night_ctnr').appendChild(renderer.domElement)

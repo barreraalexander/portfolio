@@ -16,30 +16,21 @@
                     Full Stack Web Developer from south Florida.
                 </p>
                 <a href="{{CONTACT_DICT['github_link']}}">
-                    Checkout my github 🐱
+                    Checkout my github
                 </a>
                 <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
                     <button>
-                        Download my resume 📃        
+                        Download my resume        
                     </button>
                 </a>
             </div>
         </div>
+
         <div id="night_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
-        <div id="day_ctnr">
-            <video
-                dataset-orientation="horizontal"
-                autoplay
-                loop
-                muted
-                src="{{url_for('static', filename='images/day_small_long.mp4')}}" type="video/mp4"
-            >
-            </video>
-        </div>
+        <div id="day_ctnr"></div>
     </section>
-    <!-- //FIX: THIS IS SET TO DISPLAY NONE -->
-    <div style="display: none;" class="shimmering_div">
-    </div>
+
+
     <section id="index_section2">
         <p class="dramatic_p">
             These are some
@@ -56,6 +47,8 @@
             <!-- {{project_div3}} -->
         </div>
     </section>
+
+
     <section id="index_section3">
         <div class="image_caption show_on_desktop">
             <p id="caption_text"></p>
@@ -170,6 +163,8 @@
             </div>
         </div>
     </section>
+
+
     <section id="index_section4">
         <h2>
             ABOUT ME
@@ -259,10 +254,14 @@
             </strong>  
         </p>
     </section>
+
+    
 </main>
 
 
-
+{% assets "index_js" %}
+<script type="text/javascript" src="{{ ASSET_URL}}"> </script>
+{% endassets %}
 
 
 {% endblock content %}

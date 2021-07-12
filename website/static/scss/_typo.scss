@@ -46,6 +46,10 @@ p{
     }
 }
 
+@mixin proj_heading{
+    border-bottom: .10em solid var(--text_color_inv);
+    font-size: 2rem;
+}
 
 
 
@@ -67,7 +71,6 @@ p{
 @mixin neon_text{
     animation: pulsate 2.5s infinite alternate;     
     color: var(--text_color);
-    padding: 2em;
     border-radius: 2em;
     text-shadow:
       0 0 .4em var(--primary),

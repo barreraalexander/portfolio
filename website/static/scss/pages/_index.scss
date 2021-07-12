@@ -16,21 +16,14 @@
     top: 0;
     width: 90%;
     h1{
-        @include neon_text;
+        padding: 2em;
         font-size: 3rem;
-        // gap: 10em;
+        gap: 10em;
     }
 }
 #night_ctnr, #day_ctnr{
     z-index: 999;
     opacity: .8;
-}
-
-#day_ctnr{
-    video{
-        width: 100%;
-        // position: absolute;
-    }
 }
 
 
@@ -200,21 +193,6 @@
 .flow_reversed{
     flex-flow: row-reverse nowrap !important;
 }
-
-// .img_ctnr{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: relative;
-//     width: 50%;
-//     padding: 1em;
-//     img{
-//         position: relative;
-//         width: 8em;
-//         z-index: 1000;
-//         max-width: 1400px;
-//     }
-// }
 
 
 .shifting_grill_ctnr{
@@ -422,5 +400,15 @@
         padding: .5em 1em;
         border: none;
         background-color: var(--secondary);
+    }
+}
+
+
+
+@media only screen and (min-width: $tablet_bp){
+    .hero_ctnr{
+        h1{
+            @include neon_text;
+        }
     }
 }

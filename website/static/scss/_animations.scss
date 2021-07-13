@@ -93,3 +93,53 @@
             animation: dissipate .5s ease;
 }
 
+
+
+
+@-webkit-keyframes show_menu {
+    from {
+        right: 'initial';
+    }
+    to {
+        right: 0em;
+    }
+}
+
+@keyframes show_menu {
+    from {
+        right: 'initial';
+    }
+    to {
+        right: 0em;
+    }
+}
+
+@-webkit-keyframes hide_menu {
+    from {
+        right: -15em;
+    }
+    to {
+        right: 0em;
+    }
+}
+
+@keyframes hide_menu {
+    from {
+        right: -15em;
+    }
+    to {
+        right: 0em;
+    }
+}
+
+.apply_show_menu{
+    -webkit-animation: show_menu ease 1 forwards;
+    animation: show_menu ease 1 forwards;
+    animation-duration: .8s;
+}
+
+.apply_hide_menu{
+    -webkit-animation: hide_menu ease 1 forwards;
+    animation: hide_menu ease 1 forwards;
+    animation-duration: .8s;
+}

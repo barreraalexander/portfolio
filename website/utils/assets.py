@@ -9,6 +9,7 @@ bundles = {
     ),
     'main_js': Bundle(
         'js/main_js/mod_theme.js',
+        'js/main_js/mod_menu.js',
         filters='jsmin',
         depends='js/*.js',
         output='gen/js/main.%(version)s.js'
@@ -18,7 +19,6 @@ bundles = {
         'js/index_js/scrolling_mod.js',
         'js/index_js/planets_mod.js',
         'js/index_js/projects_mod.js',
-        'js/index_js/sunrise_mod.js',
         'js/index_js/digital_mod.js',
         'js/index_js/shifting_h1.js',
         filters='jsmin',

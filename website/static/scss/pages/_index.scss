@@ -9,18 +9,22 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: flex-start;
     margin: 0 auto;
     position: absolute;
     padding: 1em;
     top: 0;
     width: 90%;
     h1{
+        @include proj_h1;
         padding: 2em;
-        font-size: 3rem;
-        gap: 10em;
+        z-index: 1001;
+    }
+    a{
+        color: var(--primary);
     }
 }
+
+
 #night_ctnr, #day_ctnr{
     z-index: 999;
     opacity: .8;
@@ -36,10 +40,8 @@
 
 .caption_ctnr{
     align-items: center;
-    // background-color: var(--bg);
     background-color: rgba($color: #222, $alpha: 0.4);
     border-radius: 5px;
-    // color: #fff;
     color: var(--text_color);
     display: flex;
     flex-flow: column nowrap;
@@ -410,5 +412,54 @@
         h1{
             @include neon_text;
         }
+    }
+    
+}
+@media only screen and (min-width: $desktop_bp){
+    .aboutme_text{
+        font-size: 1.5rem;
+    }
+    .img_of_me{
+        width: 12em;
+        filter: grayscale(100%);
+    }
+    .aboutme_ctnr{
+        justify-content: center;
+        gap: 3em;
+    }
+    .aboutme_paragraph, .workflow_text{
+        max-width: 80%;
+        margin-left: 1.5em;
+    }
+    #index_section2{
+        padding: 2em 4em;
+    }
+    #index_section4{
+        padding: 2em 4em;
+    }
+    
+}
+@media only screen and (min-width: $desktop_bp){
+    .image_caption{
+        padding-top: 0;
+        margin-top: 2em;
+    }
+    .technologies_ctnr{
+        .tech_img_ctnr{
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+    
+}
+@media only screen and (min-width: $desktop_4k_bp){
+    #index_section4 h2{
+        font-size: 3rem;
+    }
+    #base_footer_section h5{
+        font-size: 2.3rem;
+    }
+    #base_footer_section a{
+        font-size: 2rem;
     }
 }

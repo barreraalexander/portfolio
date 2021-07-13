@@ -3,11 +3,19 @@
 @import '_typo';
 @import '_animations';
 
+
 @import './pages/_base';
 
 @import './pages/_index';
 @import './pages/_about';
 @import './pages/_contact';
+
+
+@import './components/_header';
+@import './components/_footer';
+@import './components/_project';
+@import './components/_technologies';
+
 
 
 @import '_media_queries'; 

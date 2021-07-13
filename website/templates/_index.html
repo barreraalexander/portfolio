@@ -6,7 +6,6 @@
 
 <main>
     <section id="index_section1">
-    
         <div class="hero_ctnr">
             <h1>
                 DEVELOPER.            
@@ -42,9 +41,8 @@
             I've been working on
         </p>
         <div class="projects_ctnr">
-            {{project_div1}}
-            {{project_div2}}
-            <!-- {{project_div3}} -->
+            {{project(title='ppb', elem_id='project1')}}
+            {{project(title='tod', elem_id='project2')}}
         </div>
     </section>
 
@@ -60,108 +58,7 @@
             <br>
             I like to use
         </p>
-        <div class="technologies_ctnr">
-            <div
-                id="tech_img1"
-                class="tech_img_ctnr selected_img"
-                data-caption="To me, Python is just the ultimate programming language. Whether writing scripts, apis, or full on web applications (flask), python is my goto when it comes to developing software."
-            >
-                <img
-                    src="{{url_for('static', filename='images/assets/python.svg')}}"
-                    alt="python"
-                >
-            </div>
-            
-            <div
-                id="tech_img2"
-                class="tech_img_ctnr"
-                data-caption=""
-            >
-                <img
-                    src="{{url_for('static', filename='images/assets/html5-shield.svg')}}"
-                    alt="html5-shield"
-                    data-caption="HTML5"
-                >
-            </div>
-
-            <div
-                id="tech_img3"
-                class="tech_img_ctnr"
-                data-caption="Oh CSS. Definitely one of the more tricky languages to work with, that is, until SaaS came into the picture. I generally use SaaS because it saves a lot of rule-writing, what with the use of mixins/includes."
-            >
-                <img
-                    src="{{url_for('static', filename='images/assets/css-shield.svg')}}"
-                    alt="css-shield"
-                >
-            </div>
-
-
-            <div
-            id="tech_img4"
-            class="tech_img_ctnr"
-            data-caption="Javascript is an absolutely incredible and powerful language. The asynchronous features, coupled with ajax calls to REST apis, has really transformed my applications. And of course, libraries like GSAP and ThreeJS have really helped me take my frontend designs to the next level."
-            >
-                <img
-                    src="{{url_for('static', filename='images/assets/javascript-shield.svg')}}"
-                    alt="javascript-shield"
-                >
-            </div>
-
-            <div
-            id="tech_img5"
-            class="tech_img_ctnr"
-            data-caption="MySQL was the first language I ever worked with. It was day one in college and I was completely new programming. That was 5 years ago, and, other than a few stints with GraphQL, MySQL has been my goto for creating REST apis."
-            >
-                <img
-                    src="{{url_for('static', filename='images/assets/mysql.svg')}}"
-                    alt="mysql"
-                >
-            </div>
-            
-            <div
-                id="tech_img6"
-                class="tech_img_ctnr"
-                data-caption="Photoshop is a tool that I rarely have to turn to these days. However it photographs makes creating assets super easy."
-            >
-                <img
-                    src="{{url_for('static', filename='images/assets/adobephotoshop.svg')}}"
-                    alt="adobe photoshop"
-                >
-            </div>
-
-            <div
-                id="tech_img7"
-                class="tech_img_ctnr"
-                data-caption="Drafting drafting drafting. Abode XD is my go to for creating mockups of websites I plan to build."
-            >
-            <img
-                src="{{url_for('static', filename='images/assets/adobexd.svg')}}"
-                alt="adobe xd"
-            >
-            </div>
-            
-            <div
-                id="tech_img8"
-                class="tech_img_ctnr"
-                data-caption="The ultimate version control system. I absolutely love using github."
-            >
-            <img
-                src="{{url_for('static', filename='images/assets/github.svg')}}"
-                alt="github"
-            >
-            </div>
-            
-            <div
-                id="tech_img9"
-                class="tech_img_ctnr"
-                data-caption="This is about windows 10. I spent all of my time between the windows operating system and ubuntu."
-            >
-            <img
-                src="{{url_for('static', filename='images/assets/windows-10.svg')}}"
-                alt="windows 10"
-            >
-            </div>
-        </div>
+        {{technologies()}}
     </section>
 
 

@@ -17,13 +17,16 @@ h1, h2, h3, p, ul, li{
     padding: 0;
 }
 
-h1, h2{
-    font-size: 2rem;
-    z-index: 1000;
-    letter-spacing: .03em;
-    font-weight: 300;
+
+@mixin proj_a{
+    
 }
 
+@mixin proj_h1{
+    font-size: 3rem;
+    letter-spacing: .03em;
+    font-weight: 300;    
+}
 
 h2{
     font-size: 2.5rem;
@@ -73,14 +76,35 @@ p{
     color: var(--text_color);
     border-radius: 2em;
     text-shadow:
-      0 0 .4em var(--primary),
-      0 0 .10em var(--primary),
-      0 0 .82em var(--primary);
+        0 0 .4em var(--primary),
+        0 0 .10em var(--primary),
+        0 0 .82em var(--primary);    
+}
     
-    // box-shadow: 0 0 .2rem var(--text_color),
-    //           0 0 .2rem var(--text_color),
-    //           0 0 2rem var(--primary),
-    //           0 0 0.8rem var(--primary),
-    //           0 0 2.8rem var(--primary),
-    //           inset 0 0 1.3rem var(--primary);
+@mixin neon_box_shadow{
+    box-shadow: 0 0 .2rem var(--text_color),
+        0 0 .2rem var(--text_color),
+        0 0 2rem var(--primary),
+        0 0 0.8rem var(--primary),
+        0 0 2.8rem var(--primary),
+        inset 0 0 1.3rem var(--primary);        
+}
+
+@media only screen and (min-width: $desktop_bp){
+    .dramatic_p{
+        font-size: 2.2rem;
+    }    
+}
+
+
+@media only screen and (min-width: $desktop_4k_bp){
+    .dramatic_p{
+        line-height: 4rem;
+        font-size: 4rem;
+        strong{
+            font-size: 2.5rem;
+            letter-spacing: 20px;
+        }
+    }
+
 }

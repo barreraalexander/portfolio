@@ -1,0 +1,103 @@
+#base_aside_section{
+    top: 0;
+    opacity: .7;
+    width: 100%;
+    z-index: 1001;
+    position: relative;
+}
+
+#main_nav{
+    align-items: center;
+    background-color: var(--bg);
+    padding: 1em 2em;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--text_color);
+    gap: 4em;
+    margin: 0;
+    li[data-mquery="hide_on_mobile"]{
+        display: none;
+    }
+    a{
+        color: var(--text_color);
+        text-decoration: none;
+    }
+    a:hover{
+        border-bottom: .03em solid var(--primary);
+    }
+    h1{
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    img{
+        width: 2rem;
+        opacity: 1;
+    }
+    .light_switch_ctnr{
+        background-color: var(--primary);
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 2em;
+        position: relative;
+    }
+    .switch{
+        position: absolute;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        top: .25rem;
+        transition: .5s;
+        background-color: var(--theme_accent);
+    }
+}
+
+#hidden_nav{
+    background-color: var(--primary);
+    border-radius: 1rem 0rem 0rem 1rem;
+    height: 90vh;
+    display: flex;
+    // right: ;
+    // display: none;
+    flex-flow: column;
+    gap: 2em;
+    justify-content: flex-start;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    li:first-of-type{
+        margin-top: 1em;
+    }
+    a{
+        color: var(--text_color_inv);
+        font-weight: 600;
+    }
+
+}
+
+
+@media only screen and (min-width: $tablet_bp){
+    #hidden_nav{
+        display: none;
+    }
+    
+    #base_aside_section{
+        ul{
+            justify-content: flex-end;
+            padding: 1.5rem;
+            li[data-mquery="hide_on_mobile"]{
+                display: block;
+            }
+            .light_switch_flexi{
+                order: 9;
+            }
+            .menu_flexi{
+                display: none;
+            }
+            .h1_flexi{
+                margin-right: auto;
+            }
+        }
+    }
+
+
+}

@@ -3,7 +3,8 @@ from flask import Markup, url_for
 def component(set_type=""):
     dataset = ""
     if set_type=="main_nav":
-        dataset = "dataset-mquery='hide_on_mobile'"
+        dataset = "data-mquery='hide_on_mobile'"
+    
     home_link = url_for('main.index')
     about_link = url_for('main.about')
     contact_link = url_for('main.contact')

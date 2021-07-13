@@ -28,11 +28,11 @@
             <aside>
                 <ul id="main_nav">
                     <li class="h1_flexi">
-                        <h1>
-                            <a href="{{url_for('main.index')}}">
+                        <a href="{{url_for('main.index')}}">
+                            <h1>
                                 Alexander Barrera
-                            </a>
-                        </h1>
+                            </h1>
+                        </a>
                     </li>
                     <li class="light_switch_flexi">
                         <div class="light_switch_ctnr">
@@ -44,7 +44,7 @@
                     </li>
                     {{link_set('main_nav')}}
                 </ul>
-                <ul id="hidden_nav">
+                <ul id="hidden_nav" data-menu_status='closed'>
                     {{link_set('hidden_nav')}}
                 </ul>
             </aside>

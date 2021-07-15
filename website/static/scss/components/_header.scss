@@ -55,9 +55,8 @@
     background-color: var(--primary);
     border-radius: 1rem 0rem 0rem 1rem;
     height: 90vh;
-    display: flex;
-    // right: ;
-    // display: none;
+    // display: flex;
+    display: none;
     flex-flow: column;
     gap: 2em;
     justify-content: flex-start;
@@ -81,23 +80,25 @@
     }
     
     #base_aside_section{
+        .h1_flexi{
+            margin-right: auto;
+        }
+    }
+}
+
+@media only screen and (min-width: $desktop_bp){
+    #base_aside_section{
         ul{
             justify-content: flex-end;
-            padding: 1.5rem;
-            li[data-mquery="hide_on_mobile"]{
-                display: block;
-            }
             .light_switch_flexi{
                 order: 9;
             }
-            .menu_flexi{
-                display: none;
-            }
-            .h1_flexi{
-                margin-right: auto;
-            }
         }
+    li[data-mquery="hide_on_mobile"]{
+        display: block;
     }
-
-
+    .menu_flexi{
+        display: none;
+    }
+}
 }

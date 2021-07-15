@@ -7,6 +7,30 @@
             <h2>
                 Contact Me
             </h2>
+            <div class="form_ctnr">
+                <form id="contact_form" action="{{url_for('api.send_mail')}}" method="POST">
+                    {{form.hidden_tag()}}
+                    <div class="form_group">
+                        {{form.name.label}}
+                        {{form.name}}  
+                    </div>
+                    <div class="form_group">
+                        {{form.contact_info.label}}  
+                        {{form.contact_info}}  
+                    </div>
+                    <div class="form_group">
+                        {{form.company_name.label}}  
+                        {{form.company_name}}  
+                    </div>
+                    <div class="form_group">
+                        {{form.help_description.label}}  
+                        {{form.help_description}}  
+                    </div>
+                    <div class="form_group">
+                        {{form.submit}}  
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 

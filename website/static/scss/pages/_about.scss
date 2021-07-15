@@ -2,6 +2,10 @@
     padding: 2em;
     background-color: var(--primary);
     font-family: 'Roboto', sans-serif;
+    min-height: 50vh;
+    hr{
+        display: none
+    }
     h1{
         @include proj_heading;
         border-bottom: .10em solid var(--text_color_inv);
@@ -12,6 +16,7 @@
     .about_me_ctnr{
         display: flex;
         flex-flow: column;
+        justify-content: center;
         gap: 2em;
         margin-top: 1em;
         
@@ -33,4 +38,16 @@
         }
     }
 
+}
+
+
+@media only screen and (min-width: $tablet_bp){
+    #about_section{
+        .about_me_ctnr{
+            flex-flow: row;
+        }
+        hr{
+            display: block;
+        }
+    }
 }

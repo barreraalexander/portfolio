@@ -1,0 +1,38 @@
+#contact_form{
+    .form_group{
+        margin-bottom: 2.2em;
+    }
+    label{
+        font-size: 1rem;
+    }
+    label::after{
+        content: "\A";
+        white-space: pre;
+    }
+    input, textarea{
+        border: .15em solid var(--text_color_inv);
+        border-radius: .9em;
+        font-size: 1rem;
+        padding: .5em;
+        width: 16rem;
+        max-width: 90%;
+        
+    }
+    input:focus, textarea:focus{
+        border-color: var(--primary);
+        transition: .2s;
+        outline-width: 0;
+        outline: none;
+    }
+    input:hover, textarea:hover{
+        border-color: var(--primary);
+    }
+    #submit{
+        @include inverse_btn;
+        width: 8em;
+        font: 1.2rem;
+    }
+    #submit:hover{
+        @include primary_btn;
+    }
+}

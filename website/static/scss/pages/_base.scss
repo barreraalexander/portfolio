@@ -73,7 +73,7 @@ body, html{
 
 @media only screen and (min-width: $tablet_bp){
     body, html{
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
     .show_on_tablet{
         display: block;
@@ -89,7 +89,7 @@ body, html{
 
 @media only screen and (min-width: $desktop_bp){
     body, html{
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
     .show_on_desktop{
         display: block;
@@ -99,5 +99,6 @@ body, html{
 @media only screen and (min-width: $desktop_4k_bp){
     body, html{
         font-size: 2.3em;
+        // font-size: 1.5em;
     }
 }

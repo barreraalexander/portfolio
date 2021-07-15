@@ -14,3 +14,21 @@
 }
 
 
+@mixin primary_btn{
+    background-color: var(--primary);
+    border: .15em solid var(--text_color_inv);
+    border-radius: .9em;
+    color: var(--text_color_inv);
+    padding: .02em, 1em;
+    letter-spacing: .09em;
+    font-weight: 600;
+}
+
+@mixin inverse_btn{
+    color: var(--primary);
+    border: .15em solid var(--primary);
+    border-radius: .9em;
+    background-color: var(--theme_accent);
+    padding: .02em, 1em;
+    letter-spacing: .09em;
+}

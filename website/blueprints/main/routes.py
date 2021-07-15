@@ -2,6 +2,8 @@ from flask import Blueprint,\
     redirect, render_template,\
     request, url_for
 
+from website.blueprints.api.forms import ContactForm
+
 from website.components.project import component \
                                 as project
 from website.components.technologies import component \
@@ -30,7 +32,9 @@ def about():
 
 @main.route('/contact')
 def contact():
+    form = ContactForm()
     return render_template('_contact.html',
+                            form=form,
                             link_set=link_set,
                             CONTACT_DICT=CONTACT_DICT)
 

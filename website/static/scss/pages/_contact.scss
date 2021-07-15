@@ -1,0 +1,17 @@
+#contact_section{
+    background-color: var(--bg_invert);
+    color: var(--text_color_inv);
+    padding-top: 1em;
+    padding-bottom: 4em;
+    h2{
+        @include proj_h1;
+        margin-left: 2rem;
+    }
+    .form_ctnr{
+        border-radius: .9em;
+        width: 20rem;
+        margin: 0 auto;
+        background-color: var(--accent);
+        padding: 1rem;
+    }
+}

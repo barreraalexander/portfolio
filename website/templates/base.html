@@ -40,7 +40,7 @@
                         </div>
                     </li>
                     <li class="menu_flexi">
-                        <img src="{{url_for('static', filename='images/assets/hamburger.svg')}}" alt="nav button">
+                        <img id="hamburger" src="{{url_for('static', filename='images/assets/hamburger.svg')}}" data-light_src="{{url_for('static', filename='images/assets/hamburger_alt.svg')}}" data-dark_src="{{url_for('static', filename='images/assets/hamburger.svg')}}" alt="nav button">
                     </li>
                     {{link_set('main_nav')}}
                 </ul>
@@ -67,7 +67,7 @@
                         </li>
                         <li>
                             <a href="">
-                                barreraalexander93@gmail.com ✉
+                                {{CONTACT_DICT['email']}} ✉
                             </a>
                         </li>
                     </ul>

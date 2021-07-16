@@ -1,0 +1,51 @@
+#day_ctnr{
+    display: flex;
+    .left{
+        display: flex;
+        gap: 1rem;
+        background-color: var(--theme_accent);
+        text-align: center;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        h3{
+            letter-spacing: .09em;
+            font-weight: 900;
+        }
+        button{
+            @include inverse_btn;
+            padding: .5em 1em;
+            font-size: 1rem;
+            width: 16rem;
+            min-width: max-content;
+        }
+        button:hover{
+            @include primary_btn;
+        }
+    }
+    .right{
+        @include pink_shifting_bg;
+        display: flex;
+        justify-content: center;
+        width: max-content;
+        padding-top: 4rem;
+        // background-color: var(--primary);
+        img{
+            @include shift_filter;
+            width: 100%;       
+        }
+    }
+    .day_caption_ctnr{
+        display: flex;
+        align-items: center;
+        img{
+            width: 3rem;
+        }
+        span{
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: .02em;
+        }
+    }
+}

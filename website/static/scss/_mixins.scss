@@ -32,3 +32,7 @@
     padding: .02em, 1em;
     letter-spacing: .09em;
 }
+
+@mixin shadow{
+    box-shadow: .1em .1em .6em .02em var(--theme_accent);
+}

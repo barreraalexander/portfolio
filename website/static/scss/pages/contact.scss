@@ -8,6 +8,7 @@
         margin-left: 2rem;
     }
     .form_ctnr{
+        @include shadow;
         border-radius: .9em;
         width: 20rem;
         margin: 0 auto;

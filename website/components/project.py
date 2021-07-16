@@ -48,20 +48,43 @@ def component(title, elem_id=""):
                     {title_formatted}
                 </h3>
                 <a href='{domain}' target='_blank'> {domain_name} </a>
-                <div class="project_row">
-                        <img
-                            src="{img_src1}"
-                            alt="{title} image"
-                            data-src_1="{img_src1}"
-                            data-src_2="{img_src2}"
-                            data-src_3="{img_src3}"
-                            data-src_4="{img_src4}"
-                            data-src_active=1
-                            loading-lazy
-                        >
-                    <p>
-                        {text}
-                    </p>
+                <img
+                    src="{img_src1}"
+                    alt="{title} image"
+                    data-src_1="{img_src1}"
+                    data-src_2="{img_src2}"
+                    data-src_3="{img_src3}"
+                    data-src_4="{img_src4}"
+                    data-src_active=1
+                    loading-lazy
+                >
+                <p>
+                    {text}
+                </p>
                 </div>
             </div>
     """)
+
+    # return Markup(f"""
+    #         <div id="{elem_id}" class="project">
+    #             <h3>
+    #                 {title_formatted}
+    #             </h3>
+    #             <a href='{domain}' target='_blank'> {domain_name} </a>
+    #             <div class="project_row">
+    #                     <img
+    #                         src="{img_src1}"
+    #                         alt="{title} image"
+    #                         data-src_1="{img_src1}"
+    #                         data-src_2="{img_src2}"
+    #                         data-src_3="{img_src3}"
+    #                         data-src_4="{img_src4}"
+    #                         data-src_active=1
+    #                         loading-lazy
+    #                     >
+    #                 <p>
+    #                     {text}
+    #                 </p>
+    #             </div>
+    #         </div>
+    # """)

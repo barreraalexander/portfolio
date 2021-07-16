@@ -11,14 +11,28 @@ html[data-main_theme="light"]{
     #night_ctnr{
         display: none;
     }
+
     #day_ctnr{
-        display: block;
+        display: flex;
     }
+
+    #hero_h1{
+        display: none;
+    }
+
+    transition: 1s;
+    
     .switch{
         left: 1.5rem;
     }
     .caption_ctnr{
         display: none;
+    }
+    #index_section1{
+        height: unset;
+    }
+    #index_section2{
+        background-color: var(--text_color_inv);
     }
 }
 
@@ -32,6 +46,7 @@ html[data-main_theme="dark"]{
     --primary: #{$dk_theme_primary};
     --secondary: #{$dk_theme_secondary};
 
+    transition: 1s;
 
     #night_ctnr{
         display: block;

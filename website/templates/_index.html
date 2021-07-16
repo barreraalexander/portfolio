@@ -7,7 +7,7 @@
 <main>
     <section id="index_section1">
         <div class="hero_ctnr">
-            <h1>
+            <h1 id="hero_h1">
                 DEVELOPER.            
             </h1>
             <div class="caption_ctnr">
@@ -26,7 +26,7 @@
         </div>
 
         <div id="night_ctnr" data-normal_texture="{{url_for('static', filename='images/textures/moon_texture.png')}}"></div>
-        <div id="day_ctnr"></div>
+        {{day_ctnr()}}
     </section>
 
 

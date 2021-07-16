@@ -52,6 +52,21 @@
     }
 }
 
+@mixin pink_shifting_bg{
+    background: linear-gradient(45deg, var(--theme_accent), var(--primary));
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+    background-attachment: fixed;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 400% 400%;
+
+    animation: shifting_gradient 8s ease infinite;
+    -webkit-animation: shifting_gradient 8s ease infinite;
+}
+
+
 @-webkit-keyframes dissolving {
     from {opacity:1;}
     to {opacity:0;}
@@ -142,4 +157,31 @@
     -webkit-animation: hide_menu ease 1 forwards;
     animation: hide_menu ease 1 forwards;
     animation-duration: .8s;
+}
+
+
+
+@keyframes shifting_filter {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(90deg);
+    }
+}
+
+@-webkit-keyframes shifting_filter {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(90deg);
+    }
+}
+
+@mixin shift_filter {
+    -webkit-animation: shifting_filter 5s ease infinite alternate;
+    animation: shifting_filter 5s ease infinite alternate;
+    mix-blend-mode: luminosity;
+
 }

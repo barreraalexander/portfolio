@@ -4,17 +4,18 @@
 @import '_animations';
 
 
-@import './pages/_base';
+@import './pages/base';
 
-@import './pages/_index';
-@import './pages/_about';
-@import './pages/_contact';
+@import './pages/index';
+@import './pages/about';
+@import './pages/contact';
 
-@import './components/_header';
-@import './components/_footer';
-@import './components/_project';
-@import './components/_technologies';
-@import './components/_contactform';
+@import './components/header';
+@import './components/footer';
+@import './components/project';
+@import './components/technologies';
+@import './components/contactform';
+@import './components/day_ctnr';
 
 
 

@@ -25,7 +25,7 @@
 }
 
 
-#night_ctnr, #day_ctnr{
+#night_ctnr{
     z-index: 999;
     opacity: .8;
 }
@@ -97,7 +97,6 @@
     background-size: 400% 400%;
     -webkit-animation: shifting_gradient 5s ease infinite;
             animation: shifting_gradient 5s ease infinite;
-
 
     height: 4vh;
     width: 100%;

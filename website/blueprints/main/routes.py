@@ -6,6 +6,8 @@ from website.blueprints.api.forms import ContactForm
 
 from website.components.project import component \
                                 as project
+from website.components.day_ctnr import component \
+                                as day_ctnr
 from website.components.technologies import component \
                                 as technologies
 from website.components.linkset import component \
@@ -21,6 +23,7 @@ def index():
                             CONTACT_DICT=CONTACT_DICT,
                             project=project,
                             technologies=technologies,
+                            day_ctnr=day_ctnr,
                             link_set=link_set)
 
 

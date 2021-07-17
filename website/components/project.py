@@ -15,26 +15,26 @@ def component(title, elem_id=""):
 
     if (title=="food"):
         title_formatted="The Food"
-        text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
+        text = "This is text about the project. This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project."
         domain = "www.thefood.com"
         domain_name = "www.privacyplaybook.com"
 
     elif (title=="tod"):
         title_formatted="Technicians on Demand"
-        text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
+        text = "This is text about the project. This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project."
         domain = "https://www.technicianondemand.com/"
         domain_name = "www.privacyplaybook.com"
 
     elif (title=="browardreseller"):
         title_formatted="Broward Reseller"
-        text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
+        text = "This is text about the project. This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project."
         domain = "www.browardreseller.com"
         domain_name = "www.privacyplaybook.com"
     
 
     elif (title=="ppb"):
         title_formatted="Privacy Playbook"
-        text="This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour. This is the text about the project. the project that I love so very much and you, are not hungry until the hour."
+        text = "This is text about the project. This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project."
         domain = "https://privacyplaybook.com/"
         domain_name = "www.privacyplaybook.com"
 
@@ -63,28 +63,4 @@ def component(title, elem_id=""):
                 </p>
                 </div>
             </div>
-    """)
-
-    # return Markup(f"""
-    #         <div id="{elem_id}" class="project">
-    #             <h3>
-    #                 {title_formatted}
-    #             </h3>
-    #             <a href='{domain}' target='_blank'> {domain_name} </a>
-    #             <div class="project_row">
-    #                     <img
-    #                         src="{img_src1}"
-    #                         alt="{title} image"
-    #                         data-src_1="{img_src1}"
-    #                         data-src_2="{img_src2}"
-    #                         data-src_3="{img_src3}"
-    #                         data-src_4="{img_src4}"
-    #                         data-src_active=1
-    #                         loading-lazy
-    #                     >
-    #                 <p>
-    #                     {text}
-    #                 </p>
-    #             </div>
-    #         </div>
-    # """)
+""")

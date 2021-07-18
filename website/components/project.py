@@ -22,7 +22,7 @@ def component(title, elem_id=""):
     elif (title=="tod"):
         title_formatted="Technicians on Demand"
         domain = "https://www.technicianondemand.com/"
-        domain_name = "www.privacyplaybook.com"
+        domain_name = "www.technicianondemand.com"
         text = Markup(f"""
         <li>
             <p>

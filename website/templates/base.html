@@ -67,13 +67,13 @@
                     </h5>
                     <ul>
                         <li>
-                            <a href="">
-                                954 882 8507 ☎
+                            <a href="tel:{{CONTACT_DICT['phone']}}">
+                                ☎ {{CONTACT_DICT['phone']}}
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                {{CONTACT_DICT['email']}} ✉
+                            <a href="mailto:{{CONTACT_DICT['email']}}">
+                                ✉ {{CONTACT_DICT['email']}} 
                             </a>
                         </li>
                     </ul>
@@ -85,17 +85,17 @@
                     <ul>
                         <li>
                             <a href="{{CONTACT_DICT['github_link']}}">
-                                Checkout my github 😺
+                                😺 Checkout my github
                             </a>
                         </li>
                         <li>
                             <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.docx')}}" download>
-                                Download my resume (docx) 📃
+                                📃 Download my resume (docx)
                             </a>
                         </li>
                         <li>
                             <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
-                                Download my resume (pdf) 📃
+                                📃 Download my resume (pdf) 
                             </a>
                         </li>
                     </ul>

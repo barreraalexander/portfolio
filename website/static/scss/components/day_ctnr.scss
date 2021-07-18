@@ -55,7 +55,9 @@
 @media only screen and (min-width: $tablet_bp){
     #day_ctnr{
         .left{
+            // @include pink_shifting_bg;
             padding: unset;
+            // background: linear-gradient(45deg, var(--text_color_inv), var(--primary))
         }
         .right{
             display: flex;

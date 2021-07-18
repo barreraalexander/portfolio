@@ -9,6 +9,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        padding: 2em;
         h3{
             letter-spacing: .09em;
             font-weight: 900;
@@ -26,7 +27,8 @@
     }
     .right{
         @include pink_shifting_bg;
-        display: flex;
+        // display: flex;
+        display: none;
         justify-content: center;
         width: max-content;
         padding-top: 4rem;
@@ -45,6 +47,18 @@
             color: var(--primary);
             font-weight: 700;
             letter-spacing: .02em;
+        }
+    }
+}
+
+
+@media only screen and (min-width: $tablet_bp){
+    #day_ctnr{
+        .left{
+            padding: unset;
+        }
+        .right{
+            display: flex;
         }
     }
 }

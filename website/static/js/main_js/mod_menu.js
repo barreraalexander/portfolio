@@ -22,14 +22,19 @@ function mod_menu(){
 
 
 function check_target(event){
+    var hidden_menu = document.querySelector('#hidden_nav')
+    var menu_status = hidden_menu.dataset.menu_status
+
     if (event.target != hidden_menu &&
         event.target != nav_button &&
         event.target.parentNode != hidden_menu){
 
-        hidden_menu.dataset.menu_status = 'closed'
         
-        hidden_menu.classList.remove('apply_show_menu')
-        hidden_menu.classList.add('apply_hide_menu')
+
+        // hidden_menu.dataset.menu_status = 'closed'
+        
+        // hidden_menu.classList.remove('apply_show_menu')
+        // hidden_menu.classList.add('apply_hide_menu')
         menu_status = 'closed'
         window.removeEventListener('click', check_target)
 

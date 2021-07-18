@@ -29,7 +29,7 @@ let clocking = function(){
         requestAnimationFrame(clocking);
         for (let project of projects){
 
-            project.click()
+            // project.click()
         }
     }, 5000)
     

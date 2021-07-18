@@ -21,9 +21,32 @@ def component(title, elem_id=""):
 
     elif (title=="tod"):
         title_formatted="Technicians on Demand"
-        text = "This is text about the project. This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project."
         domain = "https://www.technicianondemand.com/"
         domain_name = "www.privacyplaybook.com"
+        text = Markup(f"""
+        <li>
+            <p>
+                Developed the front-end design using
+                <strong> Adobe XD </strong>,
+                and made changes based on the tastes of the customer.
+                <strong> Features mobile-first responsive design. </strong>
+            </p>
+        </li>
+        <li>
+            <p>
+                Coded the entire website using the <strong> python
+                flask framework , s3 cloud storage </strong> to host
+                the static files (images, videos, icons),
+                and nginx on <strong> ubuntu to deploy </strong> the website.
+            </p>
+        </li>
+        <li>
+            <p>
+                Secured the website with <strong>certbot</strong>  and basic <strong> nginx protocols </strong>.
+            </p>
+        </li>
+        
+        """)
 
     elif (title=="browardreseller"):
         title_formatted="Broward Reseller"
@@ -34,9 +57,29 @@ def component(title, elem_id=""):
 
     elif (title=="ppb"):
         title_formatted="Privacy Playbook"
-        text = "This is text about the project. This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project.This is text about the project."
         domain = "https://privacyplaybook.com/"
         domain_name = "www.privacyplaybook.com"
+        text = Markup(f"""
+        <li>
+            <p>
+                Built the front-end using vanilla <strong> html,css and js </strong>,
+                based on the specifications of a designer.
+            </p>
+        </li>
+        <li>
+            <p>
+                <strong> Worked closely with a back-end developer </strong>
+                to code up some “glue” functions between
+                the api and html components.
+            </p>
+        </li>
+        <li>
+            <p>
+                Controlled different versions of the app using <strong>github</strong>
+            </p>
+        </li>
+        
+        """)
 
     else:
         pass
@@ -56,11 +99,11 @@ def component(title, elem_id=""):
                     data-src_3="{img_src3}"
                     data-src_4="{img_src4}"
                     data-src_active=1
-                    loading-lazy
+                    loading=lazy
                 >
-                <p>
+                <ul>
                     {text}
-                </p>
+                </ul>
                 </div>
             </div>
 """)

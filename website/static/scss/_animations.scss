@@ -151,12 +151,14 @@
     -webkit-animation: show_menu ease 1 forwards;
     animation: show_menu ease 1 forwards;
     animation-duration: .8s;
+    display: flex !important;
 }
 
 .apply_hide_menu{
     -webkit-animation: hide_menu ease 1 forwards;
     animation: hide_menu ease 1 forwards;
     animation-duration: .8s;
+    display: none !important;
 }
 
 

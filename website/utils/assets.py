@@ -21,6 +21,7 @@ bundles = {
         'js/index_js/projects_mod.js',
         'js/index_js/digital_mod.js',
         'js/index_js/shifting_h1.js',
+        'js/index_js/day_mod.js',
         filters='jsmin',
         depends='js/*.js',
         output='gen/js/index.%(version)s.js'

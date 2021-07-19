@@ -88,9 +88,9 @@ def component(title, elem_id=""):
     return Markup(f"""
             <div id="{elem_id}" class="project">
                 <h3>
-                    {title_formatted}
+                    {title_formatted} | <a href='{domain}' target='_blank'> {domain_name} </a>
+ 
                 </h3>
-                <a href='{domain}' target='_blank'> {domain_name} </a>
                 <img
                     src="{img_src1}"
                     alt="{title} image"

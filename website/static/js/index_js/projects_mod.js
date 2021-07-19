@@ -1,37 +1,31 @@
 let projects = document.querySelectorAll('.project')
 if (projects){
     for (let project of projects){
-        project.addEventListener('click', run_slide, false)
+        project.addEventListener('click', mod_slide, false)
     }
 }
 
+// what do we need to get this slideshow going?
+// 
 
-function run_slide(event){
-    let img = this.querySelector('img')
-    img.dataset.src_active = parseInt(img.dataset.src_active)+1
-    if (img.dataset.src_active == 5){
-        img.dataset.src_active = 1
-    }
-    // img.classList.add('dissipation')
-    // setTimeout(function(){
-    //     img.classList.remove('dissipation')
-    // }, 2000)
-    img.src = img.getAttribute(`data-src_${img.dataset.src_active}`)
-    // img.classList.remove('dissipation')
 
+
+let curr_slide_index = 0
+function mod_slide(){
+
+    // if (this.dataset.panel_id != curr_slide_id){
+
+
+    // }
 }
 
 
 const slideshow_clock = new THREE.Clock()
-let clocking = function(){
+let slideshow_clocking = function(){
 
-    setTimeout(function(){
-        requestAnimationFrame(clocking);
-        for (let project of projects){
+    requestAnimationFrame(slideshow_clocking)
 
-            // project.click()
-        }
-    }, 5000)
+
     
     // let elapsed = slideshow_clock.getElapsedTime()
     // let elapsed = slideshow_clock.elapsedTime
@@ -39,7 +33,7 @@ let clocking = function(){
     //     console.log(elapsed)
     // }
 }
-clocking();
+slideshow_clocking();
 // console.log(clock)
 
 

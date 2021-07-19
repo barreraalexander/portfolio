@@ -185,3 +185,39 @@
     mix-blend-mode: luminosity;
 
 }
+
+
+
+@keyframes shifting_span {
+    from {
+        bottom: 0rem;
+        opacity: 1;
+    }
+    to {
+        bottom: -1.5em;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes shifting_span {
+    from {
+        bottom: 0rem;
+        opacity: 1;
+    }
+    to {
+        bottom: -1.5em;
+        opacity: 0;
+    }
+}
+
+.apply_shifting_span{
+    -webkit-animation: shifting_span ease 1 forwards;
+    animation: shifting_span ease 1 forwards;
+    animation-duration: 1.5s;
+}
+
+.apply_shifting_span_reverse{
+    -webkit-animation: shifting_span ease 1 forwards reverse;
+    animation: shifting_span ease 1 forwards reverse;
+    animation-duration: 2s;
+}

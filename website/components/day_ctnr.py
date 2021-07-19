@@ -14,7 +14,7 @@ def component():
             </h3>
             <div class="day_caption_ctnr">
                 <p>
-                    <span>Coder</span> from south Florida
+                    <span id="job_span">Coder</span> from south Florida
                 </p>
                 <img
                     src="{florida_svg}"

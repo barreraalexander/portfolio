@@ -15,7 +15,6 @@ function mod_menu(){
         window.addEventListener('click', check_target, true)
         
     } else if (menu_status=='open'){
-        alert('here')
         hidden_menu.dataset.menu_status = 'closed'
         hidden_menu.classList.remove('apply_show_menu')
         hidden_menu.classList.add('apply_hide_menu')
@@ -26,13 +25,11 @@ function mod_menu(){
 
 function check_target(event){
     var hidden_menu = document.querySelector('#hidden_nav')
-    // var menu_status = hidden_menu.dataset.menu_status
 
     if (event.target != hidden_menu &&
         event.target != nav_button &&
         event.target.parentNode != hidden_menu){
 
-        console.log(hidden_menu)
         mod_menu()
 
 

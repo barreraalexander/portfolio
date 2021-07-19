@@ -39,40 +39,13 @@
   }
 
 
-  let divider = document.querySelector('.shimmering_div')
-  function dissolve_divider(scrollPos){
-    if(scrollPos > 10){
-      divider.classList.add("dissolving_div")
-      setTimeout(function(){
-        divider.style.display = "none"
-      }, 400)
-    }
-  }
-
-  function check_no_scroll(scrollPos){
-    setTimeout(function(){
-      divider.classList.add("enlarge_div")
-      var scroll_alert = document.createElement("p")
-      var alert_text = document.createTextNode("Please Scroll Down")
-      scroll_alert.appendChild(alert_text)
-      scroll_alert.classList.add("scroll_alert")
-      divider.appendChild(scroll_alert)
-    }, 6000)
-  }
-
-  if (divider){
-    check_no_scroll()
-  }
-
-
   document.addEventListener('scroll', function(e) {
     lastKnownScrollPosition = window.scrollY;
     if (!ticking) {
       window.requestAnimationFrame(function() {
-        shift_digital(lastKnownScrollPosition);
-        dissolve_divider(lastKnownScrollPosition);
         if (screen.width >= 1600){
           alter_image(lastKnownScrollPosition);
+          shift_digital(lastKnownScrollPosition)
         }
         ticking = false;
       });

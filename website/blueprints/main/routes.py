@@ -13,6 +13,12 @@ from website.components.technologies import component \
 from website.components.linkset import component \
                                 as link_set
 
+from website.components.text_components import about_me \
+                                as about_me
+
+from website.components.text_components import work_flow \
+                                as work_flow
+
 from website.blueprints.main import CONTACT_DICT
 
 main = Blueprint ('main', __name__)
@@ -24,6 +30,8 @@ def index():
                             project=project,
                             technologies=technologies,
                             day_ctnr=day_ctnr,
+                            about_me=about_me,
+                            work_flow=work_flow,
                             link_set=link_set)
 
 

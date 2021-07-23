@@ -26,6 +26,7 @@ main = Blueprint ('main', __name__)
 @main.route('/')
 def index():
     return render_template('_index.html',
+                            title='Home',
                             CONTACT_DICT=CONTACT_DICT,
                             project=project,
                             technologies=technologies,
@@ -38,6 +39,7 @@ def index():
 @main.route('/about')
 def about():
     return render_template('_about.html',
+                            title='About',
                             link_set=link_set,
                             CONTACT_DICT=CONTACT_DICT)
 
@@ -45,6 +47,7 @@ def about():
 def contact():
     form = ContactForm()
     return render_template('_contact.html',
+                            title='Contact',
                             form=form,
                             link_set=link_set,
                             CONTACT_DICT=CONTACT_DICT)

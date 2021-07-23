@@ -8,8 +8,13 @@ def about_me():
             <strong>
                 Alexander Barrera
             </strong>
-            and I'm a junior web developer from south Florida. When I'm not coding
-            I like to go on
+            
+            and I'm a self-taught
+            <strong>
+                junior web developer
+            </strong>
+            
+            from south Florida. When I'm not coding I like to go on
             <strong>
                 long runs
             </strong>
@@ -17,7 +22,11 @@ def about_me():
             <strong>
                 read
             </strong> 
-            fantasy novels (Lord of the Rings, anyone? 😊)
+            fantasy novels (Lord of the Rings, anyone? 😊).
+            I've been teaching myself how to code for about 3 years or so, and I'm happy
+            to say that I've finally found my passion. Coding is not
+            just a job for me, it's an art, where a steady balance of
+            technique and originality could make for clean, efficient code.
         </p>
 
 

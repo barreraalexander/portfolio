@@ -32,9 +32,12 @@ if (night_ctnr){
    
     const textureLoader = new THREE.TextureLoader()
     
-    const normal_texture = textureLoader.load('../../images/textures/moon_texture.png')
+    const normal_texture_link = night_ctnr.dataset.normal_texture
+
+    const normal_texture = textureLoader.load(normal_texture_link)
 
     material.normalMap = normal_texture;
+
     material.roughness = 0.7
 
     var mesh1 = new THREE.Mesh(geometry, material)
@@ -110,10 +113,8 @@ if (night_ctnr){
         particles_mesh.rotation.x = (.0009 * -mouse_x)
 
         renderer.domElement.id = 'globe_canvas';
-        // renderer.setClearColor(new THREE.Color('#111'))
         renderer.render(scene, camera)
 
-        //window.requestAnimationFrame()
     }
     render();
 }

@@ -16,8 +16,12 @@ from website.components.linkset import component \
 from website.components.text_components import about_me \
                                 as about_me
 
+
 from website.components.text_components import work_flow \
                                 as work_flow
+
+from website.components.question_answer import component \
+                                as q_a
 
 from website.blueprints.main import CONTACT_DICT
 
@@ -41,6 +45,7 @@ def about():
     return render_template('_about.html',
                             title='About',
                             link_set=link_set,
+                            q_a=q_a,
                             CONTACT_DICT=CONTACT_DICT)
 
 @main.route('/contact')

@@ -22,12 +22,12 @@ def component():
             </div>
             <a href="{resume_link}" download>
                 <button>
-                    DOWNLOAD MY RESUME
+                    Download My Resume
                 </button>
             </a>
             <a href="{contact_link}">
                 <button>
-                    CONTACT ME
+                    Contact Me
                 </button>
             </a>
         </div> 

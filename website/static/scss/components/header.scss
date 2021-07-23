@@ -21,6 +21,7 @@
     a{
         color: var(--text_color);
         text-decoration: none;
+        font-size: 1.2rem;
     }
     a:hover{
         border-bottom: .03em solid var(--primary);
@@ -52,6 +53,7 @@
 }
 
 #hidden_nav{
+    align-items: center;
     background-color: var(--primary);
     border-radius: 1rem 0rem 0rem 1rem;
     height: 90vh;
@@ -63,12 +65,14 @@
     position: absolute;
     right: -15em;
     top: 0;
+    width: 40%;
     li:first-of-type{
         margin-top: 1em;
     }
     a{
         color: var(--text_color_inv);
         font-weight: 600;
+        font-size: 1.2rem;
     }
 
 }

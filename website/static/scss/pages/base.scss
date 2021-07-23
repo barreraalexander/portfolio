@@ -7,6 +7,9 @@ html[data-main_theme="light"]{
     --theme_accent: #{$lt_accent};
     --primary: #{$lt_theme_primary};
     --secondary: #{$lt_theme_secondary};
+
+    transition: 1s;
+
     
     #night_ctnr{
         display: none;
@@ -20,7 +23,7 @@ html[data-main_theme="light"]{
         display: none;
     }
 
-    transition: 1s;
+    // transition: 1s;
     
     .switch{
         left: 1.5rem;
@@ -46,7 +49,7 @@ html[data-main_theme="dark"]{
     --primary: #{$dk_theme_primary};
     --secondary: #{$dk_theme_secondary};
 
-    transition: 1s;
+    // transition: 1s;
 
     #night_ctnr{
         display: block;
@@ -66,6 +69,7 @@ body, html{
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text_color);
     background-color: var(--text_color_inv);
+    transition: 1s;
 }
 
 
@@ -113,7 +117,8 @@ body, html{
 
 @media only screen and (min-width: $desktop_4k_bp){
     body, html{
-        font-size: 2.3em;
+        // font-size: 2em;
         // font-size: 1.5em;
+        font-size: 1.8em;
     }
 }

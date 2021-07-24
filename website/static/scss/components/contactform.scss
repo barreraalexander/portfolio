@@ -10,6 +10,8 @@
         white-space: pre;
     }
     input, textarea{
+        background-color: var(--text_color);
+        color: var(--text_color_inv);
         border: .15em solid var(--text_color_inv);
         border-radius: .9em;
         font-size: 1rem;

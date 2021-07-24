@@ -1,6 +1,7 @@
 #about_section{
     padding: 2em;
-    background-color: var(--primary);
+    // background-color: var(--primary);
+    background-color: var(--bg_invert);
     font-family: 'Roboto', sans-serif;
     hr{
         display: none
@@ -8,9 +9,9 @@
     h1{
         @include proj_heading;
         // border-bottom: .10em solid var(#000);
-        border-bottom: .10em solid #000;
-        // color: var(--text_color_inv); 
-        color: #000; 
+        border-bottom: .10em solid var(--text_color_inv);
+        color: var(--text_color_inv); 
+        // color: #000; 
         font-size: 2rem;
         width: max-content;
 
@@ -44,12 +45,14 @@
 
 
 .qa_ctnr{
+    // @include shadow;
     width: 100%;
     color: var(--text_color_inv);
     margin-top: 1em;
     border-radius: .9em;
     overflow: hidden;
     max-width: 80rem;
+    border: .09em solid var(--text_color_inv);
     // width: 70%;
     strong{
         font-weight: 700;

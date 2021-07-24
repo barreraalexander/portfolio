@@ -7,12 +7,16 @@
         @include proj_h1;
         margin-left: 2rem;
     }
+    label{
+        color: var(--text_color)
+    }
     .form_ctnr{
         @include shadow;
+        // background-color: var(--accent);
+        background-color: var(--theme_accent);
         border-radius: .9em;
         width: 20rem;
         margin: 0 auto;
-        background-color: var(--accent);
         padding: 1rem;
     }
 }

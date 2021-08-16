@@ -1,29 +1,41 @@
 //SECTION: colors
-$primary1: #FFBB7F;
-$primary2_alt: #94FF75;
-$primary2: #77FFC0;
 $proj_black: #2E2E2E;
 $proj_gray: #BCBCBC;
 
 //SECTION: colors for light theme
 $lt_bg: #f6f6f6;
 $lt_primary: #fff;
-$lt_accent: #f8f8f8;
+$lt_accent: #e6e6e6;
+// $lt_accent: rgb(255, 234, 255);
 
-$lt_theme_primary: #b673b0;
-$lt_theme_secondary: #5c42f0e1;
+$lt_theme_primary: #000;
+$lt_theme_secondary: #222;
+
+
 //SECTION: colors for dark theme
-$dk_bg: #222222;
+$dk_bg: #222;
 $dk_primary: #000;
 $dk_accent: #111;
 
-$dk_theme_primary: #77FFC0;
-$dk_theme_secondary: #FFBB7F;
+$dk_theme_primary: #fff;
+$dk_theme_secondary: #f2f2f2;
 
 
 //SECTION: breakpoints
 $tablet_bp: 767px;
-// $tablet_bp: 900px;
 // $desktop_bp: 1919px;
 $desktop_bp: 1400px;
 $desktop_4k_bp: 3839px;
+
+
+// COMMON TYPO
+$letter_spacing: .2em;
+$light_weight: 300;
+$reg_weight: 400;
+$heavy_weight: 600;
+$border_radius: .9em;
+$border_width: .09em;
+$border_width_thick: .2em;
+$common_margin_top: 3em;
+$common_section_padding: 2em;
+

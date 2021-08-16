@@ -1,9 +1,8 @@
 from flask import Markup, url_for
 
 def component():
-    # img_src = url_for('static', filename='images/barrera_cutout.png')
     img_src = "https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/barrera_cutout.png"
-    florida_svg = url_for('static', filename='images/assets/pink_florida.svg')
+    florida_svg = url_for('static', filename='images/assets/theme_florida.svg')
     resume_link = url_for('static', filename='docs/BarreraAlexanderResume21.pdf')
     contact_link = url_for('main.contact')
     return Markup(f"""

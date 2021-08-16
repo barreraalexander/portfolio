@@ -37,7 +37,7 @@ def about_me():
 def work_flow():
     return Markup(f"""
 
-        <p class="workflow_text">
+        <p class="aboutme_paragraph">
             These days, I like to use to use
             <strong>
                 python flask

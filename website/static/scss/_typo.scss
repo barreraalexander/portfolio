@@ -17,6 +17,46 @@ h1, h2, h3, p, ul, li{
     padding: 0;
 }
 
+@mixin quiet_text {
+    font-family: 'Roboto';
+    font-weight: $light_weight;
+    color: var(--secondary);
+    
+}
+
+@mixin dramatic_text {
+    color: var(--primary);
+    font-family: 'Roboto Condensed';
+    font-size: 1.8em;
+    font-weight: $heavy_weight;
+    letter-spacing: $letter_spacing;
+
+}
+
+
+.dramatic_p_ctnr{
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-size: 2.5em;
+    p{
+        @include quiet_text;
+    }
+    .dramatic{
+        @include dramatic_text;
+        margin-left: .5em;
+    }
+}
+
+.dramatic_p_ctnr_alt{
+    align-items: flex-end;
+    .dramatic{
+        @include dramatic_text;
+        margin-right: .5em;
+    }
+}
+
 
 @mixin proj_a{
     
@@ -29,15 +69,15 @@ h1, h2, h3, p, ul, li{
 }
 
 h2{
-    font-size: 2.5rem;
+    font-size: 2.5em;
 }
 
 h3{
-    font-size: 3rem;
+    font-size: 3em;
 }
 
 p{
-    font-size: 1.2rem; 
+    font-size: 1.2em; 
 }
 
 
@@ -53,23 +93,6 @@ p{
     border-bottom: .10em solid var(--text_color_inv);
     font-size: 2rem;
 }
-
-
-
-.dramatic_p{
-    font-size: 1.8rem;
-    // font-size: 2rem;
-    line-height: 2.4rem;
-    margin: 1em 0;
-    strong{
-        color: var(--primary);
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        font-size: 1.8rem;
-    }
-}
-
 
 
 @mixin neon_text{
@@ -91,11 +114,11 @@ p{
         inset 0 0 1.3rem var(--primary);        
 }
 
-@media only screen and (min-width: $desktop_bp){
-    .dramatic_p{
-        font-size: 2.2rem;
-    }    
-}
+// @media only screen and (min-width: $desktop_bp){
+//     .dramatic_p{
+//         font-size: 2.2rem;
+//     }    
+// }
 
 
 @media only screen and (min-width: $desktop_4k_bp){

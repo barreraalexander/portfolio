@@ -7,8 +7,7 @@ if (night_ctnr){
         0.1,
         1000
         )
-        
-    camera.position.z = 5
+    camera.position.z = 8
 
 
     var renderer = new THREE.WebGLRenderer({
@@ -33,34 +32,34 @@ if (night_ctnr){
     const textureLoader = new THREE.TextureLoader()
     
     const normal_texture_link = night_ctnr.dataset.normal_texture
+    const bg_link = night_ctnr.dataset.background
 
     const normal_texture = textureLoader.load(normal_texture_link)
+
+
+    // const loader = new THREE.TextureLoader();
+    // loader.load(bg_link , function(texture)
+    //             {
+    //              scene.background = texture;
+    //             });
+
 
     material.normalMap = normal_texture;
 
     material.roughness = 0.7
 
     var mesh1 = new THREE.Mesh(geometry, material)
-    mesh1.position.y = 1;
-    mesh1.position.x = 1;
-    mesh1.position.z = .5;
+    mesh1.position.y = 5;
+    mesh1.position.x = 6;
+    mesh1.position.z = -2;
+    material.metalness = 5
+    material.roughness = 5
     scene.add(mesh1)
 
-    var geometry = new THREE.SphereBufferGeometry(8, 20, 20);
-    var material = new THREE.MeshLambertMaterial({color: 0x111111});
-    material.metalness = 1
-    material.roughness = 1
-    var mesh3 = new THREE.Mesh(geometry, material)
-    mesh3.position.x = -10;
-    mesh3.position.y = 5;
-    mesh3.position.z = -20;
-    mesh3.opacity = .3;
-
-    // scene.add(mesh3)
 
     var light1 = new THREE.PointLight(0xFFFFFF, 1, 1000)
     light1.position.set(1, 1, 0);
-    scene.add(light1)
+    // scene.add(light1)
 
     var light2 = new THREE.PointLight(0xFFFFFF, 1, 1000)
     light2.position.set(-1, -1  , 5); 
@@ -69,18 +68,18 @@ if (night_ctnr){
 
     //star   system
     const particles_geomtery = new THREE.BufferGeometry;
-    const particles_count = 10000/2;
+    const particles_count = 10000/3;
 
     const position_array = new Float32Array(particles_count * 3)
 
     for (let i = 0; i < particles_count * 3; i++){
-        position_array[i] = (Math.random() - 0.5) * 8
+        position_array[i] = (Math.random() - 0.5) * 40
     }
 
     particles_geomtery.setAttribute('position', new THREE.BufferAttribute(position_array, 3))
 
     const particle_material = new THREE.PointsMaterial({
-        size: 0.005,
+        size: 0.010,
         color: 'white',
     })
 

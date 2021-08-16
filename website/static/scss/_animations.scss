@@ -52,7 +52,7 @@
     }
 }
 
-@mixin pink_shifting_bg{
+@mixin theme_shifting_bg{
     background: linear-gradient(45deg, var(--theme_accent), var(--primary));
     background-attachment: fixed;
     background-size: 100% 100%;

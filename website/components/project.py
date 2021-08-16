@@ -1,6 +1,5 @@
 from flask import Markup, url_for
 
-
 def component(title, elem_id=""):
     img_src1 =f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}1.png"
     img_src2 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}2.png"

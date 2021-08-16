@@ -3,7 +3,7 @@
     height: $h;
     width: $w;
 
-    background: linear-gradient(-45deg, var(--primary), var(--secondary), $primary2_alt );
+    // background: linear-gradient(-45deg, var(--primary), var(--secondary), $primary2_alt );
     background-attachment: fixed;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -20,7 +20,6 @@
     border-radius: .9em;
     color: var(--text_color_inv);
     padding: .02em, 1em;
-    letter-spacing: .09em;
     font-weight: 600;
 }
 
@@ -30,7 +29,6 @@
     border-radius: .9em;
     background-color: var(--theme_accent);
     padding: .02em, 1em;
-    letter-spacing: .09em;
 }
 
 @mixin shadow{

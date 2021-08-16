@@ -16,7 +16,7 @@ def component(set_type=""):
     </li>
     <li {dataset}>
         <a href="{about_link}">
-            About
+            Questions
         </a>
     </li>
     <li {dataset}>

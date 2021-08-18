@@ -2,7 +2,7 @@
     overflow: hidden;
     position: relative;
     z-index: 1000;
-    height: 100vh;
+    height: 80vh;
 }
 
 .hero_ctnr{
@@ -204,6 +204,9 @@
     .caption_ctnr{
         margin-top: unset;
     }
+    #index_section1{
+        height: 100vh;
+    }    
 }
 @media only screen and (min-width: $desktop_bp){
     .img_of_me{
@@ -217,5 +220,6 @@
 
     #index_section4{
         padding: 2em 4em;
-    }    
+    }
+
 }

@@ -72,11 +72,9 @@
         <section id="base_footer_section">
             <footer>
                 <div class="footer_left">
-                    <a href="{{url_for('main.contact')}}">
-                        <h5>
-                            Contact Me
-                        </h5>
-                    </a>
+                    <h5>
+                        Contact Me
+                    </h5>
                     <ul>
                         <li>
                             <a href="tel:{{CONTACT_DICT['phone']}}">
@@ -84,13 +82,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:{{CONTACT_DICT['email']}}">
-                                ✉ {{CONTACT_DICT['email']}} 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{url_for('main.contact')}}">
-                                📁 Fillout the Form
+                            <a href="#" class='open_modal'>
+                                ✉ Fillout the Form
                             </a>
                         </li>
                     </ul>

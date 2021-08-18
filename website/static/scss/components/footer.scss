@@ -8,13 +8,15 @@
         flex-flow: column nowrap;
     }
     h5{
-        font-size: 1.5rem;
+        @include dramatic_text;
+        color: var(--text_color_inv);
         margin: .5em;
         text-decoration: underline;
         text-decoration-thickness: 3px;
     }
     a{
-        font-size: 1.2rem;
+        @include quiet_text;
+        font-size: 1.2em;
         color:var(--text_color_inv);
     }
     li{

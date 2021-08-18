@@ -1,6 +1,5 @@
 #base_aside_section{
     top: 0;
-    opacity: .7;
     width: 100%;
     z-index: 1001;
     position: absolute;
@@ -8,8 +7,7 @@
 
 #base_aside_section:hover{
     background-color: var(--theme_accent) !important;
-    // background-color: var(--text_color_inv) !important;
-    // background-color: red !important;
+
 }
 
 #main_nav{

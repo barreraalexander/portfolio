@@ -10,6 +10,7 @@ bundles = {
     'main_js': Bundle(
         'js/main_js/mod_theme.js',
         'js/main_js/mod_menu.js',
+        'js/main_js/mod_modal.js',
         filters='jsmin',
         depends='js/*.js',
         output='gen/js/main.%(version)s.js'

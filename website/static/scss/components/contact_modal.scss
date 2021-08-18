@@ -1,6 +1,5 @@
 #contact_modal_section{
     display: flex;
-    // display: none;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -17,6 +16,10 @@
         padding: 2em;
         background-color: var(--bg);
     }
+}
+
+#contact_modal_section[data-status="closed"]{
+    display: none;
 }
 
 

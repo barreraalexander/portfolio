@@ -7,7 +7,6 @@ def component(set_type=""):
     
     home_link = url_for('main.index')
     about_link = url_for('main.about')
-    contact_link = url_for('main.contact')
     return Markup (f"""
     <li {dataset}>
         <a href="{home_link}">
@@ -19,8 +18,8 @@ def component(set_type=""):
             Questions
         </a>
     </li>
-    <li {dataset}>
-        <a href="{contact_link}">
+    <li {dataset} class="open_modal">
+        <a href="#">
             Contact
         </a>
     </li>

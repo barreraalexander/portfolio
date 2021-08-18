@@ -5,16 +5,26 @@
     <main>
 
         <section id="about_section">
-            <h1>
-                Frequently Asked
-            </h1>
-            <div class="qa_ctnr">
-                {{ q_a('flask') }}
-                {{ q_a('host') }}
-                {{ q_a('bootstrap') }}
-                {{ q_a('react') }}
+            <div class="about_section_left">
+                <h1>
+                    Frequently Asked
+                </h1>
+                <div class="qa_ctnr">
+                    {{ q_a('flask') }}
+                    {{ q_a('host') }}
+                    {{ q_a('bootstrap') }}
+                    {{ q_a('react') }}
+                </div>
+            </div>
+            <div class="about_section_right">
+                <p>
+                    Full Stack Web Dev
+                </p>
+                <p>
+                    $54 / hr
+                </p>
             </div>
         </section>
-        
+
     </main>
 {% endblock %}

@@ -39,7 +39,7 @@ h1, h2, h3, p, ul, li{
     display: flex;
     flex-flow: column;
     justify-content: center;
-    font-size: 2.5em;
+    font-size: 2em;
     p{
         @include quiet_text;
     }
@@ -58,9 +58,6 @@ h1, h2, h3, p, ul, li{
 }
 
 
-@mixin proj_a{
-    
-}
 
 @mixin proj_h1{
     font-size: 3rem;
@@ -114,11 +111,11 @@ p{
         inset 0 0 1.3rem var(--primary);        
 }
 
-// @media only screen and (min-width: $desktop_bp){
-//     .dramatic_p{
-//         font-size: 2.2rem;
-//     }    
-// }
+@media only screen and (min-width: $desktop_bp){
+    .dramatic_p_ctnr{
+        font-size: 2.5em;
+    }    
+}
 
 
 @media only screen and (min-width: $desktop_4k_bp){

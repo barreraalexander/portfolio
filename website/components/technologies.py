@@ -5,12 +5,10 @@ def component():
     def tech_img_ctnr(technology):
         selected = "selected_img"
         img_src = url_for('static', filename=f'images/assets/{technology}.svg')
-        caption = "To me, Python is just the ultimate programming language. Whether writing scripts, apis, or full on web applications (flask), python is my goto when it comes to developing software."
         return Markup(f"""
             <div
                 id="{technology}"
                 class="tech_img_ctnr"
-                data-caption="{caption}"
             >
                 <img
                     src="{img_src}"

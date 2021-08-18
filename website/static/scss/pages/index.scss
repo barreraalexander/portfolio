@@ -46,8 +46,9 @@
     width: 100%;
     display: block;
     z-index: 200;
+    filter: grayscale(100%);
     // filter: saturate(4);
-    opacity: .6;
+    opacity: .8;
 }
 
 .caption_ctnr{
@@ -197,8 +198,12 @@
     .hero_ctnr{
         h1{
             @include neon_text;
+            font-size: 5em;
         }
-    } 
+    }
+    .caption_ctnr{
+        margin-top: unset;
+    }
 }
 @media only screen and (min-width: $desktop_bp){
     .img_of_me{

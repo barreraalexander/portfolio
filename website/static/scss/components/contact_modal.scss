@@ -1,0 +1,80 @@
+#contact_modal_section{
+    display: flex;
+    // display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background-color: rgba($color: #000000, $alpha: .7);
+    top: 0;
+    .modal_ctnr{
+        box-shadow: .09em .1em 2.2em .1em var(--theme_accent);
+        border-radius: $border_radius;
+        width: 45%;
+        min-width: 15em;
+        padding: 2em;
+        background-color: var(--bg);
+    }
+}
+
+
+#contact_form{
+    display: contents;
+    .form_ctnr{
+        display: flex;
+        flex-flow: column;
+        gap: 2em;
+        align-items: center;
+    }
+    #cancel_ctnr{
+        display: block;
+        width: 1.5em;
+        align-self: flex-end;
+        svg{
+            width: 100%;
+        }
+    }
+    #cancel_ctnr:hover{
+        filter: invert(100%);
+    }
+    .form_group{
+        display: flex;
+        flex-flow: column;
+    }
+    .form_group label{
+        @include quiet_text;
+        font-size: .9em;
+    }
+    input:focus, textarea:focus{
+        border-color: var(--primary);
+        transition: .2s;
+        outline-width: 0;
+        outline: none;
+    }
+    input:hover, textarea:hover{
+        border-color: var(--primary);
+    }
+
+    input, textarea{
+        background-color: var(--bg);
+        color: var(--text_color);
+        border: .15em solid var(--text_color);
+        border-radius: $border_radius;
+        padding: .5em;
+        width: 20em;
+    }
+
+    textarea{
+        min-height: 8rem;
+    }
+    #submit{
+        @include inverse_btn;
+        width: 8em;
+        font: 1.2rem;
+    }
+    #submit:hover{
+        @include primary_btn;
+    }
+}

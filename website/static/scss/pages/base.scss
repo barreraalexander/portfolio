@@ -41,6 +41,11 @@ html[data-main_theme="light"]{
         background-color: var(--text_color_inv);
         position: relative;
     }
+    .about_section_right{
+        p{
+            color: lime;
+        }
+    }
 }
 
 html[data-main_theme="dark"]{
@@ -64,6 +69,11 @@ html[data-main_theme="dark"]{
 
     .switch{
         left: .25rem;
+    }
+    .about_section_right{
+        p{
+            color: green;
+        }
     }
 }
 
@@ -93,6 +103,9 @@ body, html{
 .show_on_desktop{
     display: none;
 }
+
+
+
 
 @media only screen and (min-width: $tablet_bp){
     body, html{

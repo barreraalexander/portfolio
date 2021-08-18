@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" data-main_theme="light">
+<html lang="en" data-main_theme="dark">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,8 +29,11 @@
     </head>
 
     <body>
-
-        <section id="base_aside_section">
+        {% if title != "Home" %}
+            <section id="base_aside_section" style="position: relative;">
+        {% else %}
+            <section id="base_aside_section">
+        {% endif %}
             <aside>
                 <ul id="main_nav">
                     <li class="h1_flexi">
@@ -62,6 +65,7 @@
             </aside>
         </section>
 
+        {{contact_modal()}}
 
         {% block content %}{% endblock %}
 

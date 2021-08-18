@@ -2,8 +2,6 @@ from flask import Blueprint,\
     redirect, render_template,\
     request, url_for
 
-from website.blueprints.api.forms import ContactForm
-
 from website.components.project import component \
                                 as project
 
@@ -11,6 +9,8 @@ from website.components.project_card import component \
                                 as project_card
 from website.components.day_ctnr import component \
                                 as day_ctnr
+from website.components.contact_modal import component \
+                                as contact_modal
 from website.components.technologies import component \
                                 as technologies
 from website.components.linkset import component \
@@ -42,6 +42,7 @@ def load_components ():
                 work_flow=work_flow,
                 q_a=q_a,
                 comments=comments,
+                contact_modal=contact_modal,
                 link_set=link_set)
 
 @main.route('/')

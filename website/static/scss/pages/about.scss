@@ -1,59 +1,48 @@
 #about_section{
-    padding: 2em;
-    // background-color: var(--primary);
     background-color: var(--bg_invert);
     font-family: 'Roboto', sans-serif;
-    hr{
-        display: none
-    }
+    display: flex;
+    padding: 2em;
+    flex-flow: wrap;
+    gap: 2em;
     h1{
-        @include proj_heading;
-        // border-bottom: .10em solid var(#000);
+        @include dramatic_text;
         border-bottom: .10em solid var(--text_color_inv);
         color: var(--text_color_inv); 
-        // color: #000; 
         font-size: 2rem;
         width: max-content;
-
     }
-    .about_me_ctnr{
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        gap: 2em;
-        margin-top: 1em;
-        margin-bottom: 4em;
-    }
-    .about_me{
-        font-size: 1.2em;
-        strong{
-            color: var(--theme_accent);
-            display: block;
-            font-size: 1.1em;
-            font-style: italic;
-            margin-bottom: .5em;
-            width: 100%;
-            text-align: center;
-        }
-        p{
-            color: var(--text_color_inv);
-            font-size: 1em;
-        }
-    }
-
 }
 
+.about_section_left, .about_section_right{
+    flex: 1;
+}
+
+.about_section_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    min-width: 20em;
+    max-width: 100%;
+    p:first-of-type{
+        @include quiet_text;
+        font-size: 2em
+    }
+    p{
+        @include dramatic_text;
+        font-size: 8em;
+        text-align: center;
+    }
+}
 
 .qa_ctnr{
-    // @include shadow;
-    width: 100%;
     color: var(--text_color_inv);
     margin-top: 1em;
     border-radius: .9em;
     overflow: hidden;
     max-width: 80rem;
     border: .09em solid var(--text_color_inv);
-    // width: 70%;
     strong{
         font-weight: 700;
         float: left;
@@ -63,36 +52,26 @@
 }
 
 .question_ctnr, .answer_ctnr{
+    @include quiet_text;
     padding: 1em;
-    font-family: 'Times New Roman';
 }
 
 .question_ctnr{
-    // background-color: var(--bg);
     background-color: var(--bg);
     color: var(--text_color);
-    // background-color: lighten($primary, 10%);
     p{
         font-style: italic;
     }
 }
 .answer_ctnr{
     background-color: var(--bg_invert);
-    // border-bottom: .2em solid var(--theme_accent);
+    color: var(--text_color_inv);
 }
-
-
-
-// .answer_ctnr:last-of-type{
-//     border-bottom: unset;
-// }
 
 
 @media only screen and (min-width: $tablet_bp){
     #about_section{
-        .about_me_ctnr{
-            flex-flow: row;
-        }
+
         hr{
             display: block;
         }

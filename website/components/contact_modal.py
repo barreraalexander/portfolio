@@ -30,6 +30,9 @@ def component():
                         {contact_form.help_description}
                     </div>
                     <div class="form_group">
+                        {contact_form.recaptcha()}
+                    </div>                    
+                    <div class="form_group">
                         {contact_form.submit}  
                     </div>
                 </div>

@@ -7,8 +7,8 @@ with open('/etc/portfolio_config.json') as config_file:
 class Config:
     SECRET_KEY = config.get('SECRET_KEY')
 
-    # RECAPTCHA_PUBLIC_KEY = config.get('RECAPTCHA_PUBLIC_KEY')
-    # RECAPTCHA_PRIVATE_KEY = config.get('RECAPTCHA_SECRET_KEY')
+    RECAPTCHA_PUBLIC_KEY = config.get('RECAPTCHA_PUBLIC_KEY')
+    RECAPTCHA_PRIVATE_KEY = config.get('RECAPTCHA_SECRET_KEY')
 
     MAIL_USERNAME = config.get('EMAIL_USER')
     MAIL_DEFAULT_SENDER = config.get('EMAIL_USER')

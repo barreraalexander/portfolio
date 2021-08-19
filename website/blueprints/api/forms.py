@@ -23,7 +23,7 @@ class ContactForm (FlaskForm):
                         validators=[Length(min=2, max=300)],
                         render_kw={"placeholder":"Your Message (optional)"})
 
-    # recaptcha = RecaptchaField()
+    recaptcha = RecaptchaField()
 
     time_sent = StringField ('Time Sent',
                             default=datetime.now())

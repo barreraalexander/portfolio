@@ -29,7 +29,16 @@ def component():
                     Contact Me
                 </button>
             </a>
-        </div> 
+            <div class="color_picker">
+                <p>
+                    pick an accent
+                </p>
+                <div class="color_div" data-bg_color="#EDFFE1"></div>
+                <div class="color_div" data-bg_color="#E1FFF9"></div>
+                <div class="color_div" data-bg_color="#FCE1FF"></div>
+                <div class="color_div" data-bg_color="#FAFFE1"></div>
+            </div>
+        </div>
         <div class="day_col right"> 
             <img
                 src="{img_src}"

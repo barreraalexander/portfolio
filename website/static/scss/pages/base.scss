@@ -7,10 +7,8 @@ html[data-main_theme="light"]{
     --theme_accent: #{$lt_accent};
     --primary: #{$lt_theme_primary};
     --secondary: #{$lt_theme_secondary};
-
     transition: 1s;
 
-    
     #night_ctnr{
         display: none;
     }
@@ -45,6 +43,9 @@ html[data-main_theme="light"]{
         p{
             color: lime;
         }
+    }
+    .hero_ctnr{
+        height: unset;
     }
 }
 

@@ -26,45 +26,25 @@ if (night_ctnr){
     })
 
 
-    var geometry = new THREE.SphereBufferGeometry(1, 20, 20);
-    var material = new THREE.MeshLambertMaterial({color: 0xF1F1F1});
-   
-    const textureLoader = new THREE.TextureLoader()
+    const geometry = new THREE.SphereBufferGeometry(1.5, 20, 20);
+    const material = new THREE.MeshStandardMaterial();
     
-    const normal_texture_link = night_ctnr.dataset.normal_texture
-    const bg_link = night_ctnr.dataset.background
-
-    const normal_texture = textureLoader.load(normal_texture_link)
-
-
-    // const loader = new THREE.TextureLoader();
-    // loader.load(bg_link , function(texture)
-    //             {
-    //              scene.background = texture;
-    //             });
+    const moon_texture_link = night_ctnr.dataset.moon_texture
+    const space_bg_link = night_ctnr.dataset.space_bg
+    const loader = new THREE.TextureLoader();
+    const moon_texture = loader.load(moon_texture_link)    
 
 
-    material.normalMap = normal_texture;
+    material.normalMap = moon_texture
+    material.color = new THREE.Color('#c8c8c8')
 
-    material.roughness = 0.7
-
-    var mesh1 = new THREE.Mesh(geometry, material)
-    mesh1.position.y = 5;
-    mesh1.position.x = 6;
-    mesh1.position.z = -2;
-    material.metalness = 5
-    material.roughness = 5
+    const mesh1 = new THREE.Mesh(geometry, material)
+    mesh1.position.set(4, 8, -10)
     scene.add(mesh1)
 
-
     var light1 = new THREE.PointLight(0xFFFFFF, 1, 1000)
-    light1.position.set(1, 1, 0);
-    // scene.add(light1)
-
-    var light2 = new THREE.PointLight(0xFFFFFF, 1, 1000)
-    light2.position.set(-1, -1  , 5); 
-    scene.add(light2)
-
+    light1.position.set(0, 0, 0);
+    scene.add(light1)
 
     //star   system
     const particles_geomtery = new THREE.BufferGeometry;
@@ -105,7 +85,7 @@ if (night_ctnr){
         requestAnimationFrame(render)
 
         let elasped_time = clock.getElapsedTime()   
-        mesh1.rotation.y += 0.01;
+        mesh1.rotation.y += 0.0008;
 
         particles_mesh.rotation.y = (.0009 * elasped_time)
         particles_mesh.rotation.x = (.0009 * -mouse_y)

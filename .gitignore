@@ -1,7 +1,7 @@
 *.mp4
 .mp4
-*.png
-.png
+# *.png
+# .png
 .webassets-cache
 ".webassets-cache"
 website/static/gen/css/*.css

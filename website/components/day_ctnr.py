@@ -24,7 +24,7 @@ def component():
                     Download My Resume
                 </button>
             </a>
-            <a href="{contact_link}">
+            <a href="#" class="open_modal">
                 <button>
                     Contact Me
                 </button>

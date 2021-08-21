@@ -4,9 +4,16 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        
+        <meta name="description" content="{{META_DICT['description']}}">
+
+        <meta name="keywords" content="{{META_DICT['keywords']}}" />        
+
+        
+        
+        
         <link href="https://fonts.googleapis.com/css2?family=GoogleSans:wght@100;400&display=swap" rel="stylesheet">
-
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
@@ -15,6 +22,12 @@
 
         <link href="https://fonts.googleapis.com/css2?family=GoogleSans:wght@100;400&display=swap" rel="stylesheet">    
 
+
+
+
+
+
+
         {% assets "main_scss" %}
             <link rel="stylesheet" href="{{ASSET_URL}}">
         {% endassets %}
@@ -22,6 +35,18 @@
         <title>
             {{title}} | {{META_DICT['domain_name']}}
         </title>
+
+
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{META_DICT['domain_name']}}" />
+        <meta property="og:description" content="{{META_DICT['description']}}" />
+        <meta property="og:url" content="{{META_DICT['domain']}}" />
+        <meta property="og:site_name" content="{{META_DICT['domain_name']}}" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="{{META_DICT['description']}}" />
+        <meta name="twitter:title" content="{{META_DICT['domain_name']}}" />
 
     </head>
 

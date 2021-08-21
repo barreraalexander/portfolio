@@ -2,9 +2,6 @@ from flask import Blueprint,\
     redirect, render_template,\
     request, url_for
 
-from website.components.project import component \
-                                as project
-
 from website.components.project_card import component \
                                 as project_card
 from website.components.day_ctnr import component \
@@ -34,7 +31,6 @@ main = Blueprint ('main', __name__)
 def load_components ():
     return dict(META_DICT=META_DICT,
                 CONTACT_DICT=CONTACT_DICT,
-                project=project,
                 project_card=project_card,
                 technologies=technologies,
                 day_ctnr=day_ctnr,
@@ -55,12 +51,3 @@ def index():
 def about():
     return render_template('_about.html',
                             title='About')
-
-@main.route('/contact')
-def contact():
-    form = ContactForm()
-    return render_template('_contact.html',
-                            title='Contact',
-                            form=form,
-                            )
-

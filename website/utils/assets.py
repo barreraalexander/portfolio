@@ -18,7 +18,6 @@ bundles = {
     'index_js': Bundle(
         'js/index_js/scrolling_mod.js',
         'js/index_js/planets_mod.js',
-        'js/index_js/day_mod.js',
         filters='jsmin',
         depends='js/*.js',
         output='gen/js/index.%(version)s.js'

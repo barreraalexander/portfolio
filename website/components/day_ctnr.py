@@ -4,12 +4,11 @@ def component():
     img_src = "https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/barrera_cutout.png"
     florida_svg = url_for('static', filename='images/assets/theme_florida.svg')
     resume_link = url_for('static', filename='docs/BarreraAlexanderResume21.pdf')
-    contact_link = url_for('main.contact')
     return Markup(f"""
     <div id="day_ctnr">
         <div class="day_col left"> 
             <h3>
-                WEB DEVELOPER.
+                WEB DEVELOPER
             </h3>
             <div class="day_caption_ctnr">
                 <p>

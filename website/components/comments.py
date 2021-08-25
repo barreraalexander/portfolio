@@ -5,7 +5,12 @@ def component(title, elem_id=""):
     comment = ""
     if title=="ppb":
         author_name = "Russell Owens"
-        comment = "I hired Alexander for a small HTML/CSS job. His code was well structured and the site looks good. He proactively identified issues and either fixed them or asked for guidance. He worked effectively with github branches, PRs and issue management. He was easy to work with and had a positive attitude."
+        comment = """I hired Alexander for a small HTML/CSS
+        job. His code was well structured and the site looks
+        good. He proactively identified issues and either
+        fixed them or asked for guidance. He worked effectively
+        with github branches, PRs and issue management. He was
+        easy to work with and had a positive attitude."""
 
     elif title=="tod":
         author_name = "Adrian Milian"
@@ -13,11 +18,22 @@ def component(title, elem_id=""):
 
     elif title=="upwork1":
         author_name = "Jessica Baldwin"
-        comment = "Alexander communicated exceptionally well and he worked on the task we provided expeditiously!" 
+        comment = """Alexander communicated exceptionally
+        well and he worked on the task we provided
+        expeditiously!""" 
 
     elif title=="upwork2":
         author_name = "Port Vendre"
-        comment = "Alexander was great to work with. Stayed on time, completed work exactly as asked, and provided quality coding. We would definitely recommend him and hope to work with him again!" 
+        comment = """Alexander was great to work with.
+        Stayed on time, completed work exactly as asked,
+        and provided quality coding. We would definitely
+        recommend him and hope to work with him again!"""
+
+    elif title=="upwork3":
+        author_name = "Preston Gordon"
+        comment = """Alexander was great. He completed the
+        job promptly and was a pleasure to work with. This
+        job really helped me and my business. Thank you."""
 
 
     return Markup(f"""

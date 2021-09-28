@@ -4,6 +4,8 @@ from flask import Blueprint,\
 
 from website.components.project_card import component \
                                 as project_card
+from website.components.upwork_section import component \
+                                as upwork_section
 from website.components.day_ctnr import component \
                                 as day_ctnr
 from website.components.contact_modal import component \
@@ -39,6 +41,7 @@ def load_components ():
                 q_a=q_a,
                 comments=comments,
                 contact_modal=contact_modal,
+                upwork_section=upwork_section,
                 link_set=link_set)
 
 @main.route('/')

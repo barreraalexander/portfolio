@@ -7,6 +7,7 @@ html[data-main_theme="light"]{
     --theme_accent: #{$lt_accent};
     --primary: #{$lt_theme_primary};
     --secondary: #{$lt_theme_secondary};
+    --upwork_bg: #{$up_light};
     transition: 1s;
 
     #night_ctnr{
@@ -20,8 +21,6 @@ html[data-main_theme="light"]{
     #hero_h1{
         display: none;
     }
-
-    // transition: 1s;
     
     .switch{
         left: 1.5rem;
@@ -65,8 +64,8 @@ html[data-main_theme="dark"]{
     --theme_accent: #{$dk_accent};
     --primary: #{$dk_theme_primary};
     --secondary: #{$dk_theme_secondary};
+    --upwork_bg: #{$up_dark};
 
-    // transition: 1s;
 
     #night_ctnr{
         display: block;

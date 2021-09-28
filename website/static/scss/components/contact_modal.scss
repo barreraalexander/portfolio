@@ -28,7 +28,7 @@
     .form_ctnr{
         display: flex;
         flex-flow: column;
-        gap: 2em;
+        gap: 1em;
         align-items: center;
     }
     #cancel_ctnr{
@@ -52,7 +52,8 @@
     }
     input:focus, textarea:focus{
         border-color: var(--primary);
-        transition: .2s;
+        border: $border_width_thick solid var(--text_color);
+        transition: .1s;
         outline-width: 0;
         outline: none;
     }
@@ -61,11 +62,14 @@
     }
 
     input, textarea{
-        background-color: var(--bg);
-        color: var(--text_color);
-        border: .15em solid var(--text_color);
+        // background-color: var(--bg);
+        border: $border_width solid transparent;
         border-radius: $border_radius;
-        padding: .5em;
+        background-color: var(--text_color_inv);
+        color: var(--text_color);
+        // border: none;
+        
+        padding: .8em;
         width: 20em;
     }
 

@@ -1,14 +1,12 @@
 *.mp4
 .mp4
-# *.png
-# .png
 .webassets-cache
 ".webassets-cache"
 website/static/gen/css/*.css
 website/static/gen/js/*.js
 outline
 *.pem
-
+progress.txt
 
 # //SECTION: GENERAL
 

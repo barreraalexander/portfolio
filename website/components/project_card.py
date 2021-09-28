@@ -1,10 +1,10 @@
 from flask import Markup, url_for
 
 def component(title, elem_id=""):
-    img_src1 =f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}1.png"
-    img_src2 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}2.png"
-    img_src3 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}3.png"
-    img_src4 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}4.png"
+    img_src1 =f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}_1_v2.png"
+    img_src2 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}_2_v2.png"
+    img_src3 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}_3_v2.png"
+    img_src4 = f"https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/{title}_4_v2.png"
 
 
     def unpack_divs():

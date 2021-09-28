@@ -20,6 +20,14 @@
         @include dramatic_text;
         text-align: center;
     }
+    a{
+        @include quiet_text;
+        text-align: center;
+        text-decoration: underline;
+    }
+    a:hover{
+        font-weight: $reg_weight;
+    }
 }
 
 .comment_svg_ctnr{

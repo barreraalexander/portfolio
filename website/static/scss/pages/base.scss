@@ -47,6 +47,13 @@ html[data-main_theme="light"]{
     .hero_ctnr{
         height: unset;
     }
+
+    #contact_modal_section{
+        .modal_ctnr{
+            box-shadow: none;
+        }
+    }
+
 }
 
 html[data-main_theme="dark"]{

@@ -12,12 +12,9 @@ def component():
             class="upwork_logo"
             src="{upwork_logo}"
         >
-        <div>
-        </div>
         <img
             class="profile_summary"
             src="{img_src}"
-
         >
     </section>    
     

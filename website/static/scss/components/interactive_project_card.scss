@@ -1,0 +1,137 @@
+.interactive_project_cards_ctnr{
+    display: flex;
+    flex-flow: column;
+    gap: 2em;
+    margin-top: $common_margin_top;
+}
+
+.interactive_project_card{
+    display: flex;
+    border-radius: 1em;
+    width: 90%;
+    max-width: 25em;
+    overflow: hidden;
+    transition: .5s;
+    a{
+        display: contents;
+    }
+    .left_div,
+    .right_div{
+        flex: 1;
+        padding: 1em;
+        height: 10em;
+        position: relative;
+    }
+    .left_div:hover,
+    .right_div:hover
+    {
+        transform: scale(1.015);
+    }
+
+    .left_div{
+        z-index: 100;
+        h3{
+            @include quiet_text;
+            font-size: 1.2em;
+            text-align: center;
+            border-bottom: .015em dashed #fff;
+        }
+        .text_blob{
+            .expanded_text{
+                display: none;
+            }
+            
+            margin-top: .5em;
+        }
+    }
+    .right_div{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        text-align: center;
+        h3{
+            font-size: 1.2em;
+            text-align: center;
+        }
+    }
+
+}
+
+.interactive_project_card:hover{
+    transform: skew(5deg);
+    transition: .5s;
+}
+
+.interactive_project_card[data-variant=tod]{
+    $tod_primary : #03142a;
+    $tod_secondary : #14eeee;
+
+    .left_div{
+        background-color: $tod_primary;
+        color: #fff;
+        h3{
+            color: #fff;
+        }
+    }
+    
+    .right_div{
+        background-color: $tod_secondary;
+        color: #000;
+    }
+}
+
+.interactive_project_card[data-variant=ppb]{
+    $ppb_primary : #34345D;
+    $ppb_secondary : #41F2FF;
+    
+    .left_div{
+        background-color: $ppb_primary;
+        color: #fff;
+        h3{
+            color: #fff;
+        }
+    }
+    
+    .right_div{
+        background-color: $ppb_secondary;
+        color: #000;
+    }
+}
+
+
+.interactive_project_card[data-variant=lit]{
+    $lit_primary : #49f1b9;
+    $lit_secondary : #2f2f2f;
+    
+    .left_div{
+        background-color: $lit_primary;
+        color: #000;
+        h3{
+            color: #000;
+            border-bottom: .015em dashed #000;
+        }
+    }
+    
+    .right_div{
+        background-color: $lit_secondary;
+        color: #fff;
+
+    }
+}
+
+@media only screen and (min-width: $tablet_bp){
+    .interactive_project_card{
+        .left_div{
+            .text_blob{
+                .expanded_text{
+                    display: block;
+                }
+                
+            }
+        }
+
+
+    }
+}

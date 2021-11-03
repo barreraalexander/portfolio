@@ -4,6 +4,8 @@ from flask import Blueprint,\
 
 from website.components.project_card import component \
                                 as project_card
+from website.components.interactive_project_card import component \
+                                as interactive_project_card
 from website.components.upwork_section import component \
                                 as upwork_section
 from website.components.day_ctnr import component \
@@ -30,10 +32,14 @@ from website.blueprints.main import CONTACT_DICT, META_DICT
 main = Blueprint ('main', __name__)
 
 @main.context_processor
-def load_components ():
+def load_dicts ():
     return dict(META_DICT=META_DICT,
-                CONTACT_DICT=CONTACT_DICT,
-                project_card=project_card,
+                CONTACT_DICT=CONTACT_DICT)
+
+@main.context_processor
+def load_components ():
+    return dict(project_card=project_card,
+                interactive_project_card=interactive_project_card,
                 technologies=technologies,
                 day_ctnr=day_ctnr,
                 about_me=about_me,

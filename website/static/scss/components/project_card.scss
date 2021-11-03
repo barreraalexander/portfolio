@@ -8,7 +8,9 @@
 }
 
 .project_cards_ctnr{
-    display: flex;
+    // display: flex;
+    //FIX: DELETE ORIGINAL CODE OR REVERT TO FLEX
+    display: none !important;
     flex-flow: row wrap;
     gap: 1em;
     justify-content: center;

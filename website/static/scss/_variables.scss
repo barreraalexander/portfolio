@@ -5,15 +5,21 @@ $up_green: #14a800;
 $up_dark: #3c8224;
 $up_light: #88c872;
 
+
+
+
+
 //SECTION: colors for light theme
 $lt_bg: #f6f6f6;
 $lt_primary: #fff;
 $lt_accent: #e6e6e6;
-// $lt_accent: rgb(255, 234, 255);
 
 $lt_theme_primary: #000;
 $lt_theme_secondary: #222;
 
+$tool_mastered_lt: #A0D0B1;
+$tool_learning_lt: #988cce;
+$tool_covet_lt: #D59180;
 
 //SECTION: colors for dark theme
 $dk_bg: #222;
@@ -23,10 +29,13 @@ $dk_accent: #111;
 $dk_theme_primary: #fff;
 $dk_theme_secondary: #f2f2f2;
 
+$tool_mastered_dk: #01812E;
+$tool_learning_dk: #2e07db;
+$tool_covet_dk: #AC2300
+;
 
 //SECTION: breakpoints
 $tablet_bp: 767px;
-// $desktop_bp: 1919px;
 $desktop_bp: 1400px;
 $desktop_4k_bp: 3839px;
 

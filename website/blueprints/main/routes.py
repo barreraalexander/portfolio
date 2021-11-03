@@ -2,6 +2,8 @@ from flask import Blueprint,\
     redirect, render_template,\
     request, url_for
 
+from website.components.tools_grid import component \
+                                as tools_grid
 from website.components.project_card import component \
                                 as project_card
 from website.components.interactive_project_card import component \
@@ -26,15 +28,13 @@ from website.components.question_answer import component \
                                 as q_a
 from website.blueprints.main import CONTACT_DICT, META_DICT
 
-
-
-
 main = Blueprint ('main', __name__)
 
 @main.context_processor
 def load_dicts ():
     return dict(META_DICT=META_DICT,
                 CONTACT_DICT=CONTACT_DICT)
+
 
 @main.context_processor
 def load_components ():
@@ -48,6 +48,7 @@ def load_components ():
                 comments=comments,
                 contact_modal=contact_modal,
                 upwork_section=upwork_section,
+                tools_grid=tools_grid,
                 link_set=link_set)
 
 @main.route('/')

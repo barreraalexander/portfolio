@@ -1,4 +1,5 @@
 .interactive_project_cards_ctnr{
+    align-items: center;
     display: flex;
     flex-flow: column;
     gap: 2em;
@@ -6,12 +7,15 @@
 }
 
 .interactive_project_card{
+    // @include shadow;
+    box-shadow: .02em .05em .5em .04em var(--secondary);
     display: flex;
     border-radius: 1em;
-    width: 90%;
-    max-width: 25em;
+    max-width: 45em;
     overflow: hidden;
+    height: 10em;
     transition: .5s;
+    width: 90%;
     a{
         display: contents;
     }
@@ -19,7 +23,7 @@
     .right_div{
         flex: 1;
         padding: 1em;
-        height: 10em;
+        // height: 10em;
         position: relative;
     }
     .left_div:hover,
@@ -45,15 +49,35 @@
         }
     }
     .right_div{
+        align-items: center;
         display: flex;
         flex-flow: column;
-        align-items: center;
         justify-content: center;
-        z-index: 99;
         text-align: center;
+        overflow: hidden;
+        z-index: 99;
+        gap: 1em;
         h3{
             font-size: 1.2em;
             text-align: center;
+            font-family: 'Roboto Condensed'
+        }
+        img{
+            border: $border_width solid #000;
+            background-color: #000;
+            border-radius: 50%;
+            width: 3em;
+            padding: .25em;
+        }
+        #ppb_logo{
+            
+        }
+        #tod_logo{
+
+        }
+        #lit_logo{
+            padding: .25em;
+            // width: 1em;
         }
     }
 
@@ -123,6 +147,7 @@
 
 @media only screen and (min-width: $tablet_bp){
     .interactive_project_card{
+        height: 25em;
         .left_div{
             .text_blob{
                 .expanded_text{
@@ -130,6 +155,15 @@
                 }
                 
             }
+        }
+        .right_div{
+            gap: 2em;
+            img{
+                width: 7em;
+                border: none;
+                border-radius: unset;
+            }
+
         }
 
 

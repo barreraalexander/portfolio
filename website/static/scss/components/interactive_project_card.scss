@@ -7,13 +7,13 @@
 }
 
 .interactive_project_card{
-    // @include shadow;
-    box-shadow: .02em .05em .5em .04em var(--secondary);
+    box-shadow: .02em .05em .5em .04em var(--shadow);
     display: flex;
     border-radius: 1em;
     max-width: 45em;
     overflow: hidden;
-    height: 10em;
+    // height: 14em;
+    height: max-content;
     transition: .5s;
     width: 90%;
     a{
@@ -23,7 +23,6 @@
     .right_div{
         flex: 1;
         padding: 1em;
-        // height: 10em;
         position: relative;
     }
     .left_div:hover,
@@ -41,11 +40,33 @@
             border-bottom: .015em dashed #fff;
         }
         .text_blob{
+            display: flex;
+            flex-flow: column;
+            gap: 1em;
+            // gap: .5em;
+            font-size: .8em;
             .expanded_text{
                 display: none;
             }
-            
+            label{
+                font-size: .8em;
+            }
             margin-top: .5em;
+        }
+        ul[data-variant=tod]{
+            label{
+                color: $tod_secondary;
+            }
+        }
+        ul[data-variant=ppb]{
+            label{
+                color: $ppb_secondary;
+            }
+        }
+        ul[data-variant=lit]{
+            label{
+                color: $lit_secondary;
+            }
         }
     }
     .right_div{
@@ -63,34 +84,55 @@
             font-family: 'Roboto Condensed'
         }
         img{
-            border: $border_width solid #000;
-            background-color: #000;
-            border-radius: 50%;
+            border: $border_width solid transparent;
+            border-radius: 1em;
             width: 3em;
-            padding: .25em;
+            padding: .5em;
         }
         #ppb_logo{
+            background-color: $ppb_primary;
             
         }
         #tod_logo{
-
+            background-color: $tod_primary;
+            
         }
         #lit_logo{
-            padding: .25em;
-            // width: 1em;
+            background-color: $lit_primary;
+        }
+        .proj_link{
+            @include quiet_text;
+            font-size: .7em;
+            font-weight: 400;
+        }
+        .proj_link:hover{
+            text-decoration: underline;
+        }
+        .proj_link[data-variant=ppb],
+        h3[data-variant=ppb]
+        {
+            color: $ppb_primary;
+        }
+        .proj_link[data-variant=tod],
+        h3[data-variant=tod]
+        {
+            color: $tod_primary;
+        }
+        .proj_link[data-variant=lit],
+        h3[data-variant=lit]
+        {
+            color: $lit_primary;
         }
     }
 
 }
 
 .interactive_project_card:hover{
-    transform: skew(5deg);
+    transform: skew(2deg);
     transition: .5s;
 }
 
 .interactive_project_card[data-variant=tod]{
-    $tod_primary : #03142a;
-    $tod_secondary : #14eeee;
 
     .left_div{
         background-color: $tod_primary;
@@ -107,8 +149,7 @@
 }
 
 .interactive_project_card[data-variant=ppb]{
-    $ppb_primary : #34345D;
-    $ppb_secondary : #41F2FF;
+
     
     .left_div{
         background-color: $ppb_primary;
@@ -126,9 +167,6 @@
 
 
 .interactive_project_card[data-variant=lit]{
-    $lit_primary : #49f1b9;
-    $lit_secondary : #2f2f2f;
-    
     .left_div{
         background-color: $lit_primary;
         color: #000;

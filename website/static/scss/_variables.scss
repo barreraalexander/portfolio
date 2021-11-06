@@ -6,8 +6,12 @@ $up_dark: #3c8224;
 $up_light: #88c872;
 
 
-
-
+$tod_primary : #03142a;
+$tod_secondary : #14eeee;
+$ppb_primary : #34345D;
+$ppb_secondary : #41F2FF;
+$lit_primary : #49f1b9;
+$lit_secondary : #2f2f2f;
 
 //SECTION: colors for light theme
 $lt_bg: #f6f6f6;
@@ -16,6 +20,8 @@ $lt_accent: #e6e6e6;
 
 $lt_theme_primary: #000;
 $lt_theme_secondary: #222;
+$lt_shadow: #c8c8c8;
+
 
 $tool_mastered_lt: #A0D0B1;
 $tool_learning_lt: #988cce;
@@ -28,11 +34,12 @@ $dk_accent: #111;
 
 $dk_theme_primary: #fff;
 $dk_theme_secondary: #f2f2f2;
+$dk_shadow: #333;
+
 
 $tool_mastered_dk: #01812E;
 $tool_learning_dk: #2e07db;
-$tool_covet_dk: #AC2300
-;
+$tool_covet_dk: #AC2300;
 
 //SECTION: breakpoints
 $tablet_bp: 767px;

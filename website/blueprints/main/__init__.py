@@ -17,3 +17,7 @@ META_DICT = {
     "domain" : "www.barrera-port.co",
     "domain_name" : "Barrera Portfolio"
 }
+
+def unpack_elems(elems):
+    return " ".join(elems)
+

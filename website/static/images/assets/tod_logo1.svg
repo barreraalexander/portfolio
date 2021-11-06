@@ -1,0 +1,73 @@
+<svg id="tod_logo_wht" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 152.526 148.038">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #021125;
+      }
+
+      .cls-2 {
+        fill: #06eded;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-5);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1.077" y1="0.5" x2="0.335" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#124375"/>
+      <stop offset="1" stop-color="#06eded"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1.272" x2="0.5" y2="0.29" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="3.733" y1="-10.337" x2="3.733" y2="-11.319" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="-0.035" y1="0.5" x2="0.406" y2="0.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="1.107" y1="0.5" x2="0.336" y2="0.5" xlink:href="#linear-gradient"/>
+  </defs>
+  <rect id="Rectangle_27" data-name="Rectangle 27" class="cls-1" width="5.693" height="9.407" transform="translate(63.601 29.009)"/>
+  <rect id="Rectangle_28" data-name="Rectangle 28" class="cls-1" width="5.693" height="9.407" transform="translate(81.878 29.009)"/>
+  <rect id="Rectangle_5" data-name="Rectangle 5" class="cls-1" width="5.693" height="9.407" transform="translate(45.323 29.009)"/>
+  <rect id="Rectangle_29" data-name="Rectangle 29" class="cls-1" width="5.693" height="9.407" transform="translate(100.157 29.009)"/>
+  <g id="Group_31" data-name="Group 31" transform="translate(0 0)">
+    <g id="Group_4" data-name="Group 4" transform="translate(20.276 19.353)">
+      <path id="Path_20" data-name="Path 20" class="cls-1" d="M332.053,303.077V285.731h99.234v17.345h5.693V280.039H326.36v23.038Z" transform="translate(-326.36 -280.039)"/>
+      <path id="Path_21" data-name="Path 21" class="cls-1" d="M431.287,346.333v2.774H416.538v15.381h-9.271v14.959H356.283V364.488h-9.06V349.107h-15.17V312.9H326.36v41.9h15.17v15.381h9.06V385.14h62.37V370.181h9.271V354.8H436.98v-8.467Z" transform="translate(-326.36 -273.679)"/>
+    </g>
+    <path id="Path_22" data-name="Path 22" class="cls-2" d="M448.576,264.84H324.889a14.255,14.255,0,0,0-14.361,14.112v27.541h6.456V278.952a7.846,7.846,0,0,1,7.9-7.767H448.576a7.845,7.845,0,0,1,7.9,7.767V398.766a7.845,7.845,0,0,1-7.9,7.767H324.889a7.846,7.846,0,0,1-7.9-7.767V324.975h-6.456v73.791a14.255,14.255,0,0,0,14.361,14.112H448.576a14.255,14.255,0,0,0,14.362-14.112V278.952A14.255,14.255,0,0,0,448.576,264.84Z" transform="translate(-310.411 -264.84)"/>
+    <g id="Group_9" data-name="Group 9" transform="translate(0 43.914)">
+      <g id="Group_6" data-name="Group 6" transform="translate(28.135 3.558)">
+        <g id="Group_5" data-name="Group 5">
+          <path id="Path_23" data-name="Path 23" class="cls-3" d="M379.983,303.017H332.532v6.309h6.824v35.2h6.31v-35.2h36.611a7.9,7.9,0,0,1,7.9,7.895v-3.047A11.207,11.207,0,0,0,379.983,303.017Z" transform="translate(-332.532 -303.017)"/>
+        </g>
+        <path id="Path_24" data-name="Path 24" class="cls-4" d="M372.09,303.017H369.8a11.207,11.207,0,0,1,10.189,11.157v21.164H386.3V317.221A14.221,14.221,0,0,0,372.09,303.017Z" transform="translate(-322.346 -303.017)"/>
+      </g>
+      <path id="Path_25" data-name="Path 25" class="cls-5" d="M367.811,344.09H370.1a11.2,11.2,0,0,1-10.189-11.156V311.77h-6.309v18.116A14.221,14.221,0,0,0,367.811,344.09Z" transform="translate(-298.637 -297.067)"/>
+      <g id="Group_7" data-name="Group 7" transform="translate(61.279 5.42)">
+        <path id="Path_26" data-name="Path 26" class="cls-6" d="M423.323,304.479h-4.105a9.034,9.034,0,0,1,9.034,9.034v1.974c.007.1.031.2.031.306V334.77a5.042,5.042,0,0,1-5,5H366.457a7.9,7.9,0,0,1-7.9-7.895v3.048a11.2,11.2,0,0,0,10.189,11.156h54.573a11.326,11.326,0,0,0,11.314-11.312V315.793A11.327,11.327,0,0,0,423.323,304.479Z" transform="translate(-358.561 -304.479)"/>
+      </g>
+      <path id="Path_27" data-name="Path 27" class="cls-7" d="M411.156,304.479h-23.1v30.582h6.353V310.832h20.852a4.952,4.952,0,0,1,4.929,4.655v-1.974A9.034,9.034,0,0,0,411.156,304.479Z" transform="translate(-289.22 -299.06)"/>
+      <g id="Group_8" data-name="Group 8">
+        <path id="Path_28" data-name="Path 28" class="cls-2" d="M337.047,305.079v-2.853h-1.674v2.455h-1.248v-3.114H332.37v2.553h-1.248v-3.211h-1.7v2.676h-1.248v-3.362H315.909v5.24h4.472v2.826h-4.472v5.24h12.263v-3.4h1.248V312.8h1.7V309.59h1.248v2.553h1.756v-3.114h1.248v2.236h1.674v-2.593h1.515v-3.594Z" transform="translate(-308.941 -300.223)"/>
+        <path id="Path_29" data-name="Path 29" class="cls-2" d="M311.534,302.069h4.746v-1.1h-5.844v11.276h5.953v-1.1h-4.856Z" transform="translate(-310.436 -300.018)"/>
+        <rect id="Rectangle_6" data-name="Rectangle 6" class="cls-2" width="3.759" height="1.097" transform="translate(2.085 2.99)"/>
+        <rect id="Rectangle_7" data-name="Rectangle 7" class="cls-2" width="3.759" height="1.097" transform="translate(2.085 5.025)"/>
+        <rect id="Rectangle_8" data-name="Rectangle 8" class="cls-2" width="3.759" height="1.097" transform="translate(2.085 7.061)"/>
+        <rect id="Rectangle_9" data-name="Rectangle 9" class="cls-2" width="3.759" height="1.097" transform="translate(2.085 9.097)"/>
+      </g>
+    </g>
+  </g>
+</svg>

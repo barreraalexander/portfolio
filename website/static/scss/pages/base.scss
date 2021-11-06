@@ -8,6 +8,8 @@ html[data-main_theme="light"]{
     --primary: #{$lt_theme_primary};
     --secondary: #{$lt_theme_secondary};
     --upwork_bg: #{$up_light};
+    --shadow: #{$lt_shadow};
+
 
     --tool_mastered: #{$tool_mastered_lt};
     --tool_learning: #{$tool_learning_lt};
@@ -70,6 +72,7 @@ html[data-main_theme="dark"]{
     --primary: #{$dk_theme_primary};
     --secondary: #{$dk_theme_secondary};
     --upwork_bg: #{$up_dark};
+    --shadow: #{$dk_shadow};
 
     --tool_mastered: #{$tool_mastered_dk};
     --tool_learning: #{$tool_learning_dk};

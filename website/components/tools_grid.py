@@ -42,6 +42,7 @@ def component():
                         """ for elem in mastered
                         ]
     
+
     prospect = [
         "ruby_on_rails", "c_sharp",
         "pytorch", "rush"

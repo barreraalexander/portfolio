@@ -21,6 +21,6 @@ bundles = {
         filters='jsmin',
         depends='js/*.js',
         output='gen/js/index.%(version)s.js'
-    ),
+    )
 }
 

@@ -103,7 +103,7 @@
         </div>
     </section>
 
-    {{upwork_section()}}
+    <!-- {{upwork_section()}} -->
 
 
     <section id="index_section4">
@@ -141,6 +141,9 @@
 {% assets "index_js" %}
 <script type="text/javascript" src="{{ ASSET_URL}}"> </script>
 {% endassets %}
+
+<script type="text/javascript" src="{{url_for('static', filename='js/components_js/interactive_project_card.js')}}"> </script>
+
 
 
 {% endblock content %}

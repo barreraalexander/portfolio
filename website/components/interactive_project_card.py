@@ -17,15 +17,15 @@ def component(variant):
         roles = {
             "role1": ('DESIGNER',
             "Designed the website in adobe xd.",
-            "this is the expanded text."
+            "I also made changes to the design based on the requests of my client. Copies of the design were sent, and after approval I began building the site."
             ),
             "role2": ('CODER',
             "Built the website using html, sass, js and flask.",
-            "this is the expanded text."
+            "The python flask framework is responsible for routing, as well as allowing me to produce components in the same way one would do for react. A simple clock was pulled from ThreeJS, and it's used to run the animatons."
             ),
             "role3": ('DEVOPS',
             "Launched the website on an ubuntu server, using nginx and gunicorn.",
-            "this is the expanded text."
+            "I also garnered the ssl security certiface using site-bot. In order to save space on the server, I store a majority of the static files (images, videos) on AWS s3 buckets."
             )
         }
 
@@ -37,15 +37,15 @@ def component(variant):
         roles = {
             "role1": ('COLLABORATOR',
             "Worked with the backend developer.",
-            "to integrate data from an api into the frontend."
+            "The backend dev built an api, and I was responsible for resolving requests, and building out certain ui components based on the data. One resolve included building out a report page with the data."
             ),
             "role2": ('CODER',
-            "Built the front using html, css and  vanilla js.",
-            "this is the expanded text."
+            "Built the frontend using html, css and  vanilla js.",
+            "In order to make reusable components, I utilized python flasks Markup module. The components are React-like."
             ),
             "role3": ('SYSTEM CONTROLLER',
             "Worked with the team lead to manage git branches.",
-            "this is the expanded text."
+            "This included everything from branching and merging, and resolving diffs."
             )
         }
 
@@ -56,16 +56,16 @@ def component(variant):
         role = "Full Stack Dev"
         roles = {
             "role1": ('DESIGNER',
-            "I designed the website in adobe xd.",
-            "this is the expanded text."
+            "I did not sit down and plan this project ui, as I normally would, I just worked off the cuff.",
+            "To keep this style of build from getting difficult to manage, I made everything a component and gave them individual stylesheets (merged with SASS)."
             ),
             "role2": ('CODER',
-            "I built the website using vanilla html, css and js.",
-            "this is the expanded text."
+            "I built the website using vanilla html, css, js, and python Flask.",
+            "A special api was built to pull the content from a mysql database. The mysql database is running on AWS redis."
             ),
             "role3": ('DEVOPS',
             "I launched the website on an ubuntu server, using nginx and gunicorn.",
-            "this is the expanded text."
+            "On this particular occassion, I wrote up a bash script that would setup the server to work with python flask. This turned a 2 hour task into a 15 minute one."
             )
         }
 
@@ -76,8 +76,8 @@ def component(variant):
         role = "Full Stack Dev"
         roles = {
             "role1": ('DESIGNER',
-            "I designed the website in adobe xd.",
-            "this is the expanded text."
+            "I didn't build out the design, I just started coding.",
+            "For this project, I wanted to use something."
             ),
             "role2": ('CODER',
             "I built the website using vanilla html, css and js.",

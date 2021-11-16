@@ -32,7 +32,7 @@ def component():
         "html5", "css",
         "github", "javascript",
         "mysql", "photoshop",
-        "python",
+        "python", "flask",
         "windows", "xd"
     ]
 

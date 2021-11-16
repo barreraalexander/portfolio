@@ -19,6 +19,10 @@
     }
 
     .mastered_ctnr{
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        width: 15em;
         .tool{
             background-color: var(--tool_mastered);
         }

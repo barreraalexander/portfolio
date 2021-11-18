@@ -16,7 +16,7 @@ def component(talents):
 
 
     return Markup(f"""
-    <section id="talent_ctnr_section">
+    <section id="talents_section">
 
     </section>    
     

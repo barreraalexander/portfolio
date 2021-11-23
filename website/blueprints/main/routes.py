@@ -2,6 +2,8 @@ from flask import Blueprint,\
     redirect, render_template,\
     request, url_for
 
+from website.components.talents import component \
+                                as talents
 from website.components.tools_grid import component \
                                 as tools_grid
 from website.components.project_card import component \
@@ -49,6 +51,7 @@ def load_components ():
                 contact_modal=contact_modal,
                 upwork_section=upwork_section,
                 tools_grid=tools_grid,
+                talents=talents,
                 link_set=link_set)
 
 @main.route('/')

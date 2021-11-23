@@ -3,7 +3,6 @@
     height: $h;
     width: $w;
 
-    // background: linear-gradient(-45deg, var(--primary), var(--secondary), $primary2_alt );
     background-attachment: fixed;
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -33,4 +32,8 @@
 
 @mixin shadow{
     box-shadow: .1em .1em .6em .02em var(--theme_accent);
+}
+
+@mixin shadow_alt{
+    box-shadow: .1em .1em .6em .02em var(--accent);
 }

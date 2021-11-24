@@ -39,6 +39,8 @@
         p{
             @include quiet_text;
             // margin-left: .75em;
+            padding: .25em;
+            color: #fff;
             text-align: center;
         }
     }

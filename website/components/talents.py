@@ -2,8 +2,6 @@ from flask import Markup, url_for
 from website.blueprints.main import unpack_elems
 
 def component():
-    # maybe this can be a sort of grid, moving animations?
-    # talents = ["endurance", "api", "database management", "website build"]
     talents = {
         "tenacious" : {
             "description" : "Burning the night oil until the task is complete.",

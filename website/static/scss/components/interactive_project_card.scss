@@ -99,6 +99,11 @@
         #lit_logo{
             background-color: $lit_primary;
         }
+        #port_logo{
+            background-color: $port_secondary;
+            border-radius: 1em;
+            border: .09em solid $port_primary;
+        }
         .proj_link{
             @include quiet_text;
             font-size: .7em;
@@ -180,6 +185,25 @@
         background-color: $lit_secondary;
         color: #fff;
 
+    }
+}
+
+.interactive_project_card[data-variant=port]{
+    .left_div{
+        background-color: $port_primary;
+        color: #fff;
+        h3{
+            color: #000;
+            border-bottom: .015em dashed #000;
+        }
+    }
+    
+    .right_div{
+        background-color: $port_secondary;
+        color: #000;
+        p{
+            color: #000;
+        }
     }
 }
 

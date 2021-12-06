@@ -2,6 +2,9 @@ from flask import Blueprint,\
     redirect, render_template,\
     request, url_for
 
+from website.components.passion_projects import component \
+                                as passion_projects
+
 from website.components.talents import component \
                                 as talents
 from website.components.tools_grid import component \
@@ -52,6 +55,7 @@ def load_components ():
                 upwork_section=upwork_section,
                 tools_grid=tools_grid,
                 talents=talents,
+                passion_projects=passion_projects,
                 link_set=link_set)
 
 @main.route('/')

@@ -20,7 +20,7 @@ def component(question):
             mix languages (in this case, HTML and JS)
             is just too stuffy. I prefer the package-oriented
             structure of Flask and Django, where concerns
-            tend to be separated. 
+            tend to be separated.
             """
     elif question == 'flask':
         q = "What framework do you use to build your web apps?"

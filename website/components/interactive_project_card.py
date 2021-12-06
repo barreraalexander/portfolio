@@ -7,6 +7,7 @@ def component(variant):
     domain_name = ""
     text_html_blob = ""
     role = ""
+    github = ""
     logo_src = url_for('static', filename=f'images/assets/{variant}_logo.svg')
 
     if variant=="tod":
@@ -53,7 +54,15 @@ def component(variant):
         formatted_title = "Goose Literature"
         domain = "http://18.119.119.99/"
         domain_name = "gooselit.com"
+        github = ""
         role = "Full Stack Dev"
+        github = """
+            <a href="https://github.com/barreraalexander/gooselit">
+                <p class="proj_link" data-variant={variant}>
+                    Click here to see the github
+                </p>
+            </a>
+        """
         roles = {
             "role1": ('DESIGNER',
             "I did not sit down and plan this project ui, as I normally would, I just worked off the cuff.",
@@ -74,6 +83,13 @@ def component(variant):
         domain = "https://www.barrera-port.co/"
         domain_name = "www.barrera-port.co"
         role = "Full Stack Dev"
+        github = """
+            <a href="https://github.com/barreraalexander/portfolio">
+                <p class="proj_link" data-variant={variant}>
+                    Click here to see the github
+                </p>
+            </a>
+        """
         roles = {
             "role1": ('DESIGNER',
             "I didn't build out the design, I just started coding.",
@@ -133,6 +149,7 @@ def component(variant):
                     {domain_name}
                 </p>
             </a>
+            {github}
         </div>
     </div>
     

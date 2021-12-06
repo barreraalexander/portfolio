@@ -223,3 +223,27 @@
     animation: shifting_span ease 1 forwards reverse;
     animation-duration: 2s;
 }
+
+
+@keyframes shifting_bw{
+    from {
+        filter: grayscale(0);
+    }
+    to{
+        filter: grayscale(100);
+    }
+}
+
+.apply_shifting_bw{
+    -webkit-animation: shifting_bw ease 1 forwards;
+    animation: shifting_bw ease 1 forwards;
+    animation: 3s;
+    
+}
+
+.apply_shifting_bw_reverse{
+    -webkit-animation: shifting_bw ease 1 forwards reverse;
+    animation: shifting_bw ease 1 forwards reverse;
+    animation: 3s;
+    
+}

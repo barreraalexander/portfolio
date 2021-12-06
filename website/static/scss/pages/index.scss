@@ -194,6 +194,12 @@
     filter: none;
 }
 
+.bw_filter{
+    filter: grayscale(100);
+    transition: 5s;
+}
+
+
 
 @media only screen and (min-width: $tablet_bp){
     .hero_ctnr{

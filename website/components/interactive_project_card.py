@@ -93,6 +93,33 @@ def component(variant):
         roles = {
             "role1": ('DESIGNER',
             "I didn't build out the design, I just started coding.",
+            "For my portfolio project, I wanted to create the website using small components, so that I could update the design with ease in the future."
+            ),
+            "role2": ('CODER',
+            "I built the website using vanilla html, css and js.",
+            "I also utilized the frontend libraries THREE.JS and GSAP to control some of the animations and 3d assets.."
+            ),
+            "role3": ('DEVOPS',
+            "I launched the website on an ubuntu server, using nginx and gunicorn.",
+            "I've also written out a bash script that programs the server to run flask."
+            )
+        }
+
+    elif variant=="us_ind":
+        formatted_title = "U.S. Industrial"
+        domain = "https://www.barrera-port.co/"
+        domain_name = "www.barrera-port.co"
+        role = "Full Stack Dev"
+        github = """
+            <a href="https://github.com/barreraalexander/portfolio">
+                <p class="proj_link" data-variant={variant}>
+                    Click here to see the github
+                </p>
+            </a>
+        """
+        roles = {
+            "role1": ('DESIGNER',
+            "I didn't build out the design, I just started coding.",
             "For this project, I wanted to use something."
             ),
             "role2": ('CODER',

@@ -12,6 +12,24 @@
 
 }
 
+@mixin big_h {
+    font-size: 4em;
+    mix-blend-mode: overlay;
+    margin-top: .5em;
+    overflow-wrap: anywhere;
+    position: relative;
+    text-align: center;
+    z-index: 1000;
+    opacity: .8;
+    @media only screen and (min-width : $tablet_bp) {
+        margin-top: .25em;
+        overflow-wrap: unset;
+        font-size: 7em;
+        // text-align: unset;
+        left: .5em;
+    }
+}
+
 
 @mixin primary_btn{
     background-color: var(--primary);

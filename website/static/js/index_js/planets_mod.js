@@ -18,13 +18,12 @@ if (night_ctnr){
 
     renderer.setSize(window.innerWidth, window.innerHeight)
 
-    document.body.querySelector('#night_ctnr').appendChild(renderer.domElement)
+    night_ctnr.appendChild(renderer.domElement)
     window.addEventListener('resize', ()=> {
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix()
     })
-
 
     const geometry = new THREE.SphereBufferGeometry(1.5, 20, 20);
     const material = new THREE.MeshStandardMaterial();
@@ -46,7 +45,7 @@ if (night_ctnr){
     light1.position.set(0, 0, 0);
     scene.add(light1)
 
-    //star   system
+    //star system
     const particles_geomtery = new THREE.BufferGeometry;
     const particles_count = 10000/3;
 
@@ -70,7 +69,6 @@ if (night_ctnr){
 
     //star cluster
     document.addEventListener('mousemove', animateParticles)
-
 
     let mouse_x = 0
     let mouse_y = 0

@@ -7,6 +7,8 @@ website/static/gen/js/*.js
 outline
 *.pem
 progress.txt
+*.sh
+
 
 # //SECTION: GENERAL
 

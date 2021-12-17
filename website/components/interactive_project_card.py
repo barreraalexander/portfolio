@@ -107,8 +107,8 @@ def component(variant):
 
     elif variant=="us_ind":
         formatted_title = "U.S. Industrial"
-        domain = "https://www.barrera-port.co/"
-        domain_name = "www.barrera-port.co"
+        domain = "https://www.usindustrial.com/"
+        domain_name = "U.S Industrial"
         role = "Full Stack Dev"
         github = """
             <a href="https://github.com/barreraalexander/portfolio">

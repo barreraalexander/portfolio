@@ -2,6 +2,10 @@ from flask import Blueprint,\
     redirect, render_template,\
     request, url_for
 
+
+from website.components.rain_scape import component \
+                                as rain_scape
+
 from website.components.passion_projects import component \
                                 as passion_projects
 
@@ -56,6 +60,7 @@ def load_components ():
                 tools_grid=tools_grid,
                 talents=talents,
                 passion_projects=passion_projects,
+                rain_scape=rain_scape,
                 link_set=link_set)
 
 @main.route('/')

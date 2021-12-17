@@ -7,6 +7,13 @@ def component():
     return Markup(f"""
     <section id="contact_modal_section" data-status="closed">
         <div class="modal_ctnr">
+            <p style="text-align:center;">
+                Contact me form is disabled right now :)
+            </p>
+            <br>
+            <p style="text-align:center;">
+                Email: barreraalexander93@gmail.com
+            </p>
             <form id="contact_form" action="{send_mail_api}" method="POST">
                 {contact_form.hidden_tag()}
                 <div class="form_ctnr">

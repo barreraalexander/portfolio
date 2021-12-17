@@ -5,7 +5,7 @@ const options = {
 
 var talents_section = document.querySelector('#talents_section')
 
-console.log(talents_section)
+// console.log(talents_section)
 
 
 const observer = new IntersectionObserver (function(entries, observer){

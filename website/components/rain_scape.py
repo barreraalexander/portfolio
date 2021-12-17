@@ -2,7 +2,7 @@ from flask import Markup, url_for
 
 def component():
     smoke_texture = url_for('static', filename='images/textures/smoke.png')
-
+    js = url_for('static', filename='js/index_js/rain_scape.js')
     return Markup(f"""
     <section id="rain_scape_section">
         <h1>

@@ -29,10 +29,8 @@ if (night_ctnr){
     const material = new THREE.MeshStandardMaterial();
     
     const moon_texture_link = night_ctnr.dataset.moon_texture
-    const space_bg_link = night_ctnr.dataset.space_bg
     const loader = new THREE.TextureLoader();
     const moon_texture = loader.load(moon_texture_link)    
-
 
     material.normalMap = moon_texture
     material.color = new THREE.Color('#c8c8c8')

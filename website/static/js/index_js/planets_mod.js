@@ -81,7 +81,7 @@ if (night_ctnr){
         requestAnimationFrame(render)
 
         let elasped_time = clock.getElapsedTime()   
-        mesh1.rotation.y += 0.0008;
+        mesh1.rotation.y += 0.0019;
 
         particles_mesh.rotation.y = (.0009 * elasped_time)
         particles_mesh.rotation.x = (.0009 * -mouse_y)

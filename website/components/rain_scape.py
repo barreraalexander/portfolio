@@ -5,15 +5,23 @@ def component():
     js = url_for('static', filename='js/index_js/rain_scape.js')
     return Markup(f"""
     <section id="rain_scape_section">
-        <h1>
-            FRONTEND DEV
-        </h1>
-        <h1>
-            DB MANAGER
-        </h1>
-        <h1>
-            CODER CODER
-        </h1>
+        <div class="cards_ctnr">
+            <div class="card">
+                <p>
+                    RESPONSIVE 3D INTERFACES
+                </p>
+            </div>
+            <div class="card">
+                <p>
+                    MANAGED DATABASES
+                </p>
+            </div>
+            <div class="card">
+                <p>
+                    PYTHON FRAMEWORKS
+                </p>
+            </div>    
+        </div>
         <div id="rain_scape_ctnr" data-smoke_texture="{smoke_texture}">
         </div>
     </section>

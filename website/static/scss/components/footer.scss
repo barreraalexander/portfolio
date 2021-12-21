@@ -14,6 +14,12 @@
         text-decoration: underline;
         text-decoration-thickness: 3px;
     }
+    .footer_left{
+        display: none
+    }
+    .footer_right{
+        padding: 1em;
+    }
     a{
         @include quiet_text;
         font-size: 1.2em;

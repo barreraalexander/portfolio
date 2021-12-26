@@ -5,145 +5,21 @@
 <script src="{{url_for('static', filename='js/assets/gsap.min.js')}}"></script>
 
 <main>
-    <section id="index_section1">
-        <div class="hero_ctnr">
-            <h1 id="hero_h1">
-                WEB DEVELOPER
-            </h1>
-            <div class="caption_ctnr">
-                <p>
-                    Full Stack Web Developer from south Florida
-                </p>
-                <a href="{{CONTACT_DICT['github_link']}}">
-                    Checkout my github 😺
-                </a>
-                <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
-                    <button>
-                        Download my Resume 📃         
-                    </button>
-                </a>
-            </div>
-        </div>
-        <img id="mountain" src="https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/mountain_cutout.png" alt="">
-
-        <div id="night_ctnr"
-            data-normal_texture="{{ url_for('static', filename='images/textures/normal_map.png')}}"
-            data-moon_texture="{{ url_for('static', filename='images/textures/moon_texture.png')}}"
-        >
-        </div>
-        {{day_ctnr()}}
-    </section>
-
+    {{index_section1()}}
     {{rain_scape()}}
     {{talents()}}
-
-    <section id="index_section2">
-        <div class="dramatic_p_ctnr">
-            <p>
-                These are some
-            </p>
-            <p class='dramatic'>
-                CLIENTS
-            </p>
-            <p>
-                I've worked with
-            </p>
-        </div>
-
-        <div class="interactive_project_cards_ctnr">
-            {{interactive_project_card(variant="ppb")}}
-            {{interactive_project_card(variant="tod")}}
-            <!-- {{interactive_project_card(variant="us_ind")}} -->
-        </div>
-    
-    </section>
-
+    {{index_section2()}}
     {{passion_projects()}}
-
-
-    <section id="index_section3">
-        <div class="dramatic_p_ctnr dramatic_p_ctnr_alt">
-            <p>
-                these are some
-            </p>
-            <p class='dramatic'>
-                TOOLS
-            </p>
-            <p>
-                I like to use
-            </p>
-        </div>
-        {{tools_grid()}}
-    </section>
-
-    <section id="index_section5">
-        <div class="dramatic_p_ctnr">
-            <p>
-                a few
-            </p>
-            <p class='dramatic'>
-                WORDS
-            </p>
-            <p>
-                from past clients
-            </p>
-        </div>
-        <div class="comments_ctnr">
-            <div class="comment_svg_ctnr">
-                <svg id="comment_svg"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
-                </svg>
-            </div>
-            {{comments("ppb")}}
-            {{comments("upwork1")}}
-            {{comments("upwork2")}}
-            {{comments("upwork3")}}
-            {{comments("tod")}}
-        </div>
-    </section>
-
+    {{index_section3()}}
+    {{index_section5()}}
     {{upwork_section()}}
-
-
-    <section id="index_section4">
-        <h2>
-            ABOUT ME
-        </h2>
-        <div class="aboutme_ctnr">
-            <img class="img_of_me"
-                 src="https://barrera-portfolio-static.s3.us-east-2.amazonaws.com/barrera.jpg"
-                 alt="alexander barrera"
-                 loading=lazy
-            >
-            <div class="aboutme_text_ctnr">
-                <p class="aboutme_text">
-                    name: alexander barrera 
-                </p>
-                <p class="aboutme_text">
-                    job: web developer 
-                </p>
-                <p class="aboutme_text">
-                    location: florida
-                </p>
-            </div>
-        </div>
-
-        {{about_me()}}
-        {{work_flow()}}
-
-    </section>
-
-    
+    {{index_section4()}}
 </main>
 
 
 {% assets "index_js" %}
 <script type="text/javascript" src="{{ ASSET_URL}}"> </script>
 {% endassets %}
-
-<script type="text/javascript" src="{{url_for('static', filename='js/components_js/interactive_project_card.js')}}"> </script>
-<!-- <script type="text/javascript" src="{{url_for('static', filename='js/index_js/rain_scape.js')}}"> </script> -->
-
 
 
 {% endblock content %}

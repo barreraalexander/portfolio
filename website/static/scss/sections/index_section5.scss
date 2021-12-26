@@ -1,0 +1,72 @@
+#index_section5{
+    background-color: var(--theme_accent);
+    padding: $common_section_padding;
+}
+
+
+.aboutme_paragraph{
+    @include quiet_text;
+    font-size: 2em;
+    max-width: 80%;
+    margin: 1em auto;
+}
+
+
+#aboutme_img{
+    width: 8em;
+}
+
+.aboutme_ctnr{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 1em;
+    position: relative;
+    left: 1em;
+    margin-bottom: 1em;
+    margin-top: $common_margin_top;
+    overflow: hidden;
+    *{
+        z-index: 1000;
+    }
+}
+
+.aboutme_text_ctnr{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+
+}
+
+.aboutme_text{
+    @include quiet_text;
+    font-size: 1.5em;
+}
+
+.img_of_me{
+    width: 8em;
+    border-radius: 10px;
+    margin: 1em;
+    border: 5px solid var(--primary);
+}
+
+.img_of_me:hover{
+    filter: none;
+}
+
+.bw_filter{
+    filter: grayscale(100);
+    transition: 5s;
+}
+
+@media only screen and (min-width: $desktop_bp){
+    .img_of_me{
+        width: 12em;
+        filter: grayscale(100%);
+    }
+    .aboutme_ctnr{
+        justify-content: center;
+        gap: 3em;
+    }
+
+}

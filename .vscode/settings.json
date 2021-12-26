@@ -1,0 +1,37 @@
+{
+"highlight.decorations": { "rangeBehavior": 3 }, // Default decorations from which all others inherit from
+"highlight.regexFlags": "gi", // Default flags used when building the regexes
+"highlight.maxMatches": 250, // Maximum number of matches to decorate per regex, in order not to crash the app with accidental cathastropic regexes
+"highlight.regexes": {
+      "(//FIX)": [
+        { "color": "#FF9D9B",
+          "backgroundColor":"#000",
+          "border": "3px solid #transparent",
+          "borderRadius": "3px",
+          "fontWeight":"900",
+          "letterSpacing": "2px",
+          "isWholeLine":"true"
+      }
+      ],
+      "(//SECTION)":[
+        {"color": "#33FF82",
+          "backgroundColor":"#000",
+          "border": "3px solid #transparent",
+          "borderRadius": "3px",
+          "fontWeight":"900",
+          "letterSpacing": "2px",
+          "isWholeLine":"true"
+      }
+      ],
+      "(//DATE)":[
+        {"color": "#EABDFF",
+          "backgroundColor":"#000",
+          "border": "3px solid #transparent",
+          "borderRadius": "3px",
+          "fontWeight":"900",
+          "letterSpacing": "2px",
+          "isWholeLine":"true"
+      }
+      ]
+  }
+}

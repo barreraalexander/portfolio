@@ -1,0 +1,10 @@
+#index_section2{
+    background-color: var(--theme_accent);
+    padding: $common_section_padding;
+    h2{
+        letter-spacing: 4px;
+        text-align: left;
+        font-size: 3rem;
+        text-decoration: underline;
+    }
+}

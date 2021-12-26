@@ -1,0 +1,18 @@
+#index_section4{
+    background-color: var(--bg);
+    padding: 2em;
+    position: relative;
+    h2{
+        @include dramatic_text;
+        text-align: center;
+        font-size: 5em;
+    }
+}
+
+
+@media only screen and (min-width: $desktop_bp){
+    #index_section4{
+        padding: 2em 4em;
+    }
+
+}

@@ -1,6 +1,11 @@
 import json
+from os import path
 
-with open('/etc/portfolio_config.json') as config_file:
+
+local_config = path.expanduser('~/etc/portfolio_config.json')
+launch_config = '/etc/portfolio_config.json'
+
+with open(local_config) as config_file:
     config = json.load(config_file)
 
 

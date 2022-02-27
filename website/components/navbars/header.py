@@ -21,12 +21,8 @@ def component():
                     data-light_src="{url_for('static', filename='images/assets/hamburger_alt.svg')}"
                     data-dark_src="{url_for('static', filename='images/assets/hamburger.svg')}"
                     alt="nav button"
-                    >
+                >
             </li>
-            {link_set('main_nav')}
-        </ul>
-        <ul id="hidden_nav" data-menu_status='closed'>
-            {link_set('hidden_nav')}
         </ul>
     </aside>
 </section>

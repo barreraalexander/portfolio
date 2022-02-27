@@ -1,67 +1,3 @@
-html[data-main_theme="light"]{
-    --bg: #{$lt_bg};
-    --bg_invert: #{$dk_bg};
-    --text_color: #{$dk_primary};
-    --text_color_inv: #{$lt_primary};
-    --accent: #{$proj_black};
-    --theme_accent: #{$lt_accent};
-    --primary: #{$lt_theme_primary};
-    --secondary: #{$lt_theme_secondary};
-    --upwork_bg: #{$up_light};
-    --shadow: #{$lt_shadow};
-
-
-    --tool_mastered: #{$tool_mastered_lt};
-    --tool_learning: #{$tool_learning_lt};
-    --tool_covet: #{$tool_covet_lt};
-
-    transition: 1s;
-
-    #night_ctnr{
-        display: none;
-    }
-
-    #day_ctnr{
-        display: flex;
-    }
-
-    #hero_h1{
-        display: none;
-    }
-    
-    .switch{
-        left: 1.5rem;
-    }
-    .caption_ctnr{
-        display: none;
-    }
-    #index_section1{
-        height: unset;
-    }
-    #mountain{
-        display: none;
-    }
-    #base_aside_section{
-        background-color: var(--text_color_inv);
-        position: relative;
-    }
-    .about_section_right{
-        p{
-            color: lime;
-        }
-    }
-    .hero_ctnr{
-        height: unset;
-    }
-
-    #contact_modal_section{
-        .modal_ctnr{
-            box-shadow: none;
-        }
-    }
-
-}
-
 html[data-main_theme="dark"]{
     --bg: #{$dk_bg};
     --bg_invert: #{$lt_bg};
@@ -106,39 +42,9 @@ body, html{
     transition: 1s;
 }
 
-
-
-#windows_logo{
-    width: 6rem;
-}
-
-.hide_on_mobile{
-    display: none;
-}
-
-.hide_on_tablet{
-    display: none;
-}
-
-.show_on_desktop{
-    display: none;
-}
-
-
-
-
 @media only screen and (min-width: $tablet_bp){
     body, html{
         font-size: 1.1em;
-    }
-    .show_on_tablet{
-        display: block;
-    }
-    .hide_on_tablet{
-        display: block;
-    }
-    .hide_on_mobile{
-        display: block;
     }
 }
 
@@ -150,12 +56,4 @@ body, html{
     .show_on_desktop{
         display: block;
     }  
-}
-
-@media only screen and (min-width: $desktop_4k_bp){
-    body, html{
-        // font-size: 2em;
-        font-size: 1.5em;
-        // font-size: 1.8em;
-    }
 }

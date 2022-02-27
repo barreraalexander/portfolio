@@ -1,5 +1,5 @@
 from flask import Markup, url_for
-from website.blueprints.main import CONTACT_DICT
+from website.utils.webdata import CONTACT_DICT
 
 from website.components.day_ctnr import component as day_ctnr
 

@@ -1,5 +1,5 @@
 from flask import Markup, url_for
-from website.blueprints.main import unpack_elems
+from website.utils.webdata import unpack_elems
 
 def component():
     talents = {

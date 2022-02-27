@@ -8,7 +8,7 @@ bundles = {
         output='gen/css/main.%(version)s.css'
     ),
     'main_js': Bundle(
-        'js/main_js/mod_theme.js',
+        # 'js/main_js/mod_theme.js',
         'js/main_js/mod_menu.js',
         'js/main_js/mod_modal.js',
         filters='jsmin',
@@ -16,7 +16,7 @@ bundles = {
         output='gen/js/main.%(version)s.js'
     ),
     'index_js': Bundle(
-        'js/index_js/scrolling_mod.js',
+        # 'js/index_js/scrolling_mod.js',
         'js/index_js/planets_mod.js',
         'js/index_js/rain_scape.js',
         filters='jsmin',

@@ -45,7 +45,7 @@ function mod_text(event){
     hero_section_tl.to(
         hero_ctnr,
         {
-            duration: 2,
+            duration: 1,
             ease: Sine.easeInOut,
             y: '2em',
             filter: 'blur(0px)',

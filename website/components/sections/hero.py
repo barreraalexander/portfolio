@@ -8,15 +8,21 @@ def component():
     moon_texture = url_for('static', filename='images/textures/moon_texture.png')
     normal_texture = url_for('static', filename='images/textures/normal_map.png')
     
+    animation_script = url_for('static', filename='js/animations/hero.js')
+    three_d_script = url_for('static', filename='js/three_d/planets_mod.js')
+
     return Markup(f"""
-    <section id="index_section1">
+    <section id="hero_section">
         <div class="hero_ctnr">
-            <p>
-                Out of this world
-            </p>
+            <h2>
+                OUT OF THIS WORLD
+            </h2>
             <h1 id="hero_h1">
                 WEB DEVELOPER
             </h1>
+            <small>
+                FROM SOUTH FLORIDA
+            </small>
             
             <div class="caption_ctnr">
                 <p>
@@ -39,7 +45,8 @@ def component():
             alt="mountain artifact"
         >
 
-        <div id="night_ctnr"
+        <div
+            id="night_ctnr"
             data-normal_texture="{normal_texture}"
             data-moon_texture="{moon_texture}"
         >
@@ -47,6 +54,11 @@ def component():
 
     </section>
 
+    <script
+        src="{animation_script}">
+    </script>
 
-    
+    <script
+        src="{three_d_script}">
+    </script>
     """)

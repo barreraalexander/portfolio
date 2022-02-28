@@ -2,9 +2,7 @@ body, html{
     height: calc(100% - 2em);
     margin: 0;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text_color);
-    background-color: var(--text_color_inv);
-
+    background-color: $proj_black;
 }
 
 

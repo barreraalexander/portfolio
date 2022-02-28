@@ -1,109 +1,109 @@
-#index_section1{
+#hero_section{
+    height: 60vh;
     overflow: hidden;
     position: relative;
-    z-index: 1000;
-    height: 60vh;
-}
+    .hero_ctnr{
+        align-items: center;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        position: absolute;
+        justify-content: center;
+        width: 100%;
+        z-index: 100;
+        h1{
+            text-align: left;
+            font-size: 2em;
+        }
+        h2{
+            font-size: 1.5em;
+            text-align: center;
+        }
 
-.hero_ctnr{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    margin: 0 auto;
-    position: absolute;
-    padding: 1em;
-    top: 0;
-    width: 90%;
-    height: 100%;
-    justify-content: center;
-    h1{
-        @include proj_h1;
-        padding: 2em;
-        text-align: center;
-        z-index: 1001;
+
     }
-    a{
-        color: var(--primary);
+
+    #night_ctnr{
+        position: relative;
+        z-index: 97;
+        filter: blur(50px);
+        opacity: .8;
     }
-}
-
-
-#night_ctnr{
-    z-index: 999;
-    opacity: .8;
-}
-
-
-#globe_canvas{
-    outline: none;
-    mix-blend-mode: exclusion;
-    width: 100%;
-    height: 100vh;
-}
-
-
-#mountain{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: block;
-    z-index: 200;
-    filter: grayscale(100%);
-    // filter: saturate(4);
-    opacity: .8;
-}
-
-.caption_ctnr{
-    align-items: center;
-    background-color: rgba($color: #222, $alpha: 0.4);
-    border-radius: 5px;
-    color: var(--text_color);
-    // display: flex;
-    display: none;
-    flex-flow: column nowrap;
-    margin-top: 5rem;
-    gap: 1em;
-    justify-content: center;
-    opacity: .7;
-    padding: 1em 2em;
-    position: relative;
-    text-align: center;
-    z-index: 1001;
-    transition: .5s;
-    p, a{
-        @include quiet_text;
-        font-size: 1.5rem;
-        margin: 0;
+    
+    
+    #globe_canvas{
+        outline: none;
+        mix-blend-mode: exclusion;
+        width: 100%;
+        height: 100vh;
     }
-    button{
-        @include quiet_text;
-        font-weight: unset;
-        font-size: 1.2rem;
-        padding: .5em 1em;
-        width: max-content;
-        border-radius: 10px;
-        background-color: var(--bg);
+    
+    
+    #mountain{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        z-index: 98;
+        filter: grayscale(100%);
+
+    }
+    
+    .caption_ctnr{
+        align-items: center;
+        background-color: rgba($color: #222, $alpha: 0.4);
+        border-radius: 5px;
         color: var(--text_color);
+        display: none;
+        flex-flow: column nowrap;
+        margin-top: 5rem;
+        gap: 1em;
+        justify-content: center;
+        opacity: .7;
+        padding: 1em 2em;
+        position: relative;
+        text-align: center;
+        z-index: 99;
+        transition: .5s;
+        p, a{
+            @include quiet_text;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        button{
+            @include quiet_text;
+            font-weight: unset;
+            font-size: 1.2rem;
+            padding: .5em 1em;
+            width: max-content;
+            border-radius: 10px;
+            background-color: var(--bg);
+            color: var(--text_color);
+        }
+        
+    }
+    
+    .caption_ctnr:hover{
+        background-color: #fff;
+        opacity: 1;
+        p, a{
+            color: #000;
+        }
+        button{
+            background-color: #fff;
+            border:2px solid #000;
+            color: #000;
+        }
+        button:hover{
+            background-color: #000;
+            color: #fff;
+        }
     }
     
 }
 
-.caption_ctnr:hover{
-    background-color: #fff;
-    opacity: 1;
-    p, a{
-        color: #000;
-    }
-    button{
-        background-color: #fff;
-        border:2px solid #000;
-        color: #000;
-    }
-    button:hover{
-        background-color: #000;
-        color: #fff;
-    }
-}
+
 
 
 
@@ -119,7 +119,7 @@
         display: flex;
         margin-top: unset;
     }
-    #index_section1{
+    #hero_section{
         height: 100vh;
     }    
 }

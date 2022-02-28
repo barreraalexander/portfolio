@@ -70,7 +70,7 @@ def index():
     return render_template('_index.html',
         title='Home',
         hero=hero,
-        # index_section1=index_section1,
+        # hero_section=hero_section,
         # index_section2=index_section2,
         # index_section3=index_section3,
         # index_section4=index_section4,

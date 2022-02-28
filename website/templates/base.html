@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 
-<html lang="en" data-main_theme="dark">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
         <meta name="description" content="{{META_DICT['description']}}">
-
         <meta name="keywords" content="{{META_DICT['keywords']}}" />                
-    
-        <link href="https://fonts.googleapis.com/css2?family=GoogleSans:wght@100;400&display=swap" rel="stylesheet">
+
+        
+
+
+        <!-- Montserrot Fonts 100, 300  -->
+        <!-- Roboto Slab Fonts 300, 400, 700  -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-        <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
-
-        <link href="https://fonts.googleapis.com/css2?family=GoogleSans:wght@100;400&display=swap" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,300&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
         {% assets "main_scss" %}
             <link rel="stylesheet" href="{{ASSET_URL}}">
@@ -54,7 +52,6 @@
     </head>
 
     <body>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js"></script>
@@ -67,9 +64,6 @@
         
         {{footer()}}
 
-        {% assets "main_js" %}
-            <script type="text/javascript" src="{{ ASSET_URL}}"> </script>
-        {% endassets %}
 
     </body>
 </html>

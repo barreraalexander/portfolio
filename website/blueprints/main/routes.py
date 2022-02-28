@@ -14,6 +14,9 @@ from website.components.contact_modal import component \
 from website.components.sections.hero import component \
                                 as hero
 
+from website.components.sections.story import component \
+                                as story
+
 # from website.components.sections.index_section2 import component \
 #                                 as index_section2
 
@@ -70,6 +73,7 @@ def index():
     return render_template('_index.html',
         title='Home',
         hero=hero,
+        story=story,
         # hero_section=hero_section,
         # index_section2=index_section2,
         # index_section3=index_section3,

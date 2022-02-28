@@ -4,22 +4,26 @@ body, html{
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text_color);
     background-color: var(--text_color_inv);
-    width: 100vw;
-    overflow-x: hidden;
+
 }
+
+
+#main_ctnr{
+    display: flex;
+    flex-flow: column;
+}
+
 
 @media only screen and (min-width: $tablet_bp){
     body, html{
-        font-size: 1.1em;
+        // font-size: 1.1em;
     }
 }
 
 
 @media only screen and (min-width: $desktop_bp){
     body, html{
-        font-size: 1.1em;
+        // font-size: 1.1em;
     }
-    .show_on_desktop{
-        display: block;
-    }  
+
 }

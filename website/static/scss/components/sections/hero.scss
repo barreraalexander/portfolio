@@ -16,14 +16,11 @@
             @include neon_text;
             text-align: left;
             font-size: 2em;
-            color: #fff;
         }
         h2{
             font-size: 1.5em;
             text-align: center;
         }
-
-
     }
 
     #night_ctnr{
@@ -43,92 +40,32 @@
     
     
     #mountain{
-        position: absolute;
         bottom: 0;
-        width: 100%;
         display: block;
+        filter: saturate(60);
+        mix-blend-mode: luminosity;
+        position: absolute;
+        width: 100%;
         z-index: 98;
-        filter: grayscale(100%);
-
     }
-    
-    .caption_ctnr{
-        align-items: center;
-        background-color: rgba($color: #222, $alpha: 0.4);
-        border-radius: 5px;
-        color: var(--text_color);
-        display: none;
-        flex-flow: column nowrap;
-        margin-top: 5rem;
-        gap: 1em;
-        justify-content: center;
-        opacity: .7;
-        padding: 1em 2em;
-        position: relative;
-        text-align: center;
-        z-index: 99;
-        transition: .5s;
-        p, a{
-            @include quiet_text;
-            font-size: 1.5rem;
-            margin: 0;
-        }
-        button{
-            @include quiet_text;
-            font-weight: unset;
-            font-size: 1.2rem;
-            padding: .5em 1em;
-            width: max-content;
-            border-radius: 10px;
-            background-color: var(--bg);
-            color: var(--text_color);
-        }
-        
-    }
-    
-    .caption_ctnr:hover{
-        background-color: #fff;
-        opacity: 1;
-        p, a{
-            color: #000;
-        }
-        button{
-            background-color: #fff;
-            border:2px solid #000;
-            color: #000;
-        }
-        button:hover{
-            background-color: #000;
-            color: #fff;
-        }
-    }
-    
 }
-
-
 
 
 
 @media only screen and (min-width: $tablet_bp){
     #hero_section{
-        font-size: 1.2em;
+        font-size: 1.6em;
         height: 68vh;
     }
 }
 
 @media only screen and (min-width: $desktop_bp){
-    // .hero_ctnr{
-    //     height: unset;
-    //     h1{
-    //         @include neon_text;
-    //         font-size: 5em;
-    //     }
-    // }
-    // .caption_ctnr{
-    //     display: flex;
-    //     margin-top: unset;
-    // }
-    // #hero_section{
-    //     height: 100vh;
-    // }    
+    #hero_section{
+        height: 90vh;
+        font-size: 2em;
+        .hero_ctnr{
+            top: -5em;
+        }
+    }
+
 }

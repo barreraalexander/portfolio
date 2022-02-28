@@ -42,7 +42,7 @@ function mod_text(event){
     hero_section_tl.to(
         hero_ctnr,
         {
-            duration: .25,
+            duration: .1,
             y: '-2em',
             filter: 'blur(0px)',
             ease: Sine.easeInOut,

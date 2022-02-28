@@ -7,7 +7,7 @@ if (night_ctnr){
         0.1,
         1000
         )
-    camera.position.z = 8
+    camera.position.z = 4
 
 
     var renderer = new THREE.WebGLRenderer({
@@ -36,7 +36,7 @@ if (night_ctnr){
     material.color = new THREE.Color('#c8c8c8')
 
     const mesh1 = new THREE.Mesh(geometry, material)
-    mesh1.position.set(4, 8, -10)
+    mesh1.position.set(1, 1, -10)
     scene.add(mesh1)
 
     var light1 = new THREE.PointLight(0xFFFFFF, 1, 1000)

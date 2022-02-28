@@ -13,8 +13,10 @@
         width: 100%;
         z-index: 100;
         h1{
+            @include neon_text;
             text-align: left;
             font-size: 2em;
+            color: #fff;
         }
         h2{
             font-size: 1.5em;
@@ -108,18 +110,25 @@
 
 
 @media only screen and (min-width: $tablet_bp){
-    .hero_ctnr{
-        height: unset;
-        h1{
-            @include neon_text;
-            font-size: 5em;
-        }
-    }
-    .caption_ctnr{
-        display: flex;
-        margin-top: unset;
-    }
     #hero_section{
-        height: 100vh;
-    }    
+        font-size: 1.2em;
+        height: 68vh;
+    }
+}
+
+@media only screen and (min-width: $desktop_bp){
+    // .hero_ctnr{
+    //     height: unset;
+    //     h1{
+    //         @include neon_text;
+    //         font-size: 5em;
+    //     }
+    // }
+    // .caption_ctnr{
+    //     display: flex;
+    //     margin-top: unset;
+    // }
+    // #hero_section{
+    //     height: 100vh;
+    // }    
 }

@@ -136,7 +136,6 @@ li, p{
 
 @mixin neon_text{
     animation: pulsate 2.5s infinite alternate;     
-    color: var(--text_color);
     border-radius: 2em;
     text-shadow:
         0 0 .4em var(--primary),

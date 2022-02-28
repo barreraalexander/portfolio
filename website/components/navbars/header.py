@@ -3,27 +3,46 @@ from website.components.linkset import component as link_set
 
 def component():
     return Markup(f"""
-    <section id="base_aside_section">
-    <aside>
-        <ul id="main_nav">
-            <li class="h1_flexi">
-                <a href="{url_for('main.index')}">
-                    <h1>
-                        Alexander Barrera
-                    </h1>
-                </a>
-            </li>
+    <section id="header_section">
+        <nav>
+            <ul>
 
-            <li class="menu_flexi">
-                <img
-                    id="hamburger"
-                    src="{url_for('static', filename='images/assets/hamburger.svg')}"
-                    data-light_src="{url_for('static', filename='images/assets/hamburger_alt.svg')}"
-                    data-dark_src="{url_for('static', filename='images/assets/hamburger.svg')}"
-                    alt="nav button"
-                >
-            </li>
-        </ul>
-    </aside>
-</section>
+                <a href="{url_for('main.index')}">
+                    <li class="brand">
+                        Alexander Barrera
+                    </li>
+                </a>
+
+                <a>
+                    <img
+                        id="hamburger"
+                        src="{url_for('static', filename='images/assets/icons/hamburger.svg')}"
+                        alt="menu toggle icon"
+                    >
+
+                </a>
+
+                <div class="main_links">
+                    <a href="{url_for('main.index')}">
+                        <li>
+                            Home
+                        </li>
+                    </a>
+
+                    <a href="{url_for('main.index')}">
+                        <li>
+                            Questions
+                        </li>
+                    </a>
+
+                    <a href="{url_for('main.index')}">
+                        <li>
+                            Contact
+                        </li>
+                    </a>
+                </div>
+
+            </ul>
+        </nav>
+    </section>
     """)

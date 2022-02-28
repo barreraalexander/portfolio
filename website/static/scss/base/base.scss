@@ -4,6 +4,8 @@ body, html{
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text_color);
     background-color: var(--text_color_inv);
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 @media only screen and (min-width: $tablet_bp){

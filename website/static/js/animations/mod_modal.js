@@ -1,31 +1,23 @@
-let open_modal_elems = document.querySelectorAll('.open_modal')
-let modal_section = document.querySelector('#contact_modal_section')
-let modal = document.querySelector('.modal_ctnr')
-let close_modal = document.querySelector('#cancel_ctnr')
+const contact_modal_section = document.querySelector('#contact_modal_section')
+const close_modal = contact_modal_section.querySelector('#close_modal')
+const open_modal = document.querySelectorAll('.open_modal')
 
-if (open_modal_elems){
-    for (let elem of open_modal_elems){
-        elem.addEventListener('click', mod_modal, false)
+console.log(open_modal)
+
+if (close_modal){
+    close_modal.addEventListener('click', toggle_modal, false)
+
+    for (let elem of open_modal){
+        alert('here') 
+        elem.addEventListener('click', toggle_modal, false)
     }
-    close_modal.addEventListener('click', mod_modal, false)
+
 }
 
-function mod_modal(){
-    if (this.id == close_modal.id){
-        modal_section.dataset.status = 'closed' 
-        modal_section.removeEventListener('click', listen_clickaway)
-        return
+function toggle_modal(event){
+    if (event.target==close_modal){
+        contact_modal_section.dataset.status = "closed"
+    } else {
+        contact_modal_section.dataset.status = "open"
     }
-    modal_section.dataset.status = 'open'
-    modal_section.addEventListener('click', listen_clickaway, false)
-}
-
-
-function listen_clickaway(event){
-    if (event.target.parentNode == modal_section ||
-        event.target == modal_section
-        ){
-        close_modal.click()
-        modal_section.removeEventListener('click', listen_clickaway)
-    }    
 }

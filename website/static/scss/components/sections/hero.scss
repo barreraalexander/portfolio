@@ -44,6 +44,8 @@
         display: block;
         filter: saturate(60);
         mix-blend-mode: luminosity;
+        // -webkit-
+
         position: absolute;
         width: 100%;
         z-index: 98;

@@ -1,87 +1,97 @@
 #contact_modal_section{
+    background-color: rgba($color: $proj_black, $alpha: .7);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 4000;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 2000;
-    background-color: rgba($color: #000000, $alpha: .7);
-    top: 0;
     .modal_ctnr{
-        box-shadow: .09em .1em 2.2em .1em var(--theme_accent);
-        border-radius: $border_radius;
-        width: 45%;
-        min-width: 15em;
-        padding: 2em;
-        background-color: var(--bg);
+        position: relative;
+        width: 80%;
+        padding: 1em;
+        height: 60%;
+        background-color: rgba($color: $proj_black, $alpha: .7);
+        z-index: 100;
+        border-radius: 10px;
+        max-width: 30em;
     }
-}
-
-#contact_modal_section[data-status="closed"]{
-    display: none;
-}
-
-
-#contact_form{
-    display: none;
+    .glass_back{
+        background-color: rgba($color: $proj_white, $alpha: .2);
+        filter: blur(70px);
+        position: absolute;
+        height: 80%;
+        width: 80%;
+        z-index: 99;
+    }
     .form_ctnr{
         display: flex;
         flex-flow: column;
-        gap: 1em;
-        align-items: center;
-    }
-    #cancel_ctnr{
-        display: block;
-        width: 1.5em;
-        align-self: flex-end;
-        svg{
-            width: 100%;
+        gap: 1.5em;
+        img{
+            width: 1.5em;
+            align-self: flex-end;
+            mix-blend-mode: color;
         }
-    }
-    #cancel_ctnr:hover{
-        filter: invert(100%);
+        img:hover{
+            cursor: pointer;
+            mix-blend-mode: unset;
+            transition: 1s;
+        }
     }
     .form_group{
         display: flex;
         flex-flow: column;
+        gap: .25em;
+        .label_ctnr{
+            display: flex;
+            gap: .25em;
+            align-items: center;
+            label{
+                @include lg_text;
+                color: $proj_white;
+            }
+            small{
+                font-size: .7em;
+                color: $proj_lgray;
+            }
+        }
+        input,
+        textarea{
+            @include xsm_text;
+            border: 2px solid transparent;
+            border-radius: 2px;
+            outline: none;
+            max-width: 25em;
+            padding: .5em;
+            width: 75%;
+        }
+        textarea{
+            resize: vertical;
+            max-height: 10em;
+        }
+        input:hover,
+        textarea:hover{
+            background-color: $proj_lgray;
+            border-color: $proj_lgray;
+            cursor: pointer;
+            transition: .5s;
+        }
+        input:focus,
+        textarea:focus{
+            transition: .5s;
+            border-color: $proj_orange;   
+            background-color: $proj_white;
+        }
+        #submit{
+            @include lg_text;
+            width: max-content;
+        }
     }
-    .form_group label{
-        @include quiet_text;
-        font-size: .9em;
-    }
-    input:focus, textarea:focus{
-        border-color: var(--primary);
-        border: $border_width_thick solid var(--text_color);
-        transition: .1s;
-        outline-width: 0;
-        outline: none;
-    }
-    input:hover, textarea:hover{
-        border-color: var(--primary);
-    }
+}
 
-    input, textarea{
-        // background-color: var(--bg);
-        border: $border_width solid transparent;
-        border-radius: $border_radius;
-        background-color: var(--text_color_inv);
-        color: var(--text_color);
-        // border: none;
-        
-        padding: .8em;
-        width: 20em;
-    }
-
-    textarea{
-        min-height: 8rem;
-    }
-    #submit{
-        @include inverse_btn;
-        width: 8em;
-        font: 1.2rem;
-    }
-    #submit:hover{
-        @include primary_btn;
-    }
+#contact_modal_section[data-status=closed]{
+    display: none;
 }

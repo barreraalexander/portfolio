@@ -60,7 +60,7 @@ def component():
                     </li>
                 </a>
 
-                <li>
+                <li class="open_modal">
                     Contact
                 </li>
             </ul>

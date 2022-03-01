@@ -1,27 +1,39 @@
 from flask_wtf import FlaskForm, RecaptchaField
 from flask_wtf.file import FileField, FileAllowed
-from wtforms import StringField, TextAreaField, SubmitField, SelectMultipleField
-from wtforms.validators import DataRequired, Length
+from wtforms import StringField, TextAreaField, SubmitField
+from wtforms.validators import DataRequired, Length, Email
 from datetime import datetime
 
 class ContactForm (FlaskForm):
-    name = StringField('Name',
-                        validators=[DataRequired(),
-                        Length(min=2, max=30)],
-                        render_kw={"placeholder":"Joe Jackson"})
-
-    contact_info = StringField ('Phone Number Or Email',
-                        validators=[DataRequired(),
-                        Length(min=4, max=50)],
-                        render_kw={"placeholder":"Your Phone Number or Email"})
+    contact_info = StringField('Email',
+                        validators=[
+                            DataRequired(),
+                            Length(min=4, max=50),
+                            Email(),
+                        ],
+                        render_kw={
+                            "placeholder":"Email",
+                        }
+                    )
       
-    company_name = StringField ('Company Name',
-                        validators=[Length(min=2, max=50)],
-                        render_kw={"placeholder":"Your Company's Name (optional)"})
+    company_name = StringField ('Company',
+                        validators=[
+                            Length(min=2, max=50),
+                        ],
+                        render_kw={
+                            "placeholder":"Your Company's Name (optional)",
+                        }
+                    )
 
-    help_description = TextAreaField ('How Can I Help?',
-                        validators=[Length(min=2, max=300)],
-                        render_kw={"placeholder":"Your Message (optional)"})
+    help_description = TextAreaField ("What's Up?",
+                        validators=[
+                            DataRequired(),
+                            Length(min=2, max=300),
+                        ],
+                        render_kw={
+                            "placeholder":"Your Messages"
+                        }
+                    )
 
     recaptcha = RecaptchaField()
 

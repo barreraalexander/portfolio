@@ -1,5 +1,4 @@
-*.mp4
-.mp4
+
 .webassets-cache
 ".webassets-cache"
 website/static/gen/css/*.css

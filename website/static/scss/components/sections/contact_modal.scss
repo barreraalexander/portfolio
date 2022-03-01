@@ -16,6 +16,7 @@
         background-color: rgba($color: $proj_black, $alpha: .7);
         z-index: 100;
         border-radius: 10px;
+        max-width: 30em;
     }
     .glass_back{
         background-color: rgba($color: $proj_white, $alpha: .2);
@@ -60,11 +61,12 @@
         input,
         textarea{
             @include xsm_text;
-            width: 75%;
             border: 2px solid transparent;
-            outline: none;
             border-radius: 2px;
+            outline: none;
+            max-width: 25em;
             padding: .5em;
+            width: 75%;
         }
         textarea{
             resize: vertical;

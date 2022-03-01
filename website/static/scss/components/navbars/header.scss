@@ -44,11 +44,12 @@
         width: unset;
         position: relative;
         background-color: #111;
-    }
-    .brand {
-        margin-left: 2em;
-    }
-    li:last-of-type{
-        margin-right: 2em;
+        li:last-of-type{
+            // margin-right: 2em;
+        }
+        .brand {
+            margin-left: 2em;
+            // margin-right: auto;
+        }
     }
 }

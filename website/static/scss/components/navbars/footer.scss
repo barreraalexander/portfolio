@@ -29,10 +29,6 @@
     .nav_ctnr{
         background-color: $proj_orange;
         padding: 1em;
-        // hr{
-        //     width: 1em;
-        //     color: $proj_black;
-        // }
         h2{
             @include lg_text;
             color: $proj_black;
@@ -48,7 +44,6 @@
                 @include md_text_alt;
                 color: $proj_black;
                 font-weight: 600;
-                // text-align: center;
                 text-decoration: underline;
             }
             li:hover{
@@ -61,7 +56,7 @@
 
 @media only screen and (min-width: $tablet_bp){
     #footer_section{
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
 

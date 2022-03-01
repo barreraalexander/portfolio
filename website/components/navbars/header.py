@@ -1,5 +1,4 @@
 from flask import Markup, url_for
-from website.components.linkset import component as link_set
 
 def component():
     return Markup(f"""

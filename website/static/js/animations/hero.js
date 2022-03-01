@@ -1,8 +1,8 @@
 const hero_section = document.querySelector('#hero_section')
 const three_d_ctnr = hero_section.querySelector('#night_ctnr')
 const hero_ctnr = hero_section.querySelector('.hero_ctnr')
-
 const hero_section_tl = gsap.timeline()
+
 
 hero_section_tl.to(
     hero_ctnr,

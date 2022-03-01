@@ -114,7 +114,9 @@ if (night_ctnr){
     var render = function (){
         requestAnimationFrame(render)
 
-        let elasped_time = clock.getElapsedTime()   
+        let elasped_time = clock.getElapsedTime()
+        
+
         moon.rotation.y += 0.003;
 
         planet.rotation.y += 0.002;

@@ -25,10 +25,13 @@ def component():
             src="{url_for('static', filename='images/assets/me1.png')}"
             alt="profile picture of alexander barrera"
         >
-        <button>
-            RESUME
-        </button>
-        <button>
+
+        <a href="{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}" download>
+            <button class="orange_btn">
+                RESUME
+            </button>
+        </a>
+        <button class="rev_orange_btn">
             CONTACT
         </button>
     </section>

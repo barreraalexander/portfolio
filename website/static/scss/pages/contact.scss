@@ -11,7 +11,7 @@
         color: var(--text_color)
     }
     .form_ctnr{
-        @include shadow;
+        // @include shadow;
         // background-color: var(--accent);
         background-color: var(--theme_accent);
         border-radius: .9em;

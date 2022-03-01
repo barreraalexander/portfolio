@@ -1,14 +1,15 @@
 #story_section{
     align-items: center;
-    background-color: $proj_gray;
-    // background-color: $proj_black;
+    background: radial-gradient($proj_gray, $proj_black);
     display: flex;
     flex-flow: column;
-    // filter: grayscale(100%);
+    filter: grayscale(100%);
     gap: .5em;
-    // height: 100vh;
     text-align: center;
     padding: 1em;
+
+    transition: 3s;
+
     img{
         width: 20em;
         background-color: #000;
@@ -18,18 +19,18 @@
     .text_ctnr{
         p{
             @include xsm_text;
-            
             width: 75%;
             margin: 0 auto;
-            line-height: 22px;
+            line-height: 1.2em;
             margin-top: 1em;
-            max-width: 12em;
+            margin-bottom: 1em;
+            max-width: 30em;
         }
+
 
         span{
             @include md_text_alt;
             color: $proj_orange;
-            // font-weight: 600;
             border-bottom: 2px solid $proj_orange;
         }
         hr{
@@ -39,8 +40,26 @@
     }
     button{
         // margin: ;
-        width: 50%;
-        max-width: 8em;
+        // width: 50%;
+        width: 10em;
         margin: 1em auto;
+    }
+}
+
+
+
+@media only screen and (min-width: $tablet_bp){
+    #story_section{
+        font-size: 1.2em;
+        
+    }
+}
+
+
+@media only screen and (min-width: $desktop_bp){
+    #story_section{
+        // font-size: 1.3em;
+        gap: 1em;
+
     }
 }

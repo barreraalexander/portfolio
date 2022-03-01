@@ -61,10 +61,13 @@
 
 @media only screen and (min-width: $desktop_bp){
     #hero_section{
-        height: 90vh;
+        height: 85vh;
         font-size: 2em;
         .hero_ctnr{
             top: -5em;
+        }
+        #mountain{
+            bottom: -100px;
         }
     }
 

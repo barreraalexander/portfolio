@@ -18,6 +18,7 @@ def component():
                         id="hamburger"
                         src="{url_for('static', filename='images/assets/icons/hamburger.svg')}"
                         alt="menu toggle icon"
+                        aria-label="menu"
                     >
 
                 </a>

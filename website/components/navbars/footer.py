@@ -1,44 +1,70 @@
-from flask import Markup
+from flask import Markup, url_for
 
 
 def component():
     return Markup(f"""
-    <section id="base_footer_section">
-        <footer>
-            <div class="footer_left">
-                <h5>
-                    Contact Me
-                </h5>
-                <ul>
+    <section id="footer_section">
+        
+        <div class="links_ctnr">
+
+            <a href="https://github.com/barreraalexander" target="_blank">
+                <div class="img_text_ctnr">
+                    <img
+                        src="{url_for('static', filename='images/assets/icons/github.svg')}"
+                    >
+                    <p>
+                        github
+                    </p>
+                </div>
+            </a>
+            
+            <a href="{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}" download>
+                <div class="img_text_ctnr">
+                    <img
+                        src="{url_for('static', filename='images/assets/icons/resume.svg')}"
+                    >
+                    <p>
+                        resume
+                    </p>
+                </div>
+            </a>
+
+            <a href="https://www.upwork.com/freelancers/~0120837e444852e684" target="_blank">
+                <div class="img_text_ctnr">
+                    <img
+                        id="upwork"
+                        src="{url_for('static', filename='images/assets/icons/upwork_logo.svg')}"
+                    >
+                    <p>
+                        upwork
+                    </p>
+                </div>
+            </a>
+
+        </div>
+        
+        <div class="nav_ctnr">
+            <h2>
+                Navigation
+            </h2>
+            <ul>
+                <a href="{url_for('main.index')}">
                     <li>
-                        <a href="tel:{{CONTACT_DICT['phone']}}">
-                            ☎ {{CONTACT_DICT['phone']}}
-                        </a>
+                        Home
                     </li>
+                </a>
+
+                <a href="{url_for('main.index')}">
                     <li>
-                        <a href="#" class='open_modal'>
-                            ✉ Fillout the Form
-                        </a>
+                        Questions
                     </li>
-                </ul>
-            </div>
-            <div class="footer_right">
-                <h5>
-                    See my Works
-                </h5>
-                <ul>
-                    <li>
-                        <a href="{{CONTACT_DICT['github_link']}}">
-                            Checkout my github 😺
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
-                            Download my resume 📃
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+                </a>
+
+                <li>
+                    Contact
+                </li>
+            </ul>
+        </div>
+
     </section>
     """)

@@ -4,7 +4,7 @@ def component():
     script = url_for('static', filename='js/animations/story.js')
 
     return Markup(f"""
-    <section id="story_section">
+    <section id="story_section" loading="lazy">
         <div class="text_ctnr">
             <h1>
                 Barrera

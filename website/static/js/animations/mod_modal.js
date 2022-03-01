@@ -8,7 +8,6 @@ if (close_modal){
     close_modal.addEventListener('click', toggle_modal, false)
 
     for (let elem of open_modal){
-        alert('here') 
         elem.addEventListener('click', toggle_modal, false)
     }
 

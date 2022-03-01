@@ -5,7 +5,7 @@ def component():
     contact_form = ContactForm()
     send_mail_api = url_for('api.send_mail')
     return Markup(f"""
-    <section id="contact_modal_section" data-status="">
+    <section id="contact_modal_section" data-status="closed">
         <div class="glass_back">
         </div>
         <div class="modal_ctnr">

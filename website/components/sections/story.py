@@ -24,6 +24,7 @@ def component():
         <img
             src="{url_for('static', filename='images/assets/me1.png')}"
             alt="profile picture of alexander barrera"
+            loading="lazy"
         >
 
         <a href="{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}" download>

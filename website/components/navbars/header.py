@@ -29,16 +29,15 @@ def component():
                         </li>
                     </a>
 
-                    <a href="{url_for('main.index')}">
+                    <a href="{url_for('main.about')}">
                         <li>
                             Questions
                         </li>
                     </a>
-
-                    <a href="{url_for('main.index')}">
-                        <li>
-                            Contact
-                        </li>
+                    
+                    <li class="open_modal">
+                        Contact
+                    </li>
                     </a>
                 </div>
 

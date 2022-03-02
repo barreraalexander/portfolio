@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, request, url_for
+from flask import Blueprint, render_template
 # BASE
 from website.utils.webdata import CONTACT_DICT, META_DICT
 from website import cache
@@ -7,6 +7,7 @@ from website import cache
 from website.components.navbars.header import component as header
 from website.components.navbars.footer import component as footer
 from website.components.sections.contact_modal import component as contact_modal
+from website.components.sections.comments import component as comments
 
 from website.components.sections.hero import component as hero
 from website.components.sections.story import component as story
@@ -37,6 +38,7 @@ def index():
         title='Home',
         hero=hero,
         story=story,
+        comments=comments,
     )
 
 

@@ -12,7 +12,6 @@ from website.components.sections.comments import component as comments
 from website.components.sections.hero import component as hero
 from website.components.sections.story import component as story
 
-
 main = Blueprint ('main', __name__)
 
 @main.context_processor

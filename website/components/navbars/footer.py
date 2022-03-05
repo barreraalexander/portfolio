@@ -1,5 +1,5 @@
 from flask import Markup, url_for
-
+from website.utils.webdata import SOCIAL_MEDIA_LINKS
 
 def component():
     return Markup(f"""
@@ -7,7 +7,7 @@ def component():
         
         <div class="links_ctnr">
 
-            <a href="https://github.com/barreraalexander" target="_blank">
+            <a href="{SOCIAL_MEDIA_LINKS.get('github')}" target="_blank">
                 <div class="img_text_ctnr">
                     <img
                         src="{url_for('static', filename='images/assets/icons/github.svg')}"
@@ -29,7 +29,7 @@ def component():
                 </div>
             </a>
 
-            <a href="https://www.upwork.com/freelancers/~0120837e444852e684" target="_blank">
+            <a href="{SOCIAL_MEDIA_LINKS.get('upwork')}" target="_blank">
                 <div class="img_text_ctnr">
                     <img
                         id="upwork"
@@ -37,6 +37,18 @@ def component():
                     >
                     <p>
                         upwork
+                    </p>
+                </div>
+            </a>
+
+            <a href="{SOCIAL_MEDIA_LINKS.get('linkedin')}" target="_blank">
+                <div class="img_text_ctnr">
+                    <img
+                        id="linkedin"
+                        src="{url_for('static', filename='images/assets/icons/linkedin.svg')}"
+                    >
+                    <p>
+                        linkedin
                     </p>
                 </div>
             </a>

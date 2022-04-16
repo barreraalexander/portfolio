@@ -6,6 +6,8 @@ from website import cache
 # SECTIONS
 from website.components.navbars.header import component as header
 from website.components.navbars.footer import component as footer
+from website.components.navbars.hidden import component as hidden
+
 from website.components.sections.contact_modal import component as contact_modal
 from website.components.sections.comments import component as comments
 
@@ -20,6 +22,7 @@ def load_base ():
         header=header,
         footer=footer,
         contact_modal=contact_modal,
+        hidden=hidden,
     )
 
 @main.context_processor
@@ -31,7 +34,7 @@ def load_dicts ():
 
 
 @main.route('/')
-@cache.cached(timeout=0)
+# @cache.cached(timeout=0)
 def index():
     return render_template('_index.html',
         title='Home',

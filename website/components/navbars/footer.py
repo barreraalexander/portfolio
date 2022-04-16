@@ -1,5 +1,6 @@
 from flask import Markup, url_for
 from website.utils.webdata import SOCIAL_MEDIA_LINKS
+from website.components.pieces.main_linkset import component as main_linkset
 
 def component():
     return Markup(f"""
@@ -60,21 +61,7 @@ def component():
                 Navigation
             </h2>
             <ul>
-                <a href="{url_for('main.index')}">
-                    <li>
-                        Home
-                    </li>
-                </a>
-
-                <a href="{url_for('main.index')}">
-                    <li>
-                        Questions
-                    </li>
-                </a>
-
-                <li class="open_modal">
-                    Contact
-                </li>
+                {main_linkset()}
             </ul>
         </div>
 

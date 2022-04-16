@@ -24,17 +24,6 @@ hero_section_tl.to(
 ), 1
 
 
-hero_section_tl.to(
-    hero_ctnr,
-    {
-        duration: 2,
-        delay: 3,
-        y: '2em',
-        filter: 'blur(500px)',
-        ease: Sine.easeInOut,
-    },
-), 1
-
 
 
 function mod_text(event){
@@ -50,4 +39,4 @@ function mod_text(event){
     ), 1
 }
 
-document.addEventListener('scroll', mod_text, false)
+// document.addEventListener('scroll', mod_text, false)

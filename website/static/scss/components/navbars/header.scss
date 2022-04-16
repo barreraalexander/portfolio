@@ -14,6 +14,9 @@
     li{
         color: #fff;
     }
+    li:hover{
+        cursor: pointer;
+    }
 
     .brand{
         margin-right: auto;
@@ -32,9 +35,13 @@
     #header_section{
         .main_links{
             display: contents;
+
         }
         #hamburger{
             display: none;
+        }
+        .link_hr_ctnr{
+            
         }
     }
 }

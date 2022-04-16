@@ -6,6 +6,7 @@ from flask_caching import Cache
 from website.config import Config, cacheConfig
 from website.utils.assets import bundles
 
+
 assets = Environment ()
 cache = Cache(config=cacheConfig)
 mail = Mail()

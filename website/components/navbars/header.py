@@ -1,4 +1,5 @@
 from flask import Markup, url_for
+from website.components.pieces.main_linkset import component as main_linkset
 
 def component():
     return Markup(f"""
@@ -23,22 +24,7 @@ def component():
                 </a>
 
                 <div class="main_links">
-                    <a href="{url_for('main.index')}">
-                        <li>
-                            Home
-                        </li>
-                    </a>
-
-                    <a href="{url_for('main.about')}">
-                        <li>
-                            Questions
-                        </li>
-                    </a>
-                    
-                    <li class="open_modal">
-                        Contact
-                    </li>
-                    </a>
+                    {main_linkset()}
                 </div>
 
             </ul>

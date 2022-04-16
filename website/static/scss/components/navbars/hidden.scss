@@ -1,0 +1,55 @@
+#hidden_section{
+    background: rgba($color: #000000, $alpha: .7);
+    position: fixed;
+    // top: 1em;
+    height: 100vh;
+    width: 100vw;
+    z-index: 300;
+    transition: 1s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+
+    // transform: translate(-110vw);
+    // opacity: 0;
+    .modal_ctnr{
+        display: flex;
+        background: rgba($color: #000000, $alpha: .9);
+        // background-color: red;
+        width: 80%;
+        max-width: 40em;
+        height: 80%;
+        border-radius: 20px;
+        position: relative;
+        z-index: 100;
+        nav{
+            width: 100%;
+            height: 100%;
+        }
+        ul{
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 2em;
+            gap: 1em;
+            height: 100%;
+        }
+        li{
+            @include lg_text;
+        }
+    }
+    .glass_back{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba($color: #000000, $alpha: .8);
+        z-index: 99;
+        filter:blur(100px)
+    }
+
+}
+

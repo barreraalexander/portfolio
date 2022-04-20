@@ -14,7 +14,7 @@ def component():
         </li>
     </a>
 
-    <li class="open_modal">
+    <li class="open_menu">
         Contact
     </li>
     """)

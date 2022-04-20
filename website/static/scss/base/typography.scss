@@ -63,9 +63,17 @@ h2{
 li, p{
     @include md_text;
 }
- small{
-     @include xsm_text;
- }
+
+small{
+    @include xsm_text;
+}
+
+.open_menu:hover,
+.close_menu:hover{
+    cursor: pointer;
+}
+
+
 
 
 

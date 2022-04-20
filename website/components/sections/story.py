@@ -32,7 +32,7 @@ def component():
                 RESUME
             </button>
         </a>
-        <button class="rev_orange_btn open_modal">
+        <button class="rev_orange_btn open_menu">
             CONTACT
         </button>
     </section>

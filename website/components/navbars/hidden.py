@@ -9,6 +9,13 @@ def component():
         <div class="modal_ctnr">
             <nav>
                 <ul>
+                    <img
+                        id="close_hidden_menu"
+                        class="close_menu"
+                        src="{url_for('static', filename='images/assets/icons/cancel.svg')}"
+                        alt="close icon"
+                        aria-label="closes the mobile navigation menu"
+                    >
                     {main_linkset()}
                 </ul>
             </nav>

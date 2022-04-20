@@ -1,15 +1,16 @@
 let hidden_section = document.querySelector('#hidden_section')
-let open_menu_buttons = document.querySelectorAll('.open_menu')
-let close_menu_buttons = document.querySelectorAll('.close_menu')
 
-let menu_buttons = [...open_menu_buttons, ...close_menu_buttons]
+let open_navigation_buttons = document.querySelectorAll('.open_navigation_menu')
+let close_navigation_buttons = document.querySelectorAll('.close_navigation_menu')
 
-let hidden_menu_tl = gsap.timeline({
+let navigation_buttons = [...open_navigation_buttons, ...close_navigation_buttons]
+
+let hidden_navigation_tl = gsap.timeline({
     paused: true,
 })
 
 
-hidden_menu_tl.to(
+hidden_navigation_tl.to(
     hidden_section,
     {
         duration: .25,
@@ -20,16 +21,17 @@ hidden_menu_tl.to(
     }
 )
 
-
-for (let menu_button of menu_buttons){
-    menu_button.addEventListener('click', mod_hidden, false)
+for (let menu_button of navigation_buttons){
+    menu_button.addEventListener('click', mod_navigation, false)
+    // alert('here ')
 }
 
-function mod_hidden(event){
-    if (event.target.classList.contains('open_menu')){
-        hidden_menu_tl.play()
+function mod_navigation(event){
+    if (event.target.classList.contains('.open_navigation_menu')){
+        alert('here')
+        // hidden_navigation_tl.play()
     } else {
-        hidden_menu_tl.reverse()
+        // hidden_navigation_tl.reverse()
         
     }
 }

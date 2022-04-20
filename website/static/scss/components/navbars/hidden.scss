@@ -10,9 +10,10 @@
     justify-content: center;
     
     filter: blur(400px);
-
     opacity: 0;
-    display: none;
+    display: flex;
+
+
     .modal_ctnr{
         display: flex;
         background: rgba($color: #000000, $alpha: .9);

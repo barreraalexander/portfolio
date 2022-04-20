@@ -11,7 +11,7 @@ def component():
                 <ul>
                     <img
                         id="close_hidden_menu"
-                        class="close_menu"
+                        class="close_navigation_menu"
                         src="{url_for('static', filename='images/assets/icons/cancel.svg')}"
                         alt="close icon"
                         aria-label="closes the mobile navigation menu"

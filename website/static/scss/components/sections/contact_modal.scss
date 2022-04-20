@@ -5,9 +5,16 @@
     top: 0;
     width: 100vw;
     z-index: 4000;
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
+
+    display: none;
+    opacity: 0;
+    filter: blur(400px);
+
+
+
     .modal_ctnr{
         position: relative;
         width: 80%;
@@ -92,6 +99,3 @@
     }
 }
 
-#contact_modal_section[data-status=closed]{
-    display: none;
-}

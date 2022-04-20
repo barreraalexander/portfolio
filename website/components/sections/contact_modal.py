@@ -14,11 +14,11 @@ def component():
                 action="{send_mail_api}"
                 method="POST"
             >
-            
                 {contact_form.hidden_tag()}
                 <div class="form_ctnr">
                     <img
                         id="close_modal"
+                        class="close_menu"
                         src="{url_for('static', filename='images/assets/icons/cancel.svg')}"
                     >
 

@@ -64,7 +64,7 @@ if (night_ctnr){
                     ship.scale.set(.5, .5, .5)
                     ship.position.set(4, 4, 15)
                     scene.add( ship );
-                    alert('added')
+                    // alert('added')
             },
         )
     

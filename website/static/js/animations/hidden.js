@@ -23,7 +23,7 @@ hidden_navigation_tl.to(
 
 for (let menu_button of navigation_buttons){
     menu_button.addEventListener('click', mod_navigation, false)
-    console.log(menu_button)
+    // console.log(menu_    button)
     // alert('here ')
 }
 

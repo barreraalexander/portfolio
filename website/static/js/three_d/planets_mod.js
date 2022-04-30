@@ -89,29 +89,28 @@ if (night_ctnr){
     }
 
 
+    unloaded_components = true
     function load_on_width(){
-        if (window.innerWidth >= 767 - 1){
-            const load_manager1 = new THREE.LoadingManager();
+        if (unloaded_components){
+            if (window.innerWidth >= 767 - 1){
+                const moon_link = night_ctnr.dataset.moon_model
 
-            // load_manager1.onLoad = function(){
-            //     load_on_succession()
-            // }
+                const moon_loader = new THREE.GLTFLoader();
 
-            const moon_link = night_ctnr.dataset.moon_model
+                moon_loader.load(
+                    moon_link,
+                    function ( gltf ) {
 
-            const moon_loader = new THREE.GLTFLoader(load_manager1);
+                            moon = gltf.scene;
 
-            moon_loader.load(
-                moon_link,
-                function ( gltf ) {
-
-                        moon = gltf.scene;
-
-                        moon.position.set(0, 4, -15)
-                        scene.add( moon );
-                        load_on_succession()
-                },
-            )
+                            moon.position.set(0, 4, -15)
+                            scene.add( moon );
+                            load_on_succession()
+                            unloaded_components = false
+                    },
+                )
+            }
+            
         }
     }
 

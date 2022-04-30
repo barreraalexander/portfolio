@@ -7,6 +7,8 @@ outline
 *.pem
 progress.txt
 *.sh
+config.py
+run.py
 
 
 # //SECTION: GENERAL

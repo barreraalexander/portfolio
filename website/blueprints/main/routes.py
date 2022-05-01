@@ -34,7 +34,7 @@ def load_dicts ():
 
 
 @main.route('/')
-@cache.cached(timeout=0)
+# @cache.cached(timeout=0)
 def index():
     return render_template('_index.html',
         title='Home',

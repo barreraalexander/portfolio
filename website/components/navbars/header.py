@@ -9,7 +9,7 @@ def component():
 
                 <a href="{url_for('main.index')}">
                     <li class="brand">
-                        Alexander Barrera
+                        [ AB ]
                     </li>
                 </a>
 

@@ -1,5 +1,5 @@
 #hero_section{
-    height: 75vh;
+    height: 85vh;
     overflow: hidden;
     position: relative;
     .hero_ctnr{
@@ -42,8 +42,9 @@
     #mountain{
         bottom: 0;
         display: block;
-        filter: saturate(60);
+        // filter: saturate(60);
         mix-blend-mode: luminosity;
+
         position: absolute;
         width: 100%;
         z-index: 98;
@@ -55,7 +56,6 @@
 @media only screen and (min-width: $tablet_bp){
     #hero_section{
         font-size: 1.6em;
-        height: 68vh;
     }
 }
 
@@ -65,6 +65,8 @@
         font-size: 2em;
         .hero_ctnr{
             top: -5em;
+            justify-content: flex-end;
+            height: 85%;
         }
         #mountain{
             bottom: -100px;

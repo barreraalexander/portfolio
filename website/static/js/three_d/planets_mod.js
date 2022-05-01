@@ -42,80 +42,54 @@ if (night_ctnr){
     particles_geomtery.setAttribute('position', new THREE.BufferAttribute(position_array, 3))
 
     const particle_material = new THREE.PointsMaterial({
-        size: 0.010,
+        // size: 0.010,
+        size: 0.005,
         color: 'white',
     })
     const particles_mesh = new THREE.Points(particles_geomtery, particle_material)
     scene.add(particles_mesh)
 
-
-    function load_on_succession(){
-        const load_manager2 = new THREE.LoadingManager();
-
-        const ship_link = night_ctnr.dataset.ship_model
-
-        const ship_loader = new THREE.GLTFLoader();
-    
-        ship_loader.load(
-            ship_link,
+    function load_moon(){
+        const moon_link = night_ctnr.dataset.moon_model
+        const moon_loader = new THREE.GLTFLoader();
+        moon_loader.load(
+            moon_link,
             function ( gltf ) {
-    
-                    ship = gltf.scene;
-                    ship.scale.set(.5, .5, .5)
-                    ship.position.set(4, 4, 15)
-                    scene.add( ship );
-                    // alert('added')
+                moon = gltf.scene;
+                moon.position.set(1, 5, 8)
+                scene.add( moon );
             },
         )
-    
+    }
 
-
+    function load_planet(){
         const planet_link = night_ctnr.dataset.planet_model
-
-        const planet_loader = new THREE.GLTFLoader();
-    
-    
-    
+        const planet_loader = new THREE.GLTFLoader();    
         planet_loader.load(
             planet_link,
             function ( gltf ) {
-    
-                    planet = gltf.scene;
-                    planet.scale.set(8, 8, 8)
-                    planet.position.set(4, 18, -20)
-                    scene.add( planet );
+                planet = gltf.scene;
+                planet.scale.set(8, 8, 8)
+                planet.position.set(4, 18, -20)
+                scene.add( planet );
             },
         )
     }
 
-
-    function load_on_width(){
-        if (window.innerWidth >= 767 - 1){
-            const load_manager1 = new THREE.LoadingManager();
-
-            // load_manager1.onLoad = function(){
-            //     load_on_succession()
-            // }
-
-            const moon_link = night_ctnr.dataset.moon_model
-
-            const moon_loader = new THREE.GLTFLoader(load_manager1);
-
-            moon_loader.load(
-                moon_link,
-                function ( gltf ) {
-
-                        moon = gltf.scene;
-
-                        moon.position.set(0, 4, -15)
-                        scene.add( moon );
-                        load_on_succession()
-                },
-            )
-        }
+    function load_ship(){
+        const ship_link = night_ctnr.dataset.ship_model
+        const ship_loader = new THREE.GLTFLoader();
+        ship_loader.load(
+            ship_link,
+            function ( gltf ) {
+                ship = gltf.scene;
+                ship.scale.set(.5, .5, .5)
+                ship.position.set(4, 4, 15)
+                scene.add( ship );
+            },
+        )
     }
 
-    load_on_width()
 
     let mouse_x = 0
     let mouse_y = 0
@@ -123,17 +97,21 @@ if (night_ctnr){
     function animateParticles(event){
         mouse_y = event.clientY
         mouse_x = event.clientX
+        console.log(mouse_x)
     }
+
+    document.addEventListener('mousemove', animateParticles)
 
     window.addEventListener('resize', ()=> {
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix()
-        load_on_width()
+        // load_on_width()
 
     })
 
     const clock = new THREE.Clock()
+    var loaded_components = false
     var render = function (){
         requestAnimationFrame(render)
 
@@ -158,38 +136,55 @@ if (night_ctnr){
 
             }
 
+            if (elasped_time > 2 && elasped_time < 3){
+                ship.position.y += .01
+                ship.position.x -= .01
+                ship.position.z -= .01            
+            } else {
+                ship.position.y -= .01
+                ship.position.x += .01
+                ship.position.z += .01
+            }
+
+
+            if (window.innerWidth > 1399){
+                moon.position.set = (-5, 0, 6)
+                // moon.position.z = 16
+                point_light.position.z = 16
+                planet.position.set(12, 30, -25)
+            } else {
+                moon.position.set = (1, 5, 8)
+                point_light.position.z = 8
+            }
+
         } catch (error) {
             console.log('3d assets are still loading')
         }
 
 
-        particles_mesh.rotation.y = (.05 * elasped_time)
+        particles_mesh.rotation.y = (.005 * elasped_time)
         particles_mesh.rotation.x = (.0009 * -mouse_y)
         particles_mesh.rotation.x = (.0009 * -mouse_x)
+        particles_mesh.rotation.z = (.0009 * -mouse_y)
+        particles_mesh.rotation.z = (.0009 * -mouse_x)
 
         
 
-        // if (window.innerWidth > 1400){
-        //     moon.position.z = 16
-        //     point_light.position.z = 16
-        //     planet.position.set(12, 30, -25)
-        // } else {
-        //     moon.position.z = 5
-        //     point_light.position.z = 5
-        //     planet.position.set(4, 18, -20)
 
-        // }
 
-        // if (elasped_time > 1 && elasped_time < 40){
-        //     ship.position.y += .01
-        //     ship.position.x -= .01
-        //     ship.position.z -= .01
-            
-        // } else {
-        //     ship.position.y -= .01
-        //     ship.position.x += .01
-        //     ship.position.z += .01
-        // }
+        if (! loaded_components){
+            if (elasped_time > 2 && elasped_time < 3){ 
+                load_moon()
+                if (window.innerWidth > 1400){
+                    load_planet()
+                    load_ship()
+
+                }
+                loaded_components = true
+    
+            }
+        }
+
 
         renderer.domElement.id = 'globe_canvas';
         renderer.render(scene, camera)

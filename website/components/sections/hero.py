@@ -27,7 +27,7 @@ def component():
                 WEB DEVELOPER
             </h1>
             <small>
-                FROM SOUTH FLORIDA
+                ALEXANDER BARRERA
             </small>
         </div>
 

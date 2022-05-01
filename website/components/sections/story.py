@@ -5,6 +5,10 @@ def component():
 
     return Markup(f"""
     <section id="story_section" loading="lazy">
+        <img
+            class="inksplat"
+            src="{ url_for('static', filename='images/assets/ink2.svg') }"
+        >
         <div class="text_ctnr">
             <h1>
                 Barrera
@@ -22,6 +26,7 @@ def component():
             </p>
         </div>
         <img
+            class="me_picture"
             src="{url_for('static', filename='images/assets/me1.png')}"
             alt="profile picture of alexander barrera"
             loading="lazy"

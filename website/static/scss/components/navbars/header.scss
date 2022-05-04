@@ -8,6 +8,7 @@
         ul{
             display: flex;
             gap: 2em;
+            align-items: center;
         }
     }
 
@@ -28,6 +29,9 @@
     .main_links{
         display: none;
     }
+    .buttons_ctnr{
+        display: none;
+    }
 
 }
 
@@ -42,6 +46,10 @@
         }
         .link_hr_ctnr{
             
+        }
+        .buttons_ctnr{
+            display: contents;
+            font-size: .9em;
         }
     }
 }

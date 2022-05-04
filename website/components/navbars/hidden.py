@@ -1,5 +1,6 @@
 from flask import Markup, url_for
 from website.components.pieces.main_linkset import component as main_linkset
+from website.components.pieces.button_like import component as button_like
 
 def component():
     return Markup(f"""
@@ -17,6 +18,8 @@ def component():
                         aria-label="closes the mobile navigation menu"
                     >
                     {main_linkset()}
+                    {button_like('call', variant=0)}
+                    {button_like('resume', variant=1)}
                 </ul>
             </nav>
         </div>

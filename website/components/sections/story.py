@@ -1,14 +1,17 @@
 from flask import Markup, url_for
+from website.components.pieces.button_like import component as button_like 
 
 def component():
     script = url_for('static', filename='js/animations/story.js')
 
     return Markup(f"""
     <section id="story_section" loading="lazy">
+
         <img
             class="inksplat"
             src="{ url_for('static', filename='images/assets/ink2.svg') }"
         >
+    
         <div class="text_ctnr">
             <h1>
                 Barrera
@@ -25,6 +28,8 @@ def component():
                 And he has a sense of humor when it comes to this whole <span> professionalism </span> thing.
             </p>
         </div>
+
+
         <img
             class="me_picture"
             src="{url_for('static', filename='images/assets/me1.png')}"
@@ -32,14 +37,9 @@ def component():
             loading="lazy"
         >
 
-        <a href="{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}" download>
-            <button class="orange_btn">
-                RESUME
-            </button>
-        </a>
-        <button class="rev_orange_btn open_menu">
-            CONTACT
-        </button>
+        { button_like('call', variant=0) }
+        { button_like('resume', variant=1) }
+
     </section>
     <script src="{script}">
 

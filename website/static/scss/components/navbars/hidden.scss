@@ -8,22 +8,15 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    
     filter: blur(400px);
     opacity: 0;
-    // display: flex;
-
-    // z-index: 3000;
-
-
     display: none;
-
     .modal_ctnr{
         display: flex;
         background: rgba($color: #111, $alpha: .9);
         width: 80%;
         max-width: 40em;
-        height: 80%;
+        height: 70%;
         border-radius: 20px;
         position: relative;
         z-index: 100;

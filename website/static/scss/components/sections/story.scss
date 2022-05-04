@@ -4,7 +4,8 @@
     display: flex;
     flex-flow: column;
     filter: grayscale(100%);
-    gap: .5em;
+    // gap: .5em;
+    gap: 1em;
     text-align: center;
     padding: 1em;
     transition: 3s;
@@ -65,7 +66,6 @@
     #story_section{
         gap: 1em;
         position: relative;
-        // font-size: .m;
         overflow: hidden;
         *{
             position: relative;

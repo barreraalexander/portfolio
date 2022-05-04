@@ -1,6 +1,6 @@
 .button_like{
     display: flex;
-    gap: .25em;
+    gap: .5em;
     justify-content: center;
     align-items: center;
     width: 8em;
@@ -10,9 +10,6 @@
     img{
         width: 1em;
     }
-    // display: cursor;
-    // background-color: red;
-
 }
 
 .button_like[data-variant="0"]{

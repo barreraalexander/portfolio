@@ -1,0 +1,39 @@
+.button_like{
+    display: flex;
+    gap: .25em;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    border-radius: 10px;
+    padding: .5em .25em;
+    border: 2px solid transparent;
+    img{
+        width: 1em;
+    }
+    // display: cursor;
+    // background-color: red;
+
+}
+
+.button_like[data-variant="0"]{
+    background-color: $proj_orange;
+
+    p{
+        @include lg_text;
+        color: #000;
+    }
+}
+
+.button_like[data-variant="1"]{
+    border-color: $proj_orange;
+    background-color: $proj_gray;
+    p{
+        @include lg_text;
+        color: $proj_orange;
+    }
+}
+
+
+.button_like:hover{
+    cursor: pointer;
+}

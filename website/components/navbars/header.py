@@ -1,5 +1,6 @@
 from flask import Markup, url_for
 from website.components.pieces.main_linkset import component as main_linkset
+from website.components.pieces.button_like import component as button_like
 
 def component():
     return Markup(f"""
@@ -21,11 +22,16 @@ def component():
                         alt="menu toggle icon"
                         aria-label="menu"
                     >
-
                 </a>
+
 
                 <div class="main_links">
                     {main_linkset()}
+                </div>
+
+                <div class="buttons_ctnr">
+                    {button_like('call')}
+                    {button_like('resume')}
                 </div>
 
             </ul>

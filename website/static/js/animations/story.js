@@ -7,7 +7,7 @@ const story_observer_options = {
     threshold: .4,
 }
 
-const story_observer = new IntersectionObserver(function(entries, mission_observer){
+const story_observer = new IntersectionObserver(function(entries, story_observer){
     entries.forEach(entry => {
         if (entry.isIntersecting){
             story_tl.play()
@@ -40,16 +40,5 @@ story_tl.to(
         duration: 2,
         width: '6em',
         ease: Sine.easeInOut,
-
     }
 ), 0
-
-// if (story_section){
-
-//     // alert('here')    
-
-// }
-
-
-// // need observer and timeline
-// alert('here')

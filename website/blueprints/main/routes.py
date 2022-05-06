@@ -13,6 +13,7 @@ from website.components.sections.resume_like import component as resume_like
 
 from website.components.sections.hero import component as hero
 from website.components.sections.story import component as story
+from website.components.sections.about import component as about_section
 
 main = Blueprint ('main', __name__)
 
@@ -34,7 +35,7 @@ def load_dicts ():
 
 
 @main.route('/')
-@cache.cached(timeout=300)
+# @cache.cached(timeout=300)
 def index():
     return render_template('_index.html',
         title='Home',
@@ -48,4 +49,5 @@ def index():
 def about():
     return render_template('_about.html',
         title='About',
+        about_section=about_section,
     )

@@ -10,6 +10,7 @@ def component():
             <h1>
                 A Word from Past Clients
             </h1>
+            <hr>
         </div>
 
         <div class="comments_ctnr">

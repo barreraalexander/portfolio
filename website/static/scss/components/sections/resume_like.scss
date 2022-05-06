@@ -1,9 +1,13 @@
 #resume_like{
     padding: 2em 0;
-    // background-color: red;
     h1{
         text-align: center;
         margin-bottom: .5em;
+    }
+
+    hr{
+        width: 1em;
+        color: $proj_orange;
     }
 
     .comments_ctnr{
@@ -11,7 +15,6 @@
         flex-flow: column;
         align-items: center;
         gap: 3em;
-        // box-shadow: 20px 20px 20px 20px $proj_orange;
     }
     .comment_ctnr{
         text-align: center;
@@ -39,8 +42,6 @@
         display: contents;
         color: $proj_orange;
     }
-
-
 }
 
 @media only screen and (min-width: $desktop_bp){

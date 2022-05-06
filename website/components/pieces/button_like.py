@@ -9,6 +9,7 @@ def component(button_type, variant=""):
             'href' : '',
             'inner_text' : 'Contact',
             'img_src' : url_for('static', filename='images/assets/icons/contact.svg'),
+            'variant' : 2,
         },
         'call' : {
             'href' : f"tel:{CONTACT_DICT.get('phone')}",

@@ -1,0 +1,64 @@
+#resume_like{
+    padding: 2em 0;
+    // background-color: red;
+    h1{
+        text-align: center;
+        margin-bottom: .5em;
+    }
+
+    .comments_ctnr{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 3em;
+        // box-shadow: 20px 20px 20px 20px $proj_orange;
+    }
+    .comment_ctnr{
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        gap: .5em;
+        font-size: 1.05em;
+        background-color: $proj_gray;
+        border-radius: 20px;
+        padding: 1em;
+        max-width: 75%;
+    }
+    .author{
+        width: 80%;
+        margin: 0 auto;
+        color: #f1f1f1;
+    }
+    .comment{
+        width: 80%;
+        max-width: 25em;
+        margin: 0 auto;
+
+    }
+    .origin{
+        display: contents;
+        color: $proj_orange;
+    }
+
+
+}
+
+@media only screen and (min-width: $desktop_bp){
+    #resume_like{
+        .comments_ctnr{
+            flex-flow: row wrap;
+            justify-content: center;
+            max-width: 50em;
+            margin: 2em auto;
+        }
+        .comment_ctnr{
+
+            // background-color: red;
+            align-self: center;
+
+        }
+        .comment{
+            max-width: 18em;
+        }
+    }
+}

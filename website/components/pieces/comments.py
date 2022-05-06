@@ -6,6 +6,8 @@ def component(title, elem_id=""):
     origin = ""
     origin_url = ""
 
+
+
     if title=="ppb":
         author_name = "Russell Owens"
         comment = """I hired Alexander for a small HTML/CSS
@@ -62,7 +64,7 @@ def component(title, elem_id=""):
         <p class="author">
             -{author_name}
         </p>
-        <a href="{origin_url}" target="_blank">
+        <a class="origin" href="{origin_url}" target="_blank">
             {origin}
         </a>
     </div>

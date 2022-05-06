@@ -9,7 +9,7 @@ from website.components.navbars.footer import component as footer
 from website.components.navbars.hidden import component as hidden
 
 from website.components.sections.contact_modal import component as contact_modal
-from website.components.sections.comments import component as comments
+from website.components.sections.resume_like import component as resume_like
 
 from website.components.sections.hero import component as hero
 from website.components.sections.story import component as story
@@ -34,13 +34,13 @@ def load_dicts ():
 
 
 @main.route('/')
-# @cache.cached(timeout=0)
+@cache.cached(timeout=300)
 def index():
     return render_template('_index.html',
         title='Home',
         hero=hero,
         story=story,
-        comments=comments,
+        resume_like=resume_like,
     )
 
 

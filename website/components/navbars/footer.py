@@ -1,6 +1,8 @@
 from flask import Markup, url_for
 from website.utils.webdata import SOCIAL_MEDIA_LINKS
 from website.components.pieces.main_linkset import component as main_linkset
+from website.components.pieces.button_like import component as button_like
+
 
 def component():
     return Markup(f"""
@@ -62,6 +64,7 @@ def component():
             </h2>
             <ul>
                 {main_linkset()}
+                {button_like('resume')}
             </ul>
         </div>
 

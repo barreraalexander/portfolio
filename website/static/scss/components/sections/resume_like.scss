@@ -10,24 +10,19 @@
         display: flex;
         flex-flow: column;
         align-items: center;
-        gap: 4em;
+        gap: 3em;
         // box-shadow: 20px 20px 20px 20px $proj_orange;
     }
     .comment_ctnr{
         text-align: center;
-
-
-        
-        // box-shadow: 0px 8px 85px -32px #FFA759;
         display: flex;
         flex-flow: column;
         gap: .5em;
-        font-size: 1.2em;
+        font-size: 1.05em;
         background-color: $proj_gray;
-
         border-radius: 20px;
         padding: 1em;
-
+        max-width: 75%;
     }
     .author{
         width: 80%;

@@ -64,6 +64,7 @@ def component():
             </h2>
             <ul>
                 {main_linkset()}
+                {button_like('resume')}
             </ul>
         </div>
 

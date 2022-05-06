@@ -1,7 +1,9 @@
-from flask import Markup
+from flask import Markup, url_for
 from website.components.pieces.comments import component as comments
 
 def component():
+    observer = url_for('static', filename='js/animations/resume_like.js')
+
     return Markup(f"""
     <section id="resume_like">
         <div>
@@ -18,4 +20,6 @@ def component():
             {comments('upwork3')}
         </div>
     </section>
+    <script src="{observer}">
+    <script/>
     """)

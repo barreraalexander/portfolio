@@ -10,8 +10,8 @@ def component():
             <h1>
                 A Word from Past Clients
             </h1>
-
         </div>
+
         <div class="comments_ctnr">
             {comments('ppb')}
             {comments('tod')}
@@ -19,7 +19,9 @@ def component():
             {comments('upwork2')}
             {comments('upwork3')}
         </div>
+
     </section>
-    <script src="{observer}">
-    <script/>
+    <script
+        src="{observer}">
+    </script>
     """)

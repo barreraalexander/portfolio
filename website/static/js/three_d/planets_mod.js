@@ -97,7 +97,7 @@ if (night_ctnr){
     function animateParticles(event){
         mouse_y = event.clientY
         mouse_x = event.clientX
-        console.log(mouse_x)
+        // console.log(mouse_x)
     }
 
     document.addEventListener('mousemove', animateParticles)
@@ -158,7 +158,7 @@ if (night_ctnr){
             }
 
         } catch (error) {
-            console.log('3d assets are still loading')
+            // console.log('3d assets are still loading')
         }
 
 

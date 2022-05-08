@@ -6,6 +6,18 @@ const resume_tl = gsap.timeline({
     paused: true,
 })
 
+
+resume_tl.to(
+    resume_like,
+    {
+        delay: .5,
+        duration: 2,
+        filter: 'grayscale(0%)',
+        ease: Sine.easeInOut,
+    }
+), 0
+
+
 resume_tl.to(
     split,
     {
@@ -18,7 +30,7 @@ resume_tl.to(
 
 const resume_observer_options = {
     root: null,
-    threshold: 1,
+    threshold: .1,
 }
 
 const resume_observer = new IntersectionObserver(function(entries, resume_observer){

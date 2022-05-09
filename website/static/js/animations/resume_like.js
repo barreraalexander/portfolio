@@ -30,7 +30,7 @@ resume_tl.to(
 
 const resume_observer_options = {
     root: null,
-    threshold: .1,
+    threshold: 0,
 }
 
 const resume_observer = new IntersectionObserver(function(entries, resume_observer){

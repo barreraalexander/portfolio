@@ -27,6 +27,9 @@
         border-radius: 20px;
         padding: 1em;
         max-width: 75%;
+
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
     }
     .author{
         width: 80%;

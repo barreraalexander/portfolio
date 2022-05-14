@@ -1,6 +1,6 @@
 const story_section = document.querySelector('#story_section')
-const me_img = story_section.querySelector('img')
-const horizonal_line = story_section.querySelector('hr')
+const me_img = story_section.querySelector('.me_picture')
+// const horizonal_line = story_section.querySelector('hr')
 
 const story_observer_options = {
     root: null,
@@ -35,10 +35,20 @@ story_tl.to(
 
 
 story_tl.to(
-    horizonal_line,
+    me_img,
     {
-        duration: 2,
-        width: '6em',
+        duration: 1,
+        filter: 'blur(0px)',
         ease: Sine.easeInOut,
     }
 ), 0
+
+
+// story_tl.to(
+//     horizonal_line,
+//     {
+//         duration: 2,
+//         width: '6em',
+//         ease: Sine.easeInOut,
+//     }
+// ), 0

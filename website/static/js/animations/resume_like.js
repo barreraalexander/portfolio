@@ -1,6 +1,6 @@
 let resume_like = document.querySelector('#resume_like')
 let comment_ctnrs = resume_like.querySelectorAll('.comment_ctnr')
-let split = resume_like.querySelector('hr')
+// let split = resume_like.querySelector('hr')
 
 const resume_tl = gsap.timeline({
     paused: true,
@@ -19,10 +19,12 @@ resume_tl.to(
 
 
 resume_tl.to(
-    split,
+    comment_ctnrs,
     {
-        duration: 2,
-        width: '6em',
+        delay: .25,
+        duration: .25,
+        clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+        y: "1em",
         ease: Sine.easeInOut,
     }
 ), 0

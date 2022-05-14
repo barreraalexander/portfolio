@@ -1,5 +1,6 @@
 from flask import Markup, url_for
 from website.components.pieces.comments import component as comments
+from website.components.pieces.dramatic_h1 import component as dramatic_h1
 
 def component():
     observer = url_for('static', filename='js/animations/resume_like.js')
@@ -7,10 +8,7 @@ def component():
     return Markup(f"""
     <section id="resume_like">
         <div>
-            <h1>
-                A Word from Past Clients
-            </h1>
-            <hr>
+            {dramatic_h1('A Word from Past Clients')}
         </div>
 
         <div class="comments_ctnr">

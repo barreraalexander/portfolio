@@ -4,7 +4,7 @@ const me_img = story_section.querySelector('.me_picture')
 
 const story_observer_options = {
     root: null,
-    threshold: .4,
+    threshold: .1,
 }
 
 const story_observer = new IntersectionObserver(function(entries, story_observer){
@@ -42,13 +42,3 @@ story_tl.to(
         ease: Sine.easeInOut,
     }
 ), 0
-
-
-// story_tl.to(
-//     horizonal_line,
-//     {
-//         duration: 2,
-//         width: '6em',
-//         ease: Sine.easeInOut,
-//     }
-// ), 0

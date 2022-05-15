@@ -21,7 +21,7 @@ resume_tl.to(
 resume_tl.to(
     comment_ctnrs,
     {
-        delay: .25,
+        // delay: .25,
         duration: .25,
         clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
         y: "1em",
@@ -32,7 +32,7 @@ resume_tl.to(
 
 const resume_observer_options = {
     root: null,
-    threshold: 0,
+    threshold: .1,
 }
 
 const resume_observer = new IntersectionObserver(function(entries, resume_observer){

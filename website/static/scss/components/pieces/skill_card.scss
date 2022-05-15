@@ -1,0 +1,45 @@
+.skill_card{
+    background-color: #111;
+    height: 15em;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 25em;
+    padding: 1em;
+    position: relative;
+    .skill_card_contents{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .skill_img{
+        width: 2em;
+    }
+    h2{
+        // @include lg_text;
+        @include md_text_alt;
+        text-align: center;
+    }
+    p{
+        margin-top: 1em;
+        font-weight: 600;
+    }
+    .dotted_bg_ctnr{
+        position: absolute;
+        background-color: #000;
+        height: 110%;
+        width: 110%;
+        display: flex;
+        flex-flow: row wrap;
+        gap: .33em;
+        justify-content: center;
+        z-index: -1;
+    }
+    .dot{
+        background-color: #333;
+        border-radius: 50%;
+        height: .5em;
+        width: .5em;
+    }
+}

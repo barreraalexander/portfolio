@@ -1,13 +1,13 @@
 const story_section = document.querySelector('#story_section')
-const me_img = story_section.querySelector('img')
-const horizonal_line = story_section.querySelector('hr')
+const me_img = story_section.querySelector('.me_picture')
+// const horizonal_line = story_section.querySelector('hr')
 
 const story_observer_options = {
     root: null,
-    threshold: .4,
+    threshold: .1,
 }
 
-const story_observer = new IntersectionObserver(function(entries, mission_observer){
+const story_observer = new IntersectionObserver(function(entries, story_observer){
     entries.forEach(entry => {
         if (entry.isIntersecting){
             story_tl.play()
@@ -35,21 +35,10 @@ story_tl.to(
 
 
 story_tl.to(
-    horizonal_line,
+    me_img,
     {
-        duration: 2,
-        width: '6em',
+        duration: 1,
+        filter: 'blur(0px)',
         ease: Sine.easeInOut,
-
     }
 ), 0
-
-// if (story_section){
-
-//     // alert('here')    
-
-// }
-
-
-// // need observer and timeline
-// alert('here')

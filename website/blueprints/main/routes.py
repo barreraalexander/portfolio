@@ -13,6 +13,8 @@ from website.components.sections.resume_like import component as resume_like
 
 from website.components.sections.hero import component as hero
 from website.components.sections.story import component as story
+from website.components.sections.about import component as about_section
+from website.components.sections.skills import component as skills
 
 main = Blueprint ('main', __name__)
 
@@ -41,6 +43,7 @@ def index():
         hero=hero,
         story=story,
         resume_like=resume_like,
+        skills=skills,
     )
 
 
@@ -48,4 +51,5 @@ def index():
 def about():
     return render_template('_about.html',
         title='About',
+        about_section=about_section,
     )

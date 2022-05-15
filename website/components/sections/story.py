@@ -1,5 +1,7 @@
 from flask import Markup, url_for
 from website.components.pieces.button_like import component as button_like 
+from website.components.pieces.dramatic_h1 import component as dramatic_h1
+
 
 def component():
     script = url_for('static', filename='js/animations/story.js')
@@ -13,10 +15,7 @@ def component():
         >
     
         <div class="text_ctnr">
-            <h1>
-                Barrera
-            </h1>
-            <hr>
+            {dramatic_h1('Barrera')}
             <p>
                 Alexander Barrera is a self-trained web developer from <span> south florida.</span>
             </p>

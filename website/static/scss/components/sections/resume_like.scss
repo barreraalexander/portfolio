@@ -1,9 +1,14 @@
 #resume_like{
     padding: 2em 0;
-    // background-color: red;
+    filter: grayscale(100%);
     h1{
         text-align: center;
         margin-bottom: .5em;
+    }
+
+    hr{
+        width: 1em;
+        color: $proj_orange;
     }
 
     .comments_ctnr{
@@ -11,7 +16,6 @@
         flex-flow: column;
         align-items: center;
         gap: 3em;
-        // box-shadow: 20px 20px 20px 20px $proj_orange;
     }
     .comment_ctnr{
         text-align: center;
@@ -23,6 +27,9 @@
         border-radius: 20px;
         padding: 1em;
         max-width: 75%;
+
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
     }
     .author{
         width: 80%;
@@ -33,14 +40,13 @@
         width: 80%;
         max-width: 25em;
         margin: 0 auto;
+        font-weight: 600;
 
     }
     .origin{
         display: contents;
         color: $proj_orange;
     }
-
-
 }
 
 @media only screen and (min-width: $desktop_bp){

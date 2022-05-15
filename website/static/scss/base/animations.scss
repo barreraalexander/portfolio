@@ -24,3 +24,22 @@
         0 0 80px $proj_gray;
     }
   }
+
+
+@keyframes shift_dot {
+  from {
+    background-color: #333;
+  } to {
+    background-color: $proj_orange;
+  }
+}
+
+.apply_shift_dot{
+  animation: shift_dot infinite alternate 8s;
+  animation-delay: 2s;
+}
+
+@mixin mixin_shift_dot {
+  animation: shift_dot infinite alternate 1s;
+  
+}

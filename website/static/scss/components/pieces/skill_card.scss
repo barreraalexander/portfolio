@@ -28,14 +28,28 @@
     .dotted_bg_ctnr{
         position: absolute;
         background-color: #000;
-        height: 110%;
-        width: 110%;
+        // height: 110%;
+        // width: 110%;
+        height: 60%;
+        width: 60%;
         display: flex;
         flex-flow: row wrap;
         gap: .33em;
         justify-content: center;
         z-index: -1;
     }
+    
+    .dotted_bg_ctnr[data-variant="1"]{
+        right: -1em;
+        top: -1em;
+        
+    }
+    
+    .dotted_bg_ctnr[data-variant="2"]{
+        left: -1em;
+        top: -1em;
+    }
+
     .dot{
         background-color: #333;
         border-radius: 50%;

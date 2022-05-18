@@ -1,13 +1,10 @@
 #skills_ctnr{
     padding: 1em;
-    // margin: 1em 0;
     .skill_cards_ctnr{
         margin-top: 3em;
-        // padding: 1em;
         display: flex;
         flex-flow: column;
         align-items: center;
-        // gap: 3em;
         gap: 5em;
         text-align: center;
         .skill_card:first-of-type{
@@ -15,7 +12,6 @@
         }
         .skill_card:last-of-type{
             margin-bottom: 3em;
-            // margin-bottom: 2
         }
     }
     h1{

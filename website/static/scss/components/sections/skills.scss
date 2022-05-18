@@ -1,5 +1,15 @@
 #skills_ctnr{
     padding: 1em;
+    position: relative;
+    overflow: hidden;
+    .skills_bg{
+        width: 20em;
+        position: absolute;
+        left: 0;
+
+        display: none;
+
+    }
     .skill_cards_ctnr{
         margin-top: 3em;
         display: flex;
@@ -7,8 +17,9 @@
         align-items: center;
         gap: 5em;
         text-align: center;
-
         overflow: hidden;
+
+
 
         .skill_card:first-of-type{
             margin-top: 1em;
@@ -20,5 +31,13 @@
     h1{
         @include lg_text;
         text-align: center;
+    }
+}
+
+@media only screen and (min-width: $desktop_bp){
+    #skills_ctnr{
+        .skills_bg{
+            display: block;
+        }
     }
 }

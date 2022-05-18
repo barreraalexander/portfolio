@@ -8,6 +8,11 @@ def component():
 
     return Markup(f"""
     <section id="skills_ctnr">
+        <img
+            class="skills_bg"
+            src="{url_for('static', filename='images/assets/icons/rocket.svg')}"
+            alt="rocket decoration"
+        >
         {dramatic_h1('Type of Work I Do')}
         <div class="skill_cards_ctnr">
             {skill_card('web_dev')}

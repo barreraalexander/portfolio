@@ -1,6 +1,7 @@
 #resume_like{
     padding: 2em 0;
     filter: grayscale(100%);
+    position: relative;
     h1{
         text-align: center;
         margin-bottom: .5em;
@@ -9,6 +10,16 @@
     hr{
         width: 1em;
         color: $proj_orange;
+    }
+
+    .background_img{
+        width: 20em;
+        // filter: invert(1);
+        position: absolute;
+        right: 2em;
+        display: none;
+
+        // opacity: .7;
     }
 
     .comments_ctnr{
@@ -51,6 +62,9 @@
 
 @media only screen and (min-width: $desktop_bp){
     #resume_like{
+        .background_img{
+            display: block;
+        }
         .comments_ctnr{
             flex-flow: row wrap;
             justify-content: center;

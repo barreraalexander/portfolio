@@ -5,7 +5,7 @@ def component(skill):
     skills = {
         'web_dev' : {
             'title' : 'Design to Build',
-            'blurb' : 'If you want to provide the design, the differnce between design and product will be nill. I take pride in pixel perfect matching.',
+            'blurb' : 'If you want to provide the design, the difference between design and product will be nonexistent. I take pride in pixel perfect matching.',
             'img_src' : url_for('static', filename='images/assets/icons/skills/web_dev.svg'),
             'variant' : '1',
         },
@@ -17,13 +17,13 @@ def component(skill):
         },
         'api_dev' : {
             'title' : 'API Development',
-            'blurb' : 'Professional level API development, complete with correct status codes, and infiite scalabilty. The ORM can be pydantic, or graphql.',
+            'blurb' : 'Professional level API development, complete with correct status codes, and infinite scalabilty. The ORM can be pydantic, or graphql.',
             'img_src' : url_for('static', filename='images/assets/icons/skills/api_dev.svg'),
             'variant' : '1', 
         },
         'server' : {
             'title' : 'Elastic Cloud Server',
-            'blurb' : 'Deployment on the server is so 2014. Take advantage of the seemless scalabaility of elastic servers that grow and shrink with your traffic.',
+            'blurb' : 'Deployment on the server is so 2014. Take advantage of the seamless scalabaility of elastic servers that grow and shrink with your traffic.',
             'img_src' : url_for('static', filename='images/assets/icons/skills/server.svg'),
             'variant' : '2', 
         },

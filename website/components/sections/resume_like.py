@@ -7,6 +7,12 @@ def component():
 
     return Markup(f"""
     <section id="resume_like">
+        <img
+            class="background_img"
+            src="{url_for('static', filename='images/assets/icons/comment.svg')}"
+            alt="resume like comment"
+
+        >
         <div>
             {dramatic_h1('A Word from Past Clients')}
         </div>

@@ -8,13 +8,4 @@ def component():
         </li>
     </a>
 
-    <a href="{url_for('main.about')}">
-        <li>
-            Questions 
-        </li>
-    </a>
-
-    <li class="open_menu">
-        Contact
-    </li>
     """)

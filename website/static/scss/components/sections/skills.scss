@@ -1,25 +1,43 @@
 #skills_ctnr{
     padding: 1em;
-    // margin: 1em 0;
+    position: relative;
+    overflow: hidden;
+    .skills_bg{
+        width: 20em;
+        position: absolute;
+        left: 0;
+
+        display: none;
+
+    }
     .skill_cards_ctnr{
         margin-top: 3em;
-        // padding: 1em;
         display: flex;
         flex-flow: column;
         align-items: center;
-        // gap: 3em;
         gap: 5em;
         text-align: center;
+        overflow: hidden;
+
+
+
         .skill_card:first-of-type{
             margin-top: 1em;
         }
         .skill_card:last-of-type{
             margin-bottom: 3em;
-            // margin-bottom: 2
         }
     }
     h1{
         @include lg_text;
         text-align: center;
+    }
+}
+
+@media only screen and (min-width: $desktop_bp){
+    #skills_ctnr{
+        .skills_bg{
+            display: block;
+        }
     }
 }

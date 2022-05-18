@@ -1,4 +1,4 @@
-from flask import Markup
+from flask import Markup, url_for
 from website.components.pieces.dramatic_h1 import component as dramatic_h1
 from website.components.pieces.skill_card import component as skill_card
 
@@ -8,6 +8,11 @@ def component():
 
     return Markup(f"""
     <section id="skills_ctnr">
+        <img
+            class="skills_bg"
+            src="{url_for('static', filename='images/assets/icons/rocket.svg')}"
+            alt="rocket decoration"
+        >
         {dramatic_h1('Type of Work I Do')}
         <div class="skill_cards_ctnr">
             {skill_card('web_dev')}
@@ -16,5 +21,6 @@ def component():
             {skill_card('server')}
         </div>
     </section>
-    
+    <script src="{url_for('static', filename='js/animations/skill_card.js')}">
+    </script>
     """)

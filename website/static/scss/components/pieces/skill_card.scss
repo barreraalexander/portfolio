@@ -6,6 +6,10 @@
     max-width: 25em;
     padding: 1em;
     position: relative;
+
+    // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+
     .skill_card_contents{
         display: flex;
         flex-flow: column;
@@ -56,4 +60,13 @@
         height: .5em;
         width: .5em;
     }
+}
+
+
+.skill_card[data-variant="1"]{
+   left: -100em; 
+}
+
+.skill_card[data-variant="2"]{
+   right: -100em; 
 }

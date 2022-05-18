@@ -1,4 +1,4 @@
-let shifting_dots = document.querySelectorAll('.dot')
+// let shifting_dots = document.querySelectorAll('.dot')
 
 
 // const shifting_dots_tl = gsap.timeline({

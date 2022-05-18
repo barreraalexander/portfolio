@@ -41,7 +41,7 @@ def component(skill):
 
 
     return Markup(f"""
-    <div class="skill_card">
+    <div class="skill_card" data-variant="{chosen_skill.get('variant')}">
         <div class="dotted_bg_ctnr" data-variant="{chosen_skill.get('variant')}">
             {unpack_elems(dots)}
         </div>

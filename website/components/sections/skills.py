@@ -1,4 +1,4 @@
-from flask import Markup
+from flask import Markup, url_for
 from website.components.pieces.dramatic_h1 import component as dramatic_h1
 from website.components.pieces.skill_card import component as skill_card
 
@@ -16,5 +16,6 @@ def component():
             {skill_card('server')}
         </div>
     </section>
-    
+    <script src="{url_for('static', filename='js/animations/skill_card.js')}">
+    </script>
     """)

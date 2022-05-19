@@ -19,25 +19,25 @@ skill_card_tl.to(
     }
 ), 0
 
-skill_card_tl.to(
-    rocket,
-    {
-        duration: 5,
-        rotation: '120deg',
-        // y: '100vh',
-        ease: Sine.easeInOut,
-    }
-), 1
+// skill_card_tl.to(
+//     rocket,
+//     {
+//         duration: 5,
+//         rotation: '120deg',
+//         // y: '100vh',
+//         ease: Sine.easeInOut,
+//     }
+// ), 1
 
-skill_card_tl.to(
-    rocket,
-    {
-        duration: 30,
-        // rotation: '90deg',
-        y: '130vh',
-        ease: Sine.easeInOut,
-    }
-), 1
+// skill_card_tl.to(
+//     rocket,
+//     {
+//         duration: 30,
+//         // rotation: '90deg',
+//         y: '130vh',
+//         ease: Sine.easeInOut,
+//     }
+// ), 1
 
 
 // skill_card_tl.to(

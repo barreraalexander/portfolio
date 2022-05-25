@@ -5,7 +5,7 @@ from website.components.sections.minimalism import component as minimalism
 
 def component():
     return Markup(f"""
-    <section class="styles_section">
+    <section id="styles_section">
         {neubrutalism()}
         {minimalism()}
     </section>

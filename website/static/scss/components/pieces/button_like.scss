@@ -30,6 +30,29 @@
     }
 }
 
+.button_like[data-variant=neu1]{
+    background-color: #fff;
+    transform: rotate(5deg);
+    box-shadow: 5px 5px 0 3px #000;
+    p{
+        color: #000;
+    }
+}
+
+
+.button_like[data-variant=neu2]{
+    background-color: $proj_orange;
+    // transform: rotate(-5deg);
+
+    box-shadow: 5px 5px 0 3px #000;
+    border: 4px solid #000;
+    transform: rotate(-5deg);
+
+    p{
+        color: #000;
+    }
+}
+
 
 .button_like:hover{
     cursor: pointer;

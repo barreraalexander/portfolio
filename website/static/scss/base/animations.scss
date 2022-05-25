@@ -43,3 +43,58 @@
   animation: shift_dot infinite alternate 1s;
   
 }
+
+
+@keyframes shift_lr{
+  from {
+    left: -20em;
+  }
+  to{
+    left: 0em;
+  }
+}
+
+@-webkit-keyframes shift_lr{
+  from {
+    left: -20em;
+  }
+  to{
+    left: 0em;
+  }
+}
+
+
+.apply_shift_lr{
+  animation: shift_lr infinite alternate 10s;
+  -webkit-animation: shift_lr infinite alternate 10s;
+}
+
+
+@-webkit-keyframes shifting_gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@keyframes shifting_gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@mixin shifting_gradient {
+  animation: shifting_gradient infinite 10s; 
+  -webkit-animation: shifting_gradient infinite 10s; 
+}

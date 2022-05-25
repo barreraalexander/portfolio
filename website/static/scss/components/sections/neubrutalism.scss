@@ -1,7 +1,273 @@
 #neubrutalism_section{
-    h1{
-        font-size: 4em;
-        color: yellow;
+    .neu_hero_ctnr{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .button_like_ctnr{
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        margin-top: 2em;
     }
     
+    .neu_ctnr1{
+        background-color: $neu_blue;
+        flex: 1;
+        padding: 2em 1em;
+        position: relative;
+
+        h1{
+            @include lg_text;
+            font-size: 4em;
+            color: $proj_orange;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        span{
+            text-shadow: 0 0 20px #000;
+        }
+
+        .decorative_sqr{
+            background-color: #000;
+            height: 5em;
+            width: 5em;
+            position: absolute;
+            z-index: 1;
+            left: 5em;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+        }
+        .icon_bg{
+            display: none;
+        }
+    }
+
+    .circle_decoration_ctnr{
+        display: none;
+        .circle1{
+            width: 5em;
+
+        }
+
+    }
+
+    .neu_ctnr2{
+        background-color: $neu_red;
+        flex: 1;
+        padding: 2em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 2.5em;
+        column-gap: 3em;
+
+        overflow: hidden;
+
+        .emoji_icon{
+            position: absolute;
+            font-size: 4em;
+            top: -.5em;
+            left: -.5em;
+        }
+
+        .emoji_icon_alt{
+            position: absolute;
+            font-size: 4em;
+            top: -.5em;
+            right: -.5em;
+        }
+
+        .neu_card{
+            border: 4px solid #000;
+            width: 15em;
+            padding: 2em;
+            padding-top: 3em;
+            box-shadow: 5px 5px 0 3px #000;
+            position: relative;
+            p, li{
+                @include lg_text;
+                text-align: center;
+                color: #000;
+            }
+            ul{
+                list-style: disc;
+            }
+            
+        }
+        
+        .first_neu_card{
+            transform: rotate(-5deg);
+            background: $neu_green;
+            left: -100em;
+        }
+        
+        .second_neu_card{
+            transform: rotate(5deg);
+            right: -100em;
+            background: $neu_purple;
+        }
+        .third_neu_card{
+            left: -100em;
+            transform: rotate(-5deg);
+            background: $neu_yellow;
+        }
+
+    }
+    
+    .cta_ctnr{
+        background-color: #fff;
+        padding: 1em;
+        overflow: hidden;
+        h2{
+            @include lg_text;
+            color: #000;
+        }
+        h3{
+            @include lg_text;
+            color: $neu_green;
+            font-size: 2em;
+        }
+    }
+
+    .cta{
+        align-items: center;
+        display: flex;
+        gap: 2em;
+        position: relative;
+        width: 500vw;
+    }
+
+    .neu_me_ctnr{
+        background: linear-gradient(0deg, $proj_orange, $neu_red);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        padding: 2em;
+        p{
+            @include lg_text;
+            color: #000;
+            font-size: 2em;
+            text-align: center;
+            margin: 1em 0;
+            // max-width: 15em;
+            max-width: 7em;
+            transform: rotate(-5deg);
+        }
+
+        .barrera_cutout{
+            border: 15px solid $neu_blue;
+            background-color: #fff;
+            padding: 2em;
+            width: 15em;
+            height: 15em;
+            border-radius: 10px;
+            mix-blend-mode: darken;
+        }
+        .circle_decoration1{
+            display: none;
+        }
+    }
+
+    p{
+        @include md_text_alt;
+    }
+    
+}
+
+@media only screen and (min-width: $tablet_bp){
+    #neubrutalism_section{
+        .neu_hero_ctnr{
+            flex-flow: row;
+        }
+
+        .neu_ctnr1{
+            .icon_bg{
+                // display: block;
+                position: absolute;
+                right: -2em;
+                width: 4em;
+                background-color: #000;
+                top: 0;
+            }
+        }
+
+        .neu_me_ctnr{
+            background: #000;
+            position: relative;        
+            .barrera_cutout{
+                mix-blend-mode: unset;
+            }
+            .circle_decoration{
+                @include shifting_gradient;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                // border-radius: 50%;
+                display: block;
+                height: 8em;
+                position: absolute;
+                width: 8em;
+            }
+            
+            .circle_decoration1{
+                background: linear-gradient(45deg, $neu_blue, $neu_red);
+                left: 5vw;
+                top: 4em;
+                clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+                transform: rotate(15deg);
+            }
+            
+            .circle_decoration2{
+                background: linear-gradient(45deg, $neu_red, $neu_blue);
+                right: 5vw;
+                clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+                transform: rotate(5deg);
+                outline: none;
+            }
+            p{
+                color: #fff;
+            }
+        }
+
+        .button_like_ctnr{
+            flex-flow: column;
+            align-items: center;
+        }
+
+        .circle_decoration_ctnr{
+            display: flex;
+            justify-content: center;
+            margin-top: 2em;
+            .circle_dec{
+                border-radius: 50%;
+                width: 5em;
+                height: 5em;
+                transition: background-position 1s;
+                background-size: 400%;
+                background-position: left;
+            }
+
+            .circle1{
+                background: linear-gradient(45deg, $proj_orange, $neu_yellow);
+                // transition: background-position 1s;
+                // background-color: $proj_orange;
+                // background-color: $proj_orange;
+            }
+            .circle_dec:hover{
+                background-position: right;
+            }
+            .circle2{
+                background: linear-gradient(45deg, $neu_red, $neu_purple);
+                // background-color: $neu_red;
+                position: relative;
+                top: 1em;
+                left: -2em;
+                mix-blend-mode: color-dodge;
+            }
+    
+        }
+    }
 }

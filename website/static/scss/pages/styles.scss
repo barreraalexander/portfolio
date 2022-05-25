@@ -1,0 +1,9 @@
+#styles_section{
+    padding-top: 4em;
+}
+
+@media only screen and (min-width: $desktop_bp){
+    #styles_section{
+        padding: 0;
+    }
+}

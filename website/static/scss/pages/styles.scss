@@ -2,8 +2,14 @@
     padding-top: 4em;
 }
 
+@media only screen and (min-width: $tablet_bp){
+    #styles_section{
+        padding-top: 5em;
+    }
+}
+
 @media only screen and (min-width: $desktop_bp){
     #styles_section{
-        padding: 0;
+        padding-top: 0;
     }
 }

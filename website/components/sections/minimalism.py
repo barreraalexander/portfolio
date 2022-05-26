@@ -4,6 +4,10 @@ from website.components.pieces.button_like import component as button_like
 def component():
     return Markup(f"""
     <section id="minimalism_section">
+        <img
+            src="{ url_for('static', filename='images/assets/icons/blob_orange.svg') }"
+            class="blob_bg"
+        >
         <div class="hero_text_ctnr">
             <h1>
                 Minimal
@@ -22,7 +26,7 @@ def component():
                         alt="flower image"
                     >
                     <p>
-                        minimal style is very light on the css and javascript assets.
+                        Minimalism is very light on the css and javascript assets.
                     </p>
                 </div>
                 <div class="min_card">
@@ -31,16 +35,16 @@ def component():
                     
                     >
                     <p>
-                        very easy on the eyes, and great for accessibility ratings.
+                        Very easy on the eyes, and great for accessibility ratings.
                     </p>
                 </div>
                 <div class="min_card">
-                    <div class="slider_ctnr">
+                    <div class="slider_ctnr apply_breathe">
                         <div class="slide">
                         </div>
                     </div>
                     <p>
-                        simple to add light and dark themes, give it a try with the switch above.
+                        Simple to add light and dark themes, give it a try with the switch above.
                     </p>
                 </div>
             </div>

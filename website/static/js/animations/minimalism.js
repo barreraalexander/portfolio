@@ -62,3 +62,5 @@ slider.addEventListener('click', function(){
     minimalism_tl.play()
     has_played = true
 })
+
+

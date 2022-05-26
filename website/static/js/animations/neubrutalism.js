@@ -1,6 +1,9 @@
 let neu_section = document.querySelector('#neubrutalism_section')
 let dec_sqr = neu_section.querySelector('.decorative_sqr')
 let neu_cards = neu_section.querySelectorAll('.neu_card')
+let left_arrow = neu_section.querySelector('.circle_decoration1')
+let right_arrow = neu_section.querySelector('.circle_decoration2')
+
 
 let neu_section_tl = gsap.timeline({
     repeat: -1,
@@ -27,28 +30,10 @@ neu_section_tl.to(
     }
 ), 1
 
-neu_section_tl.to(
-    dec_sqr,
-    {
-        // delay: 0,
-        duration: 5,
-        clipPath: 'polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)',
-        ease: Sine.easeInOut,
-    }
-), 2
-
-neu_section_tl.to(
-    dec_sqr,
-    {
-        // delay: 0,
-        duration: 5,
-        clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-        ease: Sine.easeInOut,
-    }
-), 3
 
 
 let neu_section_tl2 = gsap.timeline({
+    paused: true,
 })
 
 neu_section_tl2.to(
@@ -59,7 +44,48 @@ neu_section_tl2.to(
         left: 0,
         right: 0,        
     }
-)
+), 0
+
+neu_section_tl2.to(
+    left_arrow,
+    {
+        duration: 1,
+        ease: Sine.easeInOut,
+        clipPath: 'polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%)',
+    }
+), 1
+
+neu_section_tl2.to(
+    right_arrow,
+    {
+        duration: 1,
+        ease: Sine.easeInOut,
+        clipPath: 'polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%)',
+    }
+), 1
 
 
-console.log(neu_cards)
+
+console.log(left_arrow)
+
+
+
+
+const neu_observer_options = {
+    root: null,
+    threshhold: .7,
+}
+
+
+const neu_observer = new IntersectionObserver(function(entries, neu_observer){
+    entries.forEach(entry => {
+        if (entry.isIntersecting){
+            neu_section_tl2.play()
+        } else {
+            neu_section_tl2.reverse()
+            
+        }
+    })
+}, neu_observer_options)
+
+neu_observer.observe(neu_section)

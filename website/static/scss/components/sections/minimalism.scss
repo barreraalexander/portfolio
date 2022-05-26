@@ -1,9 +1,29 @@
 #minimalism_section{
     height: 100vh;
     background-color: #f3f3f3;
-    h1{
-        font-size: 4em;
-        color: red;
+    overflow: hidden;
+    padding: 3em 0;
+    .hero_text_ctnr{
+        h1{
+            font-size: 4em;
+            text-align: center;
+            color: $proj_orange;
+        }
+        .description{
+            color: #000;
+            text-align: center;
+        }
+        span{
+            color: #fff;
+            font-size: .5em;
+        }
+        .buttons_ctnr{
+            display: flex;
+            flex-flow: row;
+            gap: 1em;
+            justify-content: center;
+    
+        }
     }
     
 }

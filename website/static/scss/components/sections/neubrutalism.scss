@@ -252,16 +252,12 @@
 
             .circle1{
                 background: linear-gradient(45deg, $proj_orange, $neu_yellow);
-                // transition: background-position 1s;
-                // background-color: $proj_orange;
-                // background-color: $proj_orange;
             }
             .circle_dec:hover{
                 background-position: right;
             }
             .circle2{
                 background: linear-gradient(45deg, $neu_red, $neu_purple);
-                // background-color: $neu_red;
                 position: relative;
                 top: 1em;
                 left: -2em;

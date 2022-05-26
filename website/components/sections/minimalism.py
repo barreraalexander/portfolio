@@ -1,4 +1,4 @@
-from flask import Markup
+from flask import Markup, url_for
 from website.components.pieces.button_like import component as button_like
 
 def component():
@@ -9,12 +9,51 @@ def component():
                 Minimal
             </h1>
             <p class="description">
-                The go-to style for IT companies, 
+                The go-to style for IT companies, modern restaurants, payment processing applications, and much more.
             </p>
+            <p class="description">
+                Minimalism is characterized by low contrast colors, subtle shadows, and linear-gradients.
+            </p>
+
+            <div class="minimal_cards_ctnr">
+                <div class="min_card">
+                    <img
+                        src="{ url_for('static', filename='images/assets/icons/flower.svg') }"
+                        alt="flower image"
+                    >
+                    <p>
+                        minimal style is very light on the css and javascript assets.
+                    </p>
+                </div>
+                <div class="min_card">
+                    <img
+                        src="{ url_for('static', filename='images/assets/icons/eye.svg') }"
+                    
+                    >
+                    <p>
+                        very easy on the eyes, and great for accessibility ratings.
+                    </p>
+                </div>
+                <div class="min_card">
+                    <div class="slider_ctnr">
+                        <div class="slide">
+                        </div>
+                    </div>
+                    <p>
+                        simple to add light and dark themes, give it a try with the switch above.
+                    </p>
+                </div>
+            </div>
+
             <div class="buttons_ctnr">
-                {button_like('call')}
-                {button_like('resume')}
+                {button_like('call', variant='min1')}
+                {button_like('resume', variant='min2')}
             </div>
         </div>
+
+
+        <script src="{ url_for('static', filename='js/animations/minimalism.js') }">
+        </script>
+
     </section>
     """)

@@ -1,9 +1,13 @@
 #minimalism_section{
-    height: 100vh;
+    // height: 100vh;
     background-color: #f3f3f3;
     overflow: hidden;
     padding: 3em 0;
     .hero_text_ctnr{
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        gap: 1em;
         h1{
             font-size: 4em;
             text-align: center;
@@ -12,6 +16,7 @@
         .description{
             color: #000;
             text-align: center;
+            width: 75%;
         }
         span{
             color: #fff;
@@ -20,10 +25,79 @@
         .buttons_ctnr{
             display: flex;
             flex-flow: row;
-            gap: 1em;
+            gap: 2em;
             justify-content: center;
-    
+            margin-top: 2em;
+            .button_like{
+                @include light_shadow;
+            }
         }
     }
+    .minimal_cards_ctnr{
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 1em;
+    }
     
+    .min_card{
+        @include light_shadow;
+        background-color: #fff;
+        border-radius: 10px;
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        gap: 2em;
+        justify-content: center;
+        // justify-content: flex-end;
+        height: 12em;
+        padding: 1em;
+        width: 8em;
+
+        img{
+            width: 2em;
+        }
+        p{
+            @include md_text_alt;
+            color: #000;
+            text-align: center;
+        }
+    }
+
+    .slider_ctnr{
+        align-items: center;
+        background: #c8c8c8;
+        border-radius: 10px;
+        display: flex;
+        // height: .25em;
+        height: 1em;
+        width: 100%;
+        justify-content: flex-start;
+        cursor: pointer;
+        
+        .slide{
+            background-color: $proj_orange;
+            border-radius: 50%;
+            height: 1.5em;
+            width: 1.5em;
+            transition: 1s;
+            position: relative;
+        }
+    }
+}
+
+
+@media only screen and (min-width: $tablet_bp) {
+    #minimalism_section{
+        .hero_text_ctnr{
+            gap: 2em;
+            .description{
+                width: 33%;
+            }
+        }
+        .minimal_cards_ctnr{
+            gap: 3em;
+        }
+    }    
 }

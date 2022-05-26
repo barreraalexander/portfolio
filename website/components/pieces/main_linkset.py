@@ -7,5 +7,10 @@ def component():
             Home
         </li>
     </a>
+    <a href="{url_for('main.styles')}">
+        <li>
+            Styles
+        </li>
+    </a>
 
     """)

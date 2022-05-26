@@ -39,5 +39,12 @@
         .skills_bg{
             display: block;
         }
+        .skill_cards_ctnr{
+            flex-flow: row wrap;
+            // max-width: 80%;
+            justify-content: center;
+            max-width: 60%;
+            margin: 2em auto;
+        }
     }
 }

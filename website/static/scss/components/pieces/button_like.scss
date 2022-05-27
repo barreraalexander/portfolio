@@ -30,8 +30,52 @@
     }
 }
 
+.button_like[data-variant=neu1]{
+    background-color: #fff;
+    transform: rotate(5deg);
+    box-shadow: 5px 5px 0 3px #000;
+    p{
+        color: #000;
+    }
+}
+
+
+.button_like[data-variant=neu2]{
+    background-color: $proj_orange;
+    // transform: rotate(-5deg);
+
+    box-shadow: 5px 5px 0 3px #000;
+    border: 4px solid #000;
+    transform: rotate(-5deg);
+
+    p{
+        color: #000;
+    }
+}
+
+.button_like[data-variant=min1]{
+    @include light_shadow;
+    background: $proj_orange;
+    border: 4px solid #000;
+    p{
+        @include lg_text;
+        color: #000;
+    }
+}
+
+.button_like[data-variant=min2]{
+    @include light_shadow;
+    background: #000;
+    border: 4px solid transparent;
+    p{
+        @include lg_text;
+        color: #fff;
+    }
+}
+
 
 .button_like:hover{
     cursor: pointer;
     filter: brightness(1.2);
+    
 }

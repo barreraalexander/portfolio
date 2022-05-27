@@ -43,3 +43,113 @@
   animation: shift_dot infinite alternate 1s;
   
 }
+
+
+@keyframes shift_lr{
+  from {
+    left: -20em;
+  }
+  to{
+    left: 0em;
+  }
+}
+
+@-webkit-keyframes shift_lr{
+  from {
+    left: -20em;
+  }
+  to{
+    left: 0em;
+  }
+}
+
+
+.apply_shift_lr{
+  animation: shift_lr infinite alternate 10s;
+  -webkit-animation: shift_lr infinite alternate 10s;
+}
+
+
+@-webkit-keyframes shifting_gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@keyframes shifting_gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@mixin shifting_gradient {
+  animation: shifting_gradient infinite 10s; 
+  -webkit-animation: shifting_gradient infinite 10s; 
+}
+
+
+@keyframes breathe {
+  from{
+    transform: scale(1.04);
+  } 
+  to{
+    transform: scale(.97);
+
+  }
+}
+
+@-webkit-keyframes breathe {
+  from{
+    transform: scale(1.04);
+  } 
+  to{
+    transform: scale(.97);
+
+  }
+}
+
+.apply_breathe{
+  animation: breathe 2s infinite alternate;
+  animation-delay: 1s;
+  
+  -webkit-animation: breathe 2s infinite alternate;
+  -webkit-animation-delay: 1s;
+}
+
+
+
+@keyframes shifting_circ{
+  from {
+    left: 0em;
+
+  }
+  to{
+    // left: 2em;
+    left: 1em;
+  }
+}
+
+.apply_shifting_circ1{
+  animation: shifting_circ 8s infinite alternate ease-in;
+  -webkit-animation: shifting_circ 8s infinite alternate;
+}
+
+.apply_shifting_circ2{
+  animation: shifting_circ 8s infinite alternate ease-in;
+  -webkit-animation: shifting_circ 8s infinite alternate;
+
+  // animation-delay: 2s;
+  animation-direction: reverse;
+}

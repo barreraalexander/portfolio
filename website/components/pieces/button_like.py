@@ -28,6 +28,11 @@ def component(button_type, variant=""):
 
     button_dict = all_dicts.get(button_type)
     
+    if (variant):
+        button_dict['variant'] = variant
+
+    
+
 
     return Markup(f"""
     <a href="{button_dict.get('href')}" {button_dict.get('href_config')}>

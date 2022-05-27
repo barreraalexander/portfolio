@@ -15,6 +15,7 @@ from website.components.sections.hero import component as hero
 from website.components.sections.story import component as story
 from website.components.sections.about import component as about_section
 from website.components.sections.skills import component as skills
+from website.components.sections.styles import component as styles_section
 
 main = Blueprint ('main', __name__)
 
@@ -48,8 +49,17 @@ def index():
 
 
 @main.route('/about')
+@cache.cached(timeout=300)
 def about():
     return render_template('_about.html',
         title='About',
         about_section=about_section,
+    )
+
+@main.route('/styles')
+@cache.cached(timeout=300)
+def styles():
+    return render_template('_styles.html',
+        title='Styles',
+        styles_section=styles_section,
     )

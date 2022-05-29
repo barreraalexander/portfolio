@@ -1,0 +1,31 @@
+#glassmin_section{
+    height: 100vh;
+    background: #f2f2f2;
+    padding-top: 2em;
+
+    .glass_panel{
+        opacity: .9;
+        background-color: #fff;
+        position: relative;
+        height: 10em;
+        margin: 0 auto;
+        width: 10em;
+        p{
+            color: #000;
+            position: relative;
+            z-index: 10;
+            // margin: 0 auto;
+        }
+    }
+    
+    .glass_ctnr{
+        background-color: rgb(188, 238, 255);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 20px;
+        filter: blur(5px);
+        z-index: 9;
+        
+    }
+}

@@ -23,6 +23,12 @@ def component(button_type, variant=""):
             'inner_text' : 'Resume',
             'img_src' : url_for('static', filename='images/assets/icons/resume.svg'),
             'variant' : 1,
+        },
+        'available' : {
+            'href' : f"tel:{CONTACT_DICT.get('phone')}",
+            'inner_text' : 'Available',
+            'img_src' : url_for('static', filename='images/assets/icons/bolt.svg'),
+            'variant' : 'glass',
         }
     }
 

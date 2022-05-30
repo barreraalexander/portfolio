@@ -12,7 +12,6 @@ def component():
                 <img
                     class="icon_bg"
                     src="{url_for('static', filename='images/assets/icons/bolt.svg')}"
-                
                 >
                 <h1>
                     neu <br> <span>BRUTAL</span> <br> ism

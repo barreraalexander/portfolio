@@ -75,11 +75,13 @@ def component():
         </div>
 
         <div class="neu_me_ctnr">
-
+            <img
+                class="blob_bg"
+                src={ url_for('static', filename='images/assets/icons/blob_orange.svg') }
+            >
             <img
                 class="barrera_cutout"
                 src="{ url_for('static', filename='images/assets/barrera_cutout.png') }"
-            
             >
             <p>
                 This is me! In all my bald-headed glory!

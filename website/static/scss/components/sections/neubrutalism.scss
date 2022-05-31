@@ -147,6 +147,14 @@
         align-items: center;
         flex-flow: column;
         padding: 2em;
+        position: relative;
+        .blob_bg{
+            position: absolute;
+            z-index: 0;
+            width: 30em;
+            top: -8em;  
+        }
+
         p{
             @include lg_text;
             color: #000;
@@ -159,13 +167,14 @@
         }
 
         .barrera_cutout{
-            border: 15px solid $neu_blue;
-            background-color: #fff;
+            // border: 15px solid $neu_blue;
+            // background-color: #fff;
+            position: relative;
             padding: 2em;
             width: 15em;
             height: 15em;
             border-radius: 10px;
-            mix-blend-mode: darken;
+            // mix-blend-mode: darken;
         }
         .circle_decoration1{
             display: none;

@@ -18,10 +18,10 @@ def component():
             'tags' : ['art', 'sad', 'trending']
         }, 
         'post3' : {
-            'title' : "The Twins Miquella and Malenia",
+            'title' : "How to Make Components in Python Flask",
             'blurb' : "Commodo sint cupidatat commodo et minim amet non ipsum irure ut pariatur adipisicing non. Qui esse dolor reprehenderit adipisicing sint minim sint. Non commodo do reprehenderit laborum est veniam excepteur incididunt sit ad ullamco laborum Lorem et. Laborum reprehenderit amet culpa duis aute in magna esse voluptate velit quis anim. Minim sit sint dolore sit ipsum commodo duis velit anim Lorem.",
             'posted' : (datetime.now() - timedelta(days=10, hours=8, minutes=25)).strftime("%b %d, %Y | %I:%M %p"),
-            'tags' : ['history', 'funny', 'top post']
+            'tags' : ['technology', 'informative', 'top post']
         }, 
     }
 

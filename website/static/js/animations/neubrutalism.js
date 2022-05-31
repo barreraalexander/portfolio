@@ -66,10 +66,6 @@ neu_section_tl2.to(
 
 
 
-console.log(left_arrow)
-
-
-
 
 const neu_observer_options = {
     root: null,

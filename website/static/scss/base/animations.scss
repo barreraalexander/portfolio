@@ -150,6 +150,18 @@
   animation: shifting_circ 8s infinite alternate ease-in;
   -webkit-animation: shifting_circ 8s infinite alternate;
 
-  // animation-delay: 2s;
   animation-direction: reverse;
+}
+
+
+@keyframes shifting_bg{
+  from{
+    background-position: top;
+  } to {
+    background-position: bottom;
+  }
+}
+
+.apply_shifting_bg{
+  animation: shifting_bg infinite 30s alternate;
 }

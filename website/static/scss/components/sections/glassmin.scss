@@ -1,7 +1,9 @@
 #glassmin_section{
     padding: 2em 0;
     background-attachment: fixed;
-    background: linear-gradient(180deg, #efd5ff 0%, #515ada 100%);
+    // background: linear-gradient(180deg, #efd5ff 0%, #515ada 100%);
+    // background: linear-gradient(180deg, #efd5ff 0%, #6c73d5  100%);
+    background: linear-gradient(180deg, #efd5ff 0%, #a2a6e2  100%);
     background-size: cover;
 
     .desktop_sidepanel{
@@ -36,7 +38,7 @@
             @include lg_text;
             text-align: center;
             color: #000;
-            font-size: 1.1em;
+            font-size: 1.5em;
             border-bottom: 1px solid #000;
             max-width: min-content;
         }
@@ -58,17 +60,11 @@
         }
         small{
             color: #000;
-            // text-align: center;
         }
         .button_like{
             font-size: .8em;
-            // img{
-            //     font-size: 1.8em;
-
-            // }
         }
         .profile_img{
-            // @include light_shadow;   
             width: 40%;
             border-radius: 50%;
             background: #fff;
@@ -103,8 +99,55 @@
         }
     }
     .panel3{
-        // order: 0;
+        .postlist_ctnr{
+            display: flex;
+            flex-flow: column;
+            margin: 2em 0;
+            gap: 2em;
+            width: 100%;
+        }
+        .post{
+            display: flex;
+            flex-flow: column;
+            border-radius: 20px;
+            padding: 1em;
+            align-items: flex-start;
+            gap: .5em;
+            p{
+                width: unset;
+            }
+            h4{
+                @include md_text_alt;
+                text-decoration: underline;
+                margin-bottom: unset;
+                font-weight: 400;
+            }
+            .posted{
+                font-size: .8em;
+            }
+        }
+        .blurb{
+            text-align: left;
+        }
+        .tags_ctnr{
+            display: flex;
+            flex-flow: wrap;
+            gap: 1em;
+            margin-bottom: .25em;
+            width: 70%;
+            max-width: 25em;
 
+            p{
+                padding: .1em;
+                background-color: rgba($color: #fff, $alpha: .3);
+                border-radius: 3px;
+                font-size: .85em;
+            }
+        }
+        hr{
+            border: 2px solid #000;
+            width: 100%;
+        }
     }
 }
 

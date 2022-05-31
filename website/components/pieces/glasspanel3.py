@@ -20,7 +20,7 @@ def component():
         'post3' : {
             'title' : "The Twins Miquella and Malenia",
             'blurb' : "Commodo sint cupidatat commodo et minim amet non ipsum irure ut pariatur adipisicing non. Qui esse dolor reprehenderit adipisicing sint minim sint. Non commodo do reprehenderit laborum est veniam excepteur incididunt sit ad ullamco laborum Lorem et. Laborum reprehenderit amet culpa duis aute in magna esse voluptate velit quis anim. Minim sit sint dolore sit ipsum commodo duis velit anim Lorem.",
-            'posted' : (datetime.now() - timedelta(days=7, hours=8, minutes=25)).strftime("%b %d, %Y | %I:%M %p"),
+            'posted' : (datetime.now() - timedelta(days=10, hours=8, minutes=25)).strftime("%b %d, %Y | %I:%M %p"),
             'tags' : ['history', 'funny', 'top post']
         }, 
     }
@@ -60,7 +60,7 @@ def component():
             Structured Information
         </h2>
         <p>
-            Works beautifully with panels of glass. Everything is separated and sections are plainly labeled. Glass style is great for websites that have to display a lot of information.
+            Works wonderfully at formatting lots of content. Everything is separated and sections are plainly labeled. The typography varies to help draw distinction between different bits of information. The gradient background is simple, beautiful, but not too distracting.
         </p>
         <div class="postlist_ctnr">
             {make_post(posts_data.get('post1'))}

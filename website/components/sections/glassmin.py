@@ -10,7 +10,7 @@ def component():
     return Markup(f"""
     <section id="glassmin_section">
         <h1>
-            Glass
+            Frosted Glass
         </h1>
         
         <div class="panels_ctnr">

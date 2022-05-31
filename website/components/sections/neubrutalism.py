@@ -63,7 +63,7 @@ def component():
                         🐱‍👤
                     </p>
                     <p>
-                        My inspiration was gumroad.com. Please check them out for an expert example of the neubrutalism design. But don't tell them I sent you <br> :)
+                        My inspiration was <a> gumroad.com </a>. Please check them out for an expert example of the neubrutalism design. But don't tell them I sent you <br> :)
                     </p>
                 </div>
 

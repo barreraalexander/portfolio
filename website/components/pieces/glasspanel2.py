@@ -7,7 +7,7 @@ def component():
             Nonessential Information
         </h2>
         <p>
-            This section is often pushed off to the right on desktop, and at the bottom of the stack on mobile, or hidden completely. This would often include the archive section of a news website or blog. On social media sites, the nonessential section would store advertisements, suggested friends and groups. Below is a simple example of what such an archive would look like.
+            This section is often pushed off to the right on desktop, and at the bottom of the stack on mobile, or hidden completely. This would often include the archive section of a news website or blog. On social media sites, the nonessential section would store advertisements, suggested friends and groups.
         </p>
         <ul>
             <li>

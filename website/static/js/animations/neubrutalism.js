@@ -13,7 +13,6 @@ let neu_section_tl = gsap.timeline({
 neu_section_tl.to(
     dec_sqr,
     {
-        // delay: 0,
         duration: 5,
         clipPath: 'polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%)',
         ease: Sine.easeInOut,
@@ -23,7 +22,6 @@ neu_section_tl.to(
 neu_section_tl.to(
     dec_sqr,
     {
-        // delay: 0,
         duration: 5,
         clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
         ease: Sine.easeInOut,
@@ -39,7 +37,7 @@ let neu_section_tl2 = gsap.timeline({
 neu_section_tl2.to(
     neu_cards,
     {
-        duration: 5,
+        duration: 2,
         ease: Sine.easeInOut,
         left: 0,
         right: 0,        

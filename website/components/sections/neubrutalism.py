@@ -6,6 +6,7 @@ def component():
     return Markup(f"""
     <section id="neubrutalism_section">
         <div class="neu_hero_ctnr">
+
             <div class="neu_ctnr1">
                 <div class="decorative_sqr">
                 </div>
@@ -27,9 +28,9 @@ def component():
                     <div class="circle_dec circle2">
                     </div>
                 </div>
-
-
             </div>
+
+
             <div class="neu_ctnr2">
 
                 <div class="neu_card first_neu_card">
@@ -37,7 +38,7 @@ def component():
                         😁
                     </p>
                     <p>
-                        More color is more fun! Tired of boring designs? Neubrutalism is meant to emphasize candy colors, inconsistent shapes, and heavy-usage of the built in canvas element.
+                        More colors and more shapes is more fun! The renaissance of the architectural Brutalism style is happening here on the web, with the same focus on textureless, unornamented shapes. Neubrutalism emphasizes candy colors, inconsistent shapes with heavy shadows, and often sitting on an angle.
                     </p>
                 </div>
 
@@ -47,13 +48,16 @@ def component():
                     </p>
                     <ul>
                         <li>
-                            big time illustrions
+                            big illustrations
                         </li>
                         <li>
                             lots of movement
                         </li>
                         <li>
-                            sell fun products
+                            attention grabbing
+                        </li>
+                        <li>
+                            purposefully obnoxious
                         </li>
                     </ul>
                 </div>
@@ -63,10 +67,9 @@ def component():
                         🐱‍👤
                     </p>
                     <p>
-                        My inspiration was <a> gumroad.com </a>. Please check them out for an expert example of the neubrutalism design. But don't tell them I sent you <br> :)
+                        My inspiration was <a  href="https://gumroad.com/" target="_blank"> gumroad.com </a>. Please check them out for an expert example of the neubrutalism design. But don't tell them I sent you <br> ;)
                     </p>
                 </div>
-
 
             </div>
         </div>

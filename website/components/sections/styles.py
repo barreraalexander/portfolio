@@ -7,8 +7,8 @@ from website.components.sections.glassmin import component as glassmin
 def component():
     return Markup(f"""
     <section id="styles_section">
-        {glassmin()}
         {minimalism()}
+        {glassmin()}
         {neubrutalism()}
     </section>
     """)

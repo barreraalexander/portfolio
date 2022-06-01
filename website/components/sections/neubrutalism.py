@@ -64,7 +64,7 @@ def component():
 
                 <div class="neu_card third_neu_card">
                     <p class="emoji_icon">
-                        🐱‍👤
+                        😍
                     </p>
                     <p>
                         My inspiration was <a  href="https://gumroad.com/" target="_blank"> gumroad.com </a>. Please check them out for an expert example of the neubrutalism design. But don't tell them I sent you <br> ;)

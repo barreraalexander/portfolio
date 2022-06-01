@@ -18,7 +18,7 @@ const glassmin_observer = new IntersectionObserver(function(entries, glassmin_ob
             entry.target.style.transform = 'translate(0, 0em)'
         }
     })
-})
+}, glassmin_observer_options)
 
 
 for (let panel of glass_panels){

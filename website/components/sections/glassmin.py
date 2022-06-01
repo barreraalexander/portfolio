@@ -8,7 +8,7 @@ from website.components.pieces.glasspanel3 import component as gp3
 
 def component():
     return Markup(f"""
-    <section id="glassmin_section" class="apply_shifting_bg">
+    <section id="glassmin_section" class="">
         <h1>
             Frosted Glass
         </h1>

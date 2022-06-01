@@ -1,4 +1,5 @@
 #neubrutalism_section{
+    overflow: hidden;
     .neu_hero_ctnr{
         display: flex;
         flex-flow: column;
@@ -173,7 +174,7 @@
             padding: 2em;
             width: 15em;
             height: 15em;
-            border-radius: 10px;
+            border-radius: 50%;
             // mix-blend-mode: darken;
         }
         .circle_decoration1{
@@ -205,7 +206,8 @@
 
         .neu_me_ctnr{
             background: #000;
-            position: relative;        
+            position: relative;
+            overflow: hidden;
             .barrera_cutout{
                 mix-blend-mode: unset;
             }

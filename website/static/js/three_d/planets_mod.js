@@ -27,7 +27,7 @@ if (night_ctnr){
 
     const point_light = new THREE.PointLight(0xFFFFFF, 1, 2)
     point_light.position.set(-2, 7, -10);
-    scene.add(point_light)
+    // scene.add(point_light)
 
     //star system
     const particles_geomtery = new THREE.BufferGeometry;
@@ -136,12 +136,12 @@ if (night_ctnr){
 
             }
 
-            if (elasped_time > 2 && elasped_time < 3){
-                ship.position.y += .01
+            if (elasped_time > 15 && elasped_time < 20){
+                ship.position.y += .001
                 ship.position.x -= .01
-                ship.position.z -= .01            
+                clock.stop()
             } else {
-                ship.position.y -= .01
+                ship.position.y -= .001
                 ship.position.x += .01
                 ship.position.z += .01
             }
@@ -149,7 +149,6 @@ if (night_ctnr){
 
             if (window.innerWidth > 1399){
                 moon.position.set = (-5, 0, 6)
-                // moon.position.z = 16
                 point_light.position.z = 16
                 planet.position.set(12, 30, -25)
             } else {

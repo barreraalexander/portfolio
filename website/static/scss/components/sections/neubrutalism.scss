@@ -155,6 +155,24 @@
             width: 30em;
             top: -8em;  
         }
+        .nametag{
+            @include lg_text;
+            font-size: 1em;
+            transform: unset;
+            width: max-content;
+            max-width: unset;
+            // background: #000;
+            // color: #fff;
+            padding: .5em;
+            border-radius: 5px;
+            top: -5em;
+            position: relative;
+
+            background-color: #222;
+            color: $proj_orange;
+            font-weight: 600;
+
+        }
 
         p{
             @include lg_text;
@@ -239,6 +257,12 @@
             }
             p{
                 color: #fff;
+            }
+            .nametag{
+                // background-color: #fff;
+                background-color: #222;
+                color: $proj_orange;
+                font-weight: 600;
             }
         }
 

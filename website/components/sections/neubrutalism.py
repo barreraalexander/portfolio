@@ -83,6 +83,9 @@ def component():
                 class="barrera_cutout"
                 src="{ url_for('static', filename='images/assets/barrera_cutout.png') }"
             >
+            <p class="nametag">
+                @ Alexander Barrera
+            </p>
             <p>
                 This is me! In all my bald-headed glory!
             </p>

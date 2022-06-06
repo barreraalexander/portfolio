@@ -57,7 +57,7 @@ def about():
     )
 
 @main.route('/styles')
-@cache.cached(timeout=300)
+# @cache.cached(timeout=300)
 def styles():
     return render_template('_styles.html',
         title='Styles',

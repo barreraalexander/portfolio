@@ -163,5 +163,18 @@
 }
 
 .apply_shifting_bg{
-  animation: shifting_bg infinite 30s alternate;
+  animation: shifting_bg infinite 4s alternate;
+}
+
+
+@keyframes shifting_border{
+  from{
+    border-radius: 10% 50% 10% 50%;
+  } to {
+    border-radius: 75% 90% 75% 90%;
+  }
+}
+
+.apply_shifting_border{
+  animation: shifting_border infinite 10s alternate
 }

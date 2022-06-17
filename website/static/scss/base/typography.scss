@@ -22,33 +22,34 @@ form{
 
 
 @mixin lg_text{
-    font-family: 'Roboto Slab', serif;
+    // font-family: 'Roboto Slab', serif;
+    font-family: $font2;
     font-weight: 700;
     letter-spacing: 1.5px;
 }
 
 @mixin md_text{
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font2;
     font-weight: 300;
     letter-spacing: .9px;
 }
 
 
 @mixin md_text_alt{
-    font-family: 'Roboto Slab', serif;
+    font-family: $font2;
     font-weight: 300;
     letter-spacing: .9px;
 }
 
 @mixin sm_text{
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font2;
     font-weight: 100;
 
 }
 
 
 @mixin xsm_text{
-    font-family: 'Roboto Slab', serif;
+    font-family: $font2;
     font-weight: 400;
 }
 

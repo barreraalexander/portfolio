@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 # BASE
 from website.utils.webdata import CONTACT_DICT, META_DICT
-from website import cache
+# from website import cache
 
 # SECTIONS
 from website.components.navbars.header import component as header
@@ -48,16 +48,16 @@ def index():
     )
 
 
-@main.route('/about')
-@cache.cached(timeout=300)
-def about():
-    return render_template('_about.html',
-        title='About',
-        about_section=about_section,
-)
+# @main.route('/about')
+# # @cache.cached(timeout=300)
+# def about():
+#     return render_template('_about.html',
+#         title='About',
+#         about_section=about_section,
+# )
 
 @main.route('/styles')
-@cache.cached(timeout=300)
+# @cache.cached(timeout=300)
 def styles():
     return render_template('_styles.html',
         title='Styles',

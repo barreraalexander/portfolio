@@ -1,6 +1,7 @@
 #story_section{
     align-items: center;
     background: radial-gradient($proj_gray, $proj_black);
+    // background: $proj_orange;
     display: flex;
     flex-flow: column;
     filter: grayscale(100%);

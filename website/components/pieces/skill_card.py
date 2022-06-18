@@ -4,7 +4,7 @@ from website.utils.webdata import unpack_elems
 def component(skill):
     skills = {
         'web_dev' : {
-            'title' : 'Design to Build',
+            'title' : 'From Design to Build',
             'blurb' : 'If you want to provide the design, the difference between design and product will be nonexistent. I take pride in pixel perfect matching.',
             'img_src' : url_for('static', filename='images/assets/icons/skills/web_dev.svg'),
             'variant' : '1',

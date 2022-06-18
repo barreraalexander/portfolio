@@ -23,7 +23,7 @@ resume_tl.to(
     {
         duration: .25,
         // clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-        clipPath: 'polygon(20px 0px, 100% 0px, 90% 100%, 0px 100%)',
+        // clipPath: 'polygon(20px 0px, 100% 0px, 90% 100%, 0px 100%)',
         y: "1em",
         ease: Sine.easeInOut,
     }

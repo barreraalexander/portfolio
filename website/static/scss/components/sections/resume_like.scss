@@ -1,4 +1,5 @@
 #resume_like{
+    // background: $proj_orange;
     padding: 2em 0;
     filter: grayscale(100%);
     position: relative;
@@ -13,7 +14,7 @@
     }
 
     .background_img{
-        width: 20em;
+        width: 15em;
         position: absolute;
         right: 2em;
         display: none;
@@ -36,7 +37,7 @@
         padding: 1em;
         max-width: 75%;
 
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
     }
     .author{
@@ -48,7 +49,7 @@
         width: 80%;
         max-width: 25em;
         margin: 0 auto;
-        font-weight: 600;
+        font-weight: 500;
 
     }
     .origin{

@@ -57,7 +57,7 @@ def component(title, elem_id=""):
 
 
     return Markup(f"""
-    <div class="comment_ctnr">
+    <div class="comment_ctnr apply_shifting_border">
         <p class="comment">
             "{comment}"
         </p>

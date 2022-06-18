@@ -9,7 +9,7 @@ def component():
     </a>
     <a href="{url_for('main.styles')}">
         <li>
-            Styles
+            UI Styles
         </li>
     </a>
 

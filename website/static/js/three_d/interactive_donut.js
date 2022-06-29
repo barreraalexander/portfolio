@@ -1,13 +1,12 @@
 var donut_ctnr = document.querySelector('#donut_ctnr')
 
 if (donut_ctnr){
-
-    
-
     var donut_scene = new THREE.Scene();
     var donut_camera = new THREE.PerspectiveCamera(
         75,
-        window.innerWidth/window.innerHeight,
+        // window.innerWidth/window.innerHeight,
+        donut_ctnr.offsetWidth/donut_ctnr.offsetHeight,
+        // donut_ctnr.innerWidth,
         0.1,
         1000
     )
@@ -18,17 +17,18 @@ if (donut_ctnr){
         antialias: true
     })
 
-    donut_renderer.setClearColor(new THREE.Color('#fff'))
-    donut_renderer.setSize(window.innerWidth, window.innerHeight)
+    // donut_renderer.setClearColor(new THREE.Color('#fff'))
+    // donut_renderer.setSize(window.innerWidth, window.innerHeight)
+    donut_renderer.setSize(donut_ctnr.offsetWidth, donut_ctnr.offsetHeight)
 
     donut_ctnr.appendChild(donut_renderer.domElement)
 
     const donut_hemi_light = new THREE.HemisphereLight (0xFFFFFF, 1, 2)
-    donut_scene.add(donut_hemi_light)
+    // donut_scene.add(donut_hemi_light)
     
 
     const particles_geomtery = new THREE.BufferGeometry;
-    const particles_count = 10000/2;
+    const particles_count = 10000/8;
 
     const position_array = new Float32Array(particles_count * 3)
 
@@ -40,7 +40,7 @@ if (donut_ctnr){
 
     const particle_material = new THREE.PointsMaterial({
         // size: 0.010,
-        size: 0.005,
+        size: 0.0001,
         color: 'white',
     })
     const particles_mesh = new THREE.Points(particles_geomtery, particle_material)
@@ -48,7 +48,12 @@ if (donut_ctnr){
     donut_scene.add(particles_mesh)
 
 
-
+    window.addEventListener('resize', ()=>{
+        donut_renderer.setSize(donut_ctnr.offsetWidth, donut_ctnr.offsetHeight);
+        donut_camera.aspect = donut_ctnr.offsetWidth / donut_ctnr.offsetHeight;
+        donut_camera.updateProjectionMatrix()
+        
+    })
 
 
 

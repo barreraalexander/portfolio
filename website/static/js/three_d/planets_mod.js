@@ -184,7 +184,6 @@ if (night_ctnr){
             }
         }
 
-
         renderer.domElement.id = 'globe_canvas';
         renderer.render(scene, camera)
 

@@ -1,33 +1,41 @@
 #interactive_donut_section{
-    background-color: gray;
+    background-color: #cbcbcb;
     padding: 1em;
     h1{
         text-align: center;
         font-size: 2em;
+        color: #000;
     }
     .interactive_panel{
         display: flex;
         flex-flow: column;
         gap: 2em;
         align-items: center;
+        margin-top: 2em;
     }
     #donut_ctnr{
-        width: 80%;
+        width: 90%;
         height: 20em;
         background: #000;
         border-radius: 1em;
         border: 5px solid olivedrab;
+        overflow: hidden;
         
     }
     #controls_ctnr{
-        width: 100%;
-        height: 8em;
+        // width: 100%;
+        // height: 8em;
+        border: 5px solid olivedrab;
+
         background: #000;
         display: flex;
-        gap: .5em;
+        flex-flow: column;
+        gap: 2em;
         justify-content: center;
         align-items: center;
         border-radius: 1em;
+        padding: 1em;
+
 
 
         .control{
@@ -46,6 +54,16 @@
                 color: #000;
             }
         }
+        .transformer_controls, .movement_controls{
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+        .movement_controls{
+            gap: 1em;
+        }
+
+
         #change_mesh{
             background: red;
         }
@@ -55,8 +73,7 @@
 
         .changer{
             @include dark_shadow;
-            margin-left: 2em;
-            height: 2em;
+             height: 2em;
             width: 2em;
             border-radius: 50%;
         }

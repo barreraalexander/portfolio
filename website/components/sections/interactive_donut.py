@@ -5,11 +5,44 @@ def component():
 
     return Markup(f"""
     <section id="interactive_donut_section">
+        <h1>
+            Interactive 3d Objects
+        </h1>
         <div class="interactive_panel">
             <div id="donut_ctnr">
             </div>
             <div id="controls_ctnr">
-            
+                <div id="backward" class="control">
+                    <p>
+                        ⬆
+                    </p>
+                </div>
+                
+                <div id="forward" class="control">
+                    <p>
+                        ⬇
+                    </p>
+                </div>
+                
+                
+                <div id="left" class="control">
+                    <p>
+                        ⬅
+                    </p>
+                </div>
+                
+                <div id="right" class="control">
+                    <p>
+                        ➡
+                    </p>
+                </div>
+
+                <div id="change_mesh" class="changer" >
+                </div>
+
+                <div id="change_color"  class="changer">
+                </div>
+
             </div>
 
         </div>

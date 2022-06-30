@@ -1,7 +1,8 @@
 #interactive_donut_section{
-    background-color: #cbcbcb;
-    padding: 1em;
+    background-color: #ddd;
+    padding: 2em 1em;
     h1{
+        @include lg_text;
         text-align: center;
         font-size: 2em;
         color: #000;
@@ -15,7 +16,9 @@
     }
     #donut_ctnr{
         width: 90%;
-        height: 20em;
+        // height: 20em;
+        height: 30em;
+        max-width: 65em;
         background: #000;
         border-radius: 1em;
         border: 5px solid olivedrab;
@@ -52,6 +55,7 @@
             p{
                 font-size: 2em;
                 color: #000;
+                pointer-events: none;
             }
         }
         .transformer_controls, .movement_controls{

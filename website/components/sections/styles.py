@@ -7,9 +7,9 @@ from website.components.sections.interactive_donut import component as interacti
 def component():
     return Markup(f"""
     <section id="styles_section">
-        {interactive_donut()}
         {minimalism()}
         {glassmin()}
+        {interactive_donut()}
         {neubrutalism()}
     </section>
     """)

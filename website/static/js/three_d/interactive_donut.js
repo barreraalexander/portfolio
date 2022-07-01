@@ -2,19 +2,10 @@ var donut_section = document.querySelector('#interactive_donut_section')
 var donut_ctnr = document.querySelector('#donut_ctnr')
 
 if (donut_ctnr){
-    let texture_path = donut_ctnr.dataset.texture1
-    const donut_textureLoader = new THREE.TextureLoader()
-    const bubbleTexture = donut_textureLoader.load(texture_path)
-
-
-
-
     var donut_scene = new THREE.Scene();
     var donut_camera = new THREE.PerspectiveCamera(
         75,
-        // window.innerWidth/window.innerHeight,
         donut_ctnr.offsetWidth/donut_ctnr.offsetHeight,
-        // donut_ctnr.innerWidth,
         0.1,
         1000
     )
@@ -29,48 +20,8 @@ if (donut_ctnr){
 
     donut_ctnr.appendChild(donut_renderer.domElement)
 
-    const donut_hemi_light = new THREE.HemisphereLight (0xFFFFFF, 1, 2)
+    const donut_hemi_light = new THREE.HemisphereLight (new THREE.Color('#fff'), 1, 2)
     donut_scene.add(donut_hemi_light)
-
-    // const donut_geo = new THREE.TorusGeometry(10, 1, 100, 200);
-    const donut_geo = new THREE.TorusGeometry(10, 3, 16, 100);
-    const sphere_geo = new THREE.SphereBufferGeometry(5, 64, 64);
-    
-    const donut_mat = new THREE.MeshStandardMaterial({
-        color: new THREE.Color('#DEB887'),
-        // wireframe: true,
-    });
-
-    const sphere_mat = new THREE.MeshNormalMaterial({
-        // color: new THREE.Color('#DEB887'),
-        // wireframe: true,
-    });
-
-
-    donut_mat.normalMap = bubbleTexture;
-    sphere_mat.normalMap = bubbleTexture;
-    // donut_mat.metalness = 0.1
-    // donut_mat.roughtness = 0.3
-
-
-    const donut_mesh = new THREE.Mesh(donut_geo, donut_mat)
-    const sphere_mesh = new THREE.Mesh(sphere_geo, sphere_mat)
-
-
-    donut_mesh.position.set(0, 0, -30)
-    sphere_mesh.position.set(0, 0, -60)
-
-
-
-    // console.log(texture_path)
-
-
-
-
-    // donut_scene.add(donut_mesh);
-    // donut_scene.add(sphere_mesh);
-
-    
 
     const particles_geomtery = new THREE.BufferGeometry;
     const particles_count = 10000/8;
@@ -88,8 +39,12 @@ if (donut_ctnr){
         color: 'white',
     })
     const particles_mesh = new THREE.Points(particles_geomtery, particle_material)
-    
     donut_scene.add(particles_mesh)
+
+
+
+    const camera_light = new THREE.PointLight( new THREE.Color('#fff'), 100, 0 );
+    donut_scene.add( camera_light );
 
 
     window.addEventListener('resize', ()=>{
@@ -116,20 +71,27 @@ if (donut_ctnr){
         
         var max_z = 30
         var min_z = -12
-        // var max_z = 0
 
-        
+        if (direction=='zoom_in'){
+            donut_camera.position.z -= .5
+            
+        }        
+
+        if (direction=='zoom_out'){
+            if (donut_camera.position.z < max_z){
+                donut_camera.position.z += .5
+            } 
+            return
+        }        
 
 
         if (direction=='forward'){
-            donut_camera.position.z -= 1
+            donut_camera.position.y += 1
             return     
         }
         
         if (direction=='backward'){
-            if (donut_camera.position.z < max_z){
-                donut_camera.position.z += 1
-            } 
+            donut_camera.position.y -= 1
             return     
         }
         
@@ -145,20 +107,26 @@ if (donut_ctnr){
     }
 
     var color_selector = 0
+    var mesh_selector = true
     function handleChanger(event){
         let command = event.target.id
         if (command=="change_mesh"){
-            // alert('mesh')
-            // donut_mesh.
-            donut_mesh.material.color.setHex( 0xffffff )
-            
+            if (mesh_selector){
+                donut_ctnr.style.mixBlendMode = 'color-burn'
+                mesh_selector = false
+                return
+            }
+            donut_ctnr.style.mixBlendMode = ''
+            mesh_selector = true
             return
         }
         if (command=="change_color"){
-            // alert('color')
-            
-            donut_mesh.material.color.setHex( 0xffffff )
-
+            let colors = ['f7dc6f', 'ff0000', '00c9ff', 'b200ff', 'd8ff00', '00ffc1']
+            donut_hemi_light.color = new THREE.Color(`#${colors[color_selector]}`)
+            color_selector += 1
+            if (color_selector==5){
+                color_selector = 0
+            }
 
             return
         }
@@ -172,6 +140,7 @@ if (donut_ctnr){
             moon_link,
             function ( gltf ) {
                 moon = gltf.scene;
+                // moon.wireframe = true
                 moon.position.set(0, 0, 6);
                 donut_scene.add( moon );
             },
@@ -196,15 +165,28 @@ if (donut_ctnr){
     load_ship()
 
 
+    function load_stork(){
+        const stork_link = donut_ctnr.dataset.model3
+        const stork_loader = new THREE.GLTFLoader();
+        stork_loader.load(
+            stork_link,
+            function ( gltf ) {
+                stork = gltf.scene;
+                stork.scale.set(.25, .25, .25)
+                stork.position.set(-8, 8, -30)
+                donut_scene.add( stork );
+            },
+        )
+    }
+    load_stork()
+
+
 
     var donut_render = function(){
         requestAnimationFrame(donut_render)
 
+        camera_light.position.set(donut_camera.position)
 
-        sphere_mesh.rotation.x += .002;
-        sphere_mesh.rotation.y += .008;
-        
-        
         try {
             if (moon){
                 moon.rotation.x += .002;
@@ -212,6 +194,11 @@ if (donut_ctnr){
             }
             if (ship){
                 ship.rotation.y += .002
+            }
+            if (stork){
+                stork.rotation.z -= .001
+                stork.rotation.x -= .00001
+
             }
         } catch (error) {
             

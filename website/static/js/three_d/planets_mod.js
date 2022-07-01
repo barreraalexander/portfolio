@@ -97,7 +97,6 @@ if (night_ctnr){
     function animateParticles(event){
         mouse_y = event.clientY
         mouse_x = event.clientX
-        // console.log(mouse_x)
     }
 
     document.addEventListener('mousemove', animateParticles)
@@ -106,8 +105,6 @@ if (night_ctnr){
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix()
-        // load_on_width()
-
     })
 
     const clock = new THREE.Clock()
@@ -183,7 +180,6 @@ if (night_ctnr){
     
             }
         }
-
 
         renderer.domElement.id = 'globe_canvas';
         renderer.render(scene, camera)

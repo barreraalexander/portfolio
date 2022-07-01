@@ -102,7 +102,7 @@ const minimalism_observer = new IntersectionObserver(function(entries, minimalis
     entries.forEach(entry => {
         if (entry.isIntersecting){
             minimalism_tl2.play()
-            console.log('not here')
+            // console.log('not here')
         } else {
             minimalism_tl2.reverse()
 

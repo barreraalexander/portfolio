@@ -187,3 +187,26 @@
   animation: shifting_border infinite 10s alternate;
   -webkit-animation: shifting_border infinite 10s alternate;
 }
+
+
+@keyframes click_down{
+  from {
+    transform: translate(0, 0em);
+  } to {
+    transform: translate(0, .5em);
+  }
+}
+
+@-webkit-keyframes click_down{
+  from {
+    transform: translate(0, 0em);
+  } to {
+    transform: translate(0, 5em);
+  }
+}
+
+.apply_click_down{
+  animation: click_down 1s alternate;
+  -webkit-animation: click_down 1s alternate;
+  background-color: red !important;
+}

@@ -1,6 +1,6 @@
 CONTACT_DICT = {
     "github_link" : "https://github.com/barreraalexander",
-    "phone" : "954-882-8507",
+    "phone" : "000-000-0000",
     "email" : "barreraalexander93@gmail.com",
 }
 

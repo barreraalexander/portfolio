@@ -1,0 +1,86 @@
+#interactive_donut_section{
+    background-color: #ddd;
+    padding: 2em 1em;
+    h1{
+        @include lg_text;
+        text-align: center;
+        font-size: 2em;
+        color: #000;
+    }
+    .interactive_panel{
+        display: flex;
+        flex-flow: column;
+        gap: 2em;
+        align-items: center;
+        margin-top: 2em;
+    }
+    #donut_ctnr{
+        width: 90%;
+        // height: 20em;
+        height: 30em;
+        max-width: 65em;
+        background: #000;
+        border-radius: 1em;
+        border: 5px solid olivedrab;
+        overflow: hidden;
+        
+    }
+    #controls_ctnr{
+        border: 5px solid olivedrab;
+
+        background: #000;
+        display: flex;
+        flex-flow: column;
+        gap: 2em;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1em;
+        padding: 1em;
+
+
+
+        .control{
+            @include dark_shadow;
+            background: #c8c8c8;
+            width: 3em;
+            height: 3em;
+            border-radius: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5em;
+            font-size: .6em;
+            
+            p{
+                font-size: 2em;
+                color: #000;
+                pointer-events: none;
+            }
+        }
+        .transformer_controls,
+        .movement_controls,
+        .zoom_controls{
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+        .movement_controls{
+            gap: 1em;
+        }
+
+
+        #change_mesh{
+            background: red;
+        }
+        #change_color{
+            background: green
+        }
+
+        .changer{
+            @include dark_shadow;
+             height: 2em;
+            width: 2em;
+            border-radius: 50%;
+        }
+    }
+}

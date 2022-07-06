@@ -1,0 +1,36 @@
+.github_tab{
+    align-items: center;
+    background: #000;
+    border-radius: 10px 0px 0px 10px;
+    bottom: 10em;
+    display: flex;
+    gap: .5em;
+    padding: .25em;
+    position: fixed;
+    right: 0;
+    bottom: 8em;
+    // width: 15em;
+    z-index: 1000;
+    transition: 3s;
+    mix-blend-mode: exclusion;
+    img{
+        width: 2em;
+    }
+    p{
+        color: #fff;
+        transition: 1s;
+        transition-delay: 2s;
+        transform: scale(0);
+        display: none;
+    }
+}
+
+.github_tab:hover,
+.github_tab:focus{
+    mix-blend-mode: unset;
+    p{
+        transition-delay: 2s;
+        transform: scale(1);
+        display: block;
+    }
+}

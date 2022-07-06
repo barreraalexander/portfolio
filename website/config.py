@@ -5,7 +5,7 @@ from os import path
 local_config = path.expanduser('~/etc/portfolio_config.json')
 launch_config = '/etc/portfolio_config.json'
 
-with open(local_config) as config_file:
+with open(launch_config) as config_file:
     config = json.load(config_file)
 
 

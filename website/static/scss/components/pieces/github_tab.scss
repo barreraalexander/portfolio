@@ -3,7 +3,7 @@
     background: #000;
     border-radius: 10px 0px 0px 10px;
     bottom: 10em;
-    display: flex;
+    display: none;
     gap: .5em;
     padding: .25em;
     position: fixed;
@@ -33,5 +33,12 @@
         transform: scale(1);
         display: block;
         text-decoration: underline;
+    }
+}
+
+
+@media only screen and (min-width: $desktop_bp){
+    .github_tab{
+        display: flex;
     }
 }

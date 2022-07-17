@@ -1,0 +1,41 @@
+#experience_section{
+    background-color: $proj_gray;
+    height: 100vh;
+    padding: 1em;
+    h1{
+        text-align: center;
+    }
+    .experience_ctnr{
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        gap: 3em;
+        margin-top: 2em;
+    }
+
+    .experience{
+        // background-color: red;
+        padding: 1em;
+        width: 10em;
+        h3{
+            font-size: 3em;
+            margin-bottom: .25em;
+            color: $proj_orange;
+        }
+
+        h3, p{
+            text-align: center;
+        }
+    }
+}
+
+// @property --num{
+        
+// }
+
+
+// @property --num {
+//     syntax: '<integer>';
+//     initial-value: 0;
+//     inherits: false;
+// }

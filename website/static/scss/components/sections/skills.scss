@@ -3,6 +3,7 @@
     position: relative;
     overflow: hidden;
     .skills_bg{
+        display: none;
         width: 15em;
         position: absolute;
         left: 0;
@@ -37,7 +38,7 @@
 @media only screen and (min-width: $desktop_bp){
     #skills_ctnr{
         .skills_bg{
-            display: block;
+            // display: block;
         }
         .skill_cards_ctnr{
             flex-flow: row wrap;

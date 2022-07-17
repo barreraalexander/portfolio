@@ -15,9 +15,11 @@ from website.components.sections.resume_like import component as resume_like
 
 from website.components.sections.hero import component as hero
 from website.components.sections.story import component as story
-from website.components.sections.about import component as about_section
 from website.components.sections.skills import component as skills
+from website.components.sections.experience import component as experience
+
 from website.components.sections.styles import component as styles_section
+
 
 main = Blueprint ('main', __name__)
 
@@ -48,6 +50,7 @@ def index():
         story=story,
         resume_like=resume_like,
         skills=skills,
+        experience=experience,
     )
 
 

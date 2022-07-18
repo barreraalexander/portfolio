@@ -16,17 +16,87 @@ if (experience_section){
             }
         }
     }
+
     
+    const experience_canvas = experience_section.querySelector('#skills_chart').getContext("2d")
+
+
+
+    const labels = [
+        "database management",
+        "ui/ux design",
+        "frontend",
+        "backend",
+        "python"
+    ]
+
+    const data = {
+        labels,
+        datasets:[{
+            data: [100, 60, 80, 90, 50],
+            label: 'Proficiencies',
+            backgroundColor: [
+                '#f7ff47',
+                '#55ff47',
+                '#47b4ff',
+                '#ca47ff',
+                '#ff4763',
+            ],
+            borderRadius: 10
+        }],
+
+    }
+
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options : {
+            animation: {
+                tension: {
+                    duration: 30000,
+                    easing: 'linear',
+                    loop: 'true'
+                }
+            },
+            responsive: true,
+            scales: {
+                y: {
+                    ticks: {
+                        color: "#fff",
+                        callback: function(value){
+                            return value + '%'
+                        }
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: "#fff",
+                    }
+                }
+            },
+            plugins : {
+                legend: {
+                    labels : {
+                        color: '#fff'
+                    },
+                }
+            }
+        },
+    };
+
+
     const experience_observer_options = {
         root: null,
         threshold: .5,
     }
-    
+
+
     const experience_section_observer = new IntersectionObserver(function(entries, experience_section_observer){
         entries.forEach(entry => {
             if (entry.isIntersecting){
                 loop()
-                // console.log(entry.target)
+                var skill_chart = new Chart(experience_canvas, config)                
             } else {
                 let experience_h3 = experience_section.querySelectorAll('.experience h3')
                 for (let elem of experience_h3){
@@ -40,9 +110,13 @@ if (experience_section){
 
 
 
-    const experience_canvas = experience_section.querySelector('#skills_chart')
 
-    console.log(experience_canvas)    
+
+    // const skill_chart = new Chart(experience_canvas, config)
+
+    // skill_chart.defaults.color = "#fff"
+
+    // console.log(experience_canvas)    
 
 
 }

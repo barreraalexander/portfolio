@@ -34,18 +34,30 @@
     }
 
     .chart_ctnr{
-        display: flex;
+        display: none;
+        // display: flex;
         justify-content: center;
         margin: 0 auto;
         margin-top: 3em;
-        width: 60%;
-        background-color: $proj_orange;
-        height: 20vh;
+        width: 80vw;
+        max-width: 50em;
+        // width: 60%;
+        // background-color: $proj_orange;
+        // height: 20vh;
         canvas{
-            width: 100%;
+            // width: 100%;
         }
     }
 
+}
+
+
+@media only screen and (min-width: $tablet_bp){
+    #experience_section{
+        .chart_ctnr{
+            display: flex;
+        }
+    }
 }
 
 // @property --num{

@@ -20,9 +20,9 @@ def component():
     <section id="experience_section">
         {dramatic_h1('Lots of Experience')}
         <div class="experience_ctnr">
-            {experience_card("successfully completed contracts", max_count=10)}
-            {experience_card("technologies mastered", max_count=30)}
-            {experience_card("successfully completed contracts", max_count=50)}
+            {experience_card("successfully completed contracts", max_count=18)}
+            {experience_card("technologies mastered", max_count=21)}
+            {experience_card("years of freelance experience", max_count=4)}
         </div>
         <div class="chart_ctnr">
             <canvas id="skills_chart"></canvas>

@@ -1,4 +1,5 @@
 from flask import Markup, url_for
+from website.components.pieces.experience_card import component as experience_card
 from website.components.pieces.dramatic_h1 import component as dramatic_h1
 
 """
@@ -19,31 +20,12 @@ def component():
     <section id="experience_section">
         {dramatic_h1('Lots of Experience')}
         <div class="experience_ctnr">
-            <div class="experience" data-max_count="10">
-                <h3>
-                    0
-                </h3>
-                <p>
-                    successfully completed contracts
-                </p>
-            </div>
-            <div class="experience" data-max_count="30">
-                <h3>
-                    0
-                </h3>
-                <p>
-                    technologies mastered
-                </p>
-            </div>
-            <div class="experience" data-max_count="50">
-                <h3>
-                    0
-                </h3>
-                <p>
-                    successfully completed contracts
-                </p>
-            </div>
-
+            {experience_card("successfully completed contracts", max_count=10)}
+            {experience_card("technologies mastered", max_count=30)}
+            {experience_card("successfully completed contracts", max_count=50)}
+        </div>
+        <div class="chart_ctnr">
+            <canvas id="skills_chart"></canvas>
         </div>
     </section>
     <script src="{animation}">

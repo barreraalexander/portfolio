@@ -1,6 +1,6 @@
 #experience_section{
     background-color: $proj_gray;
-    height: 100vh;
+    // height: 100vh;
     padding: 1em;
     h1{
         text-align: center;
@@ -8,8 +8,13 @@
     .experience_ctnr{
         align-items: center;
         display: flex;
-        flex-flow: column;
+        // flex-flow: column;
         gap: 3em;
+        
+        max-width: 55vw;
+        flex-flow: row wrap;
+        margin: 0 auto;
+        justify-content: center;
         margin-top: 2em;
     }
 
@@ -27,6 +32,20 @@
             text-align: center;
         }
     }
+
+    .chart_ctnr{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 3em;
+        width: 60%;
+        background-color: $proj_orange;
+        height: 20vh;
+        canvas{
+            width: 100%;
+        }
+    }
+
 }
 
 // @property --num{

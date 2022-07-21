@@ -10,7 +10,7 @@ def component():
         >
         <a href="{SOCIAL_MEDIA_LINKS.get('github')}/portfolio" target="_blank">
             <p>
-                code for this website
+                see the code for this website
             </p>
         </a>
     </div>

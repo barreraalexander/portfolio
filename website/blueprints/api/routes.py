@@ -15,8 +15,8 @@ def send_mail():
             'time_sent' : datetime.now(),
             'help_description' : request.form.get('help_description'),
         }
-        # response = send_form(form_data)
-        response = 'FAIL'
+        response = send_form(form_data)
+        # response = 'FAIL'
         if response == 'SUCCESS':
             flash ('We got your message!')
             flash (f"We'll contact you at: {form_data['contact_info']}")

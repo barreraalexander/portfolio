@@ -11,13 +11,14 @@ mail = Mail()
 
 from website.utils.assets import bundles
 
-def create_app (config_class=Settings):
+def create_app (config_class=settings):
     app = Flask (__name__)
-    app.config.from_object(settings)
+    app.config.from_object(config_class)
 
     assets.init_app(app)
     assets.register(bundles)
     mail.init_app(app)
+
     
     from website.blueprints.main.routes import main
     from website.blueprints.api.routes import api

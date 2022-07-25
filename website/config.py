@@ -1,11 +1,11 @@
 from pydantic import BaseSettings
 
 class Settings(BaseSettings):
-    SECRET_KEY: str
-    RECAPTCHA_PUBLIC_KEY: str
-    RECAPTCHA_SECRET_KEY: str
-    EMAIL_USER: str
-    EMAIL_PW: str
+    SECRET_KEY: str = "thisisatest"
+    RECAPTCHA_PUBLIC_KEY: str = "thisisatest"
+    RECAPTCHA_SECRET_KEY: str = "thisisatest"
+    EMAIL_USER: str = "thisisatest"
+    EMAIL_PW: str = "thisisatest"
 
     class Config:
         env_file = '.env'

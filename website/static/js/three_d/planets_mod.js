@@ -237,8 +237,6 @@ function handleKeyDown(event, custom_action=false){
         element.classList.remove('apply_click_light')
     }, 250)
 
-
-
 }
 
 function handleKeyUp(event){

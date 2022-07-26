@@ -13,10 +13,6 @@ def component():
 
     animation_script = url_for('static', filename='js/animations/hero.js')
     three_d_script = url_for('static', filename='js/three_d/planets_mod.js')
-    
-    # three_d_script = ""
-    # animation_script = ""
-
 
 
     return Markup(f"""

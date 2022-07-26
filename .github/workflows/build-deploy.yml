@@ -6,6 +6,15 @@ on:
 
 jobs:
   job1:
+    environment:
+      name: portfolio
+    env:
+      SECRET_KEY: ${{secrets.SECRET_KEY}}
+      RECAPTCHA_PUBLIC_KEY: ${{secrets.RECAPTCHA_PUBLIC_KEY}}
+      RECAPTCHA_SECRET_KEY: ${{secrets.RECAPTCHA_SECRET_KEY}}
+      EMAIL_USER: ${{secrets.EMAIL_USER}}
+      EMAIL_PW: ${{secrets.EMAIL_PW}}
+
     runs-on: ubuntu-latest
     steps:
       - name: pulling git repo
@@ -22,5 +31,5 @@ jobs:
         run: |
           pip install pytest
           pytest -v -s
-      
+
       

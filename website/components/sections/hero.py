@@ -1,6 +1,8 @@
 from flask import Markup, url_for
 from website.utils.webdata import CONTACT_DICT
 
+from website.components.pieces.hero_controls import component as hero_controls
+
 def component():
     resume_link = url_for('static', filename='docs/BarreraAlexanderResume21.pdf')
     mountain_link = url_for('static', filename='images/assets/mountain_cutout.png')
@@ -11,24 +13,24 @@ def component():
 
     animation_script = url_for('static', filename='js/animations/hero.js')
     three_d_script = url_for('static', filename='js/three_d/planets_mod.js')
-    
-    # three_d_script = ""
-    # animation_script = ""
-
 
 
     return Markup(f"""
     <section id="hero_section">
         <div class="hero_ctnr">
-            <h2>
-                OUT OF THIS WORLD
-            </h2>
-            <h1 id="hero_h1">
-                WEB DEVELOPER
-            </h1>
-            <small>
-                ALEXANDER BARRERA
-            </small>
+            <div class="text_ctnr">
+                <h2>
+                    OUT OF THIS WORLD
+                </h2>
+                <h1 id="hero_h1">
+                    WEB DEVELOPER
+                </h1>
+                <small>
+                    ALEXANDER BARRERA
+                </small>
+            </div>
+            {hero_controls()}
+
         </div>
 
         <img

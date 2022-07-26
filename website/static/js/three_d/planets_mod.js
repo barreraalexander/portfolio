@@ -164,10 +164,6 @@ if (night_ctnr){
         particles_mesh.rotation.z = (.0009 * -mouse_y)
         particles_mesh.rotation.z = (.0009 * -mouse_x)
 
-        
-
-
-
         if (! loaded_components){
             if (elasped_time > 2 && elasped_time < 3){ 
                 load_moon()
@@ -177,7 +173,6 @@ if (night_ctnr){
 
                 }
                 loaded_components = true
-    
             }
         }
 
@@ -186,4 +181,131 @@ if (night_ctnr){
 
     }
     render();
+}
+
+// this section handles controls and manipulation of the camera
+var index_hero_ctnr = document.querySelector('.hero_ctnr')
+var hero_text = document.querySelector('.text_ctnr')
+var control_panel = document.querySelector('.controls_ctnr')
+var mountain = document.querySelector('#mountain')
+var control_sets = document.querySelectorAll('.control_set')
+var control_message = document.querySelector('#controls_ctnr_message')
+var control_buttons = document.querySelectorAll('.control_button')
+
+const show_controls_tl = gsap.timeline({
+    paused: true,  
+})
+
+// mountain.style.transition = "2s"
+// mountain.style.opacity = 0
+
+show_controls_tl.to(
+    mountain,
+    {
+        opacity: 0,
+        duration: .15,
+        ease: Sine.easeInOut,
+        display: 'none',
+    },
+    1
+), 1
+
+show_controls_tl.to(
+    hero_text,
+    {
+        opacity: 0,
+        duration: .15,
+        ease: Sine.easeInOut,
+        display: 'none',
+    },
+    1
+), 1
+
+show_controls_tl.to(
+    control_panel,
+    {
+        duration: 1,
+        left: '2em',
+        x: '-20em',    
+        ease: Sine.easeInOut,
+    }
+), 1
+
+
+
+function handleKeyDown(event, custom_action=false){
+    if (custom_action){
+        var action = custom_action
+    } else {
+        var action = event.key.toLowerCase()
+    }
+    
+
+    element = document.querySelector(`#${action}`)
+    console.log(element)
+
+    element.classList.add('apply_click_light')
+
+    // element.style.transition = '.5s'
+    // element.style.filter = 'brightness(2)'
+    // element.style.filter = 'none'
+
+
+
+    if (action==='w'){
+        camera.position.z -= 1
+    }
+
+    if (action==='s'){
+        camera.position.z += 1
+    }
+
+    if (action==='d'){
+        camera.position.x += 1
+    }
+    if (action==='a'){
+        camera.position.x -= 1
+    }
+
+    if (action==='q'){
+        camera.position.y += 1
+    }
+    if (action==='e'){
+        camera.position.y -= 1
+    }
+
+    setTimeout(function(){
+        element.classList.remove('apply_click_light')
+    }, 250)
+
+}
+
+function handleKeyUp(event){
+    let action = event.key.toLowerCase()
+
+    if (action==='enter'){
+        control_message.innerText = 'controls for the camera'
+    
+        show_controls_tl.play()
+
+  
+        for (let elem of control_sets){
+            elem.style.display = 'flex';
+        }
+
+        for (let elem of control_buttons){
+            elem.addEventListener('click', handleControlClick, false)
+        }
+
+
+        document.addEventListener('keydown', handleKeyDown)
+        document.removeEventListener('keyup', handleKeyUp)
+    }
+}
+
+document.addEventListener('keyup', handleKeyUp)
+
+
+function handleControlClick(event){
+    handleKeyDown(event, custom_action=event.target.id)
 }

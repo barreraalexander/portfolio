@@ -6,7 +6,7 @@ on:
 
 jobs:
   job1:
-    runs-on: ububtu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: pull git repo
         uses: actions/checkout@v2

@@ -192,6 +192,47 @@ var control_sets = document.querySelectorAll('.control_set')
 var control_message = document.querySelector('#controls_ctnr_message')
 var control_buttons = document.querySelectorAll('.control_button')
 
+const show_controls_tl = gsap.timeline({
+    paused: true,  
+})
+
+// mountain.style.transition = "2s"
+// mountain.style.opacity = 0
+
+show_controls_tl.to(
+    mountain,
+    {
+        opacity: 0,
+        duration: .15,
+        ease: Sine.easeInOut,
+        display: 'none',
+    },
+    1
+), 1
+
+show_controls_tl.to(
+    hero_text,
+    {
+        opacity: 0,
+        duration: .15,
+        ease: Sine.easeInOut,
+        display: 'none',
+    },
+    1
+), 1
+
+show_controls_tl.to(
+    control_panel,
+    {
+        duration: 1,
+        left: '2em',
+        x: '-20em',    
+        ease: Sine.easeInOut,
+    }
+), 1
+
+
+
 function handleKeyDown(event, custom_action=false){
     if (custom_action){
         var action = custom_action
@@ -245,19 +286,9 @@ function handleKeyUp(event){
     if (action==='enter'){
         control_message.innerText = 'controls for the camera'
     
-        mountain.style.transition = "2s"
-        mountain.style.opacity = 0
-    
-        hero_text.style.transition = "2s"
-        hero_text.style.opacity = 0
-        hero_text.style.display = "block"
-        
-        index_hero_ctnr.style.transition = "2s"
-        index_hero_ctnr.style.flexFlow = 'row'
-        index_hero_ctnr.style.justifyContent = 'flex-start'
-        index_hero_ctnr.style.alignItems = 'flex-end'
-        // index_hero_ctnr.style.
-    
+        show_controls_tl.play()
+
+  
         for (let elem of control_sets){
             elem.style.display = 'flex';
         }

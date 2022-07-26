@@ -210,3 +210,25 @@
   -webkit-animation: click_down 1s alternate;
   background-color: red !important;
 }
+
+@keyframes click_light{
+  from {
+    filter: brightness(0);
+  } to {
+    filter: brightness(2);
+  }
+}
+
+
+@keyframes click_light{
+  from {
+    filter: brightness(0);
+  } to {
+    filter: brightness(4);
+  }
+}
+
+.apply_click_light{
+  animation: click_light .25s;
+  -webkit-animation: click_light .25s;
+}

@@ -35,7 +35,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: [build]
-
+    environment:
+      name: production
     steps:
       - name: deploy to ubuntu server
         uses: appleboy/ssh-action@master
@@ -43,10 +44,10 @@ jobs:
           host: ${{secrets.PROD_HOST}}
           username: ${{secrets.PROD_USERNAME}}
           password: ${{secrets.PROD_PASSWORD}}
-          # script: |
-          #   cd portfolio
-          #   git pull
-          #   echo ${{secrets.PROD_PASSWORD}} | sudo -S supervisorctl reload 
+          script: |
+            cd portfolio
+            git pull
+            echo ${{secrets.PROD_PASSWORD}} | sudo -S supervisorctl reload 
 
 
       

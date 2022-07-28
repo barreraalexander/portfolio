@@ -39,12 +39,12 @@ jobs:
     steps:
       - name: deploying stuff
         run: echo "let me deploy"
-      # - name: deploy to ubuntu server
-        # uses: appleboy/ssh-action@master
-        # with:
-        #   host: ${{secrets.PROD_HOST}}
-        #   username: ${{secrets.PROD_USERNAME}}
-        #   password: ${{secrets.PROD_PASSWORD}}
+      - name: deploy to ubuntu server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.PROD_HOST}}
+          username: ${{secrets.PROD_USERNAME}}
+          password: ${{secrets.PROD_PASSWORD}}
           # script: |
           #   cd portfolio
           #   git pull

@@ -1,5 +1,6 @@
 default-nginx
 gunicorn.service
+supervisor.service
 system.service
 .webassets-cache
 ".webassets-cache"

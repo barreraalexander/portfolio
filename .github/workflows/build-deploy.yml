@@ -46,9 +46,9 @@ jobs:
           username: ${{secrets.PROD_USERNAME}}
           password: ${{secrets.PROD_PASSWORD}}
           script: |
-            cd app/src
+            cd portfolio
             git pull
-            echo ${{secrets.PROD_PASSWORD}} | sudo -S systemctl restart api 
+            echo ${{secrets.PROD_PASSWORD}} | sudo -S supervisorctl reload 
 
 
       

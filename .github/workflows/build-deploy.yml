@@ -39,7 +39,7 @@ jobs:
     steps:
       - name: deploying stuff
         run: echo "let me deploy"
-      - name: deploy to ubuntu server
+      # - name: deploy to ubuntu server
         # uses: appleboy/ssh-action@master
         # with:
         #   host: ${{secrets.PROD_HOST}}

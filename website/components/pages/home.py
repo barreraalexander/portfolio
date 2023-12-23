@@ -1,6 +1,5 @@
 from flask import Markup
 
-from website.components.sections.hero import component as hero
 from website.components.sections.story import component as story
 from website.components.sections.skills import component as skills
 from website.components.sections.experience import component as experience

@@ -1,0 +1,120 @@
+{% macro hero() %}
+
+
+<section id="hero_section">
+    <div class="hero_ctnr">
+        <div class="text_ctnr">
+            <h2>
+                OUT OF THIS WORLD
+            </h2>
+            <h1 id="hero_h1">
+                WEB DEVELOPER
+            </h1>
+            <small>
+                ALEXANDER BARRERA
+            </small>
+        </div>
+
+        <div class="controls_ctnr">
+            <p id="controls_ctnr_message">
+                press <button> ENTER </button> to the control camera 
+            </p>
+            <div class="controls">
+    
+                <div class="control_set">
+    
+                    <div class="control_button">
+                        <p id='q' class="control">
+                            Q
+                        </p>
+                        <small>
+                            up
+                        </small>
+                    </div>
+    
+                    <div class="control_button">
+                        <p id='e' class="control">
+                            E
+                        </p>
+                        <small>
+                            down
+                        </small>
+                    </div>
+                </div>
+    
+                <div class="control_set">
+                    <div class="control_button">
+                        <p id='w' class="control">
+                            W
+                        </p>
+                        <small>
+                            forward
+                        </small>
+                    </div>
+                </div>
+    
+                <div class="control_set">
+                    
+                    <div class="control_button">
+                        <p id='a' class="control">
+                            A
+                        </p>
+                        <small>
+                            left 
+                        </small> 
+                    </div>
+                    
+    
+                    <div class="control_button">
+                        <p id='s' class="control">
+                            S
+                        </p>
+                        <small>
+                            backward
+                        </small>
+                    </div>
+    
+                    <div class="control_button">
+                        <p id='d' class="control">
+                            D
+                        </p>
+                        <small>
+                            right
+                        </small>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <img
+        id="mountain"
+        src="{{url_for('static', filename='images/assets/mountain_cutout.png')}}"
+        alt="mountain artifact"
+    >
+
+    <div
+        id="night_ctnr"
+        
+        data-moon_model="{{url_for('static', filename='images/assets/three_d/moon.glb')}}"
+        data-ship_model="{{url_for('static', filename='images/assets/three_d/ship.glb')}}"
+        data-planet_model="{{url_for('static', filename='images/assets/three_d/planet.glb')}}"
+    >
+    </div>
+
+</section>
+{% block script %}
+
+
+<script
+    src="{{url_for('static', filename='js/animations/hero.js')}}">
+</script>
+
+<script
+    src="{{url_for('static', filename='js/three_d/planets_mod.js')}}">
+</script>
+
+{% endblock %}
+
+{% endmacro %}

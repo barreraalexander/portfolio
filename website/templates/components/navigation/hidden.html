@@ -1,0 +1,27 @@
+{% from 'components/pieces/button_like.html' import button_like %}
+{% from 'components/navigation/linkset.html' import linkset %}
+
+{% macro hidden() %}
+
+<section id="hidden_section">
+    <div class="glass_back">
+    </div>
+    <div class="modal_ctnr">
+        <nav>
+            <ul>
+                <img
+                    id="close_hidden_menu"
+                    class="close_navigation_menu"
+                    src="{{url_for('static', filename='images/assets/icons/cancel.svg')}}"
+                    alt="close icon"
+                    aria-label="closes the mobile navigation menu"
+                >
+                {{linkset()}}
+                {{button_like('call', variant=0)}}
+                {{button_like('resume', variant=1)}}
+            </ul>
+        </nav>
+    </div>
+</section>
+
+{% endmacro %}

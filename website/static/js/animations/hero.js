@@ -38,5 +38,3 @@ function mod_text(event){
         },
     ), 1
 }
-
-// document.addEventListener('scroll', mod_text, false)

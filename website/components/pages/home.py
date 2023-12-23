@@ -9,13 +9,16 @@ from website.components.sections.resume_like import component as resume_like
 def component():
     return Markup(f"""
     <section id="index_section">
-        {hero()}
-        {skills()}
-        {experience()}
-        {story()}
-        {resume_like()}
+
     </section>
     
     
     
     """)
+
+
+        # {hero()}
+        # {skills()}
+        # {experience()}
+        # {story()}
+        # {resume_like()}

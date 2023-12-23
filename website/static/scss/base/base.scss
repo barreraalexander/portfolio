@@ -3,6 +3,7 @@ body, html{
     margin: 0;
     font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
     background-color: $proj_black;
+    font-size: .9em;
 }
 
 
@@ -14,6 +15,7 @@ body, html{
 
 @media only screen and (min-width: $tablet_bp){
     body, html{
+        // font-size: 1.1em;
         // font-size: 1.1em;
     }
 }

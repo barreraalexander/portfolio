@@ -1,0 +1,14 @@
+{% macro linkset() %}
+
+<a href="{{url_for('main.index')}}">
+    <li>
+        Home
+    </li>
+</a>
+<a href="{{url_for('main.styles')}}">
+    <li>
+        UI Styles
+    </li>
+</a>
+
+{% endmacro %}

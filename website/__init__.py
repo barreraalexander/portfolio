@@ -10,6 +10,7 @@ assets = Environment ()
 mail = Mail()
 
 from website.utils.assets import bundles
+from website import schemas
 
 def create_app (config_class=settings):
     app = Flask (__name__)

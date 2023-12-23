@@ -34,8 +34,8 @@ def load_dicts ():
     return dict(
         META_DICT=META_DICT,
         CONTACT_DICT=CONTACT_DICT,
-        contact_schema=schemas.contactLanguage()
-
+        contact_schema=schemas.contactLanguage(),
+        meta_schema=schemas.metaLanguage(),
     )
 
 

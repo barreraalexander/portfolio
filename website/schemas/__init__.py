@@ -1,1 +1,1 @@
-from .website_language import *
+from .language.website_language import *

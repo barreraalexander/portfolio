@@ -8,12 +8,12 @@ class websiteLanguage(BaseModel):
 
 
 class contactAttribute(BaseModel):
-    pass
+    text: str
 
 class contactLanguage(BaseModel):
-    variant: int = 2
-
-
+    phone: contactAttribute = contactAttribute(text='+19548828507')
+    email: contactAttribute = contactAttribute(text='barreraalexander93@gmail.com')
+    
 
 class metaAttribute(BaseModel):
     text: str
@@ -41,3 +41,6 @@ class metaLanguage(BaseModel):
     )
     
 
+
+class socialMediaAttribute(BaseModel):
+    pass

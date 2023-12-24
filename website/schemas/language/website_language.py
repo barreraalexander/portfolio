@@ -1,8 +1,6 @@
 from pydantic import BaseModel
 from flask import url_for
 
-
-
 class websiteLanguage(BaseModel):
     variant: int = 2
 
@@ -43,4 +41,9 @@ class metaLanguage(BaseModel):
 
 
 class socialMediaAttribute(BaseModel):
-    pass
+    link: str
+
+class socialMediaLinks(BaseModel):
+    github: socialMediaAttribute = socialMediaAttribute(link='https://github.com/barreraalexander')
+    linkedin: socialMediaAttribute = socialMediaAttribute(link='https://www.linkedin.com/in/abarrera-tech/')
+    upwork: socialMediaAttribute = socialMediaAttribute(link='https://www.upwork.com/freelancers/~0120837e444852e684')

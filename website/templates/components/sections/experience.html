@@ -1,0 +1,37 @@
+{% from 'components/pieces/dramatic_h1.html' import dramatic_h1 %}
+
+
+{% macro experience_card(experience) %}
+
+<div
+    class="experience"
+    data-max_count="{{experience.max_count}}"
+>
+    <h3>
+        0
+    </h3>
+    <p>
+        {{experience.description}}
+    </p>
+</div>
+
+{% endmacro %}
+
+{% macro experience(experience_schemas) %}
+
+<section id="experience_section">
+    {{dramatic_h1('Lots of Experience')}}
+    <div class="experience_ctnr">
+        {{experience_card(experience_schemas.contract)}}
+        {{experience_card(experience_schemas.technology)}}
+        {{experience_card(experience_schemas.year)}}
+    </div>
+    <div class="chart_ctnr">
+        <canvas id="skills_chart"></canvas>
+    </div>
+</section>
+<script src="{{url_for('static', filename='js/animations/experience.js')}}">
+</script>
+
+
+{% endmacro %}

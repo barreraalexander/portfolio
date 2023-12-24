@@ -18,11 +18,11 @@ META_DICT = {
     "domain_name" : "Barrera Portfolio"
 }
 
-SOCIAL_MEDIA_LINKS = {
-    "github" : "https://github.com/barreraalexander",
-    "linkedin" : "https://www.linkedin.com/in/abarrera-tech/",
-    "upwork" : "https://www.upwork.com/freelancers/~0120837e444852e684",
-}
+# SOCIAL_MEDIA_LINKS = {
+#     "github" : "https://github.com/barreraalexander",
+#     "linkedin" : "https://www.linkedin.com/in/abarrera-tech/",
+#     "upwork" : "https://www.upwork.com/freelancers/~0120837e444852e684",
+# }
 
 
 def unpack_elems(elems):

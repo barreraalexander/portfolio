@@ -2,18 +2,16 @@
 {% from 'components/pieces/button_like.html' import button_like %}
 {% from 'components/navigation/linkset.html' import linkset %}
 
-{% macro footer() %}
-
-
+{% macro footer(socials_schema) %}
 
 <section id="footer_section">
         
     <div class="links_ctnr">
 
-        <a href="{SOCIAL_MEDIA_LINKS.get('github')}" target="_blank">
+        <a href="{{socials_schema.github.link}}" target="_blank">
             <div class="img_text_ctnr">
                 <img
-                    src="{url_for('static', filename='images/assets/icons/github.svg')}"
+                    src="{{url_for('static', filename='images/assets/icons/github.svg')}}"
                 >
                 <p>
                     github
@@ -21,10 +19,10 @@
             </div>
         </a>
         
-        <a href="{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}" download>
+        <a href="{{url_for('static', filename='docs/BarreraAlexanderResume21.pdf')}}" download>
             <div class="img_text_ctnr">
                 <img
-                    src="{url_for('static', filename='images/assets/icons/resume.svg')}"
+                    src="{{url_for('static', filename='images/assets/icons/resume.svg')}}"
                 >
                 <p>
                     resume
@@ -32,11 +30,11 @@
             </div>
         </a>
 
-        <a href="{SOCIAL_MEDIA_LINKS.get('upwork')}" target="_blank">
+        <a href="{{socials_schema.upwork.link}}" target="_blank">
             <div class="img_text_ctnr">
                 <img
                     id="upwork"
-                    src="{url_for('static', filename='images/assets/icons/upwork_logo.svg')}"
+                    src="{{url_for('static', filename='images/assets/icons/upwork_logo.svg')}}"
                 >
                 <p>
                     upwork
@@ -44,11 +42,11 @@
             </div>
         </a>
 
-        <a href="{SOCIAL_MEDIA_LINKS.get('linkedin')}" target="_blank">
+        <a href="{{socials_schema.linkedin.link}}" target="_blank">
             <div class="img_text_ctnr">
                 <img
                     id="linkedin"
-                    src="{url_for('static', filename='images/assets/icons/linkedin.svg')}"
+                    src="{{url_for('static', filename='images/assets/icons/linkedin.svg')}}"
                 >
                 <p>
                     linkedin
@@ -63,8 +61,8 @@
             Navigation
         </h2>
         <ul>
-            {main_linkset()}
-            {button_like('resume')}
+            {{linkset()}}
+            {{button_like('resume')}}
         </ul>
     </div>
 

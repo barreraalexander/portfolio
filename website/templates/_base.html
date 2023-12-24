@@ -1,4 +1,5 @@
 {% from 'components/navigation/header.html' import header %}
+{% from 'components/navigation/footer.html' import footer %}
 
 <!DOCTYPE html>
 
@@ -31,7 +32,7 @@
         {% endassets %}
 
         <title>
-            {{title}} | {{meta_schema.domain_name}}
+            {{title}} | {{meta_schema.domain_name.text}}
         </title>
 
 
@@ -73,7 +74,7 @@
         {% block content %}
         {% endblock %}
         
-
+        {{footer(socials_schema)}}
 
         <script
             src="{{url_for('static', filename='js/animations/contact_modal.js')}}">

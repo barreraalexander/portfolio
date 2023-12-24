@@ -1,0 +1,67 @@
+{% from 'components/pieces/dramatic_h1.html' import dramatic_h1 %}
+
+{% macro shift_dots() %}
+
+{% for i in range(200) %}
+    <div class="dot apply_shift_dot">
+    </div>
+{% endfor %}
+
+{% endmacro %}
+
+
+
+{% macro skill_card(skill_schema) %}
+
+<div
+    class="skill_card"
+    data-variant="{{skill_schema.variant}}"\
+>
+    <div
+        class="dotted_bg_ctnr"
+        data-variant="{{skill_schema.variant}}"
+    >
+        {{shift_dots()}}
+    </div>
+    <div class="skill_card_contents">
+        <img
+            class="skill_img"
+            src="{{ url_for('static', filename=skill_schema.img_static_location) }}"
+            alt=""
+
+        >
+        <h2>
+            {{skill_schema.title}}
+        </h2>
+        <p>
+            {{skill_schema.blurb}}
+        </p>
+    </div>
+</div> 
+
+{% endmacro %}
+
+
+{% macro skills(skill_schemas) %}
+
+
+<section id="skills_ctnr">
+    <img
+        class="skills_bg"
+        src="{{url_for('static', filename='images/assets/icons/rocket.svg')}}"
+        alt="rocket decoration"
+    >
+    {{dramatic_h1('Type of Work I Do')}}
+    <div class="skill_cards_ctnr">
+        {{ skill_card(skill_schemas.web_dev) }}
+        {{ skill_card(skill_schemas.db_management) }}
+        {{ skill_card(skill_schemas.api_dev) }}
+        {{ skill_card(skill_schemas.server) }}
+    </div>
+</section>
+<script src="{{url_for('static', filename='js/animations/skill_card.js')}}">
+</script>
+
+
+
+{% endmacro %}

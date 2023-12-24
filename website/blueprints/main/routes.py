@@ -22,11 +22,10 @@ main = Blueprint ('main', __name__)
 @main.context_processor
 def load_base ():
     return dict(
-        # header=header,
         footer=footer,
         contact_modal=contact_modal,
-        # hidden=hidden,
         github_tab=github_tab,
+        # socials_schema=schemas.socialMediaLinks()
     )
 
 @main.context_processor
@@ -36,6 +35,7 @@ def load_dicts ():
         CONTACT_DICT=CONTACT_DICT,
         contact_schema=schemas.contactLanguage(),
         meta_schema=schemas.metaLanguage(),
+        socials_schema=schemas.socialMediaLinks()
     )
 
 
@@ -43,7 +43,9 @@ def load_dicts ():
 def index():
     return render_template('index.html',
         title='Home',
-        home_section=home_section
+        home_section=home_section,
+        skill_schemas=schemas.skills(),
+        experience_schemas=schemas.experiences()
     )
 
 

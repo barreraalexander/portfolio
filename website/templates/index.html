@@ -4,6 +4,7 @@
 {% from 'components/sections/skills.html' import skills %}
 {% from 'components/sections/experience.html' import experience %}
 {% from 'components/sections/story.html' import story %}
+{% from 'components/sections/resume_like.html' import resume_like %}
 
 {% block content %}
 
@@ -12,6 +13,7 @@
     {{skills(skill_schemas)}}
     {{experience(experience_schemas)}}
     {{story()}}
+    {{resume_like(comment_schemas)}}
 </main>
 
 

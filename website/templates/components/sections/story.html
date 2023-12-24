@@ -28,13 +28,13 @@
 
     <img
         class="me_picture"
-        src="{url_for('static', filename='images/assets/me1.png')}"
+        src="{{url_for('static', filename='images/assets/me1.png')}}"
         alt="profile picture of alexander barrera"
         loading="lazy"
     >
 
-    { button_like('call', variant=0) }
-    { button_like('resume', variant=1) }
+    {{button_like('call')}}
+    {{button_like('resume')}}
 
 </section>
 <script src="{script}">

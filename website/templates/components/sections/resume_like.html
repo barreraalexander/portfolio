@@ -1,0 +1,46 @@
+{% from 'components/pieces/dramatic_h1.html' import dramatic_h1 %}
+
+{% macro comment(comment_schema) %}
+
+<div class="comment_ctnr apply_shifting_border">
+    <p class="comment">
+        "{{comment_schema.comment}}"
+    </p>
+    <p class="author">
+        -{{comment_schema.author_name}}
+    </p>
+    <a class="origin" href="{origin_url}" target="_blank">
+        {{comment_schema.origin}}
+    </a>
+</div>
+
+{% endmacro %}
+
+{% macro resume_like(comment_schemas) %}
+
+<section id="resume_like">
+    <img
+        class="background_img"
+        src="{{url_for('static', filename='images/assets/icons/comment.svg')}}"
+        alt="resume like comment"
+
+    >
+    <div>
+        {{dramatic_h1('A Word from Past Clients')}}
+    </div>
+
+    <div class="comments_ctnr">
+        {{comment(comment_schemas.tech_on_demand)}}
+        {comments('tod')}
+        {comments('upwork1')}
+        {comments('upwork2')}
+        {comments('upwork3')}
+    </div>
+
+</section>
+<script
+    src="{{url_for('static', filename='js/animations/resume_like.js')}}">
+</script>
+
+
+{% endmacro  %}

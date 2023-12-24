@@ -1,5 +1,5 @@
 from flask import Markup, url_for
-from website.components.pieces.button_like import component as button_like
+# from website.components.pieces.button_like import component as button_like
 
 def component():
     return Markup(f"""
@@ -50,8 +50,7 @@ def component():
             </div>
 
             <div class="buttons_ctnr">
-                {button_like('call', variant='min1')}
-                {button_like('resume', variant='min2')}
+
             </div>
         </div>
 

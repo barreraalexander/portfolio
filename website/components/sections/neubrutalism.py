@@ -1,5 +1,5 @@
 from flask import Markup, url_for
-from website.components.pieces.button_like import component as button_like
+# from website.components.pieces.button_like import component as button_like
 
 
 def component():

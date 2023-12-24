@@ -6,6 +6,8 @@ class Settings(BaseSettings):
     RECAPTCHA_SECRET_KEY: str = "thisisatest"
     EMAIL_USER: str = "thisisatest"
     EMAIL_PW: str = "thisisatest"
+    DEBUG: bool = True
+    PORT: int = 5001
 
     class Config:
         env_file = '.env'

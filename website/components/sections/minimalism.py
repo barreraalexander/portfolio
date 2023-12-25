@@ -50,7 +50,8 @@ def component():
             </div>
 
             <div class="buttons_ctnr">
-
+                button_like('call', variant='min1')
+                button_like('resume', variant='min2')
             </div>
         </div>
 

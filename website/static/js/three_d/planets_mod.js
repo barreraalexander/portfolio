@@ -1,6 +1,6 @@
 var night_ctnr = document.querySelector('#night_ctnr')
 if (night_ctnr){
-    alert('loading')
+    // alert('loading')
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(
         75,

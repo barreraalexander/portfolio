@@ -49,9 +49,11 @@ def component(title, elem_id=""):
 
     elif title=="upwork3":
         author_name = "Preston Gordon"
-        comment = """Alexander was great. He completed the
+        comment = """
+        Alexander was great. He completed the
         job promptly and was a pleasure to work with. This
-        job really helped me and my business. Thank you."""
+        job really helped me and my business. Thank you.
+        """
         origin = "www.usindustrial.com"
         origin_url = "https://www.usindustrial.com/"
 

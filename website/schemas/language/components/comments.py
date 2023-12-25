@@ -47,15 +47,23 @@ class comments(BaseModel):
     )
 
     upwork2: comment = comment(
-        author_name = 'Russell Owens',
-        comment = "I hired Alexander for a small HTML/CSS job. His code was well structured and the site looks good. He proactively identified issues and either fixed them or asked for guidance. He worked effectively with github branches, PRs and issue management. He was easy to work with and had a positive attitude.",
-        origin = 'www.privacyplaybook.com', 
-        origin_url = 'https://privacyplaybook.com/', 
+        author_name = 'Port Vendre',
+        comment = """
+            Alexander was great to work with.
+            Stayed on time, completed work exactly as asked,
+            and provided quality coding. We would definitely
+            recommend him and hope to work with him again!
+        """,
+        origin = 'upwork', 
+        origin_url = 'https://www.upwork.com/', 
     )
-
     upwork3: comment = comment(
-        author_name = 'Russell Owens',
-        comment = "I hired Alexander for a small HTML/CSS job. His code was well structured and the site looks good. He proactively identified issues and either fixed them or asked for guidance. He worked effectively with github branches, PRs and issue management. He was easy to work with and had a positive attitude.",
-        origin = 'www.privacyplaybook.com', 
-        origin_url = 'https://privacyplaybook.com/', 
+        author_name = 'Preston Gordon',
+        comment = """
+        Alexander was great. He completed the
+        job promptly and was a pleasure to work with. This
+        job really helped me and my business. Thank you.
+        """,
+        origin = 'www.usindustrial.com',
+        origin_url = 'https://www.usindustrial.com/',
     )

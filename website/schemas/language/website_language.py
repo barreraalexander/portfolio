@@ -1,5 +1,4 @@
-from pydantic import BaseModel
-from flask import url_for
+from pydantic import BaseModel, constr
 
 class websiteLanguage(BaseModel):
     variant: int = 2
@@ -14,7 +13,7 @@ class contactLanguage(BaseModel):
     
 
 class metaAttribute(BaseModel):
-    text: str
+    text: constr(strip_whitespace=True)
 
 
 class metaLanguage(BaseModel):

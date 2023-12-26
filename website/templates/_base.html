@@ -9,18 +9,36 @@
 
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
-        <meta name="description" content="{{META_DICT['description']}}">
-        <meta name="keywords" content="{{META_DICT['keywords']}}" />                
+        <meta
+            charset="utf-8"
+        >
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1, shrink-to-fit=no"
+        >        
+        <meta
+            name="description"
+            content="{{meta_schema.description.text}}"
+        >
+        <meta
+            name="keywords"
+            content="{{meta_schema.keywords.text}}"
+        >                
 
         
 
 
         <!-- Montserrot Fonts 100, 300  -->
         <!-- Roboto Slab Fonts 300, 400, 700  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        >
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        >
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,300&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
@@ -54,22 +72,43 @@
 
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="{{META_DICT['domain_name']}}" />
-        <meta property="og:description" content="{{META_DICT['description']}}" />
-        <meta property="og:url" content="{{META_DICT['domain']}}" />
-        <meta property="og:site_name" content="{{META_DICT['domain_name']}}" />
+        <meta property="og:title" content="{{meta_schema.domain_name.text}}" />
+        <meta property="og:description" content="{{meta_schema.description.text}}" />
+        <meta property="og:url" content="{{meta_schema.domain.text}}" />
+        <meta property="og:site_name" content="{{meta_schema.domain_name.text}}" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:description" content="{{META_DICT['description']}}" />
-        <meta name="twitter:title" content="{{META_DICT['domain_name']}}" />
+        <meta name="twitter:description" content="{{meta_schema.description.text}}" />
+        <meta name="twitter:title" content="{{meta_schema.domain_name.text}}" />
 
     </head>
 
     <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+        integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+    </script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+    </script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js"
+    >
+    </script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+        integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+    </script>
         
         {{header()}}
         {{github_tab(socials_schema)}}

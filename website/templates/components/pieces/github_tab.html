@@ -1,0 +1,16 @@
+{% macro github_tab(socials_schema) %}
+
+<div class="github_tab">
+    <img
+        src="{{url_for('static', filename='images/assets/icons/github.svg')}}"
+
+    >
+    <a href="{{socials_schema.github.link}}/portfolio" target="_blank">
+        <p>
+            see the code for this website. it's pretty darn clean, if I don't say so myself :>
+        </p>
+    </a>
+</div>
+
+
+{% endmacro %}

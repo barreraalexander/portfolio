@@ -1,4 +1,6 @@
 from pydantic import BaseModel, constr
+from datetime import datetime, timedelta
+from typing import List
 
 class websiteLanguage(BaseModel):
     variant: int = 2
@@ -46,3 +48,50 @@ class socialMediaLinks(BaseModel):
     github: socialMediaAttribute = socialMediaAttribute(link='https://github.com/barreraalexander')
     linkedin: socialMediaAttribute = socialMediaAttribute(link='https://www.linkedin.com/in/abarrera-tech/')
     upwork: socialMediaAttribute = socialMediaAttribute(link='https://www.upwork.com/freelancers/~0120837e444852e684')
+
+
+
+class demoPost(BaseModel):
+    title: str
+    blurb: str = "Commodo sint cupidatat commodo et minim amet non ipsum irure ut pariatur adipisicing non. Qui esse dolor reprehenderit adipisicing sint minim sint. Non commodo do reprehenderit laborum est veniam excepteur incididunt sit ad ullamco laborum Lorem et. Laborum reprehenderit amet culpa duis aute in magna esse voluptate velit quis anim. Minim sit sint dolore sit ipsum commodo duis velit anim Lorem."
+
+    posted: datetime
+    tags: List[str]
+
+    @property
+    def posted_as_str(self) -> str:
+        return self.posted.strftime("%b %d, %Y | %I:%M %p")
+
+
+class demoPosts(BaseModel):
+    demo_posts = List[demoPost] = [
+        demoPost(
+            title='How Adam and Eve Cooked Eggs in the Iron Age',
+            posted=datetime.utcnow() - timedelta(days=3, hours=5, minutes=5),
+            tags=[
+                'history',
+                'funny',
+                'top post',
+            ],
+        ),
+    
+        demoPost(
+            title='Between the Queen and I',
+            posted=datetime.utcnow() - timedelta(days=7, hours=2, minutes=17),
+            tags=[
+                'art',
+                'sad',
+                'trending',
+            ],
+        ),
+
+        demoPost(
+            title='How to Make Components in Python Flask',
+            posted=datetime.utcnow() - timedelta(days=10, hours=8, minutes=25),
+            tags=[
+                'technology',
+                'informative',
+                'top post'
+            ],
+        ),
+    ]

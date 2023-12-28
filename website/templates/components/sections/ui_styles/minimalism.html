@@ -1,0 +1,62 @@
+{% macro minimalism() %}
+
+<section id="minimalism_section">
+    <img
+        src="{ url_for('static', filename='images/assets/icons/blob_orange.svg') }"
+        class="blob_bg"
+    >
+    <div class="hero_text_ctnr">
+        <h1>
+            Minimal
+        </h1>
+        <p class="description">
+            The go-to style for IT companies, modern restaurants, payment processing applications, and much more.
+        </p>
+        <p class="description">
+            Minimalism is characterized by low contrast colors, subtle shadows, and linear-gradients.
+        </p>
+
+        <div class="minimal_cards_ctnr">
+            <div class="min_card">
+                <img
+                    src="{ url_for('static', filename='images/assets/icons/flower.svg') }"
+                    alt="flower image"
+                >
+                <p>
+                    Minimalism is very light on the css and javascript assets.
+                </p>
+            </div>
+            <div class="min_card">
+                <img
+                    src="{ url_for('static', filename='images/assets/icons/eye.svg') }"
+                
+                >
+                <p>
+                    Very easy on the eyes, and great for accessibility ratings.
+                </p>
+            </div>
+            <div class="min_card">
+                <div class="slider_ctnr apply_breathe">
+                    <div class="slide">
+                    </div>
+                </div>
+                <p>
+                    Simple to add light and dark themes, give it a try with the switch above.
+                </p>
+            </div>
+        </div>
+
+        <div class="buttons_ctnr">
+            button_like('call', variant='min1')
+            button_like('resume', variant='min2')
+        </div>
+    </div>
+
+
+    <script src="{ url_for('static', filename='js/animations/minimalism.js') }">
+    </script>
+
+</section>
+
+
+{% endmacro %}

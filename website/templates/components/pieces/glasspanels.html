@@ -1,0 +1,119 @@
+{% from 'components/pieces/button_like.html' import button_like %}
+
+
+{% macro glass_panel1() %}
+
+<div class="panel glass panel1">
+    <h2>
+        My Profile
+    </h2>
+    <div class="profile_ctnr">
+        <img
+            class="profile_img"
+            src="{ url_for('static', filename='images/assets/barrera_cutout.png') }"
+        >
+        <div class="profile_details">
+            <h3>
+                Alexander Barrera
+            </h3>
+            <small>
+                Hollywood, FL
+            </small>
+            <small>
+                {datetime.now().strftime("%I:%M %p")}
+            </small>
+            {{button_like('available')}}
+        </div>
+    </div>
+    <p>
+        Profile sections would look something like this. Often pushed off to the right and above non-essential information in desktop mode, and sitting at the top of the stack in mobile mode.
+    </p>
+</div>
+
+
+{% endmacro %}
+
+
+
+
+{% macro glass_panel2() %}
+
+
+
+<div class="panel glass panel2">
+    <h2>
+        Nonessential Information
+    </h2>
+    <p>
+        This section is often pushed off to the right on desktop, and at the bottom of the stack on mobile, or hidden completely. This would often include the archive section of a news website or blog. On social media sites, the nonessential section would store advertisements, suggested friends and groups.
+    </p>
+    <ul>
+        <li>
+            March 2022
+        </li>
+        <li>
+            February 2022
+        </li>
+        <li>
+            January 2022
+        </li>
+        <li>
+            December 2021
+        </li>
+        <li>
+            November 2021
+        </li>
+        <li>
+            October 2021
+        </li>
+        <li>
+            September 2021
+        </li>
+        <li>
+            August 2021
+        </li>
+        <li>
+            July 2021
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+{% endmacro %}
+
+
+
+
+
+{% macro glass_panel3() %}
+
+<div>
+    <div class="post">
+        <h4>
+            {post_dict.get('title')}
+        </h4>
+        <p class="posted">
+            {post_dict.get('posted')}
+        </p>
+        <div class="tags_ctnr">
+            <p>
+                #{post_dict.get('tags')[0]}
+            </p>
+            <p>
+                #{post_dict.get('tags')[1]}
+            </p>
+            <p>
+                #{post_dict.get('tags')[2]}
+            </p>
+        </div>
+        <p class="blurb">
+            {post_dict.get('blurb')}
+        </p>
+    </div>
+</div>
+
+
+{% endmacro %}

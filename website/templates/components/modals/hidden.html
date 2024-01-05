@@ -1,7 +1,7 @@
 {% from 'components/pieces/button_like.html' import button_like %}
 {% from 'components/navigation/linkset.html' import linkset %}
 
-{% macro hidden() %}
+{% macro hidden(buttonlikes_schema) %}
 
 <section id="hidden_section">
     <div class="glass_back">
@@ -17,8 +17,8 @@
                     aria-label="closes the mobile navigation menu"
                 >
                 {{linkset()}}
-                {{button_like('call', variant=0)}}
-                {{button_like('resume', variant=1)}}
+                {{button_like(buttonlikes_schema.call)}}
+                {{button_like(buttonlikes_schema.resume)}}
             </ul>
         </nav>
     </div>

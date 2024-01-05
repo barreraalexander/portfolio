@@ -1,7 +1,7 @@
 {% from 'components/pieces/button_like.html' import button_like %}
 
 
-{% macro glass_panel1() %}
+{% macro glass_panel1(buttonlikes_schema) %}
 
 <div class="panel glass panel1">
     <h2>
@@ -22,7 +22,7 @@
             <small>
                 {datetime.now().strftime("%I:%M %p")}
             </small>
-            {{button_like('available')}}
+            {{button_like(buttonlikes_schema.available)}}
         </div>
     </div>
     <p>

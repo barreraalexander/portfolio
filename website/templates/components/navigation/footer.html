@@ -2,7 +2,7 @@
 {% from 'components/pieces/button_like.html' import button_like %}
 {% from 'components/navigation/linkset.html' import linkset %}
 
-{% macro footer(socials_schema) %}
+{% macro footer(socials_schema, buttonlikes_schema) %}
 
 <section id="footer_section">
         
@@ -62,7 +62,7 @@
         </h2>
         <ul>
             {{linkset()}}
-            {{button_like('resume')}}
+            {{button_like(buttonlikes_schema.resume)}}
         </ul>
     </div>
 

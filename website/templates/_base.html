@@ -110,14 +110,14 @@
     >
     </script>
         
-        {{header()}}
+        {{header(buttonlikes_schema)}}
         {{github_tab(socials_schema)}}
         {{contact_modal(contact_form)}}
 
         {% block content %}
         {% endblock %}
         
-        {{footer(socials_schema)}}
+        {{footer(socials_schema, buttonlikes_schema)}}
 
         <script
             src="{{url_for('static', filename='js/animations/contact_modal.js')}}">

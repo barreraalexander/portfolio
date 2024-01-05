@@ -1,3 +1,5 @@
+{% from 'components/pieces/button_like.html' import button_like %}
+
 {% macro minimalism() %}
 
 <section id="minimalism_section">
@@ -47,8 +49,8 @@
         </div>
 
         <div class="buttons_ctnr">
-            button_like('call', variant='min1')
-            button_like('resume', variant='min2')
+            {{button_like('call', variant='min1')}}
+            {{button_like('resume', variant='min2')}}
         </div>
     </div>
 

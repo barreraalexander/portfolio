@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template
 
-# SECTIONS
 from website import schemas
 
 from website.templates.components.forms.forms import ContactForm
@@ -19,6 +18,7 @@ def load_dicts ():
         contact_schema=schemas.contactLanguage(),
         meta_schema=schemas.metaLanguage(),
         socials_schema=schemas.socialMediaLinks(),
+        buttonlikes_schema=schemas.buttonLikes()
     )
 
 

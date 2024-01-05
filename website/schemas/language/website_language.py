@@ -45,9 +45,16 @@ class socialMediaAttribute(BaseModel):
     link: str
 
 class socialMediaLinks(BaseModel):
-    github: socialMediaAttribute = socialMediaAttribute(link='https://github.com/barreraalexander')
-    linkedin: socialMediaAttribute = socialMediaAttribute(link='https://www.linkedin.com/in/abarrera-tech/')
-    upwork: socialMediaAttribute = socialMediaAttribute(link='https://www.upwork.com/freelancers/~0120837e444852e684')
+    github: socialMediaAttribute = socialMediaAttribute(
+        link='https://github.com/barreraalexander'
+    )
+    linkedin: socialMediaAttribute = socialMediaAttribute(
+        link='https://www.linkedin.com/in/abarrera-tech/'
+    )
+    
+    upwork: socialMediaAttribute = socialMediaAttribute(
+        link='https://www.upwork.com/freelancers/~0120837e444852e684'
+    )
 
 
 
@@ -64,7 +71,7 @@ class demoPost(BaseModel):
 
 
 class demoPosts(BaseModel):
-    demo_posts = List[demoPost] = [
+    demo_posts : List[demoPost] = [
         demoPost(
             title='How Adam and Eve Cooked Eggs in the Iron Age',
             posted=datetime.utcnow() - timedelta(days=3, hours=5, minutes=5),

@@ -1,7 +1,7 @@
 {% from 'components/pieces/button_like.html' import button_like %}
 {% from 'components/navigation/linkset.html' import linkset %}
 
-{% macro header() %}
+{% macro header(buttonlikes_schema) %}
 
 <section id="header_section">
     <nav>
@@ -31,8 +31,8 @@
             </div>
 
             <div class="buttons_ctnr">
-                {{button_like('call')}}
-                {{button_like('contact')}}
+                {{button_like(buttonlikes_schema.call)}}
+                {{button_like(buttonlikes_schema.contact)}}
                 
             </div>
 

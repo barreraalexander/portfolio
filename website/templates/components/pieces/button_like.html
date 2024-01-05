@@ -1,63 +1,16 @@
-{% macro button_like(variant) %}
-
-
-{% set button_variants = {
-    'contact': {
-        'href': '',
-        'inner_text': 'Contact',
-        'img_src': url_for(
-            'static',
-            filename='images/assets/icons/contact.svg'
-        ),
-        'variant': 2
-    },
-    'call': {
-        'href': "",
-        'inner_text': 'Call',
-        'img_src': url_for(
-            'static',
-            filename='images/assets/icons/phone.svg'
-        ),
-        'variant': 0,
-    },
-    'resume': {
-        'href': url_for(
-            'static',
-            filename='docs/BarreraAlexanderResume21.pdf'
-        ),
-        'href_config': 'download', 
-        'inner_text': 'Resume',
-        'img_src': url_for(
-            'static',
-            filename='images/assets/icons/resume.svg'
-        ),
-        'variant': 1,
-    },
-    'available': {
-        'href': "",
-        'inner_text': 'Available',
-        'img_src': url_for(
-            'static',
-            filename='images/assets/icons/bolt.svg'
-        ),
-        'variant': 'glass',
-    },
-}
-
-%}
-
-{% set button_data = button_variants.get(variant) %}
+{% macro button_like(button_like) %}
 
 <a
-    href="{{button_data.get('href')}}"
+    href=""
 >
     <div
         class="button_like"
-        data-variant="{{button_data.get('variant')}}">
+        data-variant="{{button_like.variant.enumerator}}"
+    >
         <img
-            src="{{button_data.get('img_src')}}"
+            src="{{ url_for('static', filename=button_like.img_static_location) }}"
         >
-        <p>{{button_data.get('inner_text')}}</p>
+        <p>{{button_like.inner_text}}</p>
     </div>
 </a>
 

@@ -2,7 +2,7 @@
 {% from 'components/pieces/button_like.html' import button_like %}
 
 
-{% macro story() %}
+{% macro story(buttonlikes_schema) %}
 
 <section id="story_section" loading="lazy">
 
@@ -33,8 +33,8 @@
         loading="lazy"
     >
 
-    {{button_like('call')}}
-    {{button_like('resume')}}
+    {{buttonlikes_schema.call}}
+    {{buttonlikes_schema.resume}}
 
 </section>
 <script src="{{url_for('static', filename='js/animations/story.js')}}">

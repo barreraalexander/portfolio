@@ -133,7 +133,7 @@
 
 
 
-    {% assets "animations_js" %}
+    {% assets "base_js" %}
 
         <script
             type="text/javascript"
@@ -145,17 +145,17 @@
 
     {% endassets %}
 
-    {% assets "three_d_js" %}
 
-        <script
-            type="text/javascript"
-            src="{{ASSET_URL}}"
+    {% assets javascript_asset_name %}
+
+    <script
+        type="text/javascript"
+        src="{{ASSET_URL}}"
+    
+    >
         
-        >
-            
-        </script>
-
+    </script>
+    
     {% endassets %}
-
 
 </html>

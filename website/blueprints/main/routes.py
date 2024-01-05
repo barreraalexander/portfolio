@@ -26,7 +26,7 @@ def load_dicts ():
 def index():
     return render_template('index.html',
         title='Home',
-        # home_section=home_section,
+        javascript_asset_name='index_js',
         skill_schemas=schemas.skills(),
         experience_schemas=schemas.experiences(),
         comment_schemas=schemas.comments()
@@ -38,5 +38,5 @@ def index():
 def styles():
     return render_template('styles.html',
         title='Styles',
-        # styles_section=styles_section
+        javascript_asset_name='styles_js',
     )

@@ -14,34 +14,39 @@ bundles = {
         ],
         output='gen/css/main.%(version)s.css'
     ),
-    'animations_js':Bundle(
-        'js/animations/contact_modal.js',
-        'js/animations/dramatic_h1.js',
-        'js/animations/experience.js',
-        'js/animations/glassmin.js',
-        'js/animations/hero.js',
-        'js/animations/hidden.js',
-        'js/animations/minimalism.js',
-        'js/animations/neubrutalism.js',
-        'js/animations/resume_like.js',
-        'js/animations/shifting_dots.js',
-        'js/animations/skill_card.js',
-        'js/animations/story.js',
-        filters='jsmin',
-        depends=[
-            'js/animations/*.js',
-        ],
-        output='gen/js/animations.%(version)s.js'
-    ),
-    'three_d_js':Bundle(
-        # 'js/three_d/interactive_donut.js',
-        'js/three_d/planets_mod.js',
-        # 'js/three_d/rain_scape.js',
+    'base_js':Bundle(
+        'js/base/contact_modal.js',
+        'js/base/dramatic_h1.js',
+        'js/base/hidden.js',
         filters='jsmin',
         depends=[
             'js/three_d/*.js',
         ],
-        output='gen/js/three_d.%(version)s.js'
+        output='gen/js/base.%(version)s.js'
+    ),
+    'index_js':Bundle(
+        'js/index/experience.js',
+        'js/index/hero.js',
+        'js/index/planets_mod.js',
+        'js/index/resume_like.js',
+        'js/index/shifting_dots.js',
+        'js/index/skill_card.js',
+        'js/index/story.js',
+        filters='jsmin',
+        depends=[
+            'js/animations/*.js',
+        ],
+        output='gen/js/index.%(version)s.js'
+    ),
+    'styles':Bundle(
+        'js/animations/glassmin.js',
+        'js/animations/minimalism.js',
+        'js/animations/neubrutalism.js',
+        filters='jsmin',
+        depends=[
+            'js/three_d/*.js',
+        ],
+        output='gen/js/styles.%(version)s.js'
     ),
 }
 

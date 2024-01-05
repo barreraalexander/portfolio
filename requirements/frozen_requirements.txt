@@ -1,4 +1,9 @@
 flask
+flask_assets
+flask_mail
+wtforms
+gunicorn
 pydantic
 jsmin
 libsass
+pytest

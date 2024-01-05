@@ -1,8 +1,4 @@
-// alert('here')
-
-let experience_section = document.querySelector('#experience_section')
-
-if (experience_section){
+if ($('#experience_section')){
     const count_wait = (ms) => new Promise(resolve => setTimeout(resolve, ms))
     
     const loop = async () => {
@@ -107,16 +103,6 @@ if (experience_section){
     }, experience_observer_options)
     
     experience_section_observer.observe(experience_section)
-
-
-
-
-
-    // const skill_chart = new Chart(experience_canvas, config)
-
-    // skill_chart.defaults.color = "#fff"
-
-    // console.log(experience_canvas)    
 
 
 }

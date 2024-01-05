@@ -1,5 +1,5 @@
-let some_vals = $('#contact_modal_section')
-console.log(some_vals)
+// let some_vals = $('#contact_modal_section')
+// console.log(some_vals)
 // alert('rebuild me, I have changed')
 // let contact_modal_section = document.querySelector('#contact_modal_section')
 

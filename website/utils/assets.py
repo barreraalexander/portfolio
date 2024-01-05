@@ -7,7 +7,7 @@ bundles = {
         depends=[
             'scss/*.scss',
             'scss/base/*.scss',
-            'scss/pages/*.scss',
+            'scss/pages/*.scss', 
             'scss/components/navbars/*.scss',
             'scss/components/pieces/*.scss',
             'scss/components/sections/*.scss',

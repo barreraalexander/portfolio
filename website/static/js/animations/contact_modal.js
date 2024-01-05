@@ -1,3 +1,6 @@
+let some_vals = $('#contact_modal_section')
+console.log(some_vals)
+// alert('rebuild me, I have changed')
 // let contact_modal_section = document.querySelector('#contact_modal_section')
 
 // let open_modal_buttons = document.querySelectorAll('.open_menu')

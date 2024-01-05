@@ -14,5 +14,18 @@ bundles = {
         ],
         output='gen/css/main.%(version)s.css'
     ),
+    'main_js':Bundle(
+        'js/animations/contact_modal.js',
+        filters='jsmin',
+        depends=[
+            'js/animations/*.js',
+            # 'scss/base/*.scss',
+            # 'scss/pages/*.scss',
+            # 'scss/components/navbars/*.scss',
+            # 'scss/components/pieces/*.scss',
+            # 'scss/components/sections/*.scss',
+        ],
+        output='gen/js/main.%(version)s.js'
+    ),
 }
 

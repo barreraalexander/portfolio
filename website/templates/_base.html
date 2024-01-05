@@ -109,6 +109,24 @@
         referrerpolicy="no-referrer"
     >
     </script>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+        crossorigin="anonymous">
+    </script>
+
+    {% assets "main_js" %}
+
+        <script
+            type="text/javascript"
+            src="{{ASSET_URL}}"
+        
+        >
+            
+        </script>
+
+    {% endassets %}
+
         
         {{header(buttonlikes_schema)}}
         {{github_tab(socials_schema)}}

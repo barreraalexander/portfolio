@@ -1,0 +1,42 @@
+#titleleap{
+    padding: 1em;
+
+    // min-height: 80vh;
+    background-color: #fff;
+
+    h1{
+        text-align: center;
+        color: $tl_navy_bg;
+
+    }
+
+    .logo_container{
+        display: flex;
+        justify-content: center;
+        // margin-top: 2em;
+    }
+    
+    .product_summary{
+        text-align: center;
+        margin-top: 2em;
+
+        p{
+            @include lg_text;
+            width: 75%;
+            margin: 0 auto;
+            line-height: 1.2em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            max-width: 30em;
+            color: $tl_navy_bg;
+
+        }
+
+        span{
+            // @include lg_text;
+            color: $tl_teal_bg;
+            border-bottom: 2px solid $tl_teal_bg;
+        }
+
+    }
+}

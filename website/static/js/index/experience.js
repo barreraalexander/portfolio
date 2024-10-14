@@ -29,7 +29,7 @@ if ($('#experience_section')){
     const data = {
         labels,
         datasets:[{
-            data: [100, 60, 80, 90, 50],
+            data: [100, 60, 80, 90, 100],
             label: 'Proficiencies',
             backgroundColor: [
                 '#f7ff47',

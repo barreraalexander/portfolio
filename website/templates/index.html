@@ -2,6 +2,7 @@
 
 {% from 'components/sections/hero.html' import hero %}
 {% from 'components/sections/skills.html' import skills %}
+{% from 'components/sections/titleleap.html' import titleleap %}
 {% from 'components/sections/experience.html' import experience %}
 {% from 'components/sections/story.html' import story %}
 {% from 'components/sections/resume_like.html' import resume_like %}
@@ -11,6 +12,7 @@
 <main>
     {{hero()}}
     {{skills(skill_schemas)}}
+    {{titleleap()}}
     {{experience(experience_schemas)}}
     {{story(buttonlikes_schema)}}
     {{resume_like(comment_schemas)}}

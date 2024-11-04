@@ -9,7 +9,7 @@
     <p class="author">
         -{{comment_schema.author_name}}
     </p>
-    <a class="origin" href="{origin_url}" target="_blank">
+    <a class="origin" href="{{comment_schema.origin_url}}" target="_blank">
         {{comment_schema.origin}}
     </a>
 </div>
@@ -30,11 +30,13 @@
     </div>
 
     <div class="comments_ctnr">
+        {{comment(comment_schemas.app_generator)}}
         {{comment(comment_schemas.privacy_playbook)}}
         {{comment(comment_schemas.tech_on_demand)}}
         {{comment(comment_schemas.upwork1)}}
         {{comment(comment_schemas.upwork2)}}
         {{comment(comment_schemas.upwork3)}}
+        {{comment(comment_schemas.upwork4)}}
     </div>
 
 </section>

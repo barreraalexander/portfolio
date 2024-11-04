@@ -24,9 +24,10 @@ class buttonLikes(BaseModel):
     )
     
     call: buttonLike = buttonLike(
-        inner_text = 'Call',
+        inner_text = 'Text Me',
         img_static_location = 'images/assets/icons/phone.svg',
-        variant = buttonLikeVariant.PRIMARY
+        variant = buttonLikeVariant.PRIMARY,
+        href="tel:954-882-8507"
     )
 
     resume: buttonLike = buttonLike(

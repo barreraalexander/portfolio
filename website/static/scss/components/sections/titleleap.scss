@@ -19,6 +19,9 @@
     .product_summary{
         text-align: center;
         margin-top: 2em;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
 
         p{
             @include lg_text;
@@ -37,12 +40,16 @@
             color: $tl_teal_bg;
             border-bottom: 2px solid $tl_teal_bg;
         }
+        img{
+            width: 100%;
+        }
 
     }
 
     .phone_image{
         width: 90%;
         max-width: 60em;
+        display: block;
     }
 
 }

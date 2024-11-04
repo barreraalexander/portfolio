@@ -3,12 +3,24 @@ from typing import Optional
 
 class comment(BaseModel):
     elem_id: Optional[str]
-    comment: constr(strip_whitespace=True)
+    # comment: constr(strip_whitespace=True)
+    comment:str
     origin: str
     origin_url: str
     author_name: str
 
 class comments(BaseModel):
+    app_generator: comment = comment(
+        author_name = 'Adrian',
+        comment = """
+            Alexander knows very well FastAPI and his work is always focused on quality.
+            For sure I will work with Alexander in the future on other Python-related tasks.
+            Besides his skills, Alexander has a positive and optimistic approach during the entire task.
+        """,
+        origin = 'www.app-generator.dev', 
+        origin_url = 'https://app-generator.dev/', 
+    )
+
     privacy_playbook: comment = comment(
         author_name = 'Russell Owens',
         comment = """
@@ -42,8 +54,8 @@ class comments(BaseModel):
             well and he worked on the task we provided
             expeditiously!
         """,
-        origin = 'upwork', 
-        origin_url = 'https://www.upwork.com/', 
+        origin = 'www.letsbmedia.com', 
+        origin_url = 'https://letsbmedia.com/', 
     )
 
     upwork2: comment = comment(
@@ -66,4 +78,12 @@ class comments(BaseModel):
         """,
         origin = 'www.usindustrial.com',
         origin_url = 'https://www.usindustrial.com/',
+    )
+    upwork4: comment = comment(
+        author_name = 'Ronda Brunson',
+        comment = """
+        "Thanks for your service. A++"
+        """,
+        origin = 'www.promostandards.org',
+        origin_url = 'https://promostandards.org/',
     )

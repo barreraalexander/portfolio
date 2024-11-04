@@ -30,6 +30,7 @@ story_tl.to(
     {
         filter: 'grayscale(0%)',
         ease: Sine.easeInOut,
+        duration: 2,
     }
 ), 0
 
@@ -37,7 +38,7 @@ story_tl.to(
 story_tl.to(
     me_img,
     {
-        duration: 1,
+        duration: 2,
         filter: 'blur(0px)',
         ease: Sine.easeInOut,
     }

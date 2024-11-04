@@ -1,7 +1,7 @@
 {% macro button_like(button_like) %}
 
 <a
-    href=""
+    href="{{button_like.href if button_like.href}}"
 >
     <div
         class="button_like"

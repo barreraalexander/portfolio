@@ -1,6 +1,12 @@
-from pydantic import BaseSettings
+# from pydantic import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
 
 class Settings(BaseSettings):
+    model_config = SettingsConfigDict(env_file=".env")
+
+
+
     SECRET_KEY: str = "thisisatest"
     RECAPTCHA_PUBLIC_KEY: str = "thisisatest"
     RECAPTCHA_SECRET_KEY: str = "thisisatest"

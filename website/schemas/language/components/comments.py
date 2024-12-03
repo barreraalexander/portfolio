@@ -2,7 +2,7 @@ from pydantic import BaseModel, constr
 from typing import Optional
 
 class comment(BaseModel):
-    elem_id: Optional[str]
+    elem_id: Optional[str] = ""
     # comment: constr(strip_whitespace=True)
     comment:str
     origin: str

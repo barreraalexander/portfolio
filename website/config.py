@@ -15,9 +15,6 @@ class Settings(BaseSettings):
     DEBUG: bool = True
     PORT: int = 5001
 
-    class Config:
-        env_file = '.env'
-
 settings = Settings()
 
 # import json

@@ -19,6 +19,6 @@ class experiences(BaseModel):
         description="years of experience",
         # maybe have this one be a delta of when I started
         # so that I don't have to update it
-        max_count=7
+        max_count=6
     )
     

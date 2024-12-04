@@ -12,6 +12,7 @@ progress.txt
 *.sh
 config.py
 run.py
+github.environment
 
 
 # //SECTION: GENERAL

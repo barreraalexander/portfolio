@@ -41,10 +41,10 @@ jobs:
           password: ${{ secrets.PROD_PASSWORD }}
 
 
-          # script: |
-          #   cd portfolio
-          #   git pull
-          #   echo ${{secrets.PROD_PASSWORD}} | sudo -S supervisorctl reload 
+          script: |
+            cd portfolio
+            git pull
+            echo ${{secrets.PROD_PASSWORD}} | sudo -S supervisorctl reload 
 
 
       

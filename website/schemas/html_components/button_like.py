@@ -32,7 +32,7 @@ class buttonLikes(BaseModel):
 
     resume: buttonLike = buttonLike(
         inner_text = 'Resume',
-        href = 'docs/BarreraAlexanderResume21.pdf',
+        href = 'docs/BarreraAlexanderResume24.pdf',
         href_config = 'download',
         img_static_location = 'images/assets/icons/resume.svg',
         variant = buttonLikeVariant.SECONDARY,

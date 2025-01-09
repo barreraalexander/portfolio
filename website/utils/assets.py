@@ -27,7 +27,6 @@ bundles = {
     'index_js':Bundle(
         'js/index/experience.js',
         'js/index/hero.js',
-        'js/index/planets_mod.js',
         'js/index/resume_like.js',
         'js/index/shifting_dots.js',
         'js/index/skill_card.js',

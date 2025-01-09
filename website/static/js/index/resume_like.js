@@ -1,6 +1,5 @@
 let resume_like = document.querySelector('#resume_like')
 let comment_ctnrs = resume_like.querySelectorAll('.comment_ctnr')
-// let split = resume_like.querySelector('hr')
 
 const resume_tl = gsap.timeline({
     paused: true,

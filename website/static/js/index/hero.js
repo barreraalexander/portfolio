@@ -13,7 +13,7 @@ hero_section_tl.to(
 hero_section_tl.to(
     $('#night_ctnr'),
     {
-        duration: 1,
+        duration: 2,
         filter: 'blur(0px)',
         ease: Sine.easeInOut,
     },

@@ -35,6 +35,14 @@ if (night_ctnr){
 
 
 
+    const controls = new OrbitControls( camera, renderer.domElement );
+    controls.maxPolarAngle = Math.PI * 0.495;
+    controls.target.set( 0, 10, 0 );
+    controls.minDistance = 40.0;
+    controls.maxDistance = 100.0;
+    controls.update();
+
+
     const hemi_light = new THREE.HemisphereLight( 0xFFFFFF, 10 );
     scene.add(hemi_light)
 
@@ -74,7 +82,7 @@ if (night_ctnr){
         requestAnimationFrame(render)
 
         let elasped_time = clock.getElapsedTime()
-        
+        controls.update()
 
         try {
 
@@ -118,29 +126,9 @@ if (night_ctnr){
             // }
 
         } catch (error) {
-            // console.log('3d assets are still loading')
         }
 
 
-        // particles_mesh.rotation.y = (.005 * elasped_time)
-        // particles_mesh.rotation.x = (.0009 * -mouse_y)
-        // particles_mesh.rotation.x = (.0009 * -mouse_x)
-        // particles_mesh.rotation.z = (.0009 * -mouse_y)
-        // particles_mesh.rotation.z = (.0009 * -mouse_x)
-        
-        // if (! loaded_components){
-        //     if (elasped_time > 2 && elasped_time < 3){ 
-        //         // load_moon()
-        //         loadMoon(moon, moon_link, scene)
-
-        //         if (window.innerWidth > 1400){
-        //             // load_planet()
-        //             loadShip(ship, ship_link, scene)
-
-        //         }
-        //         loaded_components = true
-        //     }
-        // }
 
         renderer.domElement.id = 'globe_canvas';
         renderer.render(scene, camera)

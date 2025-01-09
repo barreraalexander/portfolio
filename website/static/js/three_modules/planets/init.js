@@ -121,8 +121,8 @@ if (night_ctnr){
             }
 
             if (window.innerWidth > 1399){
-                controls.enableRotate = true;
-                controls.update()
+                // controls.enableRotate = true;
+                // controls.update()
 
                 if (moon){
                     moon.position.set = (1, 8, 8)
@@ -133,8 +133,8 @@ if (night_ctnr){
                 }
 
             } else {
-                controls.enableRotate = false;
-                controls.update()
+                // controls.enableRotate = false;
+                // controls.update()
 
                 if (moon){
                     moon.position.set = (0, 100, 0)

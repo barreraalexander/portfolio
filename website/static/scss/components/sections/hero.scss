@@ -12,6 +12,7 @@
         justify-content: center;
         width: 100%;
         z-index: 100;
+        pointer-events:none;
         h1{
             @include neon_text;
             text-align: left;
@@ -46,16 +47,16 @@
     }
     
     
-    #mountain{
-        bottom: 0;
-        display: block;
-        // filter: saturate(60);
-        mix-blend-mode: luminosity;
+    // #mountain{
+    //     bottom: 0;
+    //     display: block;
+    //     // filter: saturate(60);
+    //     mix-blend-mode: luminosity;
 
-        position: absolute;
-        width: 100%;
-        z-index: 98;
-    }
+    //     position: absolute;
+    //     width: 100%;
+    //     z-index: 98;
+    // }
 
     .controls_ctnr{
         display: none;
@@ -84,7 +85,9 @@
             bottom: -100px;
         }
         .controls_ctnr{
-            display: block;    
+            display: flex;
+            flex-flow: column;
+            gap: 1em;  
             width: 8em;
             // height: 8em;
             margin-top: 2em;
@@ -94,9 +97,12 @@
             padding: 1em;
             opacity: .6;
             p{
+                @include xsm_text;
                 text-align: center;
-                font-size: .8em;
+                font-size: .6em;
                 user-select: none
+
+
             }
             .controls{
                 display: flex;

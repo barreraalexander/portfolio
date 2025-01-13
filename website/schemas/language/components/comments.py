@@ -17,8 +17,8 @@ class comments(BaseModel):
             For sure I will work with Alexander in the future on other Python-related tasks.
             Besides his skills, Alexander has a positive and optimistic approach during the entire task.
         """,
-        origin = 'www.app-generator.dev', 
-        origin_url = 'https://app-generator.dev/', 
+        origin = 'www.appseed.us', 
+        origin_url = 'https://appseed.us/', 
     )
 
     privacy_playbook: comment = comment(

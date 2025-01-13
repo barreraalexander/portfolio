@@ -84,6 +84,6 @@ class comments(BaseModel):
         comment = """
         "Thanks for your service. A++"
         """,
-        origin = 'www.promostandards.org',
-        origin_url = 'https://promostandards.org/',
+        origin = 'www.piranhabrands.com',
+        origin_url = 'https://www.piranhabrands.com/',
     )

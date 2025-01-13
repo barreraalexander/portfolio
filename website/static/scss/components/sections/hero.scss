@@ -1,5 +1,5 @@
 #hero_section{
-    height: 70vh;
+    height: 90vh;
     overflow: hidden;
     position: relative;
     .hero_ctnr{
@@ -12,7 +12,7 @@
         justify-content: center;
         width: 100%;
         z-index: 100;
-        pointer-events:none;
+        // pointer-events:none;
         h1{
             @include neon_text;
             text-align: left;
@@ -69,6 +69,11 @@
 @media only screen and (min-width: $tablet_bp){
     #hero_section{
         font-size: 1.6em;
+
+        .hero_ctnr{
+            pointer-events: none;
+
+        }
     }
 }
 

@@ -27,76 +27,24 @@
         gap: .25em;
     }
 
+    .logo_container{
+        display: none;
+
+    }
+
+    .phone_number{
+        :hover{
+            cursor: pointer;
+        }
+    }
+
+
 }
 
-
-// #header_section{
-//     display: none;
-//     position: absolute;
-//     z-index: 2000;
-//     width: 100vw;
-//     background-color: rgba($color: #000000, $alpha: .5);
-//     // overflow-x: hidden;
-//     nav{
-//         padding: 1em;
-//         ul{
-//             display: flex;
-//             gap: 2em;
-//             align-items: center;
-//         }
-//     }
-
-//     li{
-//         color: #fff;
-//     }
-//     li:hover{
-//         cursor: pointer;
-//     }
-
-//     .brand{
-//         margin-right: auto;
-//     }
-//     #hamburger{
-//         width: 1.2em;
-//     }
-
-//     .main_links{
-//         display: none;
-//     }
-//     .buttons_ctnr{
-//         display: none;
-//     }
-
-// }
-
-// @media only screen and (min-width: $tablet_bp){
-//     #header_section{
-//         .main_links{
-//             display: contents;
-
-//         }
-//         #hamburger{
-//             display: none;
-//         }
-//         .link_hr_ctnr{
-            
-//         }
-//         .buttons_ctnr{
-//             display: contents;
-//             font-size: .9em;
-//         }
-//     }
-// }
-
-// @media only screen and (min-width: $desktop_bp){
-//     #header_section{
-//         width: unset;
-//         position: relative;
-//         background-color: #111;
-//         li:last-of-type{
-//         }
-//         .brand {
-//             margin-left: 2em;
-//         }
-//     }
-// }
+@media only screen and (min-width: $desktop_bp){
+    #header_section{
+        .logo_container{
+            display: block;
+        }
+    }
+}

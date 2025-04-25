@@ -50,23 +50,11 @@
             position: relative;
             z-index: 100;
             border-radius: 10px;
-            // pointer-events: none;
-            // background-color: red;
-
-            // background: #FDBB2D;
-            // background: radial-gradient(circle, rgba(253, 187, 45, 1) 0%, rgba(246, 246, 246, 1) 70%, rgba(247, 247, 247, 1) 90%, rgba(248, 248, 248, 1) 100%);
-
-            // background: #FDBB2D;
-            // background: radial-gradient(circle, rgba(253, 187, 45, 1) 0%, rgba(246, 246, 246, 1) 25%, rgba(247, 247, 247, 1) 90%, rgba(248, 248, 248, 1) 100%);
-
-            // background: #6340ff;
-            // background: radial-gradient(circle, rgba(99, 64, 255, .7) 0%, rgba(181, 166, 250, 1) 20%, rgba(246, 246, 246, 1) 36%, rgba(247, 247, 247, 1) 90%, rgba(248, 248, 248, 1) 100%);
+            pointer-events: none;
 
             background: #9178ff;
             background: radial-gradient(circle, rgba(145, 120, 255, 1) 0%, rgba(243, 237, 255, 1) 20%, rgba(246, 246, 246, 1) 36%, rgba(247, 247, 247, 1) 90%, rgba(248, 248, 248, 1) 100%);
 
-            // @include dark_shadow;
-            // background-color: pink;
 
             :hover{
                 // cursor: pointer;

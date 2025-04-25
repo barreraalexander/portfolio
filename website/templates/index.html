@@ -6,11 +6,12 @@
 {% from 'components/sections/experience.html' import experience %}
 {% from 'components/sections/story.html' import story %}
 {% from 'components/sections/resume_like.html' import resume_like %}
+{% from 'components/sections/landing.html' import landing %}
 
 {% block content %}
 
 <main>
-    {{hero()}}
+    {{landing()}}
     {{skills(skill_schemas)}}
     {{titleleap()}}
     {{experience(experience_schemas)}}

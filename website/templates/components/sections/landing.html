@@ -1,0 +1,30 @@
+{% macro landing() %}
+
+
+<section
+    id="landing_section"
+    data-stork_model="{{url_for('static', filename='images/assets/three_d/stork.glb')}}"
+    
+>
+    <div class="landing_header">
+        <h2>
+            <b>PASSIONATE</b> <br> SOFTWARE ENGINEER
+        </h2>
+        <h2>
+            <b>INVENTIVE</b> <br> FRONTEND DEVELOPER
+        </h2>
+    </div>
+    <div class="landing_design_container">
+        <div class="blur_bg"></div>
+        <div class="stork_container"></div>
+    </div>
+    <div class="landing_footer">
+        <h1>BARRERA</h1>
+        <small>
+            SOFTWARE ENGINEER
+        </small>
+    </div>
+
+</section>
+
+{% endmacro %}

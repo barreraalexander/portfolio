@@ -31,6 +31,7 @@ bundles = {
         'js/index/shifting_dots.js',
         'js/index/skill_card.js',
         'js/index/story.js',
+        'js/index/landing.js',
         filters='jsmin',
         depends=[
             'js/animations/*.js',

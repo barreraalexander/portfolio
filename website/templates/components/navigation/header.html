@@ -5,44 +5,26 @@
 
 <section id="header_section">
     <nav>
-        <ul>
-            <a
-                href="{{url_for('main.index')}}">
-                <li
-                    class="brand"
-                >
-                    [ AB ]
-                </li>
-            </a>
+        <div class="time_container">
+            <div class="pulse_blob"></div>
+            <p>
+                Miami, FL <span id="header_time"></span>
+            </p>
+        </div>
+        <div class="header_logo">
+            <p>
+                BARRERA
+            </p>
+        </div>
+        <div class="phone_number">
+            <p>
+                954-882-8507
+            </p>
+        </div>
 
-            <a>
-                <img
-                    id="hamburger"
-                    class="open_navigation_menu navigation_button"
-                    src="{{url_for('static', filename='images/assets/icons/hamburger.svg')}}"
-                    alt="menu toggle icon"
-                    aria-label="menu"
-                >
-            </a>
-
-            <div class="main_links">
-                {{linkset()}}
-
-            </div>
-
-            <div class="buttons_ctnr">
-                {{button_like(buttonlikes_schema.call)}}
-                <a href="{{url_for('static', filename='docs/BarreraAlexanderResume24.pdf')}}" target="_blank">
-                    <button class="orange_btn">
-                        Download Resume
-                    </button>
-    
-                </a>
-            </div>
-
-
-        </ul>
     </nav>
 
 </section>
+
+
 {% endmacro %}

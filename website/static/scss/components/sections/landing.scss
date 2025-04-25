@@ -1,7 +1,7 @@
 #landing_section{
     background-color: #f8f8f8;
     min-height: 100vh;
-    padding-top: 5em;
+    // padding-top: 5em;
     padding-bottom: 2em;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -41,6 +41,7 @@
     .landing_design_container{
         width: 90%;
         height: 40em;
+        max-width: 50em;
         // flex: 1;
         position: relative;
         .stork_container{
@@ -148,6 +149,7 @@
 
 @media only screen and (min-width: $desktop_bp){
     #landing_section{
+        padding-top: 2em;
 
 
         // font-size: 1.6em;

@@ -91,7 +91,7 @@ if ($landing_section.length > 0){
     stork_animation_mixer = new THREE.AnimationMixer(stork)
     const clips = stork_gltf.animations
     // console.log(stork_gltf)
-    console.log(clips)
+    // console.log(clips)
 
     const clip = THREE.AnimationClip.findByName(clips, 'storkFly_B_')
     const action = stork_animation_mixer.clipAction(clip)

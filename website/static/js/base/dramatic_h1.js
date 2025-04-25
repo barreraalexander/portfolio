@@ -11,7 +11,7 @@ const dramatic_h1_observer_options = {
 const dramatic_h1_observer = new IntersectionObserver(function(entries, dramatic_h1_observer){
     entries.forEach(entry => {
         if (entry.isIntersecting){
-            console.log(entry.target)
+            // console.log(entry.target)
         } else {
         }
     })

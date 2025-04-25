@@ -1,6 +1,6 @@
 #landing_section{
     background-color: #f8f8f8;
-    min-height: 100vh;
+    min-height: 80vh;
     // padding-top: 5em;
     padding-bottom: 2em;
     overflow-x: hidden;
@@ -40,7 +40,7 @@
 
     .landing_design_container{
         width: 90%;
-        height: 40em;
+        height: 30em;
         max-width: 50em;
         // flex: 1;
         position: relative;
@@ -50,7 +50,7 @@
             position: relative;
             z-index: 100;
             border-radius: 10px;
-            pointer-events: none;
+            // pointer-events: none;
             // background-color: red;
 
             // background: #FDBB2D;
